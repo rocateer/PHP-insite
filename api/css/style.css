@@ -1,0 +1,62 @@
+body{padding:0; margin:0;}
+div, p{font-size:12px; line-height:160%; font-family:'NanumGothic','Nanum Gothic','��������',dotum;  -webkit-font-smoothing: antialiased;}
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.mt30{margin-top:30px;}
+.h3{color:#333; font-weight:bold; margin-top:20px;}
+.sub_con_wrap{padding:20px; color:#777;}
+.text-title{font-weight:bold; font-size:14px; color:#333;}
+.tabs_menu{width:100%; overflow:hidden; margin:0; padding:0;}
+.tabs_menu li{list-style:none; float:left; width:100%; text-align:center; padding:0;}
+.tabs_menu li a{padding:15px 0 15px 0; display:block; color:#555; text-decoration:none; font-size:14px; font-family:'NanumGothic','Nanum Gothic','��������',dotum; border-top:3px solid #f3f3f3; background:#f4f4f4;}
+.tabs_menu li.active a{padding:15px 0 15px 0; display:block; color:#8669ac; font-weight:bold; text-decoration:none; font-size:14px; font-family:'NanumGothic','Nanum Gothic','��������',dotum; border-top:3px solid #8669ac;
+background:#fff;}
+.cont_head_box{background:#f4f4f4; padding:20px; border:1px solid #ccc;}
+.head_bar{background:#343b53; text-align:right;}
+.head_bar a{color:#fff; text-decoration:none; font-size:14px; padding:10px 15px 10px 0; display:block;}
+
+
+.contents_align {margin:0; padding:0;}
+.contents_align li{list-style:none;}
+.contents_align li ul{margin:0 0 10px 10px; padding:0;}
+.contents_align li ul li{margin:0 0 0 0px; padding:0;}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background:#fff; padding-bottom:5px;
+}
+
+
+/* accordion */
+
+#accordion {width:100%; height:50%;}
+#accordion ul {margin:0; padding:0;}
+#accordion ul li {list-style-type: none; cursor:pointer; font-family:'NanumGothic','Nanum Gothic','��������',dotum; padding:15px 10px; font-size:16px; color:#666;  border-bottom:1px solid #ccc;}
+#accordion ul li .date{color:#999; font-size:12px; margin:3px 0 0 0; padding:0; background:#fff; font-weight:normal; display:block; position:relative;}
+#accordion ul li .date span{color:#8669ac; position:absolute; right:5px; top:1px;}
+#accordion ul li:hover {color: #333;}
+#accordion ul a {color: #333; }
+
+#accordion ul li span {display:block;}
+#accordion ul li span img {margin-top:2px; margin-left:10px;}
+#accordion ul li span img.open {float:left; position: absolute; clip: rect(0px,17px,7px,0px);  left: 0px; margin-top:9px;}
+#accordion ul li span img.closed {float:left; position: absolute; clip: rect(8px,17px,17px,0px);  left: 0px;  margin-top:2px;}
+
+.panel {
+  display: none;
+  padding: 15px;
+  font-family:'NanumGothic','Nanum Gothic','��������',dotum;
+  font-size:13px;
+  line-height:160%;
+  color: white;
+  color: #333;
+  background:#f4f4f4;
+}
+
+/* 차량로고 */
+
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Noto Sans Korean";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/NotoSans-Regular.eot?") format("eot"),
+  url("../fonts/NotoSans-Regular.otf") format("opentype"),
+  url("../fonts/NotoSans-Regular.woff") format("woff"),
+  url("../fonts/NotoSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans Korean";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/NotoSans-Medium.eot?") format("eot"),
+  url("../fonts/NotoSans-Medium.otf") format("opentype"),
+  url("../fonts/NotoSans-Medium.woff") format("woff"),
+  url("../fonts/NotoSans-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans Korean";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/NotoSans-Bold.eot?") format("eot"),
+  url("../fonts/NotoSans-Bold.otf") format("opentype"),
+  url("../fonts/NotoSans-Bold.woff") format("woff"),
+  url("../fonts/NotoSans-Bold.woff2") format("woff2");
+}
+html, body{}
+body {background:#fff;}
+body,div,p,dl,dd,dt,footer,ul,li,select,input,textarea{margin:0; padding:0; font-family: Noto Sans Korean, sans-serif; font-size:15px; color:#000; line-height:125%;}
+a {text-decoration:none; color:#000;}
+a:focus {outline:none;}
+li{list-style:none;}
+table{border-collapse:collapse;}
+h1, h2, h3, h4, h5, h6{margin: 0; color: #000; line-height: 125%; font-weight: 400}
+
+/*link*/
+a {text-decoration:none; color:#000; cursor: pointer;}
+a:focus {outline:none;}
+a link,
+a:visited{font-size:inherit;; color:#000; text-decoration:none;}
+
+.wrap{width:100%;}
+
+.feed_head{display: flex; justify-content: space-between; align-items: center; height: 60px; margin-top: 14px; padding: 0 20px}
+.feed_head .profile{display: flex; align-items: center; position: relative;}
+.feed_head .img_wrap{width: 40px; height: 40px; border-radius: 50%; overflow: hidden; float: left; margin-right: 16px;}
+.feed_head .img_wrap > img{object-fit: cover; width: 100%; height: 100%;}
+.feed_head .mark{position: absolute; left: 30px; bottom:-5px}
+.feed_head .mark img{width: 16px}
+.feed_head p{font-weight: 900; font-size: 18px}
+.feed_head span{color: #FF3767; font-size: 13px}
+
+.feed_con ul{height: 100vw;}
+.feed_con li{overflow: hidden; position: relative; padding: 5px 20px 5px 12px; box-sizing: border-box;}
+.feed_con li h3{color: #fff; font-weight: 500; font-size: 25px; line-height: 1; text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); word-break: break-all; padding: 4px 0 4px 38px; background: url(../images/i_sharp_wh.png) left top no-repeat; background-size: 38px;}
+.feed_con li span{display: flex; align-items: center; justify-content: center; position: absolute; left:0; top:0; width: 100%; height: 100%; background: rgba(255, 55, 103, .5); opacity: 0; transition: all .2s}
+.feed_con li span img{width: 80px}
+.feed_con li span.select{opacity: 1;}
+
+.feed_con .array2 li{height:49vw; padding: 0; margin: 0;}
+.feed_con .array3 li{height: 33.33vw;}
+.feed_con .array4 li{float: left; width: 50vw; height: 50vw;}
+.feed_con .array4 li h3{font-size: 25px}
+
+
+.feed_con .vertical li{float: left; overflow: hidden; display: block;}
+.feed_con .vertical li{width:50vw; height: 100vw;}
+.feed_con .array3.vertical li{width: 50vw; height: 50vw;}
+.feed_con .array3.vertical li:last-child{width: 100%}
+
+.feed_con li:nth-child(1){background:#00C7BB;}
+.feed_con li:nth-child(2){background:#F49EC5;}
+.feed_con li:nth-child(3){background:#5587C6;}
+.feed_con li:nth-child(4){background:#FBC890;}
+
+.feed_foot{padding: 10px 20px; overflow: hidden;}
+.feed_foot .share{height: 55px; display: flex; justify-content: space-between; align-items: center;}
+.feed_foot .share span{display: block; width: 15px; height: 15px; background: #000000}
+.feed_foot .tag > img{width: 38px; vertical-align: middle;}
+.feed_foot .tag span{color: #003569; display: inline-block; margin-right:5px; line-height:150%}
+.feed_foot .tag span:first-of-type{margin-left: 5px}
+.feed_foot .tag span img{width: 11px}
+
+.guide_area{padding: 10px;}
+.guide_area img{width:100%; margin-top:15px;}
+
+@media screen and (min-width:320px) {
+.wrap{width:100%;}
+}
+
+.footer_info{text-align: center; font-size: 12px; padding:20px 0;}

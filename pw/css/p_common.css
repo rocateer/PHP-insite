@@ -1,0 +1,106 @@
+/*
+ *  MEMO : 프로젝트 내부 공통 스타일 파일입니다.
+ * 작성자 : 민지
+ * 작성일 : 2020/02/25.
+*/
+@charset "utf-8";
+
+@font-face {
+  font-family: 'NotoSansKR-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NotoSansKR-Regular'),
+       local('NotoSansKR-Regular'),
+       url(../fonts/NotoSansKR-Regular.woff2) format('woff2'),
+       url(../fonts/NotoSansKR-Regular.woff) format('woff'),
+       url(../fonts/NotoSansKR-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSansKR-Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NotoSansKR-Bold'),
+       local('NotoSansKR-Bold'),
+       url(../fonts/NotoSansKR-Bold.woff2) format('woff2'),
+       url(../fonts/NotoSansKR-Bold.woff) format('woff'),
+       url(../fonts/NotoSansKR-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'S-CoreDream-5Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: local('S-CoreDream-5Medium'),
+       local('S-CoreDream-5Medium'),
+       url(../fonts/S-CoreDream-5Medium.ttf) format('ttf'),
+}
+body,th,td,input,select,textarea,button, div, span, label {font-family:"NotoSansKR-Regular", '나눔고딕'; font-size:14px;  color:#333;}
+select{height:50px; -webkit-border-radius:4px; box-sizing:border-box;}
+/* 대표 wrap */
+.body{margin:50px 0 0 0;}
+.inner_wrap{padding: 0 20px}
+
+.img_box{overflow: hidden; display: block;}
+.img_box > img{object-fit: cover; width: 100%; height: 100%;}
+
+/* 라인 */
+hr{width: 100%; height: 0; border: 0; border-bottom: 1px solid #eee;}
+hr.space{background: #F9F9F9; width: 100%; height: 10px; border-bottom: 0;}
+
+/* button custom : s */
+/* only colors */
+.btn_point a{background: #FF4A4A; color: #fff;}
+.btn_point_line a{border: 1px solid #FF4A4A; background: #fff; color: #FF4A4A;}
+.btn_gray a{background: #eee; color: #666}
+.btn_deactive a{background: #eee; color: #999}
+/* only shape */
+.btn_float a{display: inline-block; width:50%; height:60px; line-height: 60px; text-align: center; font-size: 16px;}
+.btn_full_weight a{border-radius: 50px; display: block; text-align: center; height: 50px; line-height:50px; box-sizing: border-box; font-size: 16px;}
+.btn_full_thin a{border-radius: 50px; display: block; text-align: center; height: 34px; line-height:34px; box-sizing: border-box; font-size: 14px;}
+.btn_xs a{border-radius: 20px; display: block; text-align: center; width: 65px; height: 20px; line-height:20px; box-sizing: border-box; font-size: 12px;}
+.btn_s a{border-radius: 5px; display: block; text-align: center; width: 80px; height: 30px; line-height:30px; box-sizing: border-box; font-size: 14px;}
+.btn_m{border-radius: 50px;display: block; text-align: center; width: 50%; height: 50px; line-height:50px; box-sizing: border-box; font-size: 16px;}
+/* button custom : e */
+
+/* input style */
+input{width: 100%; border: 0; height:50px; box-sizing: border-box; text-indent: 10px; border-radius: 4px;}
+input[type='text'],input[type='tel'],input[type='password'],input[type='submit'],input[type='search'] {-webkit-appearance:none; -webkit-border-radius:4px;height:50px; box-sizing: border-box; border:1px solid #ddd; }
+input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox} button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
+input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none}
+textarea{-webkit-appearance: none; border-radius: 0}
+
+input[type="checkbox"] {display:none;}
+input[type="checkbox"] + label {display:inline-block; margin-right:20px; color: #666; font-size: 14px; font-style: normal;}
+input[type="checkbox"] + label span {display:inline-block; width:15px; height:15px; margin:-3px 10px 0 0; vertical-align:middle; background:url('../images/btn_check_off.png') right center no-repeat; cursor:pointer; background-size:13px;}
+input[type="checkbox"]:checked + label span {background:url('../images/check_on.png') right center no-repeat; background-size:13px;}
+
+input[type="radio"] {display:none;}
+input[type="radio"] + label {display:inline-block; margin-right: 40px; font-size:12px; color: #333; font-style: normal;}
+input[type="radio"] + label span {display:inline-block; width:13px; height:13px; margin:-3px 10px 0 0; vertical-align:middle; background:url('../images/btn_radio_off.png') right center no-repeat; cursor:pointer; background-size:13px;}
+input[type="radio"]:checked + label span {background:url('../images/radio_on.png') right center no-repeat; background-size:13px;}
+
+/* 아이디찾기, 비번찾기 결과텍스트 창 */
+.find_result{text-align: center; font-size: 16px; line-height: 26px; color: #333;}
+.find_result span{color: #FF4A4A;}
+/* 해더 기본 스타일 */
+/*
+header{height:50px; border-bottom: 1px solid #eee; box-sizing: border-box; position:fixed; top:0; left: 0; width:100%; background: #fff; z-index: 99;}
+header .btn_back{position: absolute; left:0; top:55%; transform: translateY(-50%); width: 16px; padding: 16px; line-height: 1}
+header .btn_home{position: absolute; left:26px; top:55%; transform: translateY(-50%); width: 16px; padding: 16px; line-height: 1}
+header h1{font-size:18px; text-align: center; line-height:56px; color:#333; font-weight: normal;}
+header .btn_close{position: absolute; right:0; top:50%; transform: translateY(-50%); width: 14px; height: 14px; padding: 16px}
+header .head_btn{position: absolute; right:0; top:55%; transform: translateY(-50%); padding: 16px; font-weight: bold; line-height: 1}
+header .head_btn img{width: 16px;}
+header .head_search{position: absolute; right:30px; top:55%; transform: translateY(-50%); padding: 16px; font-weight: bold; line-height: 1}
+header .head_search img{width: 16px;}
+header .head_logo{height:14px; margin-top:21px;}
+header .search_wrap{position:absolute; z-index:99; left:0; top:50px; width:calc(100% - 20px); padding:10px; display:none; background-color:rgba(255,255,255,1);}
+header .search_wrap .input_box{border:1px solid #ddd; width:100%; position: relative;}
+header .search_wrap input{width:100%; vertical-align: middle; text-indent:10px; font-size:13px;}
+header .search_wrap a{position: absolute; right:0px; top:0; margin-left:10px; width:70px; background: #fff; text-align: center; height:38px; vertical-align: middle; line-height:38px; font-size: 12px; color: #666;}
+*/
+
+/*------------------------- modals ----------------------*/
+/* 약관 관련 모달(2) */
+.modal_terms .md_container, .modal_privacy_policy .md_container{line-height: 24px; padding: 20px; margin-top: 50px;}

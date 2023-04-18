@@ -1,0 +1,254 @@
+/*
+ *  MEMO : 프로젝트 내부 공통 스타일 파일입니다.
+ * 작성자 : 민지
+ * 작성일 : 2021/03/29.
+*/
+@charset "utf-8";
+/* 전체 : U+0020-007E
+특수문자 : U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E
+영문 : U+0041-005A(대문자), U+0061-007A(소문자)
+숫자 : U+0030-0039
+ex )
+unicode-range: U+0041-005A, U+0061-007A;
+*/
+@font-face {
+  font-family: 'font-r';
+  font-style: normal;
+  font-weight: 300;
+  src: local('NotoSansKR-Regular'),
+       local('Noto Sans Regular'),
+       url(/fonts/NotoSansKR-Regular.woff2) format('woff2'),
+       url(/fonts/NotoSansKR-Regular.woff) format('woff'),
+       url(/fonts/NotoSansKR-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'font-l';
+  font-style: normal;
+  font-weight: 200;
+  src: local('NotoSansKR-Light'),
+       local('Noto Sans Light'),
+       url(/fonts/NotoSansKR-Light.woff2) format('woff2'),
+       url(/fonts/NotoSansKR-Light.woff) format('woff'),
+       url(/fonts/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'font-b';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NotoSansKR-Bold'),
+       local('Noto Sans Bold'),
+       url(/fonts/NotoSansKR-Bold.woff2) format('woff2'),
+       url(/fonts/NotoSansKR-Bold.woff) format('woff'),
+       url(/fonts/NotoSansKR-Bold.otf) format('opentype');
+}
+body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r", '나눔고딕', sans-serif; font-size:14px; color:#333;}
+
+/* 대표 컬러 설정 */
+.essential{color:#FF4A4A;}
+.point_color{color:#FF4A4A;}
+
+/* 폰트 */
+.lh_10{line-height: 1}
+.lh_15{line-height: 1.5}
+.date{font-size: 12px;color:#999;margin-top: 4px;}
+.label{margin: 30px 0 10px;}
+h2{font-weight: normal;font-size: 20px;font-family: 'font-b';}
+h3{font-weight: normal;font-size: 18px;font-family: 'font-b';}
+h4{font-weight: normal;font-size: 24px;font-family: 'font-b'}
+h5{font-weight: normal;font-size: 16px;font-family: 'font-b'}
+h6{font-weight: normal;font-size: 14px;font-family: 'font-b'}
+
+/* 라인 */
+hr{width: 100%; height: 0; border: 0; border-bottom: 1px solid #eee;}
+hr.space{background: #F9F9F9; width: 100%; height: 10px; border-bottom: 0; margin: 0;}
+
+/* button custom : s */
+/* only colors */
+.btn_point a{background: #FF4A4A; color: #fff;}
+.btn_point_line a{border: 1px solid #FF4A4A; background: #fff; color: #FF4A4A;}
+.btn_gray a{background: #eee; color: #666}
+.btn_dark_gray a{background: #999; color: #fff}
+.btn_gray_line a{border: 1px solid #ddd; color: #666}
+.btn_deactive a{background: #eee; color: #999}
+/* only shape */
+.btn_float_wrap{width:100%; height:60px; overflow: hidden; position: fixed; bottom: 0; z-index: 7;}
+.btn_float a{vertical-align: middle;float: left; width:50%; height:60px; line-height: 58px; text-align: center; font-size: 16px;box-sizing:border-box;}
+.btn_float a img{width:28px; vertical-align: middle; margin: -2px 3px 0 0;}
+.btn_full_weight a{vertical-align: middle;border-radius: 50px; display: block; text-align: center; height: 50px; line-height:48px; box-sizing: border-box; font-size: 16px;}
+.btn_full_normal a{vertical-align: middle;border-radius: 50px; display: block; text-align: center; height: 40px; line-height:38px; box-sizing: border-box; font-size: 14px;}
+.btn_full_thin a{vertical-align: middle;border-radius: 50px; display: block; text-align: center; height: 34px; line-height:32px; box-sizing: border-box; font-size: 14px;}
+.btn_xs a{vertical-align: middle;border-radius: 20px; display: block; text-align: center; width: 65px; height: 20px; line-height:18px; box-sizing: border-box; font-size: 12px;}
+.btn_s a{vertical-align: middle;border-radius: 5px; display: block; text-align: center; width: 80px; height: 30px; line-height:28px; box-sizing: border-box; font-size: 14px;}
+.btn_m a{vertical-align: middle;border-radius: 50px; display: block; text-align: center; width: 50%; height: 50px; line-height:48px; box-sizing: border-box; font-size: 16px;}
+/* button custom : e */
+
+
+/* 폼 관련 */
+textarea{width: 100%; border-radius: 0;border: 1px solid #ddd; padding: 10px; resize: none; box-sizing: border-box;-webkit-appearance: none;}
+::-webkit-input-placeholder {color:#999;}/* WebKit, Blink, Edge */
+:-moz-placeholder {color:#999; opacity:1;} /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {color:#999; opacity:  1;}/* Mozilla Firefox 19+ */
+:-ms-input-placeholder {color:#999;}/* Internet Explorer 10-11 */
+select{border:1px solid #ddd; vertical-align:middle; width:100%; height:40px; box-sizing: border-box; padding: 0 32px 0 15px; background: url('/images/icon_arrow_down.png') no-repeat calc(100% - 10px) 50%; background-size: 12px; -webkit-appearance: none; border: 0; -webkit-border-radius: 0; -moz-appearance: none; appearance: none;}
+select::-ms-expand {display: none; /* remove default arrow in IE 10 and 11 */}
+select:focus > option:checked {background: #fff !important;}
+select[multiple]:focus option:checked {background: red linear-gradient(0deg, red 0%, red 100%);}
+
+/* input style */
+input{text-indent: 10px; border-radius: 4px; border: 0; width: 100%; height:50px; box-sizing: border-box;}
+input[type='text'],input[type='tel'],input[type='password'],input[type='submit'],input[type='search'] {-webkit-appearance:none; -webkit-border-radius:4px;height:50px; box-sizing: border-box; border:1px solid #ddd; }
+input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox} button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
+input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none}
+
+input[type="checkbox"] {display:none;}
+input[type="checkbox"] + label {display:inline-block; margin-right:40px; color: #666; font-size: 14px; font-style: normal;}
+input[type="checkbox"] + label span {display:inline-block; width:15px; height:15px; margin:-3px 10px 0 0; vertical-align:middle; background:url('/images/check_off.png') right center no-repeat; cursor:pointer; background-size:15px;}
+input[type="checkbox"]:checked + label span {background:url('/images/check_on.png') right center no-repeat; background-size:15px;}
+
+input[type="radio"] {display:none;}
+input[type="radio"] + label {display:inline-block; margin-right: 40px; font-size:12px; color: #333; font-style: normal;}
+input[type="radio"] + label span {display:inline-block; width:13px; height:13px; margin:-3px 10px 0 0; vertical-align:middle; background:url('/images/radio_off.png') right center no-repeat; cursor:pointer; background-size:13px;}
+input[type="radio"]:checked + label span {background:url('/images/radio_on.png') right center no-repeat; background-size:13px;}
+
+/* 스위치 체크박스 */
+.switch {position:relative; display:inline-block; width:40px; height:24px;}
+.check_slider {position:absolute; cursor:pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #fff; -webkit-transition: .4s; transition: .4s; border-radius: 24px; border: 1px solid #757575;}
+.check_slider:before {position: absolute; content: ""; height: 22px; width: 22px; left:-1px; bottom:-1px; background-color: #fff; border: 1px solid #757575; -webkit-transition: .4s; transition: .4s; border-radius: 50%;}
+input:checked + .check_slider {background-color: #757575;}
+input:focus + .check_slider {box-shadow: 0 0 1px #757575;}
+input:checked + .check_slider:before {-webkit-transform: translateX(16px); -ms-transform: translateX(16px); transform: translateX(16px);}
+
+/* 별점 */
+.review_rating{width: 100%; height:40px; overflow: hidden; margin: 0 auto; }
+.rating {display: inline-block;}
+.rating > input {display: none; margin: 0 5px;}
+.rating > label:before {display: inline-block; content: "\f005"; background: url('/p_images/i_star_L.png') 0 0 no-repeat; width:40px; height:40px; color:rgba(0,0,0,0); background-size: 40px;}
+.rating > input[type="radio"] + label {color: #999; float: right; margin: 0 5px;}
+.rating > input:checked ~ label{content: "\f005"; display: inline-block; background: url('/p_images/i_star_red_L.png'); width:40px; height:40px; padding: 0; background-size: 40px; z-index: 5;}
+.rating > input:checked ~ label:before {background:none;}
+
+/* 즐겨찾기 */
+.wish_ico a{display:block; background:#fff url('/p_images/btn_wish_off.png') no-repeat; height:20px; width:22px; line-height:20px; float: right; background-size: 22px;}
+.wish_ico a.active{background: url('/p_images/btn_wish_on.png') no-repeat; color:#fff; background-size: 22px;}
+
+/* modal 공통 레이아웃 */
+.modal{background: #fff; overflow: auto; position: fixed; width:100%; height:100%; z-index: 1000; top:50%; left: 50%; transform: translate(-50%, -50%); display: none; }
+.modal .md_container{position: relative; margin: 0 auto; padding:40px; box-sizing: border-box;}
+.md_overlay{position: fixed; width: 100%; height: 100%; top:0; left:0; background: rgba(0,0,0,.5); opacity: 0; visibility: hidden; z-index: 200}
+
+/* 대표 wrap */
+.body{padding:50px 0 0 0;}
+.inner_wrap{padding: 0 20px}
+.footer_margin{padding-bottom: 55px; box-sizing: border-box;}
+body, html , .wrap{height: 100%;}
+.vh_wrap{position: relative; min-height: 100%; overflow: hidden}
+.vh_body{padding-bottom: 40px;}
+.vh_footer{position: absolute; z-index: 1; bottom:40px; width: calc(100% - 40px);}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+header{height:50px; box-sizing: border-box; position:fixed; top:0; left: 0; width:100%; background: #fff; z-index: 8;}
+header .btn_back{position: absolute; left:0; top:50%; transform: translateY(-50%); width: 24px; padding: 12px; line-height: 1}
+header .btn_home{position: absolute; left:26px; top:50%; transform: translateY(-50%); width: 16px; padding: 16px; line-height: 1}
+header h1{font-size:16px;font-family: 'font-b';text-align: center; line-height:50px;}
+header .head_txt{color:#E1B275;font-size:16px;font-family: 'font-b';position: absolute;z-index: 1;top:16px;right:20px;}
+header .btn_close{position: absolute; right:0; top:50%; transform: translateY(-50%); width: 14px; height: 14px; padding: 16px}
+header .head_btn{position: absolute; right:0; top:55%; transform: translateY(-50%); padding: 16px; font-weight: bold; line-height: 1}
+header .head_btn img{width: 16px;}
+header .head_logo{height:50px;padding: 16px 20px; box-sizing: border-box;}
+header .head_alarm{position: relative;width: 50px;position: absolute; right:0; top:50%; transform: translateY(-50%); padding: 13px; box-sizing: border-box;}
+header .head_alarm span.spot{position: absolute;z-index: 1;top:16px;right:16px;width: 7px;height: 7px;border-radius: 7px;background: transparent linear-gradient(180deg, #E1B275 0%, #A1723E 100%) 0% 0% no-repeat padding-box;}
+
+footer ul{position: fixed; z-index: 100;bottom:0; width: 100%; height: 56px; background: #fff; border-top: 1px solid #ddd}
+footer li{width: 25%; font-size: 11px; float: left; text-align: center;}
+footer li a{display: inline-block;letter-spacing: -0.5px}
+footer li img{width: 48px;}
+footer li a span{overflow: hidden; margin: 8px auto 4px auto; width:24px; height: 24px; display: block;}
+footer li.active a{}
+footer li.active img{position: relative; top: 0; left: -24px; height: 24px; display: block}
+
+/* 네비 */
+.nav{ position: fixed; width:80%; height: 100%; background: #fff; top:0; left:-100%; z-index: 10; transition: all .3s;}
+.nav.open{left:0}
+.nav_dim{position: fixed; left:0; top:0; width: 100%; height: 100vh; z-index: 9; opacity: 0; visibility: hidden;background: rgba(0,0,0,.4);}
+.nav_dim.open{opacity: 1; visibility:visible;}
+.nav_close{width: 35px; position: absolute; right:-45px; top:10px;}
+.nav_close .nav_close_btn{width: 100%;}
+.side_head{border: 1px solid red}
+
+/* 로그인 */
+.login_wrap .logo{width: 264px;text-align: center; margin:150px auto 40px; display: block;}
+.login_wrap{width:100%; padding: 0 40px; box-sizing: border-box; margin: 0 auto;}
+.login_input_id{text-indent: 40px;background: url('/images/i_user.png') no-repeat 12px center; background-size: 18px}
+.login_input_pw{text-indent: 40px;margin:20px 0 0;background: url('/images/i_lock.png') no-repeat 12px center; background-size: 18px}
+.login_find_ul{margin-top: 15px; overflow: hidden;}
+.login_find_ul li{float: left; font-size: 12px;}
+.login_find_ul li:first-child{margin-right: 20px;}
+.login_find_ul li:last-child{float: right;margin-right: 0; font-weight: bold;}
+.find_form{margin-top: 70px;}
+.find_result{line-height: 22px;text-align: center;padding: 50px 0; box-sizing: border-box; font-size: 16px;}
+.find_result img{display: block; margin: 0 auto;width: 60px; margin-bottom: 20px;}
+.find_result .txt{font-size: 18px;font-weight: bold;margin-top: 20px;}
+
+/* 아이디찾기, 비번찾기 결과텍스트 창 */
+.find_result{text-align: center; font-size: 16px; line-height: 26px;}
+.find_result img{display: block; width: 60px; margin: 0 auto; margin-bottom: 20px;}
+.find_result .point{color: #F8B62B;font-size: 20px;margin: 10px 0;}
+
+/* no_search_data */
+.no_data{padding: 40px 0; box-sizing: border-box;}
+.no_data img{display: block; margin: 0 auto; margin-bottom: 20px;width: 60px;}
+.no_data p{font-size: 16px; color:#999;}
+
+/* complete 공통 */
+.complete_wrap{margin:0 auto;text-align: center;}
+.complete_wrap img{max-width:266px;width:100%; margin:85px auto 30px; }
+.complete_wrap .title{font-family: 'font-b'; font-size: 20px;}
+.complete_wrap p{font-size: 16px;line-height:24px; margin: 14px 0 20px 0;}
+
+/* paging ui */
+.paging{margin-top: 70px;text-align: center;}
+.paging>ul{display: flex;margin: 0 auto;width: 445px;}
+.paging li{font-size: 16px;color:#666;flex:0 0 32px;cursor:pointer;}
+.paging li img{height: 7px;}
+.paging li.active{color:#0070C0}
+
+/* 회원가입 동의 리스트 */
+.all_checkbox li{height: 40px; line-height: 40px;}
+.all_checkbox li > span a{float: right;width: 16px;padding: 0 5px; box-sizing: border-box;}
+.all_checkbox li > span a img{width: 100%;}
+.all_checkbox li:first-of-type input[type="checkbox"] + label{font-size: 16px;font-weight: bold;}
+
+
+/* notice, faq, qa */
+.notice_ul > li{padding: 12px 20px;box-sizing: border-box;}
+.notice_ul > li a{font-size: 16px;}
+.notice_ul > li span{font-size: 12px;color:#7F7F7F}
+.notice_title{font-size: 16px;margin: 12px 20px 0;}
+.notice_date{font-size: 12px;color:#999;margin-bottom: 16px;margin-left: 20px;}
+.notice_content{padding: 20px;color:#666;box-sizing: border-box;font-size: 14px;line-height: 24px}
+.faq_list li{position: relative;}
+.faq_list li .trigger{background: url('/images/i_minus.png') no-repeat calc(100% - 20px) center;background-size: 16px;min-height: 58px;padding: 16px 20px;padding-left: 55px; box-sizing: border-box;font-size: 16px;}
+.faq_list li .trigger.active{background: url('/images/i_plus.png') no-repeat calc(100% - 20px) center ;background-size: 16px;}
+.faq_list li .question{vertical-align: middle; margin-top: -4px;width: 27px; margin-right: 12px;}
+.faq_list li .arrow.rotate{transform: rotate(180deg);}
+.faq_list li .arrow{width: 10px;position: absolute; top:25px; right:20px;}
+.faq_list li .answer_wrap{line-height: 24px;display: none;background: #F5F5F5 url('/images/i_answer.png') no-repeat 17px 17px; background-size: 27px;padding: 16px 20px;padding-left: 55px;   box-sizing: border-box;}
+header .qa_title{color:#222;font-size:14px; position: absolute;z-index: 1;top:16px;right:20px;}
+.qa_ul > li{border-bottom: 1px solid #ddd; background: url('/images/i_question.png') no-repeat 20px 12px; background-size: 27px;padding: 16px 20px 16px 60px; box-sizing: border-box;}
+.qa_ul > li .deactive{font-family: 'font-b';margin-bottom: 10px;}
+.qa_ul > li .active{font-family: 'font-b';color:#60DDE1;margin-bottom: 10px;}
+.qa_ul > li .title{font-size: 16px;margin-bottom: 5px;}
+.qa_ul > li span{font-size: 12px;color:#999}
+.qa_top_txt{line-height: 24px;background: url('/images/i_question.png') no-repeat 20px 12px; background-size: 27px;padding: 16px 20px 16px 60px; box-sizing: border-box;}
+.qa_top_txt .title{font-size: 16px;margin-bottom: 6px;}
+.qa_top_txt .date{font-size: 12px;color:#999}
+.qa_bottom_txt .date{font-size: 12px;color:#999;margin-top: 6px;}
+.qa_bottom_txt {line-height: 24px;background: #F4F8F9 url('/images/i_answer.png') no-repeat 17px 17px; background-size: 27px;padding: 16px 20px 16px 60px; box-sizing: border-box;}
+.qa_reg_page textarea{height: 340px; margin-top: 15px;}
+.alarm_ul>li{padding: 16px 20px;box-sizing: border-box;position: relative;}
+.alarm_ul>li p{font-size: 16px;}
+.alarm_ul>li .btn_del{width: 12px;position: absolute;z-index: 1;top:19px;right:20px;}
+

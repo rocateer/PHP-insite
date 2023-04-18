@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NanumBarunGothic.eot);
+  src: local('Nanum Barun Gothic'),
+       local('NanumBarunGothic'),
+       url(../fonts/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/NanumBarunGothic.woff2) format('woff2'),
+       url(../fonts/NanumBarunGothic.woff) format('woff'),
+       url(../fonts/NanumBarunGothic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/NanumBarunGothicBold.eot);
+  src: local('Nanum Barun Gothic Bold'),
+       local('NanumBarunGothicBold'),
+       url(../fonts/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/NanumBarunGothicBold.woff2) format('woff2'),
+       url(../fonts/NanumBarunGothicBold.woff) format('woff'),
+       url(../fonts/NanumBarunGothicBold.ttf) format('truetype');
+}
+
+body {background:#fff;}
+body,div,p,dl,dd,dt,footer,ul,li,select,input,textarea{margin:0; padding:0; font-family: 'Nanum barun Gothic',dotum,sans-serif; font-size:14px; color:#333; line-height:140%;}
+a {text-decoration:none; color:#333;}
+a:focus {outline:none;}
+li{list-style:none;}
+table{border-collapse:collapse;}
+h1, h2, h3, h4, h5, h6{margin: 0; color: #333; line-height: 140%; font-weight: 400}
+
+.wrap{width: 100%; overflow: hidden;}
+.body{padding-bottom: 30px;}
+
+.img_wrap{overflow: hidden;}
+.img_wrap img{object-fit: cover; width: 100%; height: 100%;}
+
+.img_list li{margin-bottom: 20px}
+.img_list li:last-child{margin-bottom: 0}
+.img_list .img_wrap{width: 100vw; height: 100vw}
+
+.album_profile{display: flex; height: 62px; display: flex; align-items: center; justify-content: space-between;}
+.album_profile .profile_title{display: flex; align-items: center;}
+.album_profile .img_wrap{width: 30px; height: 30px; border-radius: 50%; margin-right: 8px; margin-left: 20px}
+
+.album_contents{padding: 0 20px}
+.album_contents h3{font-size: 17px; padding: 13px 0; border-bottom: 1px solid #ddd; font-weight: bold}
+.album_contents p{padding: 18px 0}
+
+.comment_wrap{padding: 20px 20px 0 20px; background: #F6F6F6;}
+.comment_wrap .comment_form{margin-bottom: 17px;}
+.comment_wrap .comment_form input,
+.comment_wrap .comment_form textarea{border: 0; width: 100%; box-sizing: border-box; resize: none; height: 44px; padding: 0 10px; border-radius: 0}
+.comment_wrap .comment_form textarea{ width: calc(100% - 50px); padding: 10px; height: 80px}
+.comment_wrap .comment_form input::-webkit-input-placeholder,
+.comment_wrap .comment_form textarea::-webkit-input-placeholder{color:#999;}
+.comment_wrap .input_wrap {position: relative;background: #fff; margin-top: 9px}
+.comment_wrap .input_wrap a{display: block; width: 22px; height: 20px; padding: 10px; position: absolute; right:0; bottom:0}
+.comment_wrap .input_wrap a img{width: 100%}
+.comment_wrap p{font-size: 15px}
+.comment_wrap p span{color: #3BAEE5}
+.comment_wrap li{position: relative; border-bottom: 1px solid #ddd; padding: 20px 0}
+.comment_wrap li:last-child{border-bottom: 0}
+.comment_wrap .img_wrap{width: 25px; height: 25px; border-radius: 50%; margin-right: 8px; display: inline-block; vertical-align: middle;}
+.comment_wrap strong{font-size: 13px}
+.comment_wrap .date{position: absolute; right:0; top:24px; font-size: 11px; color: #7B7B7B}
+.comment_wrap li p{font-size: 15px; margin-top: 6px; padding-left: 33px}
+
+/* 공지사항 */
+.board_title{padding: 16px 20px; border-bottom: 1px solid #ccc}
+.board_title p{font-size: 15px; font-weight: bold; margin: 5px 0}
+.board_title span{font-size: 12px; color: #999}
+.board_con{padding: 20px; box-sizing: border-box; min-height: calc(100vh - 426px)}
+
+/* 맞춤정보 */
+.title_wrap{position: relative; height:250px}
+.title_wrap .dim{position: absolute;width: 100%; height: 100%; background: rgba(0,0,0,.35)}
+.title_wrap .back_img{position: absolute; width: 100%; height: 100%}
+.title_wrap .title_con{position: absolute; width: 100%; height: 100%; left:0; top:0 }
+.title_wrap .btn_wrap {background: rgba(0,0,0,.3); display: flex; justify-content: flex-end; align-items: center; padding: 0 15px; box-sizing: border-box;height: 40px;}
+.title_wrap .btn_wrap a{display: block; font-size: 13px; color: #fff; min-width: 20px; text-align: center; padding: 5px; margin-left: 5px}
+.title_wrap .btn_wrap a img{vertical-align: middle; width: 24px}
+.title_wrap .btn_wrap a span{margin-left: 5px}
+.title_wrap h1{color: #fff; font-size: 20px; padding: 0 20px; margin-top: 81px; position: relative;}
+.title_wrap h1:after{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 36px;
+  background-color: #F6D54A;
+  top: -15px;
+  left: 20px;
+}
+.title_wrap .bottom_info{padding: 20px; color: #fff; position: absolute; bottom:0; width: 100%; box-sizing: border-box;}
+.title_wrap .bottom_info .img_wrap{width: 18px; height: 18px; border-radius: 50%; margin-right: 8px; display: inline-block; vertical-align: middle;}
+.title_wrap .bottom_info .date{position: absolute; right:20px; top:20px;}
+
+/* 테스트 결과 */
+.result_wrap{background: #F6F6F6; min-height: 100vh; overflow: hidden;}
+header{padding: 20px; margin-bottom: 15px}
+header h1{font-size: 14px; font-weight: 400; text-align: center}
+header .btn_close{position: absolute; right: 20px; top:20px}
+header .btn_close img{width: 16px}
+.result_wrap .title_wrap{height: 50px; background: #3BAEE5; padding: 0 15px 0 20px; display: flex; align-items: center; justify-content: space-between;}
+.result_wrap .title_wrap h2{color: #fff; font-size: 18px}
+.result_wrap .title_wrap .btn_wrap{background: none; padding: 0}
+.result_con_wrap{padding: 0 20px; overflow: hidden;}
+.result_con_wrap h3{margin-top: 40px; font-size: 24px; font-weight: 400;}
+.result_con_wrap h3 span{color: #3BAEE5}
+.result_con{margin-top: 18px; background: #fff; border-radius: 10px; padding: 16px 18px; font-size: 15px}
+.foot_btn_wrap{margin: 32px 0 64px}
+.foot_btn_wrap a{display: block; width: 159px; height: 44px; line-height: 44px; border-radius: 29px; background: #F6D54A; margin: 0 auto; text-align: center; font-size: 16px;}
+
+/* 하단 배너 */
+.full_banner_wrap .img_wrap{height: 176px; margin: 0}

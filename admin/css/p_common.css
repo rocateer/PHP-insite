@@ -1,0 +1,65 @@
+/*
+ *  MEMO : 프로젝트별 공통 관리자 스타일 파일입니다.
+ * 작성자 : Haley
+ * 작성일 : 2017/12/28.
+*/
+
+.overscroll_wrap{overflow-x: auto;width: 100%;}
+.overscroll{table-layout: fixed; word-break:break-all;}
+.overscroll_wrap::-webkit-scrollbar {width: 8px; height: 8px;}
+/* main dashboard*/
+.main_box{padding:15px; border-radius:10px; position: relative;}
+.main_box h3{color: rgba(255,255,255,.8); font-weight:400; margin:5px 0 15px; text-align: left;}
+.main_box h1{font-size: 50px;}
+.main_box > div{background: rgba(0,0,0,0); color: #fff; padding:0px; margin-top: 10px; border-radius: 3px}
+.main_box > div h4{font-size: 14px; margin: 0 0 15px; font-weight: 400}
+.main_box > div p{font-size: 30px; margin:0; text-align: right}
+.main_box .more{position: absolute; right: 15px; top:15px; background-color: rgba(0,0,0,.05); border: 1px solid rgba(0,0,0,.1)}
+.main_box .more:hover{background-color: rgba(0,0,0,.1);}
+
+.main_box.blue{background: #556cba}
+.main_box.mint{background: #1aa8b1}
+.main_box.green{background: #5eb054}
+.main_box.pink{background: #ec566f}
+
+.col-md-2-5{width: 20%; float: left; padding: 15px;}
+/* board */
+.board_box{min-height:150px; }
+.scroll_box{height:150px; overflow-y:auto; }
+
+/* 추가 style */
+.container-fluid.wide{width:1300px; }
+
+/* board */
+.board_box{min-height: 150px; }
+.scroll_box{height: 150px; overflow-y: auto; }
+.textarea_box{width:100%; height:150px; resize:vertical; border-radius:5px; border: #ddd solid 1px; }
+.list_title_1{width:400px; display:inline-block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+/*  */
+.bg_wh{position: relative; }
+.select_list_num{position:absolute; right:15px; top:10px; }
+
+/* 말줄임표 */
+.text_over{display:inline-block; width:230px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+/* print */
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}
+
+/* loader */
+.loader{
+  display: none;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('/images/loading_map.gif ');
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -1,0 +1,21 @@
+
+/* main */
+.main_wrap{width:1200px; margin:0 auto;}
+.main_wrap h3{font-size: 40px; margin: 60px 0; text-align: center; line-height: 100%; }
+
+.intro{background: url(../images/bg_intro.png) no-repeat; height: 500px; background-size: cover;}
+.intro .intro_banner p{font-size: 42px; color: #fff; text-align: center; padding: 170px 0 196px}
+
+.service{background: #ffd900; overflow: hidden;}
+.service ul{overflow: hidden; margin-bottom: 110px}
+.service ul li{float: left; width: 33.3%;}
+.service ul li dl{text-align: center; padding-top: 200px; }
+.service ul li dl.making{background: url(../images/icon_making.png) center 25px no-repeat; }
+.service ul li dl.acting{background: url(../images/icon_acting.png) center 25px no-repeat; }
+.service ul li dl.selling{background: url(../images/icon_selling.png) center 25px no-repeat; }
+.service ul li dl dt{font-size: 26px; color: #333; }
+.service ul li dl dd{font-size: 16px;}
+
+.partner{background: url(../images/bg_partner.png) no-repeat; height: 520px; background-size: cover; overflow: hidden;}
+.partner .main_wrap h3{color: #fff}
+.partner .main_wrap p{font-size: 20px; color: #fff; text-align: center; margin-bottom: 120px;}

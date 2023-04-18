@@ -1,0 +1,163 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/*
+|------------------------------------------------------------------------
+| Author : 김옥훈
+| Create-Date : 2018-12-20
+| Memo : 패스워드 찾기
+|------------------------------------------------------------------------
+
+input_check 가이드
+_________________________________________________________________________________
+|  !!. 변수설명
+| $key       : 파라미터로 받을 변수명
+| $empty_msg : 유효성검사 실패 시 전송할 메세지,
+|              ("empty_msg" => "유효성검사 메세지") 로 구분하며 list 타입임.
+| $focus_id  : 유효성검사 실패 시 foucus 이동 ID,
+|              ("focus_id" => "foucus 대상 ID")
+| $ternary  : 삼항 연산자 받을 변수명
+|              ("ternary" => "1")
+| $esc       : 개행문자 제거 요청시 true, 아닐시 false
+|              false를 요청하는 경우-> (ex. 장문의 글 작성 시 false)
+|           	 값이 array 형태일 경우 false로 적용
+| $regular_msg : 정규표현식 검사 실패 시 전송할 메세지,
+|              ("regular_msg" => "정규표현식 메세지","type" => "number")
+| $type    	: 유효성검사할 타입
+|           	 number   : 숫자검사
+|            	email    : 이메일 양식 검사
+|            	password : 비밀번호 양식 검사
+|            	tel1     : 전화번호 양식 검사 (- 미포함)
+|            	tel2     : 전화번호 양식 검사 (- 포함)
+|            	custom   : 커스텀 양식, $custom의 양식으로 검사함
+|            	default  : default, 검사를 안합니다.
+| $custom 	: 유효성검사 custom으로 진행 시 받을 값 (정규표현식)
+|
+|  !!!. 값이 array형태로 들어올 경우
+| $this->input_chkecu("파라미터로 받을 변수명[]");
+| 형태로 받는다.
+|_________________________________________________________________________________
+*/
+class Find_pw_to_email extends MY_Controller{
+	function __construct(){
+		parent::__construct();
+
+		$this->load->model('find_pw_to_email/model_find_pw_to_email');
+	}
+
+	// 1. 비밀번호 변경 요청 인증키 확인
+	public function member_pw_change_key_check(){
+
+		$p_code	= $this->_input_check("p_code",array());
+
+		$data['p_code'] = $p_code;
+
+    # model. 비밀번호 변경 요청 인증키 확인
+	  $p_code_check = $this->model_find_pw_to_email->member_pw_change_key_check($data);
+
+		if(count($p_code_check)<1) {
+			echo "잘못된경로입니다.";
+		}else{
+			$this->_view2('find_pw_to_email/view_member_pw_reset_view',array("data"=>$data));
+		}
+
+	}
+
+  // 2. 비밀번호 재설정
+	public function member_pw_reset_up(){
+
+		$p_code	= $this->_input_check("p_code",array());
+		$member_pw = $this->_input_check("member_pw",array("empty_msg"=>"비밀번호를 입력해주세요.","regular_msg" => "비밀번호는 영어,숫자 조합으로 8자~16자내로 입력해주세요.","type" => "custom","custom" => "/^.*(?=^.{8,16}$)(?=.*\d)(?=.*[a-zA-Z]).*$/"));
+		$member_pw_check = $this->_input_check("member_pw_check",array("empty_msg"=>"비밀번호 확인을 입력해주세요."));
+
+    $response = new stdClass();
+
+		if($member_pw != $member_pw_check){
+      $response->code = "-1";
+      $response->code_msg = "비밀번호가 일치하지 않습니다.";
+
+			echo json_encode($response);
+			exit;
+		}
+
+		$data['p_code'] = $p_code;
+		$data['member_pw'] =$member_pw;
+
+    # model. 회원 비밀번호 재설정
+		$result = $this->model_find_pw_to_email->member_pw_reset_up($data);
+
+		if($result < 0){
+      $response->code = "-1";
+      $response->code_msg = "처리 중 오류가 발생했습니다. 관리자에게 문의해주세요.";
+
+		}else{
+      $response->code = "1000";
+      $response->code_msg = "비밀번호가 변경되었습니다.";
+		}
+
+    echo json_encode($response);
+    exit;
+	}
+
+
+	// 1. 비밀번호 변경 요청 인증키 확인
+	public function corp_pw_change_key_check(){
+
+		$p_code	= $this->_input_check("p_code",array());
+
+		$data['p_code'] = $p_code;
+
+		# model. 비밀번호 변경 요청 인증키 확인
+		$p_code_check = $this->model_find_pw_to_email->corp_pw_change_key_check($data);
+
+		if(count($p_code_check) == 0) {
+			echo "잘못된경로입니다.";
+		}else{
+			$this->_view2('find_pw_to_email/view_member_pw_reset_view',array("data"=>$data));
+		}
+
+	}
+
+
+	// 2. 비밀번호 재설정
+	public function corp_pw_reset_up(){
+
+		$p_code	= $this->_input_check("p_code",array());
+		$member_pw = $this->_input_check("member_pw",array("empty_msg"=>"비밀번호를 입력해주세요.","regular_msg" => "비밀번호는 영어,숫자 조합으로 8자~16자내로 입력해주세요.","type" => "custom","custom" => "/^.*(?=^.{8,16}$)(?=.*\d)(?=.*[a-zA-Z]).*$/"));
+		$member_pw_check = $this->_input_check("member_pw_check",array("empty_msg"=>"비밀번호 확인을 입력해주세요."));
+
+		$response = new stdClass();
+
+		if($member_pw != $member_pw_check){
+			$response->code = "-1";
+			$response->code_msg = "비밀번호가 일치하지 않습니다.";
+
+			echo json_encode($response);
+			exit;
+		}
+
+		$data['p_code'] = $p_code;
+		$data['member_pw'] =$member_pw;
+
+		# model. 회원 비밀번호 재설정
+		$result = $this->model_find_pw_to_email->corp_pw_reset_up($data);
+
+		if($result < 0){
+			$response->code = "-1";
+			$response->code_msg = "처리 중 오류가 발생했습니다. 관리자에게 문의해주세요.";
+
+		}else{
+			$response->code = "1000";
+			$response->code_msg = "비밀번호가 변경되었습니다.";
+		}
+
+		echo json_encode($response);
+		exit;
+	}
+
+
+	// 1. 비밀번호 변경 요청 인증키 확인
+	public function member_pw_complete(){
+		$this->_view2('find_pw_to_email/view_member_pw_reset_complete');
+  }
+
+}// 클래스의 끝
+?>

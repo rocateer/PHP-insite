@@ -1,0 +1,86 @@
+/*
+SQLyog Community v13.1.2 (64 bit)
+MySQL - 5.6.14 : Database - platform_DB
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`platform_DB` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `platform_DB`;
+
+/*Table structure for table `tbl_member` */
+
+DROP TABLE IF EXISTS `tbl_member`;
+
+CREATE TABLE `tbl_member` (
+  `member_idx` int(11) NOT NULL AUTO_INCREMENT COMMENT '회원 키',
+  `member_join_type` char(1) DEFAULT NULL COMMENT '회원 가입타입(C:일반,K:카카오톡,F:페이스북,N:네이버\n)',
+  `member_type` varchar(1) DEFAULT NULL COMMENT '회원 타입',
+  `member_id` varchar(200) DEFAULT NULL COMMENT '회원 아이디',
+  `member_email` varchar(200) DEFAULT NULL COMMENT '회원 이메일\n',
+  `member_pw` varchar(200) DEFAULT NULL COMMENT '회원 비밀번호\n',
+  `member_name` varchar(200) DEFAULT NULL COMMENT '회원 이름',
+  `member_nickname` varchar(200) DEFAULT NULL COMMENT '회원 별명',
+  `member_phone` varchar(200) DEFAULT NULL COMMENT '회원 핸드폰',
+  `member_post_number` varchar(200) DEFAULT NULL COMMENT '회원 우편번호',
+  `member_addr` varchar(200) DEFAULT NULL COMMENT '회원 주소',
+  `member_addr_detail` varchar(200) DEFAULT NULL COMMENT '회원 상세주소',
+  `member_gender` varchar(1) DEFAULT NULL COMMENT '회원 성별 (0:남성,1:여성)',
+  `member_birth` varchar(200) DEFAULT NULL COMMENT '회원 생년월일',
+  `member_img` varchar(200) DEFAULT NULL COMMENT '회원 이미지',
+  `member_state` varchar(1) DEFAULT NULL COMMENT '회원 상태',
+  `city_code` int(11) DEFAULT NULL COMMENT '지역 코드',
+  `receiver_name` varchar(200) DEFAULT NULL COMMENT '배송::수취인',
+  `receiver_tel` varchar(200) DEFAULT NULL COMMENT '배송::연락처',
+  `receiver_post_number` varchar(200) DEFAULT NULL COMMENT '배송::우편번호',
+  `receiver_addr` varchar(200) DEFAULT NULL COMMENT '배송::주소1',
+  `receiver_addr_detail` varchar(200) DEFAULT NULL COMMENT '배송::주소2',
+  `alram_notice` varchar(1) DEFAULT 'Y' COMMENT '알람수신여부(공지):(Y:수신,N:수신안함)',
+  `alram_beacon` varchar(1) DEFAULT 'Y' COMMENT '알람수신여부(비콘):(Y:수신,N:수신안함)',
+  `alram_order` varchar(1) DEFAULT 'Y' COMMENT '알람수신여부(주문서):(Y:수신,N:수신안함)',
+  `alarm_yn` char(1) DEFAULT 'N' COMMENT '알람 여부 N:사용안함, Y:사용함',
+  `gcm_key` varchar(200) DEFAULT NULL COMMENT 'gcm_key',
+  `device_os` char(1) DEFAULT NULL COMMENT '디바이스os(A:android,I:ios)',
+  `pwd_key` varchar(200) DEFAULT NULL COMMENT '비밀번호 재설정키',
+  `marketing_agree_yn` varchar(1) DEFAULT NULL COMMENT '회원가입 시 마케팅 동의여부(Y:동의,N:동의안함)',
+  `event_alarm_yn` varchar(1) DEFAULT 'Y' COMMENT '이벤트 푸쉬알람(Y:수신,N:수신거부)',
+  `facebook_yn` varchar(1) DEFAULT 'N' COMMENT '페이스북 연결유무(Y:연결,N:연결안함)',
+  `instargram_yn` varchar(1) DEFAULT 'N' COMMENT '인스타그램 연결유무(Y:연결,N:연결안함)',
+  `dropbox_yn` varchar(1) DEFAULT 'N' COMMENT '드롭박스 연결유무(Y:연결,N:연결안함)',
+  `twitter_yn` varchar(1) DEFAULT 'N' COMMENT '트위터 연결유무(Y:연결,N:연결안함)',
+  `google_drive_yn` varchar(1) DEFAULT 'N' COMMENT '구글드라이브 연결유무(Y:연결,N:연결안함)',
+  `member_leave_reason` varchar(200) DEFAULT NULL COMMENT '회원 탈퇴사유',
+  `member_leave_date` datetime DEFAULT NULL COMMENT '회원 탈퇴일',
+  `member_memo` varchar(200) DEFAULT NULL COMMENT '회원 메모',
+  `login_date` datetime DEFAULT NULL COMMENT '최근접속일',
+  `email_recieved_agree_yn` char(1) DEFAULT 'N' COMMENT '이메일수신동의여부(N:안함,Y:수신함)',
+  `sms_recieved_agree_yn` char(1) DEFAULT 'N' COMMENT 'sms수신동의여부(N:안함,Y:수신함)',
+  `member_leave_type` tinyint(1) DEFAULT NULL COMMENT '* 회원탈퇴 사유 (0: 사용하지 않음 1: 컨텐츠 부족 2: 부적절한 컨텐츠 3: 기타)',
+  `del_yn` varchar(1) DEFAULT 'N' COMMENT '삭제유무(N:정상,Y:삭제)',
+  `ins_date` datetime DEFAULT NULL COMMENT '등록일',
+  `upd_date` datetime DEFAULT NULL COMMENT '수정일',
+  PRIMARY KEY (`member_idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='회원테이블';
+
+/*Data for the table `tbl_member` */
+
+insert  into `tbl_member`(`member_idx`,`member_join_type`,`member_type`,`member_id`,`member_email`,`member_pw`,`member_name`,`member_nickname`,`member_phone`,`member_post_number`,`member_addr`,`member_addr_detail`,`member_gender`,`member_birth`,`member_img`,`member_state`,`city_code`,`receiver_name`,`receiver_tel`,`receiver_post_number`,`receiver_addr`,`receiver_addr_detail`,`alram_notice`,`alram_beacon`,`alram_order`,`alarm_yn`,`gcm_key`,`device_os`,`pwd_key`,`marketing_agree_yn`,`event_alarm_yn`,`facebook_yn`,`instargram_yn`,`dropbox_yn`,`twitter_yn`,`google_drive_yn`,`member_leave_reason`,`member_leave_date`,`member_memo`,`login_date`,`email_recieved_agree_yn`,`sms_recieved_agree_yn`,`member_leave_type`,`del_yn`,`ins_date`,`upd_date`) values 
+(1,'C',NULL,'2F7A61618996663AD1F6010665AFCB2076258D26B4C01A9187BD8A4E6ECCB4FB','2F7A61618996663AD1F6010665AFCB2076258D26B4C01A9187BD8A4E6ECCB4FB','ffea85a9d7ebf678f1023643c453995d5edc71aafc043f0c3230a8c0ae94b1a663fe129d5526ea6e9947237d7e2ebefa52c9be2898c2ad5759ef84e45895819a','0D729A817AECBBCB458E63782991E811','234AD4757ECCFA05CA70334E50E50FAB','23C4ED051730A43EABA78993CC7FE1F7','08506  ','8412755A5B56C5C47FE17E6D8F34F571481FE7AF5BBCF18C67089E7C6D6C83D419EA6362ED75E735021EBF629E77FEDA','B4E3C97490629A1D877C81A206E12731D1BD18D4103D1B2683589FD04F1C4786','0','3710EEA36026F0F10F2C106D4D458375',NULL,'0',NULL,'8B4DA1A64D1BA829363C2C6ED9840AFD','0134284D17B088D1BD331C65D34C7670','FB06AF3FC0C0D83F96D4A4F06908D6FC','966BAACAE3767EF3D28DC1B62C36959E1776DCF4282B8E09B60E73BCA211FB547C68B220B0E37E8F7EBC14BA95E920A3','D736D7892AC291BFFB6A0A76C1E6D417322279E5454D20CA41B2BF662072D59718B1D9BA24400832EC355DD1541FCC2B','Y','Y','Y','N',NULL,'A',NULL,'Y','Y','N','N','N','N','N',NULL,NULL,NULL,'2018-12-04 09:49:26','N','N',NULL,'N','2018-09-06 22:18:05','2019-06-05 20:57:34'),
+(2,'C',NULL,'A5F597A45F0047DD4C7813CB5C6042BFA47670C35A8FC826726C8CF0E78472DC','A5F597A45F0047DD4C7813CB5C6042BFA47670C35A8FC826726C8CF0E78472DC','ffea85a9d7ebf678f1023643c453995d5edc71aafc043f0c3230a8c0ae94b1a663fe129d5526ea6e9947237d7e2ebefa52c9be2898c2ad5759ef84e45895819a','C2683CC866C2A509B00D995A9FFC354F','12432DD145A243A93EF5DE5C318DAD26','AC0CD35250A98AC83D86347576C7EBA4','08506  ','8412755A5B56C5C47FE17E6D8F34F571481FE7AF5BBCF18C67089E7C6D6C83D419EA6362ED75E735021EBF629E77FEDA','B4E3C97490629A1D877C81A206E12731D1BD18D4103D1B2683589FD04F1C4786','1','50EE956A0F4EF3E2ACA2995560B46D2C',NULL,'0',NULL,NULL,NULL,NULL,NULL,NULL,'Y','Y','Y','N',NULL,'I',NULL,'Y','Y','N','N','N','N','N',NULL,NULL,NULL,'2018-12-02 09:49:27','N','N',NULL,'N','2018-12-03 09:49:47','2019-04-02 10:35:13'),
+(3,'C','1','5D80EB4C5EFFF0775A543875BDF13C1F13E803A84C34AB3B0FB5DA5ABD116D3D',NULL,'23f07656b76662e9ab4319fb37c922f5b58ef721753d33ef56f144374e0460137ea412c338559e8c0d4111743914ed847c7071660d989177d9a6799468708af3','353DD5F69249C93A5A5E1DD09F17D8F3',NULL,'353DD5F69249C93A5A5E1DD09F17D8F3',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Y','Y','Y','N','3333333','A',NULL,NULL,'Y','N','N','N','N','N',NULL,NULL,NULL,NULL,'N','N',NULL,'N','2019-04-12 15:40:25','2019-06-04 22:16:45'),
+(4,'C',NULL,'B48DA3C3C3A96609772F5294955913DB82CC9D61F31FA9CD864A2B2579B4B0A4',NULL,'23f07656b76662e9ab4319fb37c922f5b58ef721753d33ef56f144374e0460137ea412c338559e8c0d4111743914ed847c7071660d989177d9a6799468708af3','BCC47B7C738DA40933ECA76A4A12065276258D26B4C01A9187BD8A4E6ECCB4FB','D12D85B366DA2DCD12196A47D0DDB827','1F5FFE5B6F083F54CD7BA90E8BD4B389',NULL,NULL,NULL,'0','3874D3E61377950798CDEBD2052E743A',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Y','Y','Y','N',NULL,NULL,NULL,NULL,'Y','N','N','N','N','N',NULL,NULL,NULL,NULL,'N','N',NULL,'N','2019-06-04 21:33:15','2019-06-04 21:33:15'),
+(5,NULL,NULL,'99677088C52EBC7A6B5EEBDBDC7B789782CC9D61F31FA9CD864A2B2579B4B0A4',NULL,NULL,NULL,'닉플Eng','1F5FFE5B6F083F54CD7BA90E8BD4B389',NULL,NULL,NULL,NULL,'19800658',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Y','Y','Y','N',NULL,'I',NULL,NULL,'Y','N','N','N','N','N',NULL,NULL,NULL,NULL,'N','N',NULL,'N','2019-06-04 21:48:29','2019-06-04 21:48:29'),
+(6,'K',NULL,'99677088C52EBC7A6B5EEBDBDC7B789782CC9D61F31FA9CD864A2B2579B4B0A4',NULL,NULL,'BCC47B7C738DA40933ECA76A4A12065276258D26B4C01A9187BD8A4E6ECCB4FB','닉플Eng','1F5FFE5B6F083F54CD7BA90E8BD4B389',NULL,NULL,NULL,NULL,'19800658',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Y','Y','Y','N',NULL,'I',NULL,NULL,'Y','N','N','N','N','N',NULL,NULL,NULL,NULL,'N','N',NULL,'N','2019-06-04 21:49:57','2019-06-04 21:49:57');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

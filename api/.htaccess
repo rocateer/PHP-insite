@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond $1 !^(index\.php|css|js|robots\.txt|favicon\.ico)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+RewriteCond %{HTTP_HOST} ^(www\.madforgarlic\.co\.kr|madforgarlic\.co\.kr|madforgarlic\.com) [NC]
+RewriteRule ^(.*)$ http://www.madforgarlic.com/$1 [R=301,L]
+</IfModule>

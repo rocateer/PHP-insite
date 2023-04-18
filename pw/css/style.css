@@ -1,0 +1,181 @@
+/*
+ *  MEMO : 프로젝트 스타일 파일입니다.
+ * 작성자 : 민지
+ * 작성일 : 2020/02/25.
+*/
+
+/* .full_body{height: 100vh; position:relative;} */
+header{height:50px; border-bottom: 1px solid #eee; box-sizing: border-box; position:fixed; top:0; left: 0; width:100%; background: #fff; z-index: 99;}
+header .btn_back{position: absolute; left:0; top:50%; transform: translateY(-50%); width: 16px; padding: 16px; line-height: 1}
+header .btn_home{position: absolute; left:26px; top:50%; transform: translateY(-50%); width: 16px; padding: 16px; line-height: 1}
+header h1{font-size:18px; text-align: center; line-height:50px; color:#FF4A4A; font-family: 'S-CoreDream-5Medium';}
+
+header .btn_close{position: absolute; right:0; top:50%; transform: translateY(-50%); width: 14px; height: 14px; padding: 16px}
+header .head_btn{position: absolute; right:0; top:55%; transform: translateY(-50%); padding: 16px; font-weight: bold; line-height: 1}
+header .head_btn img{width: 16px;}
+header .head_search{position: absolute; right:30px; top:55%; transform: translateY(-50%); padding: 16px; font-weight: bold; line-height: 1}
+header .head_search img{width: 16px;}
+header .head_logo{height:14px; margin-top:21px;}
+header .search_wrap{position:absolute; z-index:99; left:0; top:50px; width:calc(100% - 20px); padding:10px; display:none; background-color:rgba(255,255,255,1);}
+header .search_wrap .input_box{border:1px solid #ddd; width:100%; position: relative;}
+header .search_wrap input{width:100%; vertical-align: middle; text-indent:10px; font-size:13px;}
+header .search_wrap a{position: absolute; right:0px; top:0; margin-left:10px; width:70px; background: #fff; text-align: center; height:38px; vertical-align: middle; line-height:38px; font-size: 12px; color: #666;}
+
+footer{margin-top: 56px; font-family: LatoWebThin; font-style: normal;}
+footer ul{position: fixed; bottom:0; width: 100%; height: 56px; background: #fff; border-top: 1px solid #ddd}
+footer li{width: 25%; float: left; text-align: center;}
+footer li a{display: inline-block;}
+footer li img{width: 16px; padding: 20px}
+
+.nav{ position: fixed; width:80%; height: 100%; background: #fff; top:0; left:-100%; z-index: 999; transition: all .3s;}
+.nav.open{left:0}
+.nav .nav_top{position: relative; border-bottom: 1px solid #ddd; margin: 0 30px; height: 52px; text-align: center;}
+.nav .nav_top .welcome_area{color: #000; line-height:55px;}
+.nav .nav_top .welcome_area span{font-size: 18px; color: #000;}
+.nav .nav_top .head_logo{width:76px; margin-top:20px;}
+.nav .nav_top .before_login{padding: 20px 0; text-align: center}
+.nav .nav_top .before_login a{padding: 0 20px;}
+.nav .nav_top .after_login{display: block; padding: 17px 30px; background: url(../images/icon_arrow_right.png) calc(100% - 20px) center no-repeat; background-size: 7px}
+.nav .nav_top .btn a{display: inline-block; height: 36px; width: 80px; box-sizing: border-box; line-height: 36px; border: 1px solid #424242; text-align: center; margin-right: 6px; font-size: 12px}
+.nav .nav_top .btn:nth-of-type(2) a{margin-right: 0}
+.nav .nav_top .nav_close_btn{position: absolute; left:-25px; top: 5px; width: 14px; height: 14px; padding: 15px; display: none}
+.nav.open .nav_top .nav_close_btn{display: block;}
+.nav .nav_top .nav_close_btn img{width: 100%}
+.nav .side_nav{padding: 20px 0; height: calc(100% - 77px); overflow-x: hidden; overflow-y: auto;}
+.nav .side_nav li h2{position: relative}
+.nav .side_nav h2 a{display: block; padding: 10px 30px; color: #000; font-size: 14px; font-weight: normal}
+.nav_dim{position: fixed; left:0; top:0; width: 100%; height: 100vh; z-index: 9; opacity: 0; visibility: hidden;background: rgba(0,0,0,.4);}
+.nav_dim.open{opacity: 1; visibility:visible;}
+
+
+/* 로그인 */
+.login_logo{font-family: 'S-CoreDream-5Medium'; font-size: 47px; color: #FF4A4A; text-align: center; margin-top: 150px; margin-bottom: 80px;}
+.login_wrap{width:100%; padding: 0 40px; box-sizing: border-box; margin: 0 auto;}
+.login_link{width:100%; text-align: center; margin:20px auto 40px; box-sizing: border-box;}
+.login_link a{display: inline-block; width: ; margin: 0 20px; color: #666; text-align: center; box-sizing:border-box;}
+.login_link span{display: inline-block; color: #ddd; vertical-align: top;}
+
+/* 회원가입 동의 리스트 */
+.all_checkbox li{height: 40px; line-height: 40px;}
+.all_checkbox li > span a{float: right; text-decoration: underline; font-size: 12px; color: #999;}
+
+/* 회원가입 버튼 flex style */
+.flex_1, .flex_2, .flex_3{display: flex;}
+.flex_1 input, .flex_1 select{flex: 1; padding: 0; text-indent: 15px;}
+.flex_1 span{line-height: 45px; flex: 0 0 25px; text-align: center; vertical-align: middle;}
+.flex_2 input, .flex_3 input{flex:1;}
+.flex_2 a{border-radius: 4px; margin-left: 10px; text-align: center; color: #FF4A4A; height:50px; line-height: 50px; box-sizing: border-box; border: 1px solid #FF4A4A; flex: 0 0 95px;}
+.flex_3 a{border-radius: 4px; margin-left: 10px; text-align: center; color: #FF4A4A; height:50px; line-height: 50px; box-sizing: border-box; border: 1px solid #FF4A4A; flex: 0 0 120px;}
+.flex_3 a.deactive{border: none; background: #eee; color: #999;}
+.flex_3 .txt_timer{padding-right:9px; background: #fff; color: #FF7B7B; font-size: 12px; position: absolute; top:50%; right: 131px; transform: translateY(-50%);}
+
+/*-------------------------complete 화면-------------------------*/
+/* complete 공통 */
+.complete_wrap{border: 1px solid; margin:0 auto; font-family:'Nanum Barun Gothic', '나눔바른고딕'; }
+.complete_wrap img{width:66px; margin:0 auto}
+.complete_wrap p{color:#666; font-size:37px; font-weight:200; font-family:'Nanum Barun Gothic', '나눔바른고딕'; line-height:44px;}
+.complete_wrap span{font-size:12px; color: #999; padding-top:10px; display: block; line-height: 18px;}
+/* join_complete */
+.complete_wrap.join h3{font-family: 'S-CoreDream-5Medium';margin-top: 220px; font-size: 32px; color:#FF4A4A; }
+
+/* 헤더 있는 안내 화면 */
+.body_full_wrap{width: calc(100% - 76px); margin: 0 auto; text-align: center; padding-top: 115px; border-top: 1px solid #F5F5F5}
+.body_full_wrap img{width: 70px; margin: 0 auto}
+.body_full_wrap h2{font-size: 16px; padding: 55px 0 10px; color: #333}
+.body_full_wrap span{color: #666}
+.body_full_wrap .btn_refresh{display: inline-block; background: url(../images/icon_refresh.png) left center no-repeat; background-size: 16px; padding-left: 28px; color: #999}
+
+/* 회원 탈퇴 */
+.withdrawal_text{padding: 16px; border-bottom: 1px solid #F5F5F5; color: #666}
+.withdrawal_text strong{font-size: 18px; color: #333; line-height: 200%}
+.withdrawal_reason li{height: 60px; line-height: 60px}
+.text_count{text-align: right; font-size: 12px; color: #9E9E9E; margin-top: 5px}
+.btn_wrap{overflow: hidden;}
+.btn_wrap .btn a{display: block; float: left; text-align: center; width: calc(50% - 5px); height: 40px; line-height: 40px}
+.btn_wrap .btn_gray a{margin-right: 10px}
+.modal .md_content p{font-size: 20px; text-align: center; color: #212121; margin: 60px 0}
+
+/* 메인 */
+.swiper-slide{background: #757575; text-align: center; line-height: 200px; color: #fff}
+.swiper-pagination{bottom:15px; width: 100%;}
+.swiper-pagination-bullet{width: 8px; height: 8px; margin-left: 10px; background: #BDBDBD; opacity: 1}
+.swiper-pagination-bullet:first-of-type{margin-left: 0}
+.swiper-pagination-bullet-active{background:#424242; opacity: 1}
+.full_banner_wrap{position: relative; height: 138px; overflow: hidden;}
+.full_banner_wrap img{width: 100%;}
+
+/* news */
+.main_news_area{}
+.main_news_area .news_img {position:relative; overflow: hidden; height:auto; width:100%;}
+.main_news_area .news_img .img_wrap{top:0; left:0; right:0; bottom:0;}
+.main_news_area .news_img .img_wrap img{top:0; left:0; width: 100%; height:auto;}
+.main_news_area .info_area{position: relative; padding:15px 12px;}
+.main_news_area .info_area .head_title{font-size: 16px; font-style: normal; margin-bottom:6px;}
+.main_news_area .info_area span{font-size: 12px; color:#666;}
+.main_news_area .info_area .con_thum{font-size: 12px; color:#999; margin-top: 15px; white-space: normal; overflow: hidden; text-overflow: ellipsis; line-height: 1.6; height: 3.2em; word-break: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.main_news_area .thumbnail img{width:100%;}
+.main_news_area .news_con{color:#666; margin-top: 20px; line-height: 160%;}
+.main_news_area .news_con img{max-width: 100%;}
+
+.view_body{margin-top:52px; padding:0px;}
+.project_info_wrap{padding: 0 8px; margin-bottom: 40px;}
+.project_info_wrap .project_map{width:100%; display: block;}
+.project_info_wrap .project_map img{width:100%; display: block;}
+.project_info_wrap .project_info{background: #fff; border: 1px solid #d4d4d4; border-top: none; padding:20px 15px; margin: 0; position: relative;}
+.project_info_wrap .project_info .info_name{font-size:20px; color:#000; width:calc(100% - 60px);}
+.project_info_wrap .project_info .info_url{font-size:12px; color:#000;}
+.project_info_wrap .project_info .info_date{font-size:12px; color:#666; position: absolute; right:15px; top:24px;}
+.project_info_wrap .project_info .info_table{width: 100%; margin-top: 20px;}
+.project_info_wrap .project_info .info_table th{width:50px; text-align: left; font-weight: normal;}
+.project_info_wrap .project_info .info_table td{padding: 5px 0;}
+
+/* 공지사항 */
+.board_list{border-top: 1px solid #d4d4d4}
+.board_list li{display: block; border-bottom: 1px solid #d4d4d4; padding: 16px; position: relative; padding:13px 10px 13px 38px;}
+.board_list li a {font-size:14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-weight: 200;}
+.board_list li a p{font-size:12px; color:#999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 5px;}
+.board_list li .number{font-size: 16px; color:#D4D4D4; position: absolute; right:20px; top:20px;}
+
+.board_title{padding: 16px; border-bottom: 1px solid #F5F5F5}
+.board_title p{font-size:16px; margin-bottom: 5px;}
+.board_title span{font-size: 12px; color: #999}
+.board_con{padding:0px 0px; color:#666; font-size: 14px;}
+.board_con img{max-width: 100%;}
+.board_con .board_txt{padding:20px 12px;}
+
+/* FAQ */
+.accordion{overflow: hidden;}
+.accordion li{display: block; border-bottom: 1px solid #d4d4d4; position: relative; padding:13px 30px 13px 36px;}
+.accordion li div{overflow: hidden;}
+.accordion li div.active p, .accordion li div.active p span{color:#000; font-weight: bold;}
+.accordion li div p{font-size:14px; color:#666; line-height: 20px; float: left; width:calc(100% - 1px); font-weight: 200; }
+.accordion li div p.active{color:#ff0000;}
+.accordion li div .i_q{color:#000; font-size: 16px; margin-right: 10px; float: left; margin-bottom: 2px;}
+.accordion li div .date{font-size: 12px; color:#999;}
+.accordion .panel{color:#333; padding: 10px 0 10px 20px; display: none; line-height: 20px; font-size: 13px; font-weight: 200; word-break: break-all;}
+.faq_list li p.active{font-size: 14px; color:#ff0000;}
+.faq_category{padding: 10px 17px;}
+.faq_category select{border:1px solid #d4d4d4; color:#666; font-size: 14px; -webkit-appearance: none; -webkit-border-radius: 0; -moz-appearance: none; appearance: none;}
+
+/* Q&A */
+.reg_btn_wrap{width: 100%; background: #F6F6F6; height: 70px; display: flex; align-items: center; justify-content: center;}
+.reg_btn_wrap a{display: inline-block; border: 1px solid #424242; width: 150px; height: 36px; box-sizing: border-box; line-height: 34px; background: #fff; text-align: center}
+
+.board_list .question_wrap .list_item{padding-left: 65px}
+.board_list .list_item .nick{font-weight: bold; font-size: 12px; margin-right: 7px}
+
+.qa_mark{display: block; width: 30px; height: 30px; border-radius: 15px; font-size: 20px; text-align: center; line-height: 28px; box-sizing: border-box; position: absolute; left:20px; top:23px}
+.question_wrap .qa_mark{background: #333; color: #fff}
+.answer_wrap .qa_mark{background: #fff; color: #333; border: 1px solid #333}
+
+.board_con.question_wrap,
+.board_con.answer_wrap{position: relative; padding: 22px 22px 22px 60px}
+.board_con.question_wrap{background: #F6F6F6}
+
+.board_reg{border-top: 1px solid #F5F5F5; padding: 25px 16px 0;}
+.board_reg div{margin-bottom: 20px}
+.board_reg div span{font-size: 12px; color: #9E9E9E}
+.board_reg div input{border-bottom: 1px solid #E0E0E0}
+.board_reg div textarea{padding: 10px 0; border: 0; border-bottom: 1px solid #E0E0E0; height: 220px}
+.board_reg div input::-webkit-input-placeholder,
+.board_reg div textarea::-webkit-input-placeholder{color:#E0E0E0;}

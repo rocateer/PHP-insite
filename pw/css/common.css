@@ -1,0 +1,127 @@
+/*
+ *  MEMO : 공통 스타일 파일입니다.
+ * 작성자 : 민지
+ * 작성일 : 2020/02/25.
+*/
+
+/* css 초기화 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none; }
+input,select,textarea,button {font-size:100%;vertical-align:middle}
+button {border:0 none;background-color:transparent;cursor:pointer}
+table {border-collapse:collapse;border-spacing:0;width: 100%}
+body {-webkit-text-size-adjust:none; background:#fff} /* 뷰표트 변환시 폰트크기 자동확대 방지 */
+html{-webkit-text-size-adjust:antialiased;-moz-osx-font-sommthing:grayscale;}
+a{color:#000;text-decoration:none; border:none; -webkit-tap-highlight-color:transparent;}
+a:active, a:hover {text-decoration:none}
+a[href^=tel] {text-decoration:inherit;color: inherit;}
+input:focus,select:focus,textarea:focus{outline: none;}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-internal-autofill-selected {background: #fff !important; -webkit-box-shadow: 0 0 0 1000px white inset;}
+
+
+textarea{width: 100%; border: 1px solid #ddd; resize: none; padding: 10px; box-sizing: border-box;}
+textarea::-webkit-input-placeholder{color:#999;}
+select{vertical-align:middle; border: 0; border:1px solid #ddd; width:100%; height:40px; box-sizing: border-box; padding: 0 32px 0 15px; background: url(../images/icon_arrow_down.png) no-repeat calc(100% - 10px) 50%; background-size: 12px; -webkit-appearance: none; -webkit-border-radius: 0; -moz-appearance: none; appearance: none;}
+
+::-webkit-input-placeholder {color:#999;}/* WebKit, Blink, Edge */
+:-moz-placeholder {color:#999; opacity:1;} /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {color:#999; opacity:  1;}/* Mozilla Firefox 19+ */
+:-ms-input-placeholder {color:#999;}/* Internet Explorer 10-11 */
+
+.trigger{cursor: pointer;}
+.row{overflow: hidden;}
+.middle{vertical-align: middle;}
+.w_100{width:100%;}
+.inline_block{display: inline-block;}
+.relative{position: relative;}
+/* layout */
+.wrap{position: relative; padding-bottom: 40px;}
+.mt5{margin-top: 5px}
+.mt10{margin-top: 10px}
+.mt15{margin-top: 15px}
+.mt20{margin-top: 20px!important;}
+.mt30{margin-top: 30px}
+.mt40{margin-top: 40px}
+.mt45{margin-top: 45px}
+.mt50{margin-top: 50px !important;}
+.mt60{margin-top: 60px !important;}
+.mb5{margin-bottom: 5px;}
+.mb10{margin-bottom: 10px;}
+.mb15{margin-bottom: 15px;}
+.mb20{margin-bottom: 20px;}
+.mb30{margin-bottom: 30px;}
+.mb40{margin-bottom: 40px;}
+.mb70{margin-bottom: 70px;}
+.mr0{margin-right:0 !important;}
+
+/* font */
+.fs_12{font-size: 12px;}
+.fs_14{font-size: 14px !important;}
+.fs_16{font-size: 16px;}
+.fs_18{font-size: 18px;}
+.fs_20{font-size: 20px;}
+.font_gray_f{color: #fff;}
+.font_gray_3{color: #333;}
+.font_gray_6{color: #666;}
+.font_gray_0{color: #000;}
+.essential{color:#FF4A4A;}
+
+
+/* 정렬 */
+.f_left{float: left;}
+.f_right{float: right;}
+.txt_right{text-align: right;}
+.txt_center{text-align: center;}
+.txt_left{text-align: left;}
+.clearboth{clear:both;}
+.clearfix:after{content: "";display: table;clear: both;}
+
+/* button */
+.btn_basic a{display: block; text-align: center; height: 36px; line-height:36px; background: #000; color: #fff; font-size: 14px;}
+.btn_gray a{background: #9E9E9E; color: #fff}
+.btn_underline a{ padding-bottom:2px; border-bottom:1px solid #666; display: block;}
+.btn_line a{border:1px solid #666; color:#666; height:36px; line-height:36px; display: block; padding: 0 25px;}
+.btn_line_full a{border:1px solid #666; color:#666;  height:28px; line-height:28px; display: block; text-align: center;}
+
+.btn_m_line a{display: inline-block; font-size:12px; height:28px; line-height:26px; border:1px solid #666; color:#666; width:100px; text-align: center;}
+.btn_solid a{border: 1px solid #000; background: #000; color:#fff;}
+.btn_line a{border: 1px solid #D4D4D4; background: #fff; color:#333;}
+.btn_100 a{display:inline-block; width: 135px; height: 36px; line-height: 36px; text-align: center;}
+.btn_150 a{display:inline-block; width: 150px; height: 36px; line-height: 36px; text-align: center;}
+.btn_160 a{display:inline-block; width: 160px; height: 36px; line-height: 36px; text-align: center;}
+.btn_200 a{display:inline-block; width: 200px; height: 36px; line-height: 36px; text-align: center;}
+
+
+/* modal 공통 레이아웃 */
+.modal{background: #fff; overflow: scroll; position: fixed; width:100%; height:100%; z-index: 1000; top:50%; left: 50%; transform: translate(-50%, -50%); display: none; }
+.modal .md_container{background: #fff; position: relative; margin: 0 auto; padding:20px; font-size: 14px;}
+.modal span.md_close{display: block; font-size: 18px; position: absolute; right:20px; top:20px; cursor: pointer; width:15px; height:15px;}
+.modal span.md_close img{width:100%;}
+.modal span.md_close:hover{color: #333}
+.md_overlay{position: fixed; width: 100%; height: 100%; top:0; left:0; background: rgba(0,0,0,.5); opacity: 0; visibility: hidden; z-index: 200}
+
+/* 인풋 기본 스타일 */
+input{width: 100%; border: 0; height:38px; text-indent: 5px; -webkit-appearance: none; -webkit-border-radius: 0;}
+input[type='text'],input[type='password'],,input[type='submit'],input[type='search'] {-webkit-appearance:none; -webkit-border-radius:1px;}
+input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox} button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
+input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none}
+textarea{-webkit-appearance: none; border-radius: 0}
+
+input[type="checkbox"] {display:none;}
+input[type="checkbox"] + label {display:inline-block; margin-right:20px; color: #666; font-size: 12px; font-style: normal;}
+input[type="checkbox"] + label span {display:inline-block; width:13px; height:13px; margin:-3px 10px 0 0; vertical-align:middle; background:url('../images/btn_check_off.png') right center no-repeat; cursor:pointer; background-size:13px;}
+input[type="checkbox"]:checked + label span {background:url('../images/btn_check_on.png') right center no-repeat; background-size:13px;}
+
+input[type="radio"] {display:none;}
+input[type="radio"] + label {display:inline-block; margin-right: 40px; font-size:12px; color: #333; font-style: normal;}
+input[type="radio"] + label span {display:inline-block; width:13px; height:13px; margin:-3px 10px 0 0; vertical-align:middle; background:url('../images/btn_radio_off.png') right center no-repeat; cursor:pointer; background-size:13px;}
+input[type="radio"]:checked + label span {background:url('../images/btn_radio_on.png') right center no-repeat; background-size:13px;}
+
+/* 스위치 체크박스 */
+.switch {position:relative; display:inline-block; width:40px; height:24px;}
+.check_slider {position:absolute; cursor:pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #fff; -webkit-transition: .4s; transition: .4s; border-radius: 24px; border: 1px solid #757575;}
+.check_slider:before {position: absolute; content: ""; height: 22px; width: 22px; left:-1px; bottom:-1px; background-color: #fff; border: 1px solid #757575; -webkit-transition: .4s; transition: .4s; border-radius: 50%;}
+input:checked + .check_slider {background-color: #757575;}
+input:focus + .check_slider {box-shadow: 0 0 1px #757575;}
+input:checked + .check_slider:before {-webkit-transform: translateX(16px); -ms-transform: translateX(16px); transform: translateX(16px);}
