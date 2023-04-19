@@ -8,11 +8,6 @@
       <!-- body : s -->
       <div class="bg_wh mt20">
       	<div class="table-responsive">
-          <!-- top -->
-          <div class="row table_title">
-            <div class="col-lg-6"> &nbsp;<i class="fa fa-check" aria-hidden="true"></i> &nbsp;<?=$result->title?></div>
-          </div>
-          <!-- top  -->
           <section>
           	<table class="table table-bordered">
           		<tbody>

@@ -8,20 +8,14 @@
     <!-- body : s -->
     <div class="bg_wh mt20">
     	<div class="table-responsive">
-    		<!-- top -->
-    		<div class="row table_title">
-          <div class="col-lg-6"> &nbsp;<i class="fa fa-check" aria-hidden="true"></i> &nbsp;약관 목록</div>
-    		</div>
-    		<!-- top  -->
-
         <!-- list_get : s -->
         <div id="list_ajax">
           <table class="table table-bordered check_wrap">
           	<thead>
           		<tr>
-                <th width="30">NO</th>
+                <th width="80">No</th>
           			<th width="*">약관명</th>
-                <th width="120">수정일</th>
+                <th width="150">수정일</th>
           		</tr>
           	</thead>
           	<tbody>
