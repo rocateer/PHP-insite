@@ -31,7 +31,7 @@
             </tr>
             <tr>
               <th colspan="4" style="background-color: white;">
-                <textarea name="contents" id="contents" style="width:100%; height:100px;" placeholder="내용" class="input_default"></textarea>
+                <textarea name="contents" id="contents" style="width:100%; height:200px;" placeholder="내용" class="input_default"></textarea>
               </th>
             </tr>
             <tr>

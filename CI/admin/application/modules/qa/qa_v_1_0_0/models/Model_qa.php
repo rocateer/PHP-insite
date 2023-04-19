@@ -3,29 +3,12 @@
 /*
 |------------------------------------------------------------------------
 | Author : 박수인
-| Create-Date : 2021-10-06
+| Create-Date : 2023-04-19
 | Memo : qa 관리
 |------------------------------------------------------------------------
 */
 
 Class Model_qa extends MY_Model {
-
-	// qa 총 카운트
-	public function total_qa(){
-
-		$sql = "SELECT
-							COUNT(*) AS cnt
-						FROM
-							tbl_qa
-						WHERE
-							del_yn ='N'
-					";
-
-		return $this->query_cnt($sql,
-														array(
-														)
-														);
-	}
 
 	// qa 리스트 가져오기
 	public function qa_list($data) {
@@ -34,7 +17,6 @@ Class Model_qa extends MY_Model {
 		$qa_title = $data['qa_title'];
 		$member_nickname = $data['member_nickname'];
 		$reply_yn = $data['reply_yn'];
-		$qa_type = $data['qa_type'];
 		$s_date = $data['s_date'];
 		$e_date = $data['e_date'];
 		$page_size = (int)$data['page_size'];
@@ -47,13 +29,13 @@ Class Model_qa extends MY_Model {
 							a.qa_title,
 							a.ins_date,
 							a.reply_yn,
-							a.qa_type,
 							a.del_yn
 						FROM
 							tbl_qa a
 							JOIN tbl_member b ON b.member_idx = a.member_idx
 						WHERE
 							a.del_yn ='N'
+							and a.type=0
 						";
 
 		if($member_id != ""){
@@ -70,9 +52,6 @@ Class Model_qa extends MY_Model {
 
 		if($reply_yn != ""){
   		$sql .= " AND a.reply_yn LIKE '%$reply_yn%' ";
-		}
-		if($qa_type != ""){
-  		$sql .= " AND a.qa_type LIKE '%$qa_type%' ";
 		}
 
 		if($s_date != ""){
@@ -100,7 +79,6 @@ Class Model_qa extends MY_Model {
 		$qa_title = $data['qa_title'];
 		$member_nickname = $data['member_nickname'];
 		$reply_yn = $data['reply_yn'];
-		$qa_type = $data['qa_type'];
 		$s_date = $data['s_date'];
 		$e_date = $data['e_date'];
 
@@ -111,6 +89,7 @@ Class Model_qa extends MY_Model {
 							JOIN tbl_member b ON b.member_idx = a.member_idx
 						WHERE
 							a.del_yn ='N'
+							and a.type=0
 							";
 
 		if($member_id != ""){
@@ -127,9 +106,6 @@ Class Model_qa extends MY_Model {
 
 		if($reply_yn != ""){
 			$sql .= " AND a.reply_yn LIKE '%$reply_yn%' ";
-		}
-		if($qa_type != ""){
-			$sql .= " AND a.qa_type LIKE '%$qa_type%' ";
 		}
 
 		if($s_date != ""){
@@ -157,12 +133,8 @@ Class Model_qa extends MY_Model {
 							FN_AES_DECRYPT(b.member_id) AS member_id,
 							b.member_nickname,
 							a.qa_title,
-							a.qa_type,
 							a.qa_contents,
 							a.reply_contents,
-							a.device_os,
-							a.app_version,
-							a.os_version,
 							a.ins_date,
 							a.upd_date
 						FROM

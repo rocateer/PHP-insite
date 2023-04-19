@@ -46,12 +46,12 @@
               <td colspan="3">
                 <?php if($result->display_yn == "N"){ ?>
                   <label class="switch">
-                    <input type="checkbox" onchange="display_yn_mod_up(<?=$result->faq_idx?>, 'Y');">
+                    <input type="checkbox" name="display_yn" id="display_yn" value="Y">
                     <span class="check_slider"></span>
                   </label>
                 <?php }else if($result->display_yn == "Y"){ ?>
                   <label class="switch">
-                    <input type="checkbox" onchange="display_yn_mod_up(<?=$result->faq_idx?>, 'N');" checked>
+                    <input type="checkbox" name="display_yn" id="display_yn" value="Y" checked>
                     <span class="check_slider"></span>
                   </label>
                 <?php } ?>

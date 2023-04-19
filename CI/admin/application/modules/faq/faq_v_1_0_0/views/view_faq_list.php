@@ -51,7 +51,6 @@
 
 <script>
 
-  
 //엔터키 시 검색
 window.addEventListener('keydown', function(event){
   if (window.event.keyCode == 13) {
@@ -84,6 +83,30 @@ window.addEventListener('keydown', function(event){
       data     : formData,
       success: function(result) {
         $('#list_ajax').html(result);
+      }
+    });
+  }
+
+  function display_mod_up(faq_idx, display_yn){
+
+    var formData = {
+      "faq_idx" : faq_idx,
+      "display_yn" : display_yn
+    };
+
+    $.ajax({
+      url      : "/<?=mapping('faq')?>/display_mod_up",
+      type     : 'POST',
+      dataType : 'json',
+      async    : true,
+      data     : formData,
+      success: function(result){
+        if(result.code == "0"){
+          alert(result.code_msg);
+        }else{
+          alert(result.code_msg);
+          default_list_get($('#page_num').val());
+        }
       }
     });
   }

@@ -3,7 +3,7 @@
 /*
 |------------------------------------------------------------------------
 | Author : 박수인
-| Create-Date : 2021-09-29
+| Create-Date : 2023-04-19
 | Memo : FAQ 관리
 |------------------------------------------------------------------------
 */
@@ -23,6 +23,7 @@ Class Model_faq extends MY_Model{
 							a.faq_idx,
 							a.title,
 							a.del_yn,
+							a.display_yn,
 							DATE_FORMAT(a.ins_date,'%Y-%m-%d') as ins_date
 						FROM
 							tbl_faq a
@@ -119,6 +120,7 @@ Class Model_faq extends MY_Model{
 		$faq_idx = $data['faq_idx'];
 		$title = $data['title'];
 		$contents = $data['contents'];
+		$display_yn = $data['display_yn'];
 
 		$this->db->trans_begin();
 
@@ -127,6 +129,7 @@ Class Model_faq extends MY_Model{
 						SET
 							title = ?,
 							contents = ?,
+							display_yn = ?,
 							upd_date = NOW()
 						WHERE
 							faq_idx = ?
@@ -135,6 +138,7 @@ Class Model_faq extends MY_Model{
 		$this->query($sql,array(
 							   $title,
 							   $contents,
+							   $display_yn,
 							   $faq_idx
 							   ),$data
 							 );
@@ -224,10 +228,10 @@ Class Model_faq extends MY_Model{
 	}
 	
 	// faq 상태 변경
-	public function display_yn_mod_up($data){
+	public function display_mod_up($data){
 
 		$faq_idx = $data['faq_idx'];
-		$state = $data['state'];
+		$display_yn = $data['display_yn'];
 
 		$this->db->trans_begin();
 
@@ -242,7 +246,7 @@ Class Model_faq extends MY_Model{
 
 		$this->query($sql,
 								 array(
-								 $state,
+								 $display_yn,
 								 $faq_idx
 							   ),
 								 $data);

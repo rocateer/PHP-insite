@@ -29,6 +29,7 @@
 
 /* 추가 style */
 .container-fluid.wide{width:1300px; }
+.container-fluid.narrow{width:600px; }
 
 /* board */
 .board_box{min-height: 150px; }

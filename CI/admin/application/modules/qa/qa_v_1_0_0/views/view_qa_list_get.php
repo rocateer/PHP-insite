@@ -8,7 +8,6 @@
     <thead>
       <tr>
         <th width="50">No</th>
-        <th width="100">카테고리</th>
         <th width="150">아이디</th>
         <th width="150">닉네임</th>
         <th width="*">제목</th>
@@ -26,9 +25,6 @@
             <?=$no--?>
           </td>
           <td>
-            <?=$this->global_function->get_qa_type($row->qa_type)?>
-          </td>
-          <td>
             <?=$row->member_id?>
           </td>
           <td>
@@ -40,9 +36,9 @@
           <td>
             <?php
               if($row->reply_yn == "Y"){
-                echo "<span class='state_03'>답변완료</span>";
+                echo "<span>답변완료</span>";
               }else{
-                echo "<span class='state_02'>미답변</span>";}
+                echo "<span>미답변</span>";}
             ?>
           </td>
           <td>
@@ -54,7 +50,7 @@
         }else{
       ?>
       <tr>
-        <td colspan="6">
+        <td colspan="7">
           <?=no_contents('0')?>
         </td>
       </tr>

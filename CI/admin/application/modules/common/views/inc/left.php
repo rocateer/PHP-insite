@@ -33,16 +33,16 @@ $arr_right = explode(',',$this->admin_right);
           <p><span>ID : <?=$this->admin_id?></span></p>
         </li>
 
-        <!-- section 1 : 회원관리 -->
+        <!-- 회원관리 -->
         <li class="<?php if($this->uri->segment(1)==mapping('member')) echo "active";?>">
           <a href="/<?=mapping('member')?>">
             <span class="material-icons">people_alt</span>
             <span>회원 관리 &nbsp;</span>
           </a>
         </li>
-        <!-- section 1 : 회원관리 -->
+        <!-- 회원관리 -->
 
-        <!-- section 5 : 신고 관리 -->
+        <!-- 신고 관리 -->
         <li class="<?php if($this->uri->segment(1) == mapping('board_report')||$this->uri->segment(1) == mapping('board_reply_report')){echo "active";} ?>">
           <a href="#" data-toggle="collapse" data-target="#admin_report">
             <span class="material-icons">
@@ -56,9 +56,9 @@ $arr_right = explode(',',$this->admin_right);
             <li><a href="/<?=mapping('board_reply_report')?>">댓글 신고</a></li>
           </ul>
         </li>
-         <!-- section 5 : 신고 관리 -->
+         <!-- 신고 관리 -->
 
-        <!-- section 5 : 커뮤니티 관리 -->
+        <!-- 커뮤니티 관리 -->
         <li class="<?php if($this->uri->segment(1) == mapping('board')){echo "active";} ?>">
           <a href="#" data-toggle="collapse" data-target="#admin_board">
             <span class="material-icons">
@@ -73,9 +73,9 @@ $arr_right = explode(',',$this->admin_right);
             <li><a href="/<?=mapping('board')?>/main_section_2">베스트 이브의 고민 큐레이션</a></li>
           </ul>
         </li>
-         <!-- section 5 : 커뮤니티 관리 -->
+         <!-- 커뮤니티 관리 -->
 
-        <!-- section 2 : 떙그랑 메거진 관리  -->
+        <!-- 떙그랑 메거진 관리  -->
         <li class="<?php if($this->uri->segment(1) == mapping('news')){echo "active";} ?>">
           <a href="#" data-toggle="collapse" data-target="#admin_news">
             <span class="material-icons">
@@ -89,9 +89,9 @@ $arr_right = explode(',',$this->admin_right);
             <li><a href="/<?=mapping('news')?>/main_section_1">메거진 큐레이션</a></li>
           </ul>
         </li>
-        <!-- section 2 : 떙그랑 메거진 관리  -->
+        <!-- 떙그랑 메거진 관리  -->
 
-        <!-- section 3 : 운동관리 -->
+        <!-- 운동관리 -->
         <li class="<?php if($this->uri->segment(1) == mapping('exercise')|| $this->uri->segment(1)==mapping('program')){echo "active";} ?>">
           <a href="#" data-toggle="collapse" data-target="#admin_exercise">
             <span class="material-icons">
@@ -106,9 +106,9 @@ $arr_right = explode(',',$this->admin_right);
             <li><a href="/<?=mapping('exercise')?>/main_section_1">추천 운동 큐레이션</a></li>
           </ul>
         </li>
-        <!-- section 3 : 운동관리 --> 
+        <!-- 운동관리 --> 
     
-        <!-- section 6 : 카테고리관리 -->
+        <!-- 카테고리관리 -->
         <li class="<?php if($this->uri->segment(1)==mapping('category_management')) echo "active";?>">
 
           <a href="#" data-toggle="collapse" data-target="#admin_category">
@@ -121,9 +121,18 @@ $arr_right = explode(',',$this->admin_right);
             <li><a href="/<?=mapping('category_management');?>/category_management1">이브의 고민 카테고리 관리</a></li>
           </ul>
         </li>
-       <!-- section 8 : 카테고리관리 -->
+       <!-- 카테고리관리 -->
 
-        <!-- section 8 : 공지사항 -->
+          <!-- 안내관리 -->
+          <li class="<?php if($this->uri->segment(1)==mapping('info')) echo "active";?>">
+          <a href="/<?=mapping('info');?>" >
+            <span class="material-icons">note</span>
+            <span>안내관리</span>
+          </a>
+        </li>
+        <!-- 안내관리 -->
+
+        <!-- 공지사항 -->
         <li class="<?php if($this->uri->segment(1)==mapping('notice')  ||  $this->uri->segment(1)==mapping('faq') ||  $this->uri->segment(1)==mapping('qa')) echo "active";?>">
 
           <a href="#" data-toggle="collapse" data-target="#admin_cscenter">
@@ -137,16 +146,16 @@ $arr_right = explode(',',$this->admin_right);
             <li><a href="/<?=mapping('qa');?>">1:1문의 관리</a></li>
           </ul>
         </li>
-       <!-- section 8 : 공지사항 -->
+       <!-- 공지사항 -->
         
-        <!-- section 9 : 약관관리 -->
+        <!-- 약관관리 -->
         <li class="<?php if($this->uri->segment(1)==mapping('terms')) echo "active";?>">
           <a href="/<?=mapping('terms');?>" >
             <span class="material-icons">edit</span>
             <span>약관관리</span>
           </a>
         </li>
-        <!-- section 9 : 약관관리 -->
+        <!-- 약관관리 -->
        
       </ul>
       <!-- side-nav : e -->

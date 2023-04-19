@@ -3,7 +3,7 @@
 /*
 |------------------------------------------------------------------------
 | Author : 박수인
-| Create-Date : 2021-09-29
+| Create-Date : 2023-04-19
 | Memo : FAQ 관리
 |------------------------------------------------------------------------
 
@@ -111,10 +111,12 @@ class Faq_v_1_0_0 extends MY_Controller{
 		$faq_idx = $this->_input_check("faq_idx",array("empty_msg"=>"faq 코드 누락"));
 		$title = $this->_input_check("title",array("empty_msg"=>"제목을 입력해주세요.","focus_id"=>"title"));
 		$contents = $this->_input_check("contents",array("empty_msg"=>"내용을 입력해주세요.","focus_id"=>"contents"));
+		$display_yn = $this->_input_check("display_yn",array());
 
 		$data['faq_idx'] = $faq_idx;
 		$data['title'] = $title;
 		$data['contents'] = $contents;
+		$data['display_yn'] = $display_yn==''? 'N':'Y';
 		
 		$result = $this->model_faq->faq_mod_up($data); // faq 수정
 
@@ -161,7 +163,7 @@ class Faq_v_1_0_0 extends MY_Controller{
 	public function faq_reg_in(){
 		$title = $this->_input_check("title",array("empty_msg"=>"제목을 입력해주세요.","focus_id"=>"title"));
 		$contents = $this->_input_check("contents",array("empty_msg"=>"내용을 입력해주세요.","focus_id"=>"contents"));
-		$display_yn = $this->_input_check("display_yn",array("ternary" => "N"));
+		$display_yn = $this->_input_check("display_yn",array());
 
 		$data['title'] = $title;
 		$data['contents'] = $contents;
@@ -183,14 +185,14 @@ class Faq_v_1_0_0 extends MY_Controller{
 	}
 	
 	// faq 상태 변경
-	public function display_yn_mod_up(){
+	public function display_mod_up(){
 		$faq_idx = $this->_input_check("faq_idx",array("empty_msg"=>"공지사항 키가 누락되었습니다."));
-		$state = $this->_input_check("state",array("ternary" => "N"));
+		$display_yn = $this->_input_check("display_yn",array());
 
 		$data['faq_idx']  = $faq_idx;
-		$data['state'] = $state;
+		$data['display_yn'] = $display_yn;
 
-		$result = $this->model_faq->display_yn_mod_up($data); // 공지사항 상태 변경
+		$result = $this->model_faq->display_mod_up($data); // 공지사항 상태 변경
 
 		$response = new stdClass();
 

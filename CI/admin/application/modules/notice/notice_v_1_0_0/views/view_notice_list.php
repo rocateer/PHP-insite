@@ -12,10 +12,10 @@
       <form name="form_default" id="form_default" method="post">
       <table class="search_table">
         <colgroup>
-          <col style="width:100px">
-          <col style="width:350px">
-          <col style="width:100px">
-          <col style="width:350px">
+          <col style="width:15%">
+          <col style="width:35%">
+          <col style="width:15%">
+          <col style="width:35%">
         </colgroup>
         <tbody>
           <tr>

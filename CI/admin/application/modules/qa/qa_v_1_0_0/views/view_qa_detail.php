@@ -39,16 +39,6 @@
               </td>
             </tr>
             <tr>
-              <th>카테고리</th>
-              <td>
-                <?=$this->global_function->get_qa_type($result->qa_type)?>
-              </td>
-              <th>디바이스 정보</th>
-              <td>
-                <?=$result->device_os?> (version:<?=$result->os_version?>)  &nbsp;&nbsp;&nbsp;   [evescore앱 버전:<?=$result->app_version?>]
-              </td>
-            </tr>
-            <tr>
               <th>제목</th>
               <td colspan="3">
                 <?=$result->qa_title?>

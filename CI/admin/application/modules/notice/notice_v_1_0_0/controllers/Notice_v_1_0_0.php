@@ -100,12 +100,12 @@ class Notice_v_1_0_0 extends MY_Controller{
 		$img_path = $this->_input_check("img_path[]",array());
 		$title = $this->_input_check("title",array("empty_msg"=>"제목을 입력해 주세요."));
 		$contents = $this->_input_check("contents",array("empty_msg"=>"내용을 입력해 주세요."));
-		$display_yn = $this->_input_check("display_yn",array("ternary"=>'N'));
+		$display_yn = $this->_input_check("display_yn",array());
 
 		$data['title'] = $title;
 		$data['contents'] = $contents;
 		$data['img_path'] = $img_path;
-		$data['display_yn'] = $display_yn;
+		$data['display_yn'] = $display_yn==''? 'N':'Y';
 
 		$result = $this->model_notice->notice_reg_in($data); // 공지사항 등록하기
 
@@ -145,13 +145,13 @@ class Notice_v_1_0_0 extends MY_Controller{
 		$title = $this->_input_check("title",array("empty_msg"=>"제목을 입력해 주세요."));
 		$contents = $this->_input_check("contents",array("empty_msg"=>"내용을 입력해 주세요."));
 		$img_path = $this->_input_check("img_path[]",array());
-		$display_yn = $this->_input_check("display_yn",array("ternary"=>'N'));
+		$display_yn = $this->_input_check("display_yn",array());
 
 		$data['notice_idx'] = $notice_idx;
 		$data['title'] = $title;
 		$data['contents'] = $contents;
 		$data['img_path'] = $img_path;
-		$data['display_yn'] = $display_yn;
+		$data['display_yn'] = $display_yn==''? 'N':'Y';
 
 		$result = $this->model_notice->notice_mod_up($data); // 공지사항 수정하기
 

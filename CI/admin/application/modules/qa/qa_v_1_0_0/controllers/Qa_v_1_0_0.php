@@ -1,9 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 |------------------------------------------------------------------------
-| Author :	박수인
-| Create-Date : 2021-10-06
-| Memo : QnA 관리
+| Author : 박수인
+| Create-Date : 2023-04-19
+| Memo : qa 관리
 |------------------------------------------------------------------------
 
 _input_check 가이드
@@ -54,13 +54,7 @@ class Qa_v_1_0_0 extends MY_Controller{
 	// qa 리스트
 	public function qa_list(){
 
-		$total_qa = $this->model_qa->total_qa();
-
-		$response = new stdClass();
-
-		$response->total_qa = $total_qa;
-
-		$this->_view(mapping('qa').'/view_qa_list', $response);
+		$this->_view(mapping('qa').'/view_qa_list');
 	}
 
 	// qa 리스트 가져오기
@@ -69,7 +63,6 @@ class Qa_v_1_0_0 extends MY_Controller{
 		$member_id = $this->_input_check("member_id",array());
 		$qa_title = $this->_input_check("qa_title",array());
 		$reply_yn = $this->_input_check("reply_yn",array());
-		$qa_type = $this->_input_check("qa_type",array());
 		$s_date = $this->_input_check("s_date",array());
 		$e_date = $this->_input_check("e_date",array());
 		$page_num = $this->_input_check('page_num ',array("ternary"=>'1'));
@@ -80,7 +73,6 @@ class Qa_v_1_0_0 extends MY_Controller{
 		$data['member_id'] = $member_id;
 		$data['qa_title'] = $qa_title;
 		$data['reply_yn'] = $reply_yn;
-		$data['qa_type'] = $qa_type;
 		$data['s_date'] = $s_date;
 		$data['e_date'] = $e_date;
 		$data['page_no'] = ($page_num-1)*$page_size;

@@ -19,39 +19,32 @@
 					</colgroup>
     			<tbody>
             <tr>
-              <th width="150" style="text-align:center;">닉네임</th>
+              <th style="text-align:center;">닉네임</th>
                 <td>
                   <input name="member_nickname" id="member_nickname" class="form-control" placeholder="" autocomplete="off" >
                 </td>
-                <th width="150" style="text-align:center;">아이디</th>
+                <th style="text-align:center;">아이디</th>
               <td>
                 <input name="member_id" id="member_id" class="form-control" placeholder="">
               </td>
             </tr>
             <tr>
-              <th width="150" style="text-align:center;">제목</th>
+              <th style="text-align:center;">제목</th>
                 <td>
                   <input name="qa_title" id="qa_title" class="form-control" placeholder="" autocomplete="off" >
                 </td>
-              <th width="150" style="text-align:center;">문의일</th>
+              <th style="text-align:center;">문의일</th>
                 <td>
                   <input name="s_date" id="s_date" class="form-control datepicker" autocomplete="off" readonly style="width: 40%;">&nbsp;<span class="material-icons">date_range</span>&nbsp;~&nbsp;
                   <input name="e_date" id="e_date" class="form-control datepicker" autocomplete="off" readonly style="width: 40%;" >&nbsp;<span class="material-icons">date_range</span>
                 </td>
             </tr>
             <tr>
-              <th width="150" style="text-align:center;">답변 상태</th>
-              <td>
+              <th style="text-align:center;">답변 상태</th>
+              <td colspan="3">
                 <label class="radio-inline"><input type="radio" name="reply_yn" id="reply_yn_1" checked value=""> 전체</label>
 								<label class="radio-inline"><input type="radio" name="reply_yn" id="reply_yn_3" value="N"> 미답변</label>
                 <label class="radio-inline"><input type="radio" name="reply_yn" id="reply_yn_3" value="Y"> 답변완료</label>
-              </td>
-              <th width="150" style="text-align:center;">카테고리</th>
-              <td>
-                <label class="radio-inline"><input type="radio" name="qa_type" id="qa_type" checked value=""> 전체</label>
-								<label class="radio-inline"><input type="radio" name="qa_type" id="qa_type_0" value="0"> 불편 신고</label>
-                <label class="radio-inline"><input type="radio" name="qa_type" id="qa_type_1" value="1"> 제안 및 건의</label>
-                <label class="radio-inline"><input type="radio" name="qa_type" id="qa_type_1" value="2"> 기타</label>
               </td>
             </tr>
     			</tbody>
