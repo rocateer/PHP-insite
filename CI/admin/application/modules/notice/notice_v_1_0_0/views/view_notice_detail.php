@@ -4,9 +4,6 @@
   <!-- Page Heading -->
   <div class="page-header">
     <h1>공지사항 상세</h1>
-    <span style="line-height:35px; float:right">
-      등록일시: <?=$this->global_function-> date_Ymd_hyphen($result->ins_date)?>
-    </span>
   </div>
 
   <!-- body : s -->
@@ -30,8 +27,7 @@
               </tr>
               <tr>
                 <th>
-                  <p>사진</p>
-                  <p>(750xauto)</p>
+                  <p>이미지</p>
                   <input type="button" class="btn btn-xs btn-default" value="등록" onclick="file_upload_click('img','image','1','150');" style="margin-bottom:10px">
                 </th>
                 <td colspan="3">
@@ -61,17 +57,17 @@
               <tr>
                 <th>노출 여부</th>
                 <td colspan="3">
-                  <?php if($result->notice_state == "N"){ ?>
+                  <?if($result->display_yn=='Y'){?>
+                      <label class="switch">
+                        <input type="checkbox" name="display_yn" id="display_yn" value="Y" checked>
+                        <span class="check_slider"></span>
+                      </label>
+                  <?}else{?>
                     <label class="switch">
-                      <input type="checkbox" name="notice_state" id="notice_state" value="Y">
+                      <input type="checkbox" name="display_yn" id="display_yn" value="Y">
                       <span class="check_slider"></span>
                     </label>
-                  <?php }else if($result->notice_state == "Y"){ ?>
-                    <label class="switch">
-                      <input type="checkbox"  name="notice_state" id="notice_state" value="Y" checked>
-                      <span class="check_slider"></span>
-                    </label>
-                  <?php } ?>
+                  <?}?>
                 </td>
               </tr>
 

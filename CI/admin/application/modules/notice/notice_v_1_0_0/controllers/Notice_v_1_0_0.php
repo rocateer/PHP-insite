@@ -2,7 +2,7 @@
 /*
 |------------------------------------------------------------------------
 | Author : 박수인	
-| Create-Date : 2021-10-13
+| Create-Date : 2023-04-19
 | Memo : 공지사항 관리
 |------------------------------------------------------------------------
 
@@ -61,6 +61,7 @@ class Notice_v_1_0_0 extends MY_Controller{
 		$title = $this->_input_check("title",array());
 		$s_date = $this->_input_check("s_date",array());
 		$e_date = $this->_input_check("e_date",array());
+		$display_yn = $this->_input_check("display_yn",array());
     $page_num = $this->_input_check("page_num",array("ternary"=>'1'));
 		$page_size = PAGESIZE;
 		$history_data = $this->_input_check("history_data",array());
@@ -68,6 +69,7 @@ class Notice_v_1_0_0 extends MY_Controller{
 		$data['title'] = $title;
 		$data['s_date'] = $s_date;
 		$data['e_date'] = $e_date;
+		$data['display_yn'] = $display_yn;
 		$data['page_no'] = ($page_num-1)*$page_size;
 		$data['page_size'] = $page_size;
 
@@ -98,12 +100,12 @@ class Notice_v_1_0_0 extends MY_Controller{
 		$img_path = $this->_input_check("img_path[]",array());
 		$title = $this->_input_check("title",array("empty_msg"=>"제목을 입력해 주세요."));
 		$contents = $this->_input_check("contents",array("empty_msg"=>"내용을 입력해 주세요."));
-		$notice_state = $this->_input_check("notice_state",array("ternary"=>'N'));
+		$display_yn = $this->_input_check("display_yn",array("ternary"=>'N'));
 
 		$data['title'] = $title;
 		$data['contents'] = $contents;
 		$data['img_path'] = $img_path;
-		$data['notice_state'] = $notice_state;
+		$data['display_yn'] = $display_yn;
 
 		$result = $this->model_notice->notice_reg_in($data); // 공지사항 등록하기
 
@@ -143,13 +145,13 @@ class Notice_v_1_0_0 extends MY_Controller{
 		$title = $this->_input_check("title",array("empty_msg"=>"제목을 입력해 주세요."));
 		$contents = $this->_input_check("contents",array("empty_msg"=>"내용을 입력해 주세요."));
 		$img_path = $this->_input_check("img_path[]",array());
-		$notice_state = $this->_input_check("notice_state",array("ternary"=>'N'));
+		$display_yn = $this->_input_check("display_yn",array("ternary"=>'N'));
 
 		$data['notice_idx'] = $notice_idx;
 		$data['title'] = $title;
 		$data['contents'] = $contents;
 		$data['img_path'] = $img_path;
-		$data['notice_state'] = $notice_state;
+		$data['display_yn'] = $display_yn;
 
 		$result = $this->model_notice->notice_mod_up($data); // 공지사항 수정하기
 
@@ -167,14 +169,14 @@ class Notice_v_1_0_0 extends MY_Controller{
 	}
 
 	// 공지사항 상태 변경
-	public function notice_state_mod_up(){
+	public function display_mod_up(){
 		$notice_idx = $this->_input_check("notice_idx",array("empty_msg"=>"공지사항 키가 누락되었습니다."));
-		$notice_state = $this->_input_check("notice_state",array("empty_msg"=>"공지사항 상태 코드가 누락되었습니다."));
+		$display_yn = $this->_input_check("display_yn",array("empty_msg"=>"공지사항 상태 코드가 누락되었습니다."));
 
 		$data['notice_idx']  = $notice_idx;
-		$data['notice_state'] = $notice_state;
+		$data['display_yn'] = $display_yn;
 
-		$result = $this->model_notice->notice_state_mod_up($data); // 공지사항 상태 변경
+		$result = $this->model_notice->display_mod_up($data); // 공지사항 상태 변경
 
 		$response = new stdClass();
 

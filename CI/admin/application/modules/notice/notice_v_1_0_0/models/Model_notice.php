@@ -2,8 +2,8 @@
 
 /*
 |------------------------------------------------------------------------
-| Author : 박수인
-| Create-Date : 2021-10-13
+| Author : 박수인	
+| Create-Date : 2023-04-19
 | Memo : 공지사항 관리
 |------------------------------------------------------------------------
 */
@@ -18,11 +18,12 @@ Class Model_notice extends MY_Model{
 		$title = $data['title'];
 		$s_date = $data['s_date'];
 		$e_date = $data['e_date'];
+		$display_yn = $data['display_yn'];
 
 		$sql = "SELECT
 							notice_idx,
 							title,
-							notice_state,
+							display_yn,
 							del_yn,
 							ins_date,
 							DATE_FORMAT(upd_date,'%Y-%m-%d') as  upd_date
@@ -34,6 +35,9 @@ Class Model_notice extends MY_Model{
 
 		if($title != ""){
 			$sql .= " AND title LIKE '%$title%' ";
+		}
+		if($display_yn != ""){
+			$sql .= " AND display_yn = '$display_yn' ";
 		}
 		if($s_date != ""){
 			$sql .= " AND DATE_FORMAT(ins_date, '%Y-%m-%d') >= '$s_date' ";
@@ -58,6 +62,7 @@ Class Model_notice extends MY_Model{
 		$title = $data['title'];
 		$s_date = $data['s_date'];
 		$e_date = $data['e_date'];
+		$display_yn = $data['display_yn'];
 
 		$sql = "SELECT
 							COUNT(*) AS cnt
@@ -69,6 +74,9 @@ Class Model_notice extends MY_Model{
 
 		if($title != ""){
 			$sql .= " AND title LIKE '%$title%' ";
+		}
+		if($display_yn != ""){
+			$sql .= " AND display_yn = '$display_yn' ";
 		}
 		if($s_date != ""){
 			$sql .= " AND DATE_FORMAT(ins_date, '%Y-%m-%d') >= '$s_date' ";
@@ -88,7 +96,7 @@ Class Model_notice extends MY_Model{
 		$title = $data['title'];
 		$contents = $data['contents'];
 		$img_path = $data['img_path'];
-		$notice_state = $data['notice_state'];
+		$display_yn = $data['display_yn'];
 
 		$this->db->trans_begin();
 
@@ -98,7 +106,7 @@ Class Model_notice extends MY_Model{
 							title,
 							contents,
 							img,
-							notice_state,
+							display_yn,
 							del_yn,
 							ins_date,
 							upd_date
@@ -118,7 +126,7 @@ Class Model_notice extends MY_Model{
 								 $title,
 								 $contents,
 								 $img_path,
-								 $notice_state,
+								 $display_yn,
 							   ),
 								 $data);
 
@@ -145,7 +153,7 @@ Class Model_notice extends MY_Model{
 							img,
 							DATE_FORMAT(ins_date,'%Y-%m-%d') AS ins_date,
 							DATE_FORMAT(upd_date,'%Y-%m-%d') AS upd_date,
-							notice_state,
+							display_yn,
 							del_yn
 	        	FROM
 	          	tbl_notice
@@ -168,7 +176,7 @@ Class Model_notice extends MY_Model{
 		$title = $data['title'];
 		$contents = $data['contents'];
 		$img_path = $data['img_path'];
-		$notice_state = $data['notice_state'];
+		$display_yn = $data['display_yn'];
 
 		$this->db->trans_begin();
 
@@ -178,7 +186,7 @@ Class Model_notice extends MY_Model{
 							title = ?,
 							contents = ?,
 							img = ?,
-							notice_state = ?,
+							display_yn = ?,
 							upd_date = NOW()
 						WHERE
 							notice_idx = ?
@@ -189,7 +197,7 @@ Class Model_notice extends MY_Model{
 							   $title,
 							   $contents,
 							   $img_path,
-							   $notice_state,
+							   $display_yn,
 							   $notice_idx
 							   ),
 								 $data);
@@ -204,17 +212,17 @@ Class Model_notice extends MY_Model{
 	}
 
 	// 공지사항 상태 변경
-	public function notice_state_mod_up($data){
+	public function display_mod_up($data){
 
 		$notice_idx  = $data['notice_idx'];
-		$notice_state = $data['notice_state'];
+		$display_yn = $data['display_yn'];
 
 		$this->db->trans_begin();
 
 		$sql = "UPDATE
 							tbl_notice
 						SET
-							notice_state = ?,
+							display_yn = ?,
 							upd_date = NOW()
 						WHERE
 							notice_idx = ?
@@ -222,7 +230,7 @@ Class Model_notice extends MY_Model{
 
 		$this->query($sql,
 								 array(
-								 $notice_state,
+								 $display_yn,
 								 $notice_idx
 							   ),
 								 $data);

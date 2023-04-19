@@ -28,14 +28,14 @@
               <a href="/<?=mapping('notice')?>/notice_detail?notice_idx=<?=$row->notice_idx?>&history_data=<?=$history_data?>"><?=$row->title?></a>
             </td>
             <td>
-              <?php if($row->notice_state == "N"){ ?>
+              <?php if($row->display_yn == "N"){ ?>
                 노출 안함 <label class="switch">
-                  <input type="checkbox" onchange="notice_state_mod_up(<?=$row->notice_idx?>, 'Y');">
+                  <input type="checkbox" onchange="display_mod_up(<?=$row->notice_idx?>, 'Y');">
                   <span class="check_slider"></span>
                 </label> 노출
-              <?php }else if($row->notice_state == "Y"){ ?>
+              <?php }else if($row->display_yn == "Y"){ ?>
                 노출 안함 <label class="switch">
-                  <input type="checkbox" onchange="notice_state_mod_up(<?=$row->notice_idx?>, 'N');" checked>
+                  <input type="checkbox" onchange="display_mod_up(<?=$row->notice_idx?>, 'N');" checked>
                   <span class="check_slider"></span>
                 </label> 노출
               <?php } ?>

@@ -29,6 +29,14 @@
               <input name="e_date" id="e_date" class="form-control datepicker" autocomplete="off" readonly style="width: 40%;" >&nbsp;<span class="material-icons">date_range</span>
             </td>
           </tr>
+          <tr>
+            <th style="text-align:center">노출 여부</th>
+            <td colspan="3">
+              <label class="radio-inline"><input type="radio" name="display_yn" id="display_yn_1" checked value=""> 전체</label>
+              <label class="radio-inline"><input type="radio" name="display_yn" id="display_yn_2" value="Y"> 노출</label>
+              <label class="radio-inline"><input type="radio" name="display_yn" id="display_yn_3" value="N"> 노출안함</label>
+            </td>
+          </tr>
         </tbody>
       </table>
       </form>
@@ -69,6 +77,7 @@ window.addEventListener('keydown', function(event){
       'title' :  $('#title').val(),
       's_date' : $('#s_date').val(),
       'e_date' : $('#e_date').val(),
+      'display_yn' : $("input[name='display_yn']:checked").val(),
       'page_num' : page_num
     };
 
@@ -85,15 +94,15 @@ window.addEventListener('keydown', function(event){
   }
 
   // 공지사항 상태 수정
-  function notice_state_mod_up(notice_idx, notice_state){
+  function display_mod_up(notice_idx, display_yn){
 
     var formData = {
       "notice_idx" : notice_idx,
-      "notice_state" : notice_state
+      "display_yn" : display_yn
     };
 
     $.ajax({
-      url      : "/<?=mapping('notice')?>/notice_state_mod_up",
+      url      : "/<?=mapping('notice')?>/display_mod_up",
       type     : 'POST',
       dataType : 'json',
       async    : true,
