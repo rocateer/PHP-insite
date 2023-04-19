@@ -1,8 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 |------------------------------------------------------------------------
-| Author :	김옥훈
-| Create-Date : 2018-01-31
+| Author :	박수인
+| Create-Date : 2023-04-19
 | Memo : 약관 관리
 |------------------------------------------------------------------------
 */
@@ -22,12 +22,10 @@ Class Model_terms extends MY_Model {
 							tbl_terms_management
           	";
 
-
   	return $this->query_result($sql,
                                 array(
 																)
                               );
-
 	}
 
 //약관 상세 보기

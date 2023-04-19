@@ -2,8 +2,8 @@
 /*
 |------------------------------------------------------------------------
 | Author :	박수인
-| Create-Date : 2018-01-15
-| Memo : 기초정보관리
+| Create-Date : 2023-04-19
+| Memo : 약관관리
 |------------------------------------------------------------------------
 
 _input_check 가이드
@@ -78,7 +78,7 @@ class Terms_v_1_0_0 extends MY_Controller{
 //약관 수정
 	public function terms_mod_up(){
 
-		ini_set('display_errors', '0'); // 재명:: 약관 내용이 많아졌을 시 "preg_replace(): Compilation failed: regular expression is too large at offset 49194" 에러 방지
+		ini_set('display_errors', '0'); //약관 내용이 많아졌을 시 "preg_replace(): Compilation failed: regular expression is too large at offset 49194" 에러 방지
 
 		$terms_management_idx = $this->_input_check("terms_management_idx",array());
 		$contents = $this->_input_check("contents",array("empty_msg"=>"내용을 입력해주세요."));

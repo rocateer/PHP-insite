@@ -32,7 +32,7 @@
 <form method="post" name="form1">
   <div class="login_bg">
     <div class="login_head text-center">
-      <h1><?=SERVICE_NAME;?> 중앙관리시스템12</h1>
+      <h1><?=SERVICE_NAME;?> 중앙관리시스템</h1>
     </div>
     <!-- panel : s -->
     <div class="panel">
