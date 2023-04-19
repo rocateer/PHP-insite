@@ -2,7 +2,7 @@
 /*
 |------------------------------------------------------------------------
 | Author : 박수인	
-| Create-Date : 2022-08-22
+| Create-Date : 2023-04-19
 | Memo : 회원 관리
 |------------------------------------------------------------------------
 
@@ -42,6 +42,7 @@ class Member_v_1_0_0 extends MY_Controller{
 		parent::__construct();
 
 		$this->load->model(mapping('member').'/model_member');
+		$this->load->model('common/model_common');
 	}
 	/* Index */
 	public function index(){
@@ -50,16 +51,28 @@ class Member_v_1_0_0 extends MY_Controller{
 
 // 회원 리스트 
 	public function member_list(){
-		$this->_view(mapping('member').'/view_member_list');
-	}
+		$result_list=$this->model_common->city_list();
+		$work_list=$this->model_common->work_list();
 
+		$response = new stdClass();
+
+		$response->result_list = $result_list;
+		$response->work_list = $work_list;
+
+		$this->_view(mapping('member').'/view_member_list',$response);
+	}
 
 //회원 리스트 가져오기
 	public function member_list_get(){
 
 		$member_id = $this->_input_check('member_id',array());
+		$member_name = $this->_input_check('member_name',array());
 		$member_nickname = $this->_input_check('member_nickname',array());
 		$member_state = $this->_input_check('member_state',array());
+		$member_join_type = $this->_input_check('member_join_type',array());
+		$city_name = $this->_input_check('city_name',array());
+		$region_code = $this->_input_check('region_code',array());
+		$work = $this->_input_check('work',array());
 		$s_date = $this->_input_check('s_date',array());
 		$e_date = $this->_input_check('e_date',array());
 		$page_num = $this->_input_check("page_num",array("ternary"=>'1'));
@@ -67,13 +80,17 @@ class Member_v_1_0_0 extends MY_Controller{
 		$page_size = PAGESIZE;//10
 
 		$data["member_id"]=$member_id;
+		$data["member_name"]=$member_name;
 		$data["member_nickname"]=$member_nickname;
 		$data["member_state"]=$member_state;
+		$data["member_join_type"]=$member_join_type;
+		$data["city_name"]=$city_name;
+		$data["region_code"]=$region_code;
+		$data["work"]=$work;
 		$data["s_date"]=$s_date;
 		$data["e_date"]=$e_date;
 		$data['page_no'] = ($page_num-1)*$page_size;
 		$data['page_size'] = $page_size;
-
 
 		# model, 기업 회원 리스트 get
 		$result_list=$this->model_member->member_list($data);

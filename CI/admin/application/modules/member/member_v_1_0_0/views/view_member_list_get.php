@@ -9,12 +9,15 @@
 	<thead>
     <tr>		
 		<th width="50">No</th>
-		<th width="100">아이디(이메일)</th>
-		<th width="110">닉네임</th>
-		<th width="80">성별</th>
+		<th width="80">가입 유형</th>
+		<th width="150">아이디(이메일)</th>
+		<th width="80">이름</th>
+		<th width="120">닉네임</th>
+		<th width="100">지역</th>
+		<th width="100">상세지역</th>
+		<th width="80">직종</th>
 		<th width="100">가입일</th>
 		<th width="100">탈퇴일</th>
-		<th width="90">신고받은 횟수</th>
 		<th width="80">회원상태</th>
 		</tr>
 	</thead>
@@ -25,16 +28,15 @@
     ?>
 					<tr>
 						<td><?=$no--?></td>
-						<td class="td_left"><a href="/<?=mapping('member')?>/member_detail?member_idx=<?=$row->member_idx?>&history_data=<?=$history_data?>"><?=$this->global_function->get_join_type($row->member_join_type);?> <?=$row->member_id?></a></td>
+						<td><?=$this->global_function->get_join_type($row->member_join_type);?></td>
+						<td class="td_left"><a href="/<?=mapping('member')?>/member_detail?member_idx=<?=$row->member_idx?>&history_data=<?=$history_data?>"><?=$row->member_id?></a></td>
+						<td><?=$row->member_name?></td>
 						<td><?=$row->member_nickname?></td>
-						<td><?=($row->member_gender=="0")?"남":"여"?></td>
-						<td><?=$row->ins_date?></td>
-						<td>
-							<?=($row->member_state ==3)?$row->member_leave_date:'-'?>
-						</td>
-						<td>
-						<?($row->member_reported_cnt=='')?'-':$row->member_reported_cnt?>
-						</td>
+						<td><?=$row->city_name?></td>
+						<td><?=$row->region_name?></td>
+						<td><?=($row->work_name !='')?$row->work_name:'-'?></td>
+						<td><?=($row->ins_date !='')?$row->ins_date:'-'?></td>
+						<td><?=($row->member_state ==3)?$row->member_leave_date:'-'?></td>
 						<td>
 							<?php if($row->member_state == '0'){ echo "이용중"; }
 							else if($row->member_state == '1'){ echo "이용정지"; }

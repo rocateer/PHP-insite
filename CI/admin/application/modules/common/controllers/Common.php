@@ -1,12 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /*
-  .  ____  .    ________________________________________________________
-  |/      \|   | Create-Date :  2017.08.05 | Author : 김옥훈
- [| ♥    ♥ |]  | Modify-Date :  2017.??.?? | Editor : 서욘두
-  |___==___|  V  Class-Name  :  common
-             / | Memo        :  공통 영역 관리
-               |________________________________________________________
+|------------------------------------------------------------------------
+| Author : 박수인	
+| Create-Date : 2023-04-19
+| Memo : 공통모듈
+|------------------------------------------------------------------------
 */
 
 class Common extends MY_Controller {
@@ -22,85 +21,17 @@ class Common extends MY_Controller {
 		$this->load->model('common/model_common');
 
 	}
-
-		// 큐레이션 상태 변경
-		public function display_mod_up(){
-			$main_section_idx = $this->_input_check("main_section_idx",array("empty_msg"=>" 키가 누락되었습니다."));
-			$display_yn = $this->_input_check("display_yn",array("empty_msg"=>" 상태 코드가 누락되었습니다."));
 	
-			$data['main_section_idx']  = $main_section_idx;
-			$data['display_yn'] = $display_yn;
-	
-			$result = $this->model_common->display_mod_up($data); // 공지사항 상태 변경
-	
-			$response = new stdClass();
-	
-			if($result == "0") {
-				$response->code = 0;
-				$response->code_msg 	= "상태변경 실패하였습니다.";
-			} else if($result == "1") {
-				$response->code = 1;
-				$response->code_msg 	= "노출여부 변경하였습니다.";
-			}
-			echo json_encode($response);
-			exit;
-		}
+	//선호지역 리스트 불러오기 
+	public function region_list(){
+		$city_name = $this->_input_check("city_name",array());
 
-			// 수정
-		public function main_section_mod_up(){
-			$main_section_idx = $this->_input_check("main_section_idx",array("empty_msg"=>"키값을 입력해주세요.","focus_id"=>"main_section_idx"));
-			$program_idx = $this->_input_check("program_idx",array("ternary"=>'0'));
-			$news_idx = $this->_input_check("news_idx",array("ternary"=>'0'));
-			$board_idx = $this->_input_check("board_idx",array("ternary"=>'0'));
+		$data['city_name'] = $city_name;
 
-			$data['main_section_idx'] = $main_section_idx;
-			$data['program_idx'] = $program_idx;
-			$data['news_idx'] = $news_idx;
-			$data['board_idx'] = $board_idx;
+		$region_list = $this->model_common->region_list($data);
 
-			$result = $this->model_common->main_section_mod_up($data);
-
-			$response = new stdClass;
-
-			if($result == "0") {
-				$response->code = "0";
-				$response->code_msg = "실패하였습니다.";
-			}else{
-				$response->code = "1";
-				$response->code_msg = "정상적으로 처리되었습니다.";
-			}
-
-			echo json_encode($response);
-			exit;
+		echo json_encode($region_list);
 	}
-
-			// 수정
-		public function setting_mod_up(){
-			$type = $this->_input_check("type",array("empty_msg"=>"키값을 입력해주세요."));
-			$main_news_title = $this->_input_check("main_news_title",array());
-			$main_program_title = $this->_input_check("main_program_title",array());
-
-			$data['type'] = $type;
-			$data['main_news_title'] = $main_news_title;
-			$data['main_program_title'] = $main_program_title;
-
-			$result = $this->model_common->setting_mod_up($data);
-
-			$response = new stdClass;
-
-			if($result == "0") {
-				$response->code = "0";
-				$response->code_msg = "실패하였습니다.";
-			}else{
-				$response->code = "1";
-				$response->code_msg = "수정되었습니다.";
-			}
-
-			echo json_encode($response);
-			exit;
-	}
-
-	
 
 	// 주소 좌표 변환
 	public function addr_to_coordinate(){

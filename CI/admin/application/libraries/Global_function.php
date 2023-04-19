@@ -551,11 +551,11 @@ keyboard_double_arrow_right</span> </a>
 	function get_join_type($str){
 
 		switch ($str) {
-			case 'C' : $rt =''; break;
-			case 'K' : $rt='(카카오톡)'; break;
-			case 'A' : $rt='(애플)'; break;
-			case 'N' : $rt='(네이버)'; break;
-			case 'G' : $rt='(구글)'; break;
+			case 'C' : $rt ='일반'; break;
+			case 'K' : $rt='카카오톡'; break;
+			case 'A' : $rt='애플'; break;
+			case 'N' : $rt='네이버'; break;
+			case 'G' : $rt='구글'; break;
 			}
 			return $rt;
 	}

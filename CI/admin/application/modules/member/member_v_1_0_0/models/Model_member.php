@@ -3,7 +3,7 @@
 /*
 |------------------------------------------------------------------------
 | Author : 박수인	
-| Create-Date : 2022-08-22
+| Create-Date : 2023-04-19
 | Memo : 회원 관리
 |------------------------------------------------------------------------
 */
@@ -17,45 +17,70 @@ Class Model_member extends MY_Model {
     $page_no=(int)$data['page_no'];
 
 		$member_id=$data['member_id'];
+		$member_name=$data['member_name'];
 		$member_nickname=$data['member_nickname'];
 		$member_state=$data['member_state'];
+		$member_join_type=$data['member_join_type'];
+		$city_name=$data['city_name'];
+		$region_code=$data['region_code'];
+		$work=$data['work'];
 		$s_date=$data['s_date'];
 		$e_date=$data['e_date'];
 	
 		$sql = "SELECT
-							member_idx,
-							FN_AES_DECRYPT(member_id) AS member_id,
-							member_nickname,
-							member_join_type,
-							member_gender,
-							member_state,
-							member_reported_cnt,
-							DATE_FORMAT(ins_date, '%Y-%m-%d') AS ins_date,
-							DATE_FORMAT(member_leave_date, '%Y-%m-%d') AS member_leave_date
+							a.member_idx,
+							FN_AES_DECRYPT(a.member_id) AS member_id,
+							FN_AES_DECRYPT(a.member_name) AS member_name,
+							a.member_nickname,
+							a.member_join_type,
+							a.member_gender,
+							a.member_state,
+							b.work_name,
+							c.city_name,
+							c.region_name,
+							DATE_FORMAT(a.ins_date, '%Y-%m-%d') AS ins_date,
+							DATE_FORMAT(a.member_leave_date, '%Y-%m-%d') AS member_leave_date
 						FROM
-							tbl_member 
+							tbl_member as a
+							LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N'
+							LEFT JOIN tbl_region as c on c.region_code=a.region_code
 						WHERE
-							member_idx!=2
+							a.del_yn='N'
 					";
 				
+		if($work !=""){
+			$sql .= " 	AND b.work_name LIKE '%$work%' ";
+		}
+		if($member_join_type !=""){
+			$sql .= " 	AND a.member_join_type = '$member_join_type' ";
+		}
+		if($city_name !=""){
+			$sql .= " 	AND c.city_name LIKE '%$city_name%' ";
+		}
+		if($region_code !=""){
+			$sql .= " 	AND a.region_code = $region_code ";
+		}
+		if($member_name !=""){
+			$sql .= " 	AND FN_AES_DECRYPT(a.member_name) LIKE '%$member_name%' ";
+		}
 		if($member_id !=""){
-			$sql .= " 	AND FN_AES_DECRYPT(member_id) LIKE '%$member_id%' ";
+			$sql .= " 	AND FN_AES_DECRYPT(a.member_id) LIKE '%$member_id%' ";
 		}
 		if($member_nickname !=""){
-			$sql .= " 	AND member_nickname LIKE '%$member_nickname%' ";
+			$sql .= " 	AND a.member_nickname LIKE '%$member_nickname%' ";
 		}
 		if($member_state !=""){
-			$sql .= " 	AND member_state LIKE '%$member_state%' ";
+			$sql .= " 	AND a.member_state LIKE '%$member_state%' ";
 		}
 		if($s_date != ""){
-			$sql .= " AND DATE_FORMAT(ins_date, '%Y-%m-%d') >= '$s_date' ";
+			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') >= '$s_date' ";
 		}
 		if($e_date != ""){
-			$sql .= " AND DATE_FORMAT(ins_date, '%Y-%m-%d') <= '$e_date' ";
+			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') <= '$e_date' ";
 		}
 	
 
-   $sql.="	ORDER BY ins_date DESC limit ?,? ";
+   $sql.="	ORDER BY a.ins_date DESC limit ?,? ";
 
     return $this->query_result($sql,
                                 array(
@@ -70,33 +95,54 @@ Class Model_member extends MY_Model {
 	public function member_list_count($data) {
 		
 		$member_id=$data['member_id'];
+		$member_name=$data['member_name'];
 		$member_nickname=$data['member_nickname'];
 		$member_state=$data['member_state'];
+		$member_join_type=$data['member_join_type'];
+		$city_name=$data['city_name'];
+		$region_code=$data['region_code'];
+		$work=$data['work'];
 		$s_date=$data['s_date'];
 		$e_date=$data['e_date'];
 	
 		$sql = "SELECT
 							COUNT(*) AS cnt
 						FROM
-							tbl_member 
+							tbl_member as a
+							LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N'
 						WHERE
-							member_idx!=2
+							a.del_yn='N'
 					";
 				
+		if($work !=""){
+			$sql .= " 	AND b.work_name LIKE '%$work%' ";
+		}
+		if($member_join_type !=""){
+			$sql .= " 	AND a.member_join_type = '$member_join_type' ";
+		}
+		if($city_name !=""){
+			$sql .= " 	AND c.city_name LIKE '%$city_name%' ";
+		}
+		if($region_code !=""){
+			$sql .= " 	AND a.region_code = $region_code ";
+		}
+		if($member_name !=""){
+			$sql .= " 	AND FN_AES_DECRYPT(a.member_name) LIKE '%$member_name%' ";
+		}
 		if($member_id !=""){
-			$sql .= " 	AND FN_AES_DECRYPT(member_id) LIKE '%$member_id%' ";
+			$sql .= " 	AND FN_AES_DECRYPT(a.member_id) LIKE '%$member_id%' ";
 		}
 		if($member_nickname !=""){
-			$sql .= " 	AND member_nickname LIKE '%$member_nickname%' ";
+			$sql .= " 	AND a.member_nickname LIKE '%$member_nickname%' ";
 		}
 		if($member_state !=""){
-			$sql .= " 	AND member_state LIKE '%$member_state%' ";
+			$sql .= " 	AND a.member_state LIKE '%$member_state%' ";
 		}
 		if($s_date != ""){
-			$sql .= " AND DATE_FORMAT(ins_date, '%Y-%m-%d') >= '$s_date' ";
+			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') >= '$s_date' ";
 		}
 		if($e_date != ""){
-			$sql .= " AND DATE_FORMAT(ins_date, '%Y-%m-%d') <= '$e_date' ";
+			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') <= '$e_date' ";
 		}
 	
 		return $this->query_cnt($sql,
@@ -113,45 +159,24 @@ public function member_detail($data){
 	
 	$sql = "SELECT
 						a.member_idx,
-						b.cnt,
-						b.month_record_time,
 						FN_AES_DECRYPT(a.member_id) AS member_id,
 						FN_AES_DECRYPT(a.member_name) AS member_name,
-						FN_AES_DECRYPT(a.member_phone) AS member_phone,
-						a.member_gender,
 						a.member_nickname,
 						a.member_join_type,
-						a.member_type,
+						a.member_gender,
 						a.member_state,
-						a.ins_date,
-						a.exercise_goal, 
-						a.exercise_goal_type, 
-						a.exercise_s_time, 
-						a.exercise_e_time, 
-						a.exercise_part, 
-						a.exercise_part_type, 
-						a.waist_measurement, 
-						DATE_FORMAT(a.member_leave_date, '%Y-%m-%d') AS member_leave_date,
-						a.member_leave_cnt,
-						a.member_reported_cnt,
-						a.member_leave_reason,
-						a.del_yn
-				FROM
+						b.work_name,
+						c.city_name,
+						c.region_name,
+						DATE_FORMAT(a.ins_date, '%Y-%m-%d') AS ins_date,
+						DATE_FORMAT(a.member_leave_date, '%Y-%m-%d') AS member_leave_date
+					FROM
 						tbl_member as a
-						LEFT JOIN 
-						(
-						SELECT 
-						member_idx,
-						COUNT(*) AS cnt,
-						SEC_TO_TIME( SUM( TIME_TO_SEC(record_time) ) ) AS month_record_time
-						FROM
-						tbl_member_program_record 
-						WHERE
-						del_yn='N'
-						AND excercise_yn='Y'
-						GROUP BY member_idx) as b ON b.member_idx =a.member_idx
-				WHERE
-				a.member_idx = ?
+						LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N'
+						LEFT JOIN tbl_region as c on c.region_code=a.region_code
+					WHERE
+						a.del_yn='N'
+						and a.member_idx = ?
 					";
 
 	return  $this->query_row($sql,
