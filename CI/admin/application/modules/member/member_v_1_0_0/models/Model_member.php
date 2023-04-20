@@ -31,6 +31,7 @@ Class Model_member extends MY_Model {
 							a.member_idx,
 							FN_AES_DECRYPT(a.member_id) AS member_id,
 							FN_AES_DECRYPT(a.member_name) AS member_name,
+							FN_AES_DECRYPT(a.member_phone) AS member_phone,
 							a.member_nickname,
 							a.member_join_type,
 							a.member_gender,
@@ -42,7 +43,7 @@ Class Model_member extends MY_Model {
 							DATE_FORMAT(a.member_leave_date, '%Y-%m-%d') AS member_leave_date
 						FROM
 							tbl_member as a
-							LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N'
+							LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N' and b.state=1
 							LEFT JOIN tbl_region as c on c.region_code=a.region_code
 						WHERE
 							a.del_yn='N'
@@ -107,9 +108,10 @@ Class Model_member extends MY_Model {
 	
 		$sql = "SELECT
 							COUNT(*) AS cnt
-						FROM
+							FROM
 							tbl_member as a
-							LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N'
+							LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N' and b.state=1
+							LEFT JOIN tbl_region as c on c.region_code=a.region_code
 						WHERE
 							a.del_yn='N'
 					";
@@ -161,10 +163,12 @@ public function member_detail($data){
 						a.member_idx,
 						FN_AES_DECRYPT(a.member_id) AS member_id,
 						FN_AES_DECRYPT(a.member_name) AS member_name,
+						FN_AES_DECRYPT(a.member_phone) AS member_phone,
 						a.member_nickname,
 						a.member_join_type,
 						a.member_gender,
 						a.member_state,
+						b.work_name,
 						b.work_name,
 						c.city_name,
 						c.region_name,
@@ -172,7 +176,7 @@ public function member_detail($data){
 						DATE_FORMAT(a.member_leave_date, '%Y-%m-%d') AS member_leave_date
 					FROM
 						tbl_member as a
-						LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N'
+						LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N' and b.state=1
 						LEFT JOIN tbl_region as c on c.region_code=a.region_code
 					WHERE
 						a.del_yn='N'

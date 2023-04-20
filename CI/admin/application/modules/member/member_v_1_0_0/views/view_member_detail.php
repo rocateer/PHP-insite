@@ -20,48 +20,40 @@
             </colgroup>
       			<tbody>
       				<tr>
+              <th style="text-align:center">가입 유형</th>
+      					<td><?=$this->global_function->get_join_type($result->member_join_type);?></td>
               <th style="text-align:center">아이디(이메일)</th>
-      					<td><?=$this->global_function->get_join_type($result->member_join_type);?> <?=$result->member_id?></td>
-              <th style="text-align:center">닉네임</th>
-                <td><?=$result->member_nickname?></td>
+                <td><?=$result->member_id?></td>
               </tr>
       				<tr>
               <th style="text-align:center">이름</th>
                 <td><?=$result->member_name?></td>
-              <th style="text-align:center">성별</th>
-                <td><?=($result->member_gender=="0")?"남":"여"?></td>
+              <th style="text-align:center">닉네임</th>
+                <td><?=$result->member_nickname?></td>
               </tr>
               <tr>
               <th style="text-align:center">전화번호</th>
                 <td><?=$this->global_function->format_phone($result->member_phone);?></td>
-              <th style="text-align:center">가입일</th>
-                <td><?=$this->global_function->date_Ymd_hyphen($result->ins_date);?></td>
+              <th style="text-align:center">지역</th>
+                <td><?=$result->city_name?> > <?=$result->region_name?></td>
               </tr>
               <tr>
               <th style="text-align:center">회원 상태</th>
-                <td>
+              <td>
                   <?php if($result->member_state == '0'){ echo "이용중"; }
                   else if($result->member_state == '1'){ echo "이용정지"; }
                   else if($result->member_state == '2'){echo "가입대기";} 
                   else if($result->member_state == '3'){echo "탈퇴";} 
                   ?>
                 </td>
-                <th style="text-align:center">신고 받은 횟수</th>
-                <td>
-                  <?=$result->member_reported_cnt?>
-                </td>
+              <th style="text-align:center">가입일</th>
+                <td><?=$this->global_function->date_Ymd_hyphen($result->ins_date);?></td>
               </tr>
-              
               <tr>
-              <th style="text-align:center">이용정지 이력</th>
-                <td><?=$result->member_leave_cnt?>
-                </td>
               <th style="text-align:center">탈퇴일</th>
                 <td>
                   <?=($result->member_leave_date=='')?'-':$result->member_leave_date?>
                 </td>
-              </tr>
-              <tr>
               <th style="text-align:center">탈퇴사유</th>
                <td colspan="3">
                <?if($result->member_state ==3){?>
@@ -74,7 +66,7 @@
           <br>
           
           <div class="row table_title">
-            <div class="col-lg-6"> &nbsp;<strong>나의 추가 정보</strong></div>
+            <div class="col-lg-6"> &nbsp;<strong>인증 정보</strong></div>
           </div>
 
           <table class="table table-bordered td_left">
@@ -86,18 +78,10 @@
             </colgroup>
       			<tbody>
             <tr>
-                <th style="text-align:center">운동 목표</th>
-                  <td colspan="3"><?=$this->global_function->get_exercise_goal_type($result->exercise_goal_type)?><?=($result->exercise_goal_type==4)?' : '.$result->exercise_goal:''?></td>
-              </tr>
-            <tr>
-                <th style="text-align:center">관심 운동 부위</th>
-                  <td colspan="3"><?=$this->global_function->get_exercise_part_type($result->exercise_part_type)?><?=($result->exercise_part_type==3)?' : '.$result->exercise_part:''?></td>
-              </tr>
-            <tr>
-                <th style="text-align:center">운동 시간대</th>
-                  <td><?=($result->exercise_s_time!='')?$result->exercise_s_time.'시 ':''?><?=($result->exercise_e_time!='')?'~ '.$result->exercise_e_time.'시':''?> </td>
-                <th style="text-align:center">목표 허리둘레</th>
-                  <td><?=($result->waist_measurement!='')?$result->waist_measurement.' 인치':''?></td>
+                <th style="text-align:center">인종 직증</th>
+                <td><?=$result->work_name?></td>
+                <th style="text-align:center">승인일</th>
+                <td><?=$result->member_nickname?></td>
               </tr>
             </tbody>
           </table>
