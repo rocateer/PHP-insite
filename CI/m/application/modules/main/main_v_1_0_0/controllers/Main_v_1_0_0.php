@@ -46,7 +46,6 @@ class Main_v_1_0_0 extends MY_Controller{
 
 	//인덱스
   public function index() {
-
     $this->main_detail();
   }
 
