@@ -98,17 +98,17 @@ define('PAGESIZE',10);
 define('PAGESIZE_15',15);
 define('PAGESIZE_12',12);
 define('ABS_PATH',$_SERVER['DOCUMENT_ROOT']);
-define("THIS_DOMAIN","https://".$_SERVER['HTTP_HOST']);
-define("_HTTP","https://");
+define("THIS_DOMAIN","http://".$_SERVER['HTTP_HOST']);
+define("_HTTP","http://");
 define('NO_CONTENTS', "조회된 컨텐츠가 없습니다.");
 
 /* 초기 세팅 */
 
-define("SITE_NAME",	"evescore");
-define("SITE_DOMAIN",	"evescore.com");
-define("SERVICE_NAME",'더프리다');
-define("COOKIE_DOMAIN",	".evescore.com");
-define('FILE_PATH',str_replace('/admin','',str_replace('/corp','',$_SERVER['DOCUMENT_ROOT'])));
+define("SITE_NAME",	"insite");
+define("SITE_DOMAIN",	"rocateerdev.co.kr");
+define("SERVICE_NAME",'인사이트');
+define("COOKIE_DOMAIN",	".rocateerdev.co.kr");
+define('FILE_PATH',str_replace('/m','',str_replace('/m','',$_SERVER['DOCUMENT_ROOT'])));
 
 /*smtp 메일 세팅*/
 define('SMTP_HOST', 'smtp.gmail.com');
@@ -129,6 +129,3 @@ define('NAVER_SET_DAMAIN', 'https://www.whatskitchen.com'); //네이버에서 �
 
 /*카카오 SNS 로그인 설정*/
 define('KAKAO_APP_KEY', '1c0591eb50224fe211f58257056fc998'); //카카오 로그인 앱키 JavaScript 키
-
-/* 워크 체크 연결 키 */
-define('PROJECT_IDX', 90);
