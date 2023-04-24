@@ -20,7 +20,7 @@ a.inherit{color:inherit;}
 a:active, a:hover {text-decoration:none}
 a[href^=tel] {text-decoration:inherit;color: inherit;}
 input:focus,select:focus,textarea:focus{outline: none;}
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-internal-autofill-selected {background: #fff !important; -webkit-box-shadow: 0 0 0 1000px white inset;}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-internal-autofill-selected {background: #121212 !important;}
 
 
 /* 퀵 클래스 */

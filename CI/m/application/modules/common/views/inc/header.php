@@ -20,8 +20,6 @@
   <!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
   <link rel="stylesheet" href="/external_css/swiper-bundle.min.css">
   <link rel="stylesheet" href="/external_css/jquery.tag-editor.css">
-  <!-- <link rel="stylesheet" href="/external_css/nouislider.min.css"> -->
-  <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
   <!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
   <link rel="stylesheet" href="/external_css/outside.css">
 

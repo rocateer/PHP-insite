@@ -30,21 +30,17 @@
       <? if($agent=='ios'){ ?>
         
           <a href="javascript:void(0)" onclick="$('#member_join_type').val('A');api_request_sns_login('A');">
-            <img src="/images/login_1.png" alt="Apple로그인">
+            <img src="/images/apple_logo.png" alt="Apple로그인">
           </a>
        
       <? } ?>
      
         <a href="javascript:void(0)" onclick="$('#member_join_type').val('N');api_request_sns_login('N');">
-          <img src="/images/login_2.png" alt="네이버로그인">
-        </a>
-    
-        <a href="javascript:void(0)" onclick="$('#member_join_type').val('G');api_request_sns_login('G');">
-          <img src="/images/login_3.png" alt="구글로그인">
+          <img src="/images/naver_logo.png" alt="네이버로그인">
         </a>
     
         <a href="javascript:void(0)" onclick="$('#member_join_type').val('K');api_request_sns_login('K');">
-          <img src="/images/login_4.png" alt="카카오로그인">
+          <img src="/images/kakao_logo.png" alt="카카오로그인">
         </a>
       
       </div>
