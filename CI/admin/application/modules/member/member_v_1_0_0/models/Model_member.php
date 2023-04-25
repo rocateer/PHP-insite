@@ -35,7 +35,7 @@ Class Model_member extends MY_Model {
 							a.member_nickname,
 							a.member_join_type,
 							a.member_gender,
-							a.member_state,
+							a.del_yn,
 							b.work_name,
 							c.city_name,
 							c.region_name,
@@ -46,7 +46,7 @@ Class Model_member extends MY_Model {
 							LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N' and b.state=1
 							LEFT JOIN tbl_region as c on c.region_code=a.region_code
 						WHERE
-							a.del_yn='N'
+							1=1
 					";
 				
 		if($work !=""){
@@ -71,7 +71,7 @@ Class Model_member extends MY_Model {
 			$sql .= " 	AND a.member_nickname LIKE '%$member_nickname%' ";
 		}
 		if($member_state !=""){
-			$sql .= " 	AND a.member_state LIKE '%$member_state%' ";
+			$sql .= " 	AND a.del_yn LIKE '%$member_state%' ";
 		}
 		if($s_date != ""){
 			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') >= '$s_date' ";
@@ -113,7 +113,7 @@ Class Model_member extends MY_Model {
 							LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N' and b.state=1
 							LEFT JOIN tbl_region as c on c.region_code=a.region_code
 						WHERE
-							a.del_yn='N'
+							1=1
 					";
 				
 		if($work !=""){
@@ -138,7 +138,7 @@ Class Model_member extends MY_Model {
 			$sql .= " 	AND a.member_nickname LIKE '%$member_nickname%' ";
 		}
 		if($member_state !=""){
-			$sql .= " 	AND a.member_state LIKE '%$member_state%' ";
+			$sql .= " 	AND a.del_yn LIKE '%$member_state%' ";
 		}
 		if($s_date != ""){
 			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') >= '$s_date' ";
@@ -164,23 +164,33 @@ public function member_detail($data){
 						FN_AES_DECRYPT(a.member_id) AS member_id,
 						FN_AES_DECRYPT(a.member_name) AS member_name,
 						FN_AES_DECRYPT(a.member_phone) AS member_phone,
+						FN_AES_DECRYPT(a.member_birth) AS member_birth,
 						a.member_nickname,
 						a.member_join_type,
 						a.member_gender,
-						a.member_state,
+						a.del_yn,
+						a.work_yn,
+						a.profile_yn,
 						b.work_name,
-						b.work_name,
+						d.pay_type,
+						d.career,
+						d.title,
+						d.contents,
+						d.display_yn,
+						d.report_cnt,
+						d.img as profile_img,
 						c.city_name,
 						c.region_name,
+						DATE_FORMAT(b.admission_date, '%Y-%m-%d') AS admission_date,
 						DATE_FORMAT(a.ins_date, '%Y-%m-%d') AS ins_date,
 						DATE_FORMAT(a.member_leave_date, '%Y-%m-%d') AS member_leave_date
 					FROM
 						tbl_member as a
 						LEFT JOIN tbl_work_confirm as b on b.work_confirm_idx=a.work_confirm_idx and b.del_yn='N' and b.state=1
 						LEFT JOIN tbl_region as c on c.region_code=a.region_code
+						LEFT JOIN tbl_profile as d on d.member_idx=a.member_idx and d.del_yn='N'
 					WHERE
-						a.del_yn='N'
-						and a.member_idx = ?
+						a.member_idx = ?
 					";
 
 	return  $this->query_row($sql,
@@ -190,24 +200,22 @@ public function member_detail($data){
 													);
 }
 
-public function member_state_mod_up($data){
+public function display_mod_up($data){
 
 	$member_idx  = $data['member_idx'];
-	$member_state = $data['member_state'];
 
 	$this->db->trans_begin();
 
 	$sql = "UPDATE
-						tbl_member
+						tbl_profile
 					SET
-						member_state = ?,
+						display_yn = if(display_yn='N','Y','N'),
 						upd_date = NOW()
 					WHERE
 						member_idx = ?
 					";
 
 	$this->query($sql,array(
-							 $member_state,
 							$member_idx
 							 ),$data
 						 );
@@ -226,7 +234,6 @@ public function member_state_mod_up($data){
 	public function del_yn_mod_up($data){
 
 		$member_idx = (int)$data['member_idx'];
-		$member_state = $data['member_state'];
 		$del_yn = $data['del_yn'];
 
 		$this->db->trans_begin();
@@ -234,8 +241,7 @@ public function member_state_mod_up($data){
 		$sql = "UPDATE
 							tbl_member
 						SET
-							member_state =?,
-							member_leave_cnt =if($member_state=1,member_leave_cnt+1,member_leave_cnt),
+							del_yn =?,
 							upd_date = NOW()
 						WHERE
 							member_idx = ?
@@ -243,7 +249,7 @@ public function member_state_mod_up($data){
 
 	$this->query($sql,
 														array(
-														$member_state,
+														$del_yn,
 														$member_idx
 														),$data
 														);

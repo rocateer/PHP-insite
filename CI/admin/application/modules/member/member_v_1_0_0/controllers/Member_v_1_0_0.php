@@ -211,16 +211,13 @@ class Member_v_1_0_0 extends MY_Controller{
 		exit;
 	}
 
-	// 회원 상태 변경
-	public function member_state_mod_up(){
+	public function display_mod_up(){
 
 		$member_idx = $this->_input_check("member_idx",array("empty_msg"=>"회원 키가 누락되었습니다."));
-		$member_state = $this->_input_check("member_state",array());
 		
 		$data['member_idx']  = $member_idx;
-		$data['member_state'] = $member_state;
 
-		$result = $this->model_member->member_state_mod_up($data);
+		$result = $this->model_member->display_mod_up($data);
 
 		$response = new stdClass();
 
@@ -239,11 +236,9 @@ class Member_v_1_0_0 extends MY_Controller{
 	public function del_yn_mod_up(){
 		$member_idx = $this->_input_check("member_idx",array("empty_msg"=>"키 누락"));
 		$del_yn = $this->_input_check("del_yn",array("empty_msg"=>"yn 누락"));
-		$member_state = $this->_input_check("member_state",array("empty_msg"=>"yn 누락"));
 
 		$data['member_idx'] = $member_idx;
 		$data['del_yn'] = $del_yn;
-		$data['member_state'] = $member_state;
 
 		$result = $this->model_member->del_yn_mod_up($data);
 
