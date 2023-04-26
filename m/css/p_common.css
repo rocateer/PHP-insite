@@ -33,7 +33,7 @@
 }
 body{background:#121212;}
 body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r", sans-serif; font-size:14px; color:#fff;}
- 
+input[type=password] {font-family:'Malgun gothic', dotum, sans-serif;}
 /* 대표 컬러 설정 */
 .point_color{color:#20BFA9 !important;}
 .sub_color{color:#F68582}
@@ -43,12 +43,12 @@ body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r",
 .sm_red{font-size: 12px;color:#F57A77; margin-top: 6px;line-height: 20px;}
 .b{font-weight: 600;} 
 .date{font-size: 12px;color:#999;}
-h1{font-weight: normal;font-size: 30px;font-family:'font-b';color:#262626;}
-h2{font-weight: normal;font-size: 24px;font-family:'font-b';color:#262626;}
-h3{font-weight: normal;font-size: 18px;font-family:'font-eb';color:#262626}
-h4{font-weight: normal;font-size: 18px;font-family:'font-b';color:#262626}
-h5{font-weight: normal;font-size: 16px;font-family:'font-b';color:#262626}
-h6{font-weight: normal;font-size: 14px;font-family:'font-b';color:#262626}
+h1{font-weight: normal;font-size: 30px;font-family:'font-b';color:#F5F5F5;}
+h2{font-weight: normal;font-size: 24px;font-family:'font-b';color:#F5F5F5;}
+h3{font-weight: normal;font-size: 18px;font-family:'font-eb';color:#F5F5F5}
+h4{font-weight: normal;font-size: 18px;font-family:'font-b';color:#F5F5F5}
+h5{font-weight: normal;font-size: 16px;font-family:'font-b';color:#F5F5F5}
+h6{font-weight: normal;font-size: 14px;font-family:'font-b';color:#F5F5F5}
 /* 라인 */
 hr{width: 100%; height: 0; border: 0; border-bottom: 1px solid #eee;margin: 0;}
 hr.space{width: 100%; height: 0; border: 0; border-bottom: 8px solid #FAF9FE;margin: 0;}
@@ -57,19 +57,19 @@ h4 .w_20{padding-bottom: 3px;}
 
 /* button custom : s */
 /* only colors */
-a.btn_disabled {background:#444; color: #A0A0A0; cursor: none;}
-a.btn_point{background: #20BFA9; color: #121212;}
-a.btn_point_ghost{border:1px solid #20BFA9; color: #20BFA9;}
-a.btn_dark_gray {background:#232527; color: #fff;}
+.btn_disabled {background:#444; color: #A0A0A0; cursor: none;}
+.btn_point{background: #20BFA9; color: #121212;}
+.btn_point_ghost{border:1px solid #20BFA9; color: #20BFA9;}
+.btn_dark_gray {background:#232527; color: #fff;}
 
 /* only shape */
 .btn_half_wrap{display: flex;}
 .btn_half_left{flex:1; margin-right:5px;}
 .btn_half_right{flex:1}
-a.btn_full_basic {border-radius:5px; display:block; text-align:center; height:50px; line-height:50px; font-size:16px; font-family:'font-b';}
-a.btn_md {border-radius:5px; display:block; text-align:center; height:40px; line-height:40px; font-size:16px; font-family:'font-b';}
+.btn_full_basic {border-radius:5px; display:block; text-align:center; height:50px; line-height:50px; font-size:16px; font-family:'font-b';}
+.btn_md {border-radius:5px; display:block; text-align:center; height:40px; line-height:40px; font-size:16px; font-family:'font-b';}
 /* button custom : e */
-a.btn_floating{position:fixed; width:100%; height:50px; z-index: 99; bottom:0px; left:0; box-sizing: border-box; text-align: center; line-height: 50px; font-size: 16px; font-family:'font-b';}
+.btn_floating{position:fixed; width:100%; height:50px; z-index: 99; bottom:0px; left:0; box-sizing: border-box; text-align: center; line-height: 50px; font-size: 16px; font-family:'font-b';}
 
 /* 폼 관련 */
 .disabled input{background: #F6F6F6 !important; border: 1px solid #CDCDCD !important;}
@@ -274,7 +274,7 @@ footer li.active img{position: relative; top: 0; left: 0; height: 24px; display:
 .flex_1 input{flex:1;}
 .flex_1 a{border-radius:5px; background: #fff;border: 1px solid #F57A77; margin-left: 5px; color:#F57A77; line-height:48px; flex: 0 0 90px; text-align: center; vertical-align: middle;}
 .flex_1 span{line-height: 50px; padding: 0 7px;}
-.flex_1 select{flex: 0 0 150px;}
+.flex_1 select{flex: 0 0 120px;}
 .flex_2 > *{flex:1;} 
 .flex_2 > :last-child{margin-left: 15px;}
 .flex_3 input{flex:1;height: 36px;border: 1px solid #DDDDDD; border-radius: 5px; box-shadow: none}

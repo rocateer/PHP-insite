@@ -22,7 +22,7 @@ class Join_v_1_0_0 extends MY_Controller{
 	//메인 화면
   public function join_reg(){
 
-		$this->_view(mapping('join').'/view_join_reg');
+		$this->_view(mapping('join').'/view_join_reg2');
   }
 
 	//메인 화면
