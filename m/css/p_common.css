@@ -187,15 +187,15 @@ footer li.active img{position: relative; top: 0; left: 0; height: 24px; display:
 /* 로그인 */
 .login_wrap .logo{width: 135px;text-align: center; margin:100px auto 80px; display: block;}
 .login_wrap{width:100%; padding: 0 50px; box-sizing: border-box; margin: 0 auto;}
-.login_wrap .or{width: 146px;font-size: 12px;color:#A0A0A0;padding: 0 60px; position:relative; margin:109px auto 30px;box-sizing: border-box;text-align: center;}
+.login_wrap .or{width: 146px; font-size: 12px;color:#A0A0A0;padding: 0 0px; position:relative; margin:109px auto 30px;box-sizing: border-box; text-align: center;}
 .login_wrap .or::after{content: '';display: block;position: absolute;z-index: 1;top:5px;right:0px;width: 35px;height: 1px;background-color: #444444;}
 .login_wrap .or::before{content: '';display: block;position: absolute;z-index: 1;top:5px;left:0px;width: 35px;height: 1px;background-color: #444444;}
 .login_wrap .join{width: 100%;font-size: 12px;color:#A0A0A0;position:relative;margin:80px auto;box-sizing: border-box;text-align: center;}
 .login_wrap .join a{color:#20BFA9;}
-.login_find_ul{float: right;margin-top: 16px; margin-bottom: 123px; overflow: hidden;}
-.login_find_ul li{float: left; font-size: 12px; color:#E2E2E2;}
-.login_find_ul li:first-child{margin-right: 20px;position: relative;}
-.login_find_ul li:first-child::after{content: '';display: block; position: absolute;z-index: 1;top:4px; right:-10px;background: #999999; width: 2px;height: 2px;border-radius: 2px;}
+
+.login_find_ul{text-align: right; font-size: 12px; overflow: hidden; margin-top: 15px;}
+.login_find_ul span{margin: 0 4px;}
+
 .sns_ul{width:100%;overflow: hidden;margin:20px auto; text-align: center;}
 .sns_ul img{width:50px; margin: 0 12px;}
 .sns_ul>li{width: 50px;margin-right: 12px;float: left;}

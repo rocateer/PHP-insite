@@ -16,15 +16,14 @@
       <a href="#" class="btn_point btn_full_basic">로그인</a>
     </div>
 
-    <ul class="login_find_ul">
-      <li>
-        <a href="/<?=mapping('find_id')?>">아이디 찾기</a>
-      </li>
-      <li>
-        <a href="/<?=mapping('find_pw')?>">비밀번호 찾기</a>
-      </li>
-    </ul>
+    <div class="login_find_ul">
+      <a href="/<?=mapping('find_id')?>">아이디 찾기</a>
+      <span>·</span> 
+      <a href="/<?=mapping('find_pw')?>">비밀번호 찾기</a>
+    </div>
+
     <div class="or">또는</div>
+
      <div class="sns_ul">
         <a href="javascript:void(0)" onclick="$('#member_join_type').val('N');api_request_sns_login('N');">
           <img src="/images/naver_logo.png" alt="네이버로그인">

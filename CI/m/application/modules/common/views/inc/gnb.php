@@ -12,7 +12,7 @@ header h1{font-size:16px;font-family: 'font-b'; text-align: center; line-height:
 header .head_txt{color:#20BFA9;font-size:16px; position: absolute; z-index: 1; top:15px; right:20px;}
 
 a.btn_gray_ghost{border:1px solid #444; color: #E2E2E2;}
-a.btn_sm {border-radius:3px; display:inline-block; text-align:center; padding:8px 12px; font-size:12px; font-family:'font-b';}
+a.btn_sm {border-radius:3px; display:inline-block; text-align:center; padding:8px 12px; font-size:12px; font-family:'font-b'; }
 </style>
 
 <header>
