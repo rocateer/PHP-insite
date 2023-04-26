@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <!-- Page Heading -->
   <div class="page-header">
-    <h1>프로그램 관리</h1>
+    <h1>배너 관리</h1>
   </div>
 
   <!-- body : s -->
@@ -19,35 +19,24 @@
           </colgroup>
           <tbody>
             <tr>
-              <th style="text-align:center">프로그램명</th>
+              <th style="text-align:center">배너명</th>
               <td>
                 <input class="form-control" name="title" id="title">
               </td>
-              <th style="text-align:center">노출 여부</th>
+              <th style="text-align:center">등록일</th>
               <td>
+                <input name="s_date" id="s_date" class="form-control datepicker" autocomplete="off" readonly style="width: 40%;">&nbsp;<span class="material-icons">date_range</span>&nbsp;~&nbsp;
+                <input name="e_date" id="e_date" class="form-control datepicker" autocomplete="off" readonly style="width: 40%;" >&nbsp;<span class="material-icons">date_range</span>
+              </td>
+            </tr>
+            <tr>
+              <th style="text-align:center">노출 여부</th>
+              <td colspan="3">
                 <label class="radio-inline"><input type="radio" name="display_yn" value="" checked> 전체</label>
                 <label class="radio-inline"><input type="radio" name="display_yn" value="Y"> 게시중</label>
                 <label class="radio-inline"><input type="radio" name="display_yn" value="N"> 노출 안함</label>
               </td>
-            </tr>
-            <tr>
-              
-              <th style="text-align:center">프로그램 카테고리</th>
-              <td>
-              <select name="category_management_idx" id="category_management_idx" class="form-control">
-                  <option value="">선택</option>
-                  <?foreach($result_list as $row){?>
-                    <option value="<?=$row->category_management_idx?>"><?=$row->category_name?></option>
-                  <?}?>
-                </select>
-              </td>
-              <th style="text-align:center">등록일</th>
-                <td>
-                  <input name="s_date" id="s_date" class="form-control datepicker" autocomplete="off" readonly style="width: 40%;">&nbsp;<span class="material-icons">date_range</span>&nbsp;~&nbsp;
-                  <input name="e_date" id="e_date" class="form-control datepicker" autocomplete="off" readonly style="width: 40%;" >&nbsp;<span class="material-icons">date_range</span>
-                </td>
-            </tr>
-          
+            </tr>          
           </tbody>
         </table>
       </form>
@@ -85,7 +74,6 @@
     var form_data = {
       'title' : $('#title').val(),
       'display_yn' : $('input[name="display_yn"]:checked').val(),
-      'category_management_idx' : $('select[name="category_management_idx"]').val(),
       's_date' : $('#s_date').val(),
       'e_date' : $('#e_date').val(),
       'history_data' : window.history.length,
@@ -93,7 +81,7 @@
     };
 
     $.ajax({
-      url: "/<?=mapping('program')?>/program_list_get",
+      url: "/<?=mapping('banner')?>/banner_list_get",
       type: 'POST',
       dataType : 'html',
       async: true,
@@ -105,15 +93,15 @@
 }
 
   // 상태 수정
-  function program_state_mod_up(program_idx, display_yn){
+  function display_mod_up(banner_idx, display_yn){
 
     var formData = {
-      "program_idx" : program_idx,
+      "banner_idx" : banner_idx,
       "display_yn" : display_yn
     };
 
     $.ajax({
-      url      : "/<?=mapping('program')?>/program_state_mod_up",
+      url      : "/<?=mapping('banner')?>/display_mod_up",
       type     : 'POST',
       dataType : 'json',
       async    : true,

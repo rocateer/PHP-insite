@@ -4,7 +4,7 @@
 			<h1>회원 관리</h1>
 		</div>
 
-    <form id="form_default" name="form_default" onkeypress="enter_form();" >
+    <form id="form_default" name="form_default" >
       <!-- body : s -->
       <div class="bg_wh mt20">
         <!-- search : s -->
@@ -48,9 +48,9 @@
                 <th style="text-align:center">회원상태</th>
       					<td>
                   <label class="radio-inline"><input type="radio"  name="member_state" id="member_state_1"   value="" checked> 전체</label>
-                  <label class="radio-inline"><input type="radio" name="member_state" id="member_state_2"  value="0">이용중</label>
-                  <label class="radio-inline"><input type="radio" name="member_state" id="member_state_3"  value="1">이용정지</label>
-                  <label class="radio-inline"><input type="radio" name="member_state" id="member_state_4"  value="3">탈퇴</label>
+                  <label class="radio-inline"><input type="radio" name="member_state" id="member_state_2"  value="N">이용중</label>
+                  <label class="radio-inline"><input type="radio" name="member_state" id="member_state_3"  value="P">이용정지</label>
+                  <label class="radio-inline"><input type="radio" name="member_state" id="member_state_4"  value="Y">탈퇴</label>
                 </td>
                 <th style="text-align:center">가입유형</th>
       					<td>

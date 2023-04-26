@@ -36,11 +36,11 @@
 						<td><?=$row->region_name?></td>
 						<td><?=($row->work_name !='')?$row->work_name:'-'?></td>
 						<td><?=($row->ins_date !='')?$row->ins_date:'-'?></td>
-						<td><?=($row->member_state ==3)?$row->member_leave_date:'-'?></td>
+						<td><?=($row->del_yn =='Y')?$row->member_leave_date:'-'?></td>
 						<td>
-							<?php if($row->member_state == '0'){ echo "이용중"; }
-							else if($row->member_state == '1'){ echo "이용정지"; }
-							else if($row->member_state == '3'){echo "탈퇴";} 
+							<?php if($row->del_yn == 'N'){ echo "이용중"; }
+							else if($row->del_yn == 'P'){ echo "이용정지"; }
+							else if($row->del_yn == 'Y'){echo "탈퇴";} 
 							?>
 						</td>
 					</tr>

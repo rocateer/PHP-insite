@@ -406,17 +406,27 @@ keyboard_double_arrow_right</span> </a>
 		return $str;
 	}
 
-  // 핸드폰 형식세팅
+	// 핸드폰 형식세팅
 	function set_phone_number($str){
 
-		if($str){
+		if(strlen($str)==11){
 			$rt = substr($str,0,3)."-".substr($str,3,4)."-".substr($str,7,4);
-		}else{
-			$rt ="";
+		}else if(strlen($str)==10){
+			$test = substr($str,0,2);
+			if($test=='02'){
+				$rt = substr($str,0,2)."-".substr($str,2,4)."-".substr($str,6,4);
+			}else{
+				$rt = substr($str,0,3)."-".substr($str,3,3)."-".substr($str,6,4);
+			}
+		}else if(strlen($str)==9){
+			$rt = substr($str,0,2)."-".substr($str,2,3)."-".substr($str,5,4);
+		}else if(strlen($str)<7){
+			$rt = "";
+		}else if(strlen($str)==8){
+			$rt = substr($str,0,4)."-".substr($str,4,4);
 		}
 		return $rt;
 	}
-
 	// 전화번호 '-'기준으로 나누기
 	function telnumNoneHypen($str){
 
@@ -527,23 +537,26 @@ keyboard_double_arrow_right</span> </a>
 		echo "원";
 	}
 
-	function get_order_state($str){
+	function get_pay_type($str){
 
 		switch ($str) {
-			case '0' : $rt ='주문완료'; break;
-			case '1' : $rt='입금완료'; break;
-			case '2' : $rt='배송준비'; break;
-			case '3' : $rt='배송보류'; break;
-			case '4' : $rt='배송중'; break;
-			case '5' : $rt='배송완료'; break;
-			case '20' : $rt='주문취소신청'; break;
-			case '21' : $rt='주문취소'; break;
-			case '30' : $rt='주문환불신청'; break;
-			case '31' : $rt='주문환불완료'; break;
-			case '32' : $rt='주문환불불가'; break;
-			case '40' : $rt='주문교환신청'; break;
-			case '41' : $rt='주문교환완료'; break;
-			case '42' : $rt='주문교환불가'; break;
+			case 0 : $rt ='일급'; break;
+			case 1 : $rt='연봉'; break;
+			case 2 : $rt='협의가능'; break;
+			default:  $rt=''; break;
+			}
+			return $rt;
+	}
+
+	function get_career_type($str){
+
+		switch ($str) {
+			case 0 : $rt ='1년미만'; break;
+			case 1 : $rt='1년이상~3년미만'; break;
+			case 2 : $rt='3년이상~5년미만'; break;
+			case 3 : $rt='5년이상~10년미만'; break;
+			case 4 : $rt='10년이상'; break;
+			default:  $rt=''; break;
 			}
 			return $rt;
 	}

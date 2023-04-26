@@ -33,16 +33,78 @@ $arr_right = explode(',',$this->admin_right);
           <p><span>ID : <?=$this->admin_id?></span></p>
         </li>
 
+
         <!-- 회원관리 -->
-        <li class="<?php if($this->uri->segment(1)==mapping('member')) echo "active";?>">
-          <a href="/<?=mapping('member')?>">
-            <span class="material-icons">people_alt</span>
-            <span>회원 관리 &nbsp;</span>
+        <li class="<?php if($this->uri->segment(1)==mapping('member')||$this->uri->segment(1)==mapping('work')) echo "active";?>">
+          <a href="#" data-toggle="collapse" data-target="#member">
+            <span class="material-icons">
+            people_alt
+            </span>
+            <span>회원 관리</span> <span class="material-icons">arrow_drop_down</span>
           </a>
+
+          <ul id="member" class="collapse <?php if($this->uri->segment(1)==mapping('member')||$this->uri->segment(1)==mapping('work')){ echo "in";}?>" aria-expanded="true">
+            <li><a href="/<?=mapping('member')?>">회원 관리</a></li>
+            <li><a href="/<?=mapping('work')?>">직종 승인 관리</a></li>
+          </ul>
         </li>
         <!-- 회원관리 -->
 
-        <!-- 신고 관리 -->
+        
+        <!-- 커뮤니티 관리 -->
+        <li class="<?php if($this->uri->segment(1) == mapping('board')){echo "active";} ?>">
+          <a href="#" data-toggle="collapse" data-target="#admin_board">
+            <span class="material-icons">
+            forum
+            </span>
+            <span>커뮤니티 게시판 관리</span> <span class="material-icons">arrow_drop_down</span>
+          </a>
+
+          <ul id="admin_board" class="collapse <?php if($this->uri->segment(1)==mapping('board')){ echo "in";}?>" aria-expanded="true">
+            <li><a href="/<?=mapping('board')?>">게시판 큐레이션</a></li>
+            <li><a href="/<?=mapping('board')?>/counselor_board_list">게시판 관리</a></li>
+            <li><a href="/<?=mapping('board')?>/main_section_2">커뮤니티 게시글 관리</a></li>
+            <li><a href="/<?=mapping('board')?>/main_section_2">구인 관리</a></li>
+            <li><a href="/<?=mapping('board')?>/main_section_2">중고거래 게시글 관리</a></li>
+          </ul>
+        </li>
+         <!-- 커뮤니티 관리 -->
+
+        
+        <!-- 메거진 관리  -->
+        <li class="<?php if($this->uri->segment(1) == mapping('news')){echo "active";} ?>">
+          <a href="#" data-toggle="collapse" data-target="#admin_news">
+            <span class="material-icons">category</span>
+            <span>공동구매 관리</span> <span class="material-icons">arrow_drop_down</span>
+          </a>
+
+          <ul id="admin_news" class="collapse <?php if($this->uri->segment(1)==mapping('news')){ echo "in";}?>" aria-expanded="true">
+            <li><a href="/<?=mapping('news')?>">공동구매 관리</a></li>
+            <li><a href="/<?=mapping('news')?>">공동구매 투표 관리</a></li>
+            <li><a href="/<?=mapping('news')?>/main_section_1">공동구매 Q&A 관리</a></li>
+          </ul>
+        </li>
+        <!-- 메거진 관리  -->
+    
+
+        <!-- 카테고리관리 -->
+        <li class="<?php if($this->uri->segment(1)==mapping('category_management')) echo "active";?>">
+
+          <a href="#" data-toggle="collapse" data-target="#admin_category">
+            <span class="material-icons">widgets</span>
+            <span>교육 관리</span> <span class="material-icons">arrow_drop_down</span>
+          </a>
+
+          <ul id="admin_category" class="collapse <?php if( $this->uri->segment(1)==mapping('category_management') ) echo "in";?>" aria-expanded="true">
+            <li><a href="/<?=mapping('category_management');?>">교육 관리</a></li>
+            <li><a href="/<?=mapping('category_management');?>">교육 투표 관리</a></li>
+            <li><a href="/<?=mapping('category_management');?>/category_management1">교육 Q&A 관리</a></li>
+          </ul>
+        </li>
+       <!-- 카테고리관리 -->
+
+
+      <!-- 신고 관리 -->
         <li class="<?php if($this->uri->segment(1) == mapping('board_report')||$this->uri->segment(1) == mapping('board_reply_report')){echo "active";} ?>">
           <a href="#" data-toggle="collapse" data-target="#admin_report">
             <span class="material-icons">
@@ -52,85 +114,37 @@ $arr_right = explode(',',$this->admin_right);
           </a>
 
           <ul id="admin_report" class="collapse <?php if($this->uri->segment(1)==mapping('board_report')|| $this->uri->segment(1)==mapping('board_reply_report')  ){ echo "in";}?>" aria-expanded="true">
-            <li><a href="/<?=mapping('board_report')?>">게시글 신고 관리</a></li>
-            <li><a href="/<?=mapping('board_reply_report')?>">댓글 신고</a></li>
+            <li><a href="/<?=mapping('board_report')?>">게시글 신고관리</a></li>
+            <li><a href="/<?=mapping('board_reply_report')?>">게시글 댓글 신고관리</a></li>
+            <li><a href="/<?=mapping('board_report')?>">중고거래 신고관리</a></li>
+            <li><a href="/<?=mapping('board_reply_report')?>">중고거래 댓글 신고관리</a></li>
+            <li><a href="/<?=mapping('report')?>">구인 신고관리</a></li>
+            <li><a href="/<?=mapping('report')?>">구직프로필 신고관리</a></li>
+            <li><a href="/<?=mapping('board_reply_report')?>">공구/교육 사전투표<br>댓글 신고관리</a></li>
           </ul>
         </li>
          <!-- 신고 관리 -->
 
-        <!-- 커뮤니티 관리 -->
-        <li class="<?php if($this->uri->segment(1) == mapping('board')){echo "active";} ?>">
-          <a href="#" data-toggle="collapse" data-target="#admin_board">
-            <span class="material-icons">
-            forum
-            </span>
-            <span>커뮤니티 관리</span> <span class="material-icons">arrow_drop_down</span>
+
+          <!-- 배너관리 -->
+        <li class="<?php if($this->uri->segment(1)==mapping('banner')) echo "active";?>">
+          <a href="/<?=mapping('banner');?>" >
+            <span class="material-icons">menu</span>
+            <span>배너관리</span>
           </a>
-
-          <ul id="admin_board" class="collapse <?php if($this->uri->segment(1)==mapping('board')){ echo "in";}?>" aria-expanded="true">
-            <li><a href="/<?=mapping('board')?>">오늘의 운동 완료 관리</a></li>
-            <li><a href="/<?=mapping('board')?>/counselor_board_list">이브의 고민 관리</a></li>
-            <li><a href="/<?=mapping('board')?>/main_section_2">베스트 이브의 고민 큐레이션</a></li>
-          </ul>
         </li>
-         <!-- 커뮤니티 관리 -->
+        <!-- 배너관리 -->
 
-        <!-- 떙그랑 메거진 관리  -->
-        <li class="<?php if($this->uri->segment(1) == mapping('news')){echo "active";} ?>">
-          <a href="#" data-toggle="collapse" data-target="#admin_news">
-            <span class="material-icons">
-            widgets
-            </span>
-            <span>메거진 관리</span> <span class="material-icons">arrow_drop_down</span>
-          </a>
-
-          <ul id="admin_news" class="collapse <?php if($this->uri->segment(1)==mapping('news')){ echo "in";}?>" aria-expanded="true">
-            <li><a href="/<?=mapping('news')?>">메거진 관리</a></li>
-            <li><a href="/<?=mapping('news')?>/main_section_1">메거진 큐레이션</a></li>
-          </ul>
-        </li>
-        <!-- 떙그랑 메거진 관리  -->
-
-        <!-- 운동관리 -->
-        <li class="<?php if($this->uri->segment(1) == mapping('exercise')|| $this->uri->segment(1)==mapping('program')){echo "active";} ?>">
-          <a href="#" data-toggle="collapse" data-target="#admin_exercise">
-            <span class="material-icons">
-            list_alt
-            </span>
-            <span>운동 관리</span> <span class="material-icons">arrow_drop_down</span>
-          </a>
-
-          <ul id="admin_exercise" class="collapse <?php if($this->uri->segment(1)==mapping('exercise')|| $this->uri->segment(1)==mapping('program')){ echo "in";}?>" aria-expanded="true">
-            <li><a href="/<?=mapping('exercise')?>">운동 관리</a></li>
-            <li><a href="/<?=mapping('program')?>">프로그램 관리</a></li>
-            <li><a href="/<?=mapping('exercise')?>/main_section_1">추천 운동 큐레이션</a></li>
-          </ul>
-        </li>
-        <!-- 운동관리 --> 
-    
-        <!-- 카테고리관리 -->
-        <li class="<?php if($this->uri->segment(1)==mapping('category_management')) echo "active";?>">
-
-          <a href="#" data-toggle="collapse" data-target="#admin_category">
-            <span class="material-icons">category</span>
-            <span>카테고리</span> <span class="material-icons">arrow_drop_down</span>
-          </a>
-
-          <ul id="admin_category" class="collapse <?php if( $this->uri->segment(1)==mapping('category_management') ) echo "in";?>" aria-expanded="true">
-            <li><a href="/<?=mapping('category_management');?>">프로그램 카테고리 관리</a></li>
-            <li><a href="/<?=mapping('category_management');?>/category_management1">이브의 고민 카테고리 관리</a></li>
-          </ul>
-        </li>
-       <!-- 카테고리관리 -->
 
           <!-- 안내관리 -->
-          <li class="<?php if($this->uri->segment(1)==mapping('info')) echo "active";?>">
+        <li class="<?php if($this->uri->segment(1)==mapping('info')) echo "active";?>">
           <a href="/<?=mapping('info');?>" >
             <span class="material-icons">note</span>
             <span>안내관리</span>
           </a>
         </li>
         <!-- 안내관리 -->
+
 
         <!-- 공지사항 -->
         <li class="<?php if($this->uri->segment(1)==mapping('notice')  ||  $this->uri->segment(1)==mapping('faq') ||  $this->uri->segment(1)==mapping('qa')) echo "active";?>">
@@ -148,6 +162,7 @@ $arr_right = explode(',',$this->admin_right);
         </li>
        <!-- 공지사항 -->
         
+
         <!-- 약관관리 -->
         <li class="<?php if($this->uri->segment(1)==mapping('terms')) echo "active";?>">
           <a href="/<?=mapping('terms');?>" >
