@@ -17,6 +17,7 @@ if (!function_exists('mapping')) {
       //개발
 
       $return_arr =  array(
+        'guide' => 'guide_v_1_0_0', // ------------------------------- guide
         'event' => 'event_v_0_0_0', // ------------------------------- event
         'block' => 'block_v_0_0_0', // ------------------------------- block
         'history' => 'history_v_0_0_0', // ------------------------------- history
@@ -54,6 +55,7 @@ if (!function_exists('mapping')) {
     } else {
       //운영
       $return_arr =  array(
+        'guide' => 'guide_v_1_0_0', // ------------------------------- guide
         'event' => 'event_v_0_0_0', // ------------------------------- event
         'block' => 'block_v_0_0_0', // ------------------------------- block
         'history' => 'history_v_0_0_0', // ------------------------------- history
