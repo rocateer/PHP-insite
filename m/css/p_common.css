@@ -9,27 +9,27 @@
   font-family: 'font-b';
   font-style: normal;
   font-weight: 700;
-  src: url(../fonts/NanumSquareB.woff) format('woff'), url(../fonts/NanumSquareB.woff) format('woff'), url(../fonts/NanumSquareB.ttf) format('truetype');
+  src: url(/fonts/NanumSquareB.woff) format('woff'), url(/fonts/NanumSquareB.woff) format('woff'), url(/fonts/NanumSquareB.ttf) format('truetype');
 }
 @font-face {
   font-family: 'font-eb';
   font-style: normal;
   font-weight: 900;
-  src: url(../fonts/NanumSquareEB.woff) format('woff'), url(../fonts/NanumSquareEB.woff) format('woff'), url(../fonts/NanumSquareEB.ttf) format('truetype');
+  src: url(/fonts/NanumSquareEB.woff) format('woff'), url(/fonts/NanumSquareEB.woff) format('woff'), url(/fonts/NanumSquareEB.ttf) format('truetype');
 }
 @font-face {
   font-family: 'font-l';
   font-style: normal;
   font-weight: 300;
-  src: url(../fonts/NanumSquareL.woff) format('woff'), url(../fonts/NanumSquareL.woff) format('woff'), url(../fonts/NanumSquareL.ttf) format('truetype');
+  src: url(/fonts/NanumSquareL.woff) format('woff'), url(/fonts/NanumSquareL.woff) format('woff'), url(/fonts/NanumSquareL.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'font-r';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/NanumSquareR.woff) format('woff'), url(../fonts/NanumSquareR.otf) format('otf'),
-    url(../fonts/NanumSquareR.ttf) format('truetype');
+  src: url(/fonts/NanumSquareR.woff) format('woff'), url(/fonts/NanumSquareR.otf) format('otf'),
+    url(/fonts/NanumSquareR.ttf) format('truetype');
 }
 
 body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r", sans-serif; font-size:14px; color:#fff; background:#121212;}
@@ -215,7 +215,8 @@ footer li.active img{position: relative; top: 0; left: 0; height: 24px; display:
 /* no_search_data */
 .no_data{padding:150px 0; box-sizing: border-box;}
 .no_data img{display: block; margin: 0 auto; margin-bottom:30px; width:80px;}
-.no_data p{text-align: center; font-size: 14px; color:#BFBFBF; line-height: 1.6}
+.no_data p{text-align: center; font-size: 14px; color:#BFBFBF; line-height: 1.6; }
+.no_data p .message_box{background: #232527; border-radius: 5px; padding: 16px 20px; display: inline-block;}
 .no_data2{padding:50px 0; box-sizing: border-box;}
 .no_data2 img{display: block; margin: 0 auto; margin-bottom:30px; width:80px;}
 .no_data2 p{text-align: center; font-size: 14px; color:#BFBFBF; line-height: 1.6}
