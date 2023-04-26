@@ -152,7 +152,14 @@ input:checked + .check_slider:before {-webkit-transform: translateX(16px); -ms-t
 /* 대표 wrap */
 .body{padding-top:50px; min-height: 100%; box-sizing: border-box;}
 .inner_wrap{padding-left:20px; padding-right: 20px;}
+.inner_wrap .find_result{border:1px solid #444444; border-radius: 5px; height:300px;margin: 0 auto;}
 .inner_wrap2{padding-left:30px; padding-right: 30px;}
+
+.find_result{text-align: center;}
+.find_result img{width: 35px;margin: 0 auto;display: block;padding-top: 70px;}
+.find_result h2{color: #F5F5F5;}
+.find_result .text{color: #E2E2E2;}
+
 .footer_margin{padding-bottom: 60px; box-sizing: border-box;}
 body, html , .wrap{height: 100%;}
 .vh_wrap{position: relative; min-height: 100vh; overflow: hidden}

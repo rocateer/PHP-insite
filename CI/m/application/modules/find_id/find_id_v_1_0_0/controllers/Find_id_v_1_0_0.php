@@ -20,7 +20,7 @@ class Find_id_v_1_0_0 extends MY_Controller{
 
 	//메인 화면
   public function find_id_detail(){
-		$this->_view2(mapping('find_id').'/view_find_id_detail');
+		$this->_view(mapping('find_id').'/view_find_id_detail');
   }
 	
 	public function find_id_member(){
@@ -38,14 +38,36 @@ class Find_id_v_1_0_0 extends MY_Controller{
 			$response->code = "0";
 			$response->code_msg = "일치하는 회원정보가 없습니다.";
 
+			$this->_view(mapping('find_id').'/view_find_id_detail',$response);
+
 		}else{
 			$response->code = "1000";
 			$response->code_msg = "정상";
-			$response->member_id = $result->member_id;
+			$response->member_idx = $result->member_idx;
+
+			$this->_view(mapping('find_id').'/view_find_id_detail',$response);
 		}
 
 		echo json_encode($response);
 		exit;
+  }
+	
+	public function find_id_success(){
+		$member_idx = $this->_input_check("member_idx",array("empty_msg"=>"키 누락"));
+		
+		$data['member_idx'] = $member_idx;
+		
+		$result = $this->model_find_id->find_id_detail($data); // 아이디 찾기
+		
+		$response = new StdClass();
+		$response->result = $result;
+
+		$this->_view(mapping('find_id').'/view_find_id_success',$response);
+  }
+
+	public function find_id_fail(){
+		
+		$this->_view(mapping('find_id').'/view_find_id_fail');
   }
 	
 	

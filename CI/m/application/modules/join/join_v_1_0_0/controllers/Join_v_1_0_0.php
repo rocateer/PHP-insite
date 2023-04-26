@@ -21,6 +21,12 @@ class Join_v_1_0_0 extends MY_Controller{
 
 	//메인 화면
   public function join_reg(){
+
+		$this->_view(mapping('join').'/view_join_reg');
+  }
+
+	//메인 화면
+  public function join_reg123(){
 		$terms_list = $this->model_join->terms_list();
 
 		$response = new stdClass();

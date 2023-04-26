@@ -41,7 +41,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .relative{position: relative;}
 .hide_text{text-indent: 100%; white-space: nowrap; overflow: hidden;}
 .txt_overflow{text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
-.label{margin: 30px 0 8px;color:#262626;}
+.label{margin: 30px 0 8px;color:#A0A0A0;}
 .first_label{margin:0px 0 8px;color:#262626;}
 /* layout */
 .wrap{position: relative;}

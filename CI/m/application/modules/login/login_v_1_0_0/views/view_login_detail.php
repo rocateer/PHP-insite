@@ -40,7 +40,7 @@
       </div>
       <div class="join">
           아직 인사이트 회원이 아니신가요?
-        <a href="javascript:void(0)" onclick="$('#member_join_type').val('N');api_request_sns_login('N');"> 회원가입
+        <a href="/<?=mapping('join')?>"> 회원가입
         </a>
   
       </div>

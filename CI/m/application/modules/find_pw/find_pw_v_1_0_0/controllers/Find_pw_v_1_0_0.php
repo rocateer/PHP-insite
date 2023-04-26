@@ -51,7 +51,7 @@ class Find_pw_v_1_0_0 extends MY_Controller{
 
 	//메인 화면
   public function find_pw_detail(){
-		$this->_view2(mapping('find_pw').'/view_find_pw_detail');
+		$this->_view(mapping('find_pw').'/view_find_pw_detail');
   }
 	
 	public function find_pw_member(){
