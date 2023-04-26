@@ -13,11 +13,11 @@
 
     
     <div class="btn_space mt30">
-      <a href="#" class="btn_point btn_full_basic">선택</a>
+      <a href="#" class="btn_point btn_full_basic">로그인</a>
     </div>
 
     <ul class="login_find_ul">
-      <li style="border: 1px solid red;">
+      <li>
         <a href="/<?=mapping('find_id')?>">아이디 찾기</a>
       </li>
       <li>
@@ -39,14 +39,12 @@
           </a>
       <? } ?>
       </div>
-      <ul class="login_find_ul">
-        <li>
+      <div class="join">
           아직 인사이트 회원이 아니신가요?
-        </li>
         <a href="javascript:void(0)" onclick="$('#member_join_type').val('N');api_request_sns_login('N');"> 회원가입
         </a>
   
-      </ul>
+      </div>
   </form>
 </div>
 
@@ -207,13 +205,13 @@ function api_reponse_device_gcmkey(device_os,gcm_key){
   $("#gcm_key").val(gcm_key);
 }
 
-$(function(){
-  if(agent!="pc"){
-    setTimeout(function() {
-          api_request_device_gcmkey();
-     }, 2000);
-  }
-});
+// $(function(){
+//   if(agent!="pc"){
+//     setTimeout(function() {
+//           api_request_device_gcmkey();
+//      }, 2000);
+//   }
+// });
 </script>
 
 
