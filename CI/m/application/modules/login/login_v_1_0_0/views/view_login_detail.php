@@ -11,30 +11,21 @@
     <input type="text" id="member_id" name="member_id" class="login_input_id" placeholder="아이디">
     <input type="password" id="member_pw" name="member_pw" class="login_input_pw" placeholder="비밀번호">
 
-    <div class="btn_full_weight btn_point mt30">
-      <a href="javascript:void(0)" onClick="login_action_member();">로그인</a>
+    
+    <div class="btn_space mt30">
+      <a href="#" class="btn_point btn_full_basic">선택</a>
     </div>
+
     <ul class="login_find_ul">
-      <li>
-        <a href="/<?=mapping('find_id')?>">아이디 찾기 · </a>
+      <li style="border: 1px solid red;">
+        <a href="/<?=mapping('find_id')?>">아이디 찾기</a>
       </li>
       <li>
         <a href="/<?=mapping('find_pw')?>">비밀번호 찾기</a>
       </li>
-      <li>
-        <a href="/<?=mapping('join')?>">회원가입</a>
-      </li>
     </ul>
     <div class="or">또는</div>
-    <div class="sns_ul">
-      <? if($agent=='ios'){ ?>
-        
-          <a href="javascript:void(0)" onclick="$('#member_join_type').val('A');api_request_sns_login('A');">
-            <img src="/images/apple_logo.png" alt="Apple로그인">
-          </a>
-       
-      <? } ?>
-     
+     <div class="sns_ul">
         <a href="javascript:void(0)" onclick="$('#member_join_type').val('N');api_request_sns_login('N');">
           <img src="/images/naver_logo.png" alt="네이버로그인">
         </a>
@@ -42,8 +33,20 @@
         <a href="javascript:void(0)" onclick="$('#member_join_type').val('K');api_request_sns_login('K');">
           <img src="/images/kakao_logo.png" alt="카카오로그인">
         </a>
-      
+      <? if($agent=='ios'){ ?>
+          <a href="javascript:void(0)" onclick="$('#member_join_type').val('A');api_request_sns_login('A');">
+            <img src="/images/apple_logo.png" alt="Apple로그인">
+          </a>
+      <? } ?>
       </div>
+      <ul class="login_find_ul">
+        <li>
+          아직 인사이트 회원이 아니신가요?
+        </li>
+        <a href="javascript:void(0)" onclick="$('#member_join_type').val('N');api_request_sns_login('N');"> 회원가입
+        </a>
+  
+      </ul>
   </form>
 </div>
 

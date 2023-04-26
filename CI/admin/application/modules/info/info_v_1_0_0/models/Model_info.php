@@ -104,6 +104,81 @@ Class Model_info extends MY_Model {
 		}
 	}
 
+//안내 수정
+	public function ban_mod_up($data) {
+		$info_idx = $data['info_idx'];
+		$contents = $data['contents'];
+
+		$this->db->trans_begin();
+
+		$sql = "UPDATE
+							tbl_info
+						SET
+							contents = ?,
+							upd_date = NOW()
+						WHERE
+							info_idx = ?
+						";
+
+		$this->query($sql,
+	                array(
+										$contents,
+										$info_idx
+	                ),
+									$data
+	              );
+
+		if($this->db->trans_status() === FALSE){
+
+			$this->db->trans_rollback();
+			return "0";
+		}else{
+
+			$this->db->trans_commit();
+			return "1";
+		}
+	}
+
+	//안내 리스트
+	public function age_detail(){
+
+		$sql = "SELECT
+							info_idx,
+							type,
+							img,
+							contents,
+							upd_date
+						FROM
+							tbl_info
+						WHERE
+							type=2
+          	";
+
+  	return $this->query_row($sql,
+                                array(
+																)
+                              );
+	}
+
+	public function gender_detail(){
+
+		$sql = "SELECT
+							info_idx,
+							type,
+							img,
+							contents,
+							upd_date
+						FROM
+							tbl_info
+						WHERE
+							type=3
+          	";
+
+  	return $this->query_row($sql,
+                                array(
+																)
+                              );
+	}
 
 
 

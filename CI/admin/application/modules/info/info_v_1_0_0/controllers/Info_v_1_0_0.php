@@ -85,6 +85,44 @@ class Info_v_1_0_0 extends MY_Controller{
 		}
 		echo json_encode($response);
 		exit;
-
 	}
+	
+	//차별금지 리스트
+	public function ban_list(){
+			
+		$age_detail=$this->model_info->age_detail(); //안내 리스트
+		$gender_detail=$this->model_info->gender_detail(); //안내 리스트
+
+		$response = new stdClass();
+
+		$response->age_detail = $age_detail;
+		$response->gender_detail = $gender_detail;
+
+		$this->_view(mapping('info').'/view_ban_list',$response);
+	}
+
+	//차별금지 저장
+	public function ban_mod_up(){
+
+		$contents = $this->_input_check("contents",array());
+		$info_idx = $this->_input_check("info_idx",array("empty_msg"=>"키를 입력해주세요."));
+
+		$data['info_idx']=$info_idx;
+		$data['contents']=$contents;
+
+		$result=$this->model_info->ban_mod_up($data);//안내 수정
+
+		$response = new stdClass();
+
+		if($result == "0") {
+			$response->code = 0;
+			$response->code_msg 	= "저장 실패하였습니다. 다시 시도 해주시기 바랍니다.";
+		} else if($result == "1") {
+			$response->code = 1;
+			$response->code_msg 	= "저장 되었습니다.";
+		}
+		echo json_encode($response);
+		exit;
+	}
+
 }	// 클래스의 끝

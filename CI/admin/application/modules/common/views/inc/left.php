@@ -138,10 +138,15 @@ $arr_right = explode(',',$this->admin_right);
 
           <!-- 안내관리 -->
         <li class="<?php if($this->uri->segment(1)==mapping('info')) echo "active";?>">
-          <a href="/<?=mapping('info');?>" >
+          <a href="#" data-toggle="collapse" data-target="#info">
             <span class="material-icons">note</span>
-            <span>안내관리</span>
+            <span>안내 관리</span> <span class="material-icons">arrow_drop_down</span>
           </a>
+
+          <ul id="info" class="collapse <?php if( $this->uri->segment(1)==mapping('info') ) echo "in";?>" aria-expanded="true">
+            <li><a href="/<?=mapping('info');?>">안내 관리</a></li>
+            <li><a href="/<?=mapping('info');?>/ban_list">차별금지 안내 관리</a></li>
+          </ul>
         </li>
         <!-- 안내관리 -->
 
