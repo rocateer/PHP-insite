@@ -11,10 +11,10 @@ if(!empty($result_list)){
 		<?=$row->title?>
 	</p>
 	<div class="answer_wrap panel">
-		<div class="mb10">
+		<div>
 			<?=$this->global_function->textEnter($row->contents)?>
 		</div>
-			<span class="date mt20"><?=$this->global_function->date_Ymd_dot($row->ins_date)?></span>
+		<!-- <span class="date mt20"><?=$this->global_function->date_Ymd_dot($row->ins_date)?></span> -->
 	</div>
 </li>
 <?php
