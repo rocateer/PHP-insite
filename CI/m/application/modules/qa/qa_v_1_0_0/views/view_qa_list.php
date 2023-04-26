@@ -4,14 +4,14 @@
   <h1>
     1:1 문의
   </h1>
-  <p class="qa_title"><a href="/<?=mapping('qa')?>/qa_reg">질문하기</a></p>
+  <p class="head_txt"><a href="/<?=mapping('qa')?>/qa_reg">등록</a></p>
 </header>
 <!-- header : e -->
 
 <!-- body : s -->
 <div class="body">
-  <div class="no_data" id="no_data" style="display:none">
-    <p>문의 글을 작성하시면<br>확인 후에 답변을 드립니다.</p>
+  <div class="no_data" id="no_data">
+    <p><span class="message_box">FAQ으로는 해결이 어려우신가요?<br>문의 글을 작성하시면확인 후에 답변을 드립니다.</span></p>
   </div>
 	<ul class="qa_ul" id="list_ajax">
 
