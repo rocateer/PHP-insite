@@ -58,7 +58,7 @@ class Login_v_1_0_0 extends MY_Controller{
 		$response->return_url = $return_url;
 		$response->agent = $this->_user_agent();
 
-		$this->_view2(mapping('login').'/view_login_detail',$response);
+		$this->_view(mapping('login').'/view_login_detail',$response);
   }
 
 	// 로그인

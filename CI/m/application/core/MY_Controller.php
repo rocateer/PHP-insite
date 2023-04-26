@@ -50,28 +50,20 @@ class MY_Controller extends CI_Controller {
 
 
   function _view($view, $array="") {
-
 		$data = array(
       'agent' => $this->_user_agent()
     );
     $this->load->view("common/inc/header", $data);
     $this->load->view($view, $array);
-    $this->load->view("common/inc/footer", $data);
-
   }
 
   function _view2($view, $array="") {
-		
-		$data = array(
-      'agent' => $this->_user_agent()
-    );
-    $this->load->view("common/inc/header", $data);
+    $this->load->view("common/inc/header");
+    $this->load->view("common/inc/gnb");
     $this->load->view($view, $array);
-
   }
 
   function _list_view($view, $array="") {
-
     $this->load->view($view, $array);
 
   }
