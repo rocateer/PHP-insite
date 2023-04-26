@@ -16,6 +16,22 @@ header .head_txt{color:#20BFA9;font-size:16px; position: absolute; z-index: 1; t
 .gnb_wrap li{display:inline-block; margin-right:20px; color:#A0A0A0;}
 .gnb_wrap li.active{color:#fff;}
 
+.main_list_wrap{margin-top:20px;}
+.main_list_head{padding:0 20px;}
+.main_list_head img{width:24px; margin-right:10px; vertical-align:middle;}
+.main_list li{border-bottom:1px solid #444; padding:20px; overflow: hidden;}
+.main_list li .list_category{font-size:12px; color:#A0A0A0;}
+.main_list li .list_category img{width:16px; vertical-align:middle; margin-right:4px;}
+.main_list li .best_title img{width:16px; vertical-align:middle;}
+.main_list li .best_title span{vertical-align:middle; color:#fff; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; max-width:calc(100% - 50px); display: inline-block;}
+.main_list li .best_title span.type_2{vertical-align:middle; color:#fff; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; max-width:calc(100% - 80px); display: inline-block;}
+.action_ui li{margin-right:20px; border:none; display: inline-block; font-size:12px; color:#636363; padding:0;}
+.action_ui li img{width:16px; vertical-align:middle; margin-right:4px;}
+.action_ui li:last-child{margin-right:0px;}
+
+
+.w_16{width:16px;}
+
 a.btn_gray_ghost{border:1px solid #444; color: #E2E2E2;}
 a.btn_sm {border-radius:3px; display:inline-block; text-align:center; padding:8px 12px; font-size:12px; font-family:'font-b'; }
 </style>
@@ -28,7 +44,6 @@ a.btn_sm {border-radius:3px; display:inline-block; text-align:center; padding:8p
 	</div>
 </header>
 
-
 <ul class="gnb_wrap">
 	<li class="active"><a href="#">홈</a></li>
 	<li><a href="#">중고거래</a></li>
@@ -36,7 +51,6 @@ a.btn_sm {border-radius:3px; display:inline-block; text-align:center; padding:8p
 	<li><a href="#">공동구매</a></li>
 	<li><a href="#">교육</a></li>
 </ul>
-
-
 <hr class="space">
+
 
