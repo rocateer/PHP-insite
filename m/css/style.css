@@ -2,3 +2,19 @@
 /* 로그인 아이콘 */
 .login_input_id{background: url('/images/ic_login_id.png') 0 12px no-repeat; background-size:24px; text-indent: 37px;}
 .login_input_pw{background: url('/images/ic_login_lock.png') 0 12px no-repeat; background-size:24px; text-indent: 37px;}
+
+/* main */
+.gnb_wrap{-ms-overflow-style:none; /* IE and Edge */ scrollbar-width:none; padding:15px 20px; box-sizing:border-box; overflow-y:hidden; overflow-x:auto; width:auto; word-break: break-all; white-space: nowrap; margin-top:50px;}
+.gnb_wrap li{display:inline-block; margin-right:20px; color:#A0A0A0;}
+.gnb_wrap li.active{color:#fff;}.main_list_wrap{margin-top:20px;}
+.main_list_head{padding:0 20px;}
+.main_list_head img{width:24px; margin-right:10px; vertical-align:middle;}
+.main_list li{border-bottom:1px solid #444; padding:20px; overflow: hidden;}
+.main_list li .list_category{font-size:12px; color:#A0A0A0;}
+.main_list li .list_category img{width:16px; vertical-align:middle; margin-right:4px;}
+.main_list li .best_title img{width:16px; vertical-align:middle;}
+.main_list li .best_title span{vertical-align:middle; color:#fff; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; max-width:calc(100% - 50px); display: inline-block;}
+.main_list li .best_title span.type_2{vertical-align:middle; color:#fff; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; max-width:calc(100% - 80px); display: inline-block;}
+.action_ui li{margin-right:20px; border:none; display: inline-block; font-size:12px; color:#636363; padding:0;}
+.action_ui li img{width:16px; vertical-align:middle; margin-right:4px;}
+.action_ui li:last-child{margin-right:0px;}
