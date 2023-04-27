@@ -2,6 +2,7 @@
 /* 로그인 아이콘 */
 .login_input_id{background: url('/images/ic_login_id.png') 0 12px no-repeat; background-size:24px; text-indent: 37px;}
 .login_input_pw{background: url('/images/ic_login_lock.png') 0 12px no-repeat; background-size:24px; text-indent: 37px;}
+.find_form .subtext{font-size:14px; color:#A0A0A0; line-height: 20px;font-size:12px; display: inline-block;}
 
 /* main */
 .gnb_wrap{-ms-overflow-style:none; /* IE and Edge */ scrollbar-width:none; padding:15px 20px; box-sizing:border-box; overflow-y:hidden; overflow-x:auto; width:auto; word-break: break-all; white-space: nowrap; margin-top:50px;}

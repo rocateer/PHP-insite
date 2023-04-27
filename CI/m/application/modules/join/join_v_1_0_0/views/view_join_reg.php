@@ -7,8 +7,15 @@
 <div class="body row">
   <div class="inner_wrap">
     <form class="find_form" name="form_default" id="form_default" method="post">
-      <div class="mt40" >
-        <h2>기본 정보 입력</h2>
+      <div>
+        <h2>
+          기본 정보 입력
+          <div class="step_ui">
+            <span class="active">1</span>
+            <span></span>
+            <span></span>
+          </div>
+        </h2>
       </div>
       <ul class="input_ui row mt40">
         <li>

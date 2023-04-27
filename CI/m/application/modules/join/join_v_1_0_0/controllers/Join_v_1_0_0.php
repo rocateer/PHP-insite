@@ -22,19 +22,32 @@ class Join_v_1_0_0 extends MY_Controller{
 	//메인 화면
   public function join_reg(){
 
-		$this->_view(mapping('join').'/view_join_reg2');
+		$this->_view(mapping('join').'/view_join_reg');
   }
 
 	//메인 화면
-  public function join_reg123(){
+  public function join_reg2(){
 		$terms_list = $this->model_join->terms_list();
+		$region_list = $this->model_join->region_list();
 
 		$response = new stdClass();
 
+		$response->region_list = $region_list;
 		$response->terms_list = $terms_list;
 		$response->agent = $this->_user_agent();
 
-		$this->_view2(mapping('join').'/view_join_reg', $response);
+		$this->_view(mapping('join').'/view_join_reg2', $response);
+  }
+
+	//메인 화면
+  public function join_reg3(){
+		$work_list = $this->model_join->work_list();
+
+		$response = new stdClass();
+
+		$response->work_list = $work_list;
+
+		$this->_view(mapping('join').'/view_join_reg3', $response);
   }
 
 	//메인 화면

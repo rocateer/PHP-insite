@@ -7,8 +7,13 @@
 <div class="body row">
   <div class="inner_wrap">
     <form class="find_form">
-      <div class="mt40" >
+      <div>
         <h2>계정 정보 입력</h2>
+        <div class="step_ui">
+          <span class="before"></span>
+          <span class="active">2</span>
+          <span></span>
+        </div>
       </div>
       <ul class="input_ui row mt40">
         <li>
@@ -21,9 +26,8 @@
         </li>
         <li>
           <label class="region">지역선택<span class="essential">*</span></label>
-          <a href="javascript:void(0)" onclick="modal_open('terms1')" class="btn essential">선택하기</a>
-          <div type="text" class="btn_dark_gray btn_full_basic" id="member_pw" name="member_pw" placeholder="주로 활동하는 지역을 선택해주세요.">
-          </div>
+          <a href="#" onclick="modal_open('region')" class="btn essential">선택하기</a>
+          <input type="text" class="input_dark mt5" id="work_confirm_idx" name="work_confirm_idx" placeholder="주로 활동하는 지역을 선택해주세요">
         </li>
       </ul>
       <div class="all_checkbox row mt40 mb30">
@@ -41,9 +45,8 @@
               <span></span>
               서비스 이용약관 
               <a href="#" class="essential">필수</a>
-              <a href="#" class="essential">보기</a>
             </label>
-            <a class="arrow" href="javascript:void(0)" onclick="modal_open('terms1')"></a>
+            <a class="look" href="javascript:void(0)" onclick="modal_open('terms1')" >보기</a>
           </li>
           <li>
             <input type="checkbox" name="checkOne" id="checkOne_2" value="Y" >
@@ -51,9 +54,8 @@
               <span></span>
               개인정보 취급방침 
               <a href="#" class="essential">필수</a>
-              <a href="#" class="essential">보기</a>
             </label>
-            <a class="arrow" href="javascript:void(0)" onclick="modal_open('terms0')"></a>
+            <a class="look" href="javascript:void(0)" onclick="modal_open('terms2')">보기</a>
           </li>
           <li>
             <input type="checkbox" name="checkOne" id="email_recieved_agree_yn" value="P" >
@@ -61,7 +63,7 @@
               <span></span>
               마케팅 수신 동의
             </label>
-            <a class="arrow" href="javascript:void(0)" onclick="modal_open('terms5')"></a>
+            <a class="look" href="javascript:void(0)" onclick="modal_open('terms0')">보기</a>
           </li>
         </ul>
       </div>
@@ -77,7 +79,9 @@
   <!-- modal : s -->
   <div class="modal modal_terms<?=$row->type?>">
     <header>
-      <a class="btn_close" href="javascript:void(0)" onclick="modal_close('terms<?=$row->type?>')"><img src="/images/head_btn_close.png" alt="닫기"></a>
+      <a class="btn_back" href="#">
+        <img class="w_100" src="/images/haed_btn_back.png" onclick="modal_close('terms<?=$row->type?>')" alt="뒤로가기">
+      </a>
       <h1><?=$row->title?></h1>
     </header>
     <!-- header : e -->
@@ -90,19 +94,27 @@
   <!-- modal : e -->
 <?}?>
 
+<!-- 지역선택 모달 -->
+  <div class="modal modal_region">
+    <header>
+      <a class="btn_back" href="#">
+        <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('region')" alt="뒤로가기">
+      </a>
+      <h1>근무 지역 선택</h1>
+    </header>
+    <!-- header : e -->
+    <div class="body">
+      <div id="edit">
+      날짜
+      </div>
+    </div>
+  </div>
+<!-- 지역 선택 모달 -->
 
 <input type="text" name="member_name" id="member_name" value="" placeholder="이름" style="display: none;">
 <input type="text" name="member_phone" id="member_phone" value="" placeholder="핸드폰"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="display: none;">
 <input type="text" name="member_gender" id="member_gender" value="" placeholder="성별 0남 1여"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="display: none;">
 <input type="text" name="member_birth" id="member_birth" value="" placeholder="생년월일"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="display: none;">
-
-<input type="hidden" name="auth_yn" id="auth_yn" value="N">
-
-<input type="hidden" name="timer_yn" id="timer_yn" value="N">
-<input type="hidden" name="timer_cnt" id="timer_cnt" value="0">
-
-<input type="hidden" name="time_over_yn" id="time_over_yn" value="N">
-<input type="hidden" name="verify_idx" id="verify_idx" value="">
 
 <input type="hidden" name="device_os" id="device_os" value="">
 <input type="hidden" name="gcm_key" id="gcm_key" value="">

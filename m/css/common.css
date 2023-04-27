@@ -38,7 +38,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .first_label{margin:0px 0 8px;color:#262626;}
 
 /* layout */
-.wrap{position: relative;}=
+.wrap{position: relative;}
 .mt5{margin-top: 5px !important;}
 .mt10{margin-top: 10px !important;}  
 .mt15{margin-top: 15px !important;}

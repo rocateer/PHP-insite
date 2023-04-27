@@ -7,37 +7,52 @@
 <div class="body row">
   <div class="inner_wrap">
     <form class="find_form">
-      <div class="mt40" >
-        <h2>기본 정보 입력</h2>
+      <div>
+        <h2>인증 관리</h2>
+        <div class="step_ui">
+          <span class="before"></span>
+          <span class="before"></span>
+          <span class="active">3</span>
+        </div>
       </div>
       <ul class="input_ui row mt40">
         <li>
-          <label>이메일<span class="essential">*</span></label>
-          <div class="flex_1">
-            <input type="text" id="member_nickname" name="member_nickname" placeholder="이메일 주소를 입력해 주세요">
-            <span>@</span>
-            <select id="email_addr" name="email_addr">
-              <option>선택하세요</option>
-              <option>naver.com</option>
-              <option>gmail.com</option>
-              <option>hanmail.net</option>
-              <option>nate.com</option>
-              <option>daum.net</option>
-              <option>icloud.com</option>
-              <option>hotmail.com</option>
-              <option>kakao.com</option>
-              <option>직접 입력</option>
-            </select>
+          <label>번호인증<span class="essential">*</span></label>
+          <div style="border-bottom: 1px solid #444">
+            <input class="mt5" type="number" id="member_phone" name="member_pw" placeholder="휴대폰 번호를 입력해 주세요" style="width:65%;border-bottom:none;">
+            <div class="btn_ghost" style="padding-top:5px;">
+              <span style="display:none;">
+                인증번호 전송
+              </span> 
+              <span>
+                인증번호 재전송
+              </span> 
+            </div>
           </div>
-          <input type="text" id="member_email" name="member_email" placeholder="이메일을 직접 입력해 주세요." style="display: none;">
+          <div style="border-bottom: 1px solid #444">
+            <input class="mt5" type="password" id="member_pw" name="member_pw" placeholder="휴대폰 번호를 입력해 주세요" style="width:65%;border-bottom:none;">
+            <div class="btn_ghost" style="padding-top:5px;">
+              <span style="display:none;">
+                인증번호 전송
+              </span> 
+              <span>
+                인증번호 재전송
+              </span> 
+            </div>
+          </div>
+          <div class="mt5" style="border-bottom: 1px solid #444">
+            <input type="text" id="member_email" name="member_email" placeholder="인증번호를 입력해주세요" style="width:65%;border-bottom:none;">
+            <div class="btn_ghost">
+              <span>
+                인증하기
+              </span> 
+            </div>
+          </div>
         </li>
         <li>
-          <label>비밀번호<span class="essential">*</span></label>
-          <input type="password" id="member_pw" name="member_pw" placeholder="영문, 숫자, 특수문자 조합 8~15자리로 입력해 주세요.">
-        </li>
-        <li>
-          <label>비밀번호 확인<span class="essential">*</span></label>
-          <input type="password" id="member_pw" name="member_pw" placeholder="영문, 숫자, 특수문자 조합 8~15자리로 입력해 주세요.">
+          <label class="region">직종인증</label>
+          <a href="#" onclick="modal_open('region')" class="btn essential">인증하기</a>
+          <input type="text" class="input_dark mt5" id="work_confirm_idx" name="work_confirm_idx" placeholder="인증 후 많은 전문가들과 소통하세요">
         </li>
       </ul>
       <div class="btn_space">
@@ -47,24 +62,71 @@
   </div>
 </div>
 
-<?foreach($terms_list as $row){
-    ?>
-  <!-- modal : s -->
-  <div class="modal modal_terms<?=$row->type?>">
-    <header>
-      <a class="btn_close" href="javascript:void(0)" onclick="modal_close('terms<?=$row->type?>')"><img src="/images/head_btn_close.png" alt="닫기"></a>
-      <h1><?=$row->title?></h1>
-    </header>
-    <!-- header : e -->
-    <div class="body">
-      <div id="edit">
-      <?=$row->contents?>
+<!-- 모달 -->
+<div class="modal modal_region">
+  <header>
+    <a class="btn_back" href="#">
+      <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('region')" alt="뒤로가기">
+    </a>
+    <h1>직종 인증</h1>
+  </header>
+  <!-- header : e -->
+  <div class="body">
+  <div class="inner_wrap">
+    <form class="find_form">
+      <div>
+        <h2>직종 인증 신청</h2>
+        <span class="subtext mt10">
+          내 직종을 인증하세요! <br>
+          나와 같은 직종에서 일하는 사람들과 공유할 수 있어요.
+        </span>
       </div>
+      <ul class="input_ui row mt40">
+        <li>
+          <label>직종 선택<span class="essential">*</span></label>
+          <span class="subtext">
+            현재 일하고 계신 직종을 선택해 주세요. 기타 직종은 '일반'
+          </span>
+          <select class="mt10">
+            <option value="">직종을 선택해주세요.</option>
+            <?foreach($work_list as $row){?>
+              <option value="<?=$row->work_idx?>"><?=$row->work_name?></option>
+            <?}?>
+          </select>
+        </li>
+        <li>
+          <label class="">인증<span class="essential">*</span>
+            <img src="/images/head_btn_close.png" alt=""  class="btn" style="width: 15px;">
+          </label>
+          <span class="subtext">
+            명함 또는 현장 사진을 첨부해 주세요.
+          </span>
+          <div class="x_scroll_img_reg">
+          <ul class="img_reg_ul">
+            <li>
+              <p class="cnt_num"><span>1</span>/2</p>
+              <div class="img_box">
+                <img src="/images/btn_photo.png" alt="">
+              </div>
+            </li>
+            <li>
+              <img src="/images/btn_sm_delete.png" alt="x" class="btn_delete">
+              <div class="img_box">
+                <img src="p_images/s1.jpg" alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+        </li>
+      </ul>
+    </form>
+    <div class="btn_space">
+      <a href="#" class="btn_point btn_full_basic">선택</a>
     </div>
   </div>
-  <!-- modal : e -->
-<?}?>
-
+  </div>
+</div>
+<!-- 모달 -->
 
 <input type="text" name="member_name" id="member_name" value="" placeholder="이름" style="display: none;">
 <input type="text" name="member_phone" id="member_phone" value="" placeholder="핸드폰"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="display: none;">

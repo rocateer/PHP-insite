@@ -32,7 +32,7 @@
     url(/fonts/NanumSquareR.ttf) format('truetype');
 }
 body{background:#121212;}
-body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r", sans-serif; font-size:14px; color:#fff;}
+body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r", sans-serif; font-size:14px; color:#E2E2E2;}
 input[type=password] {font-family:'Malgun gothic', dotum, sans-serif;}
 /* 대표 컬러 설정 */
 .point_color{color:#20BFA9 !important;}
@@ -62,6 +62,7 @@ a.btn_point{background: #20BFA9; color: #121212;}
 a.btn_point_ghost{border:1px solid #20BFA9; color: #20BFA9;}
 a.btn_gray_ghost{border:1px solid #444; color: #E2E2E2;}
 a.btn_dark_gray {background:#232527; color: #fff;}
+
 
 
 /* only shape */
@@ -119,6 +120,10 @@ input[type="radio"]:checked + label span {background:url('../images/radio_on.png
 
 .input_ui li{margin-bottom:30px;}
 .input_ui li label{margin-bottom: 10px; display: block; color:#A0A0A0;}
+.input_ui li .region{width: 200px;display: inline-block;}
+.input_ui li .btn{float:right;}
+.input_ui li .btn_ghost{float:right;line-height: 50px;color: #A0A0A0;}
+.input_ui li .btn_ghost span{ border: 1px solid #444;padding: 5px 7px; border-radius: 4px;color: #A0A0A0;}
 .essential{color:#20BFA9; margin-left: 5px;}
 
 /* 테이블관련 */
@@ -154,7 +159,7 @@ input:checked + .check_slider:before {-webkit-transform: translateX(16px); -ms-t
 
 /* 대표 wrap */
 .body{padding-top:50px; min-height: 100%; box-sizing: border-box;}
-.inner_wrap{padding-left:20px; padding-right: 20px;}
+.inner_wrap{ max-width: 375px; padding: 20px 20px 70px 20px;}
 .inner_wrap .find_result{border:1px solid #444444; border-radius: 5px; height:300px;margin: 0 auto;}
 .inner_wrap2{padding-left:30px; padding-right: 30px;}
 
@@ -196,7 +201,7 @@ footer li a span{overflow: hidden; margin: 11px auto 2px auto; width:24px; heigh
 footer li.active a{color:#262626; font-weight:600}
 footer li.active img{position: relative; top: 0; left: 0; height: 24px; display: block}
 
-/* 로그인 */
+/* reg */
 .login_wrap .logo{width: 135px;text-align: center; margin:100px auto 80px; display: block;}
 .login_wrap{width:100%; padding: 0 50px; box-sizing: border-box; margin: 0 auto;}
 .login_wrap .or{width: 146px; font-size: 12px;color:#A0A0A0;padding: 0 0px; position:relative; margin:109px auto 30px;box-sizing: border-box; text-align: center;}
@@ -214,9 +219,16 @@ footer li.active img{position: relative; top: 0; left: 0; height: 24px; display:
 .sns_ul>li:last-child{margin-right: 0;}
 .sns_ul>li img{width: 100%;}
 .sns_ul>li img{width: 100%;}
+input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50px; text-align: center; border-bottom:none !important; border-radius:5px ; color:#F5F5F5 ;}
 
-/* 아이디찾기, 비번찾기 결과텍스트 창 */
-.modal_slide{padding: 40px 30px;box-sizing: border-box; z-index: 201; width: 100%; position:fixed; left:0;bottom:0;border-top-left-radius: 20px;border-top-right-radius: 20px; background: #fff;}
+.step_ui{float: right;}
+.step_ui span{display: inline-block; width:10px; height: 10px; background: #444444; border-radius:30px; vertical-align: middle; margin: 0 3px;}
+.step_ui .before{display: inline-block; width:10px; height: 10px; background: #164740; border-radius:30px; vertical-align: middle; margin: 0 3px;}
+.step_ui .active{border:1px solid #20BFA9; width:20px; height: 20px; text-align: center; line-height: 20px; color:#20BFA9; background: none;}
+
+
+/* jdkqfyr=== 창 */
+.modal_slide{padding: 40px 30px;box-sizing: border-box; z-index: 201; width: 100%; position:fixed; left:0;bottom:0;border-top-left-radius: 20px;border-top-right-radius: 20px; background: #121212;}
 .md_slide_overlay{position: fixed; width: 100%; height: 100%; top:0; left:0; background: rgba(0,0,0,.5); opacity: 0; visibility: hidden; z-index: 200} 
 .modal_slide_find_result img{width: 32px;margin-bottom: 12px;}
 .modal_slide_find_result p{color:#494949;margin-top: 20px;}
@@ -230,6 +242,26 @@ footer li.active img{position: relative; top: 0; left: 0; height: 24px; display:
 
 .scroll_wrap{height:calc(100vh - 300px); overflow-y:auto;}
 .modal_inner_wrap{padding: 0 30px;}
+
+/* modal 공통 레이아웃 */
+.modal{background: #121212; overflow: auto; position: fixed; width:calc(100% - 100px); height:auto; z-index: 1000; top:50%; left: 50%; transform: translate(-50%, -50%); display: none; }
+.modal .title{text-align: center;margin-bottom: 30px;}
+.modal .sub_title{margin-top: 16px;margin-bottom: 30px;text-align: center;line-height: 1.6;}
+.modal select{height: 40px;}
+.modal textarea{height: 140px;}
+.modal .md_container{position: relative; padding: 30px 20px; box-sizing: border-box;}
+.md_overlay{position: fixed; width: 100%; height: 100%; top:0; left:0; background: rgba(0,0,0,.5); opacity: 0; visibility: hidden; z-index: 200}
+.modal_terms0{width:100%; height:100%;}
+.modal_terms0 #edit{padding: 20px;box-sizing: border-box;}
+.modal_terms1{width:100%; height:100%;}
+.modal_terms1 #edit{padding: 20px;box-sizing: border-box;}
+.modal_terms2{width:100%; height:100%;}
+.modal_terms2 #edit{padding: 20px;box-sizing: border-box;}
+.modal_region{width:100%; height:100%;}
+.modal_region #edit{padding: 20px;box-sizing: border-box;}
+.btn_md_wrap{overflow: hidden;margin-top: 30px;display: flex;}
+.btn_md_right{border-radius:10px;background:#4C35CA;color:#121212;float: right;display:inline-block;flex:1;padding: 9px 0; text-align:center}
+.btn_md_left{border-radius:10px;color:#737373;border:1px solid #BBBBBB;float: right;margin-right: 10px;display:inline-block;flex:1;padding: 9px 0; text-align:center}
 
 /* no_search_data */
 .no_data{padding:150px 0; box-sizing: border-box;}
@@ -267,8 +299,10 @@ footer li.active img{position: relative; top: 0; left: 0; height: 24px; display:
 /* 회원가입 동의 리스트 */
 .all_checkbox li{height: 35px; line-height: 35px}
 .all_checkbox li > span a{color:#CDCDCD;float: right; box-sizing: border-box;}
-.all_checkbox li input[type="checkbox"] + label{color:#333}
-.all_checkbox li:first-of-type input[type="checkbox"] + label{color:#333;font-family: 'font-b';font-size: 16px;}
+.all_checkbox li input[type="checkbox"] + label{color:#E2E2E2}
+.all_checkbox li:first-of-type input[type="checkbox"] + label{color:#F5F5F5;font-family: 'font-b';font-size: 14px;}
+.all_checkbox .look{float:right;color:#A0A0A0;}
+
 .single_chk li{height: 35px;}
 .single_chk li > span a{color:#CDCDCD;float: right; box-sizing: border-box;}
 .single_chk li input[type="checkbox"] + label{color:#333} 

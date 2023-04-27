@@ -17,43 +17,53 @@ Class Model_join extends MY_Model {
 							terms_management_idx,
 							title,
 							type,
-							member_type,
 							contents,
 							upd_date
 						FROM
 							tbl_terms_management
-						WHERE
-							member_type = '0'
           	";
 
   	return $this->query_result($sql,
                                 array(
 																)
                               );
-
 	}
 
-	//상세
-  public function terms_detail($data){
+	//지역 리스트
+	public function region_list() {
 
-    $type = $data['type'];
+		$sql = "SELECT
+							city_code,
+							city_name
+						FROM
+							tbl_region
+							GROUP BY city_code,city_name
+          	";
 
-    $sql = "SELECT
-              terms_management_idx,
-              title,
-              contents
-            FROM
-              tbl_terms_management
-            WHERE member_type = '0'
-						and type =?
-    ";
+  	return $this->query_result($sql,
+                                array(
+																)
+                              );
+	}
 
-    return $this->query_row($sql,
-                            array(
-                            $type
-                            )
-                            );
-  }
+	//직종 리스트
+	public function work_list() {
+
+		$sql = "SELECT
+							work_idx, 
+							work_name, 
+							del_yn
+						FROM
+							tbl_work
+						WHERE
+						 del_yn='N'
+          	";
+
+  	return $this->query_result($sql,
+                                array(
+																)
+                              );
+	}
 
 	// 아이디 중복 체크
 	public function member_id_check($data){
