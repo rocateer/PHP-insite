@@ -129,6 +129,36 @@
   </div>
   <div class="swiper-pagination"></div>
 </div>
+<style>
+footer{padding:50px 20px 30px 20px; box-sizing: border-box;}
+footer .trigger{display: block;}
+footer .footer_controller.active img{transform: rotate(180deg)}
+footer .footer_info li{color:#636363; font-size: 12px; margin:8px 0;}
+footer .footer_info li span{color:#A0A0A0; margin-left: 5px; font-size: 12px;}
+footer .footer_menu li{border:1px solid #444; border-radius: 5px; text-align: center; margin: 5px 0;}
+footer .footer_menu li a{display: block; padding:10px; color:#A0A0A0; font-size: 12px;}
+</style>
+<footer class="accordion">
+	<div class="footer_controller trigger">
+		인사이트 사업자정보 <img src="/images/arrow_basic.png" alt="" class="w_16 middle">
+    </div>
+	<div class="panel mt20" style="display:none;">
+		<ul class="footer_info mt20">
+			<li>대표이사<span>김인사</span></li>
+			<li>주소<span>서울 금천구 가산디지털1로 145 하이엔드타워 3차 314호</span></li>
+			<li>사업자등록번호<span>220-88-02594</span></li>
+			<!-- <li>대표이사<span>1566-7727 (평일 09:00-18:00, 주말/공휴일 휴무)</span></li> -->
+			<li>이메일<span>insite@gmail.com</span></li>
+			<li>개인정보관리책임자<span>김책임</span></li>
+		</ul>
+		<ul class="footer_menu mt20">
+			<li><a href="#">사업자정보확인</a></li>
+			<li><a href="#">서비스 이용약관</a></li>
+			<li><a href="#">개인정보 취급방침</a></li>
+		</ul>
+	</div>
+	
+</footer>
 
   <script>
     var main_bn_1 = new Swiper(".main_bn_1", {
@@ -148,4 +178,11 @@
         el: ".swiper-pagination",
       },
     });
+
+	$(function(){
+	//footer
+	$('.trigger').click(function(){
+		$('html, body').animate({scrollTop:$(document).height()},400)
+	})
+
   </script>
