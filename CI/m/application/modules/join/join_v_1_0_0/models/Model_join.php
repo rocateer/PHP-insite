@@ -65,6 +65,26 @@ Class Model_join extends MY_Model {
                               );
 	}
 
+	//직종 리스트
+	public function info_detail() {
+
+		$sql = "SELECT
+							info_idx, 
+							img, 
+							contents, 
+							upd_date
+						FROM
+							tbl_info
+						WHERE
+						 type=0
+          	";
+
+  	return $this->query_row($sql,
+                                array(
+																)
+                              );
+	}
+
 	// 아이디 중복 체크
 	public function member_id_check($data){
 

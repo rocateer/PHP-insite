@@ -8,12 +8,13 @@
   <div class="inner_wrap">
     <form class="find_form">
       <div>
-        <h2>계정 정보 입력</h2>
-        <div class="step_ui">
-          <span class="before"></span>
-          <span class="active">2</span>
-          <span></span>
-        </div>
+        <h2>계정 정보 입력
+          <div class="step_ui">
+            <span class="before"></span>
+            <span class="active">2</span>
+            <span></span>
+          </div>
+        </h2>
       </div>
       <ul class="input_ui row mt40">
         <li>

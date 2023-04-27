@@ -261,6 +261,8 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .modal_terms2 #edit{padding: 20px;box-sizing: border-box;}
 .modal_region{width:100%; height:100%;}
 .modal_region #edit{padding: 20px;box-sizing: border-box;}
+.modal_confirm{width:100%; height:100%;}
+.modal_confirm #edit{padding: 20px;box-sizing: border-box;}
 .btn_md_wrap{overflow: hidden;margin-top: 30px;display: flex;}
 .btn_md_right{border-radius:10px;background:#4C35CA;color:#121212;float: right;display:inline-block;flex:1;padding: 9px 0; text-align:center}
 .btn_md_left{border-radius:10px;color:#737373;border:1px solid #BBBBBB;float: right;margin-right: 10px;display:inline-block;flex:1;padding: 9px 0; text-align:center}

@@ -8,40 +8,30 @@
   <div class="inner_wrap">
     <form class="find_form">
       <div>
-        <h2>인증 관리</h2>
-        <div class="step_ui">
-          <span class="before"></span>
-          <span class="before"></span>
-          <span class="active">3</span>
-        </div>
+        <h2>인증 관리
+          <div class="step_ui">
+            <span class="before"></span>
+            <span class="before"></span>
+            <span class="active">3</span>
+          </div>
+        </h2>
       </div>
       <ul class="input_ui row mt40">
         <li>
           <label>번호인증<span class="essential">*</span></label>
           <div style="border-bottom: 1px solid #444">
-            <input class="mt5" type="number" id="member_phone" name="member_pw" placeholder="휴대폰 번호를 입력해 주세요" style="width:65%;border-bottom:none;">
+            <input class="mt5" type="number" id="member_phone" name="member_phone" placeholder="휴대폰 번호를 입력해 주세요" style="width:65%;border-bottom:none;" pattern="\d*">
             <div class="btn_ghost" style="padding-top:5px;">
-              <span style="display:none;">
+              <span style="display:none;" onclick="tel_verify_setting();">
                 인증번호 전송
               </span> 
-              <span>
-                인증번호 재전송
-              </span> 
-            </div>
-          </div>
-          <div style="border-bottom: 1px solid #444">
-            <input class="mt5" type="password" id="member_pw" name="member_pw" placeholder="휴대폰 번호를 입력해 주세요" style="width:65%;border-bottom:none;">
-            <div class="btn_ghost" style="padding-top:5px;">
-              <span style="display:none;">
-                인증번호 전송
-              </span> 
-              <span>
+              <span onclick="tel_verify_confirm();">
                 인증번호 재전송
               </span> 
             </div>
           </div>
           <div class="mt5" style="border-bottom: 1px solid #444">
-            <input type="text" id="member_email" name="member_email" placeholder="인증번호를 입력해주세요" style="width:65%;border-bottom:none;">
+            <input type="text" id="member_email" name="member_email" placeholder="인증번호를 입력해주세요" style="width:65%;border-bottom:none;" pattern="\d*">
             <div class="btn_ghost">
               <span>
                 인증하기
@@ -66,7 +56,7 @@
 <div class="modal modal_region">
   <header>
     <a class="btn_back" href="#">
-      <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('region')" alt="뒤로가기">
+      <img class="w_100" src="/images/haed_btn_back.png" onclick="modal_close('region')" alt="뒤로가기">
     </a>
     <h1>직종 인증</h1>
   </header>
@@ -96,16 +86,16 @@
         </li>
         <li>
           <label class="">인증<span class="essential">*</span>
-            <img src="/images/head_btn_close.png" alt=""  class="btn" style="width: 15px;">
+            <img src="/images/ic_info.png" alt=""  class="btn" style="width: 15px;" onclick="modal_open('confirm')">
           </label>
           <span class="subtext">
             명함 또는 현장 사진을 첨부해 주세요.
           </span>
-          <div class="x_scroll_img_reg">
+          <div class="x_scroll_img_reg mt5">
           <ul class="img_reg_ul">
             <li>
               <p class="cnt_num"><span>1</span>/2</p>
-              <div class="img_box">
+              <div class="img_box" onclick="api_request_file_upload('img','2');">
                 <img src="/images/btn_photo.png" alt="">
               </div>
             </li>
@@ -121,12 +111,29 @@
       </ul>
     </form>
     <div class="btn_space">
-      <a href="#" class="btn_point btn_full_basic">선택</a>
+      <a href="#" class="btn_point btn_full_basic">직종 인증 신청</a>
     </div>
   </div>
   </div>
 </div>
 <!-- 모달 -->
+
+<!-- 지역선택 모달 -->
+<div class="modal modal_confirm">
+  <header>
+    <a class="btn_back" href="#">
+      <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('confirm')" alt="뒤로가기">
+    </a>
+    <h1>인증 안내</h1>
+  </header>
+  <!-- header : e -->
+  <div class="body">
+    <div id="edit">
+    <img src="<?=$info_detail->img?>" alt="">
+    </div>
+  </div>
+</div>
+<!-- 지역 선택 모달 -->
 
 <input type="text" name="member_name" id="member_name" value="" placeholder="이름" style="display: none;">
 <input type="text" name="member_phone" id="member_phone" value="" placeholder="핸드폰"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="display: none;">
@@ -145,7 +152,6 @@
 <input type="hidden" name="gcm_key" id="gcm_key" value="">
 
 <script type="text/javascript">
-
 
 function do_auth(){
 
@@ -251,6 +257,118 @@ function default_reg_in(){
     }
   });
 }
+
+  // 인증 체크
+  function auth_check(){
+    var auth_yn = document.querySelector('#auth_yn').value;
+
+    var res = auth_yn == 'Y' ? 'Y' : 'N';
+
+    return res;
+  }
+  
+//인증요청
+  function tel_verify_setting(){
+
+    alert("발송 중입니다. 잠시만 기다려주세요.");
+
+    var member_phone = $('#member_phone_input').val();
+
+    var form_data = {
+      'member_phone' : member_phone
+    };
+
+    $.ajax({
+      url: "/<?=$this->nationcode.'/'.mapping('tel_verify')?>/tel_verify_setting",
+      type: 'POST',
+      dataType: 'json',
+      async: true,
+      data: form_data,
+      success: function(result){
+        if(result.code == '-1'){
+        alert(result.code_msg);
+        $("#"+result.focus_id).focus();
+        return;
+        }
+        // 0:실패 1:성공
+        if(result.code == 0) {
+        alert(result.code_msg);
+        } else {
+        alert(result.code_msg);
+
+        // send_sms(result.msg);
+
+        $("#verify_idx").val(result.verify_idx);
+        if ($('#timer_yn').val()=='N') {
+          COM_set_timer(5,'span_auth_number');
+          $('#timer_yn').val('Y');
+        }else {
+          $('#timer_cnt').val('1');
+          COM_set_timer(5,'span_auth_number');
+        }
+        //  $('#btn_auth_ok').text('확인');
+        $('#span_auth_number').css('display','block');
+        $("#verify_check").removeClass('deactive');
+        $("#verify_check").addClass('active');
+        $('#member_phone').val(member_phone);
+        }
+      }
+    });
+  }
+
+  function send_sms(msg){
+    var member_phone = $('#member_phone_input').val();
+
+    var form_data = {
+      'api_key' : '<?=SMS_KEY?>',
+      'msg' : msg,
+      'to' : member_phone,
+    };
+
+    $.ajax({
+      url: "https://api.sms.net.bd/sendsms",
+      type: 'POST',
+      dataType: 'json',
+      async: true,
+      data: form_data,
+      success: function(result){
+        console.log("success");
+      }
+    });
+  }
+
+
+  function tel_verify_confirm(){
+    var form_data = {
+      'verify_idx' : $('#verify_idx').val(),
+      'verify_num' : $('#verify_num').val(),
+      'time_over_yn' : $('#time_over_yn').val(),
+    };
+
+    $.ajax({
+      url: "/<?=mapping('tel_verify')?>/tel_verify_confirm",
+      type: 'POST',
+      dataType: 'json',
+      async: true,
+      data: form_data,
+      success: function(result){
+        if(result.code == '-1'){
+        alert(result.code_msg);
+        $("#"+result.focus_id).focus();
+        return;
+        }
+        // 0:실패 1:성공
+        if(result.code == 0) {
+        alert(result.code_msg);
+        } else {
+        alert(result.code_msg);
+        $('#auth_yn').val("Y");
+        $('#span_auth_number').css('display','none');
+        // modal_open('join');
+        }
+      }
+    });
+  }
 
 </script>
 

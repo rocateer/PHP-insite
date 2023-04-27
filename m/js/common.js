@@ -434,7 +434,9 @@ function file_upload(img_id,file_type,limit_cnt,width,height,accept_file,img_res
           set_img(img_list[i].path);
           // set_member_img(img_list[i].path);
         }else if(img_id=='member_img'){
-          set_one_img(img_list[i].path);          
+          set_one_img(img_list[i].path);
+        }else if(img_id=='product_img'){
+          set_img(img_list[i].path);
         }else{
           $('#'+img_id).append(str);
         }
@@ -447,124 +449,22 @@ function file_upload(img_id,file_type,limit_cnt,width,height,accept_file,img_res
 
 }
 
-
-// 파일업로드 - 리사 커스텀-------------------------------------------------------------------------------
-var file_cnt = 0;
-var file_size = 0;
-// file_size -> KB 단위, 33,554,432KB(32GB) 까지 업로드 가능
-// 이미지 업로드 함수 trigger(img_id:id,limit_cnt:파일갯수,file_type:(image:이미지,file:파일),width:이미지 넓이,height:이미지 높이,accept_file:확장자명체(ex:.jpg ,.png ,.gif),img_resize:이미지 리사이즈 넓이))
-var ext = '.jpg, .jpeg ,.png, .gif, .jfif ,.exif, .tiff ,.bmp, .ppm, .pgm, .pbm, .pnm, .hwp, .doc, .docs, .xls, .xlsx, .ppt, .pptx, pdf';
-function file_upload_click_1(img_id,file_type,limit_cnt,width,height,accept_file = ext,img_resize){
-  $('body').append('<form id="file_form" method="post"></form>');
-  var fileUpload = "<input type='hidden' name='file_size' id='file_size' value='"+file_size+"'><input type='hidden' id='member_img_path'><input type='file' name='file[]' id='ex_file' accept='"+accept_file+" ' onchange=\"file_upload_1('"+img_id+"','"+file_type+"','"+limit_cnt+"','"+width+"','"+height+"','"+accept_file+"','"+img_resize+"');\" style='display:none' ><input type='hidden' name='img_resize' id='img_resize' value='"+img_resize+"'>";
-  $('#file_form').html(fileUpload);
-  $('#ex_file').click();
-}
-
-//파일업로드함수
-function file_upload_1(img_id,file_type,limit_cnt,width,height,accept_file,img_resize){
-  var formdata = new FormData($("#file_form")[0]);
-  //업로드 갯수 제한
-  if(limit_cnt!=""){
-    var check_id = 'id_file_'+img_id+'_';
-    if($("[id^="+check_id+"]").length >= parseInt(limit_cnt)){
-      alert('업로드는 '+limit_cnt+'개 까지만 등록 가능합니다.');
-      return;
-    }
-  }
-
-  //파일확장자 제한
-  if(accept_file !="undefined" ){
-    var file_check_arr = accept_file.split(',');
-    //var temp_ext = $('#ex_file').val().split('.');
-    var filename =$('#ex_file').val();
-    var _fileLen = filename.length;
-    var _lastDot = filename.lastIndexOf('.');
-    var file_ext = filename.substring(_lastDot, _fileLen).toLowerCase();
-
-    var enable_cnt = 0;
-    for(var i = 0; i < file_check_arr.length; i ++) {
-      //alert(file_check_arr[i]);
-      if(file_ext ==file_check_arr[i].trim()){
-        enable_cnt++;
-      }
-    }
-    //alert(enable_cnt);
-    if(enable_cnt ==0){
-      alert("허용된 확장자("+accept_file+")가 아닌 파일입니다.");
-      return;
-    }
-  }
-
-  $.ajax({
-    url         : "/common/multi_fileUpload",
-    type        : 'post',
-    dataType    : 'json',
-    processData : false,
-    contentType : false,
-    data        : formdata,
-    success     : function(img_list){
-      if(img_list.code == '0'){
-        alert(img_list.code_msg);
-      } else {
-        
-        for(var i = 0; i < img_list.length; i++){
-        file_size += img_list[i].size; // 업로드 용량 관리
-
-        str="<li id='id_file_"+img_id+"_"+i+"_"+file_cnt+"'>"
-        str+="<input type='hidden'  name='"+img_id+"_orig_name[]' id='"+img_id+"orig_name"+i+"' value='"+img_list[i].orig_name+"'/>";
-        if(file_type !="file"){
-          str+= " <img src='/images/btn_del.gif' style='width:15px;' onclick=\"file_upload_remove('"+img_id+"_"+i+"_"+file_cnt+"');\"/><br>";
-          str+="<img style='width:"+width+"px;height:"+height+"px;' src='"+img_list[i].path+"'>";
-        }else{
-          var img_ext = new Array('.jpg','.jpeg','.png','.gif','.jfif','.exif','.bmp','.ppm','.pgm','.pbm','.pnm','.tiff');
-          var _fileLen = img_list[i].orig_name.length;
-          var _lastDot = img_list[i].orig_name.lastIndexOf('.');
-          var file_ext = img_list[i].orig_name.substring(_lastDot, _fileLen).toLowerCase();
-          var file_icon = "";
-          
-          if(img_ext.includes(file_ext)){
-            file_icon = "/images/i_img.png";
-          } else {
-            file_icon = "/images/i_document.png";
-          }
-          str+= `<img src='${file_icon}'>${img_list[i].orig_name}<img src='/images/i_delete.png' onclick=file_upload_remove('${img_id}_${i}_${file_cnt}'); alt='x' class='btn_del'>`;
-        }
-        str+="<input type='hidden' name='"+img_id+"_path[]' id='"+img_id+"_"+i+"' value='"+img_list[i].path+"'/>";
-        str+="</li>";
-  
-          if (img_id=='img') {
-            set_img(img_list[i].path);
-            // set_member_img(img_list[i].path);
-          }else if(img_id=='member_img'){
-            set_one_img(img_list[i].path);          
-          }else{
-            $('#'+img_id).append(str);
-          }
-  
-        }
-        file_cnt++;
-      }
-    }
-
-  });
-
-}
-
 var file_upload_remove = function(file_no){
   $("#id_file_"+file_no).remove();
 }
 
-// 파일업로드 - 리사 커스텀-------------------------------------------------------------------------------
-
 
 var img_id_val = "img";
+var type = '';
 
 //파일업로드요청:서버->앱
 function api_request_file_upload(img_id, file_cnt){
 
   img_id_val = img_id;
-  
+  if(img_id=='member_img') {
+    type = '1'; //회원 이미지 1:1 크롭
+  }
+
   if (file_cnt) {
     if ($("."+img_id+"_div").length>=file_cnt) {
       alert("최대 "+file_cnt+"장까지만 등록 가능합니다.");
@@ -579,17 +479,19 @@ function api_request_file_upload(img_id, file_cnt){
   }
 
 	if(agent == 'android') {
-		window.rocateer.api_file_upload();
+		window.rocateer.request_file_upload();
 	} else if (agent == 'ios') {
   	 var message = {
-  	    "request_type" : "api_file_upload",
+       "request_type": "request_file_upload",
+       "type":type,
   	};
 	 window.webkit.messageHandlers.native.postMessage(message);
 	}
 }
 
 // 파일적용::앱->서버
-function api_reponse_file_upload(file_path){
+function api_reponse_file_upload(file_path) {
+
   if (img_id_val=='member_img') {
     set_one_img(file_path);
   }else {
@@ -597,10 +499,34 @@ function api_reponse_file_upload(file_path){
   }
 }
 
-function set_one_img(file_path){
-  $('#member_img_src').attr("src", file_path);
-  $('#member_img_path').val(file_path);
+var i = 0;
+function set_img(file_path) {
+  
+  var _img = file_path.split('.');
+  var file_path_s = _img[0] + "_s." + _img[1];
+
+  var str = `
+    <li class="${img_id_val}_div" id="${img_id_val}_file_0_${i}">
+      <a href="javascript:file_img_remove('${img_id_val}_file_0_${i}')"> <img src="/images/btn_delete.png" alt="x" class="btn_delete"></a>
+      <div class="img_box">
+        <img src="${file_path_s}" alt="">
+      </div>
+      <input type='checkbox' name='${img_id_val}_path'  value='${file_path}' checked style='display:none' />
+    </li>
+  `;
+
+
+  $('#'+img_id_val).append(str);
+  $('#'+img_id_val+'_cnt').html($("."+img_id_val+"_div").length);
+
+  i++;
 }
+
+function file_img_remove(file_no){
+  $("#"+file_no).remove();
+  $('#'+img_id_val+'_cnt').html($("."+img_id_val+"_div").length);
+}
+
 // -------------------------------------------------------------------------------------
 
 //달력 세팅

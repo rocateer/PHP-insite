@@ -42,9 +42,11 @@ class Join_v_1_0_0 extends MY_Controller{
 	//메인 화면
   public function join_reg3(){
 		$work_list = $this->model_join->work_list();
+		$info_detail = $this->model_join->info_detail();
 
 		$response = new stdClass();
 
+		$response->info_detail = $info_detail;
 		$response->work_list = $work_list;
 
 		$this->_view(mapping('join').'/view_join_reg3', $response);
