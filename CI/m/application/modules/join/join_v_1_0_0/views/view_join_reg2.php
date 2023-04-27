@@ -20,38 +20,51 @@
           <input type="text" id="member_nickname" name="member_nickname" placeholder="닉네임을 입력해 주세요.">
         </li>
         <li>
-          <label>지역선택<span class="essential">*</span></label>
+          <label class="region">지역선택<span class="essential">*</span></label>
+          <a href="javascript:void(0)" onclick="modal_open('terms1')" class="btn essential">선택하기</a>
           <div type="text" class="btn_dark_gray btn_full_basic" id="member_pw" name="member_pw" placeholder="주로 활동하는 지역을 선택해주세요.">
-
           </div>
         </li>
-
-        <li class="mt30">
-          <ul class="ul_2_ui">
-            <li>
-              <input type="checkbox" name="check" id="check_1">
-              <label for="check_1">
-                <span></span>택배
-              </label>
-            </li>
-            <li>
-             
-            </li>
-            <li>
-              <input type="checkbox" name="check" id="check_2">
-              <label for="check_2">
-                <span></span>직거래
-              </label>
-            </li>
-            <li>
-              <input type="checkbox" name="check" id="check_2">
-              <label for="check_2">
-                <span></span>직거래
-              </label>
-            </li>
-          </ul>
-        </li>
       </ul>
+      <div class="all_checkbox row mt40 mb30">
+        <ul>
+          <li>
+            <input type="checkbox" name="checkAll" id="checkAll" >
+            <label for="checkAll">
+              <span></span>
+              전체 약관 동의
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" name="checkOne" id="checkOne_1" value="Y" >
+            <label for="checkOne_1">
+              <span></span>
+              서비스 이용약관 
+              <a href="#" class="essential">필수</a>
+              <a href="#" class="essential">보기</a>
+            </label>
+            <a class="arrow" href="javascript:void(0)" onclick="modal_open('terms1')"></a>
+          </li>
+          <li>
+            <input type="checkbox" name="checkOne" id="checkOne_2" value="Y" >
+            <label for="checkOne_2">
+              <span></span>
+              개인정보 취급방침 
+              <a href="#" class="essential">필수</a>
+              <a href="#" class="essential">보기</a>
+            </label>
+            <a class="arrow" href="javascript:void(0)" onclick="modal_open('terms0')"></a>
+          </li>
+          <li>
+            <input type="checkbox" name="checkOne" id="email_recieved_agree_yn" value="P" >
+            <label for="email_recieved_agree_yn">
+              <span></span>
+              마케팅 수신 동의
+            </label>
+            <a class="arrow" href="javascript:void(0)" onclick="modal_open('terms5')"></a>
+          </li>
+        </ul>
+      </div>
       <div class="btn_space">
         <a href="#" class="btn_point btn_floating">다음</a>
       </div>
