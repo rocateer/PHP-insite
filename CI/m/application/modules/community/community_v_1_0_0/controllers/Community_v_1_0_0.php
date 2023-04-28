@@ -11,86 +11,25 @@ class Community_v_1_0_0 extends MY_Controller{
 	function __construct(){
 		parent::__construct();
 
-    if(!$this->session->userdata("member_idx") ){
-			redirect("/".mapping('login')."?return_url=/".mapping('community'));
-			exit;
-		}
-
-		// model_community 이름으로 공통 사용
-		$this->load->model(mapping('community').'/model_community');
-		$this->load->model('common/model_common');
-
 	}
 
 //인덱스
   public function index() {
-
     $this->community_list();
   }
 
 //메인 화면
   public function community_list(){
-    $tab = $this->_input_check("tab",array()); //1 : 운동완료
-
-    $best_community_list = $this->model_community->best_community_list();
-    $category_list = $this->model_community->category_list();
-    $new_alarm_cnt = $this->model_community->new_alarm_cnt();
-
-    $response = new stdClass();
-    
-    $response->agent = $this->_user_agent();
-		$response->tab = $tab;
-		$response->best_community_list = $best_community_list;
-		$response->category_list = $category_list;
-		$response->new_alarm_cnt = $new_alarm_cnt;
-
 		$this->_view(mapping('community').'/view_community_list',$response);
   }
 
-  public function community_list_get(){
-
-    $page_num = $this->_input_check("page_num",array("ternary"=>'1'));
-    $category = $this->_input_check("category",array());
-    $board_type = $this->_input_check("board_type",array());
-    $member_idx = $this->member_idx;
-    $page_size = PAGESIZE;
-  
-    $data['category'] = $category;
-    $data['board_type'] = $board_type;
-    $data['member_idx'] = $member_idx;
-    $data['page_no'] = ($page_num-1)*$page_size;
-    $data['page_size'] = $page_size;
-
-    $result = $this->model_community->community_list($data);
-    $result_list_count = $this->model_community->community_list_count($data);
-  
-    $response = new stdClass();
-
-    $response->member_idx = $member_idx;
-    $response->board_type = $board_type;
-    $response->result_list = $result['community_list'];
-    $response->result_list_count = $result_list_count;
-    $response->total_block = ceil($result_list_count/$page_size);
-    $response->loading_ok = (ceil($result_list_count/$page_size)>$page_num)?"Y":"N";
-  
-    $this->_list_view(mapping('community').'/view_community_list_get', $response);
-  }
+//인기
+public function community_hot(){
+  $this->_view(mapping('community').'/view_community_hot_list');
+}
 
 // 커뮤니티 상세
   public function community_detail(){
-    $board_idx = $this->_input_check("board_idx",array());
-  
-    $data['board_idx'] = $board_idx;
-
-    $result = $this->model_community->community_detail($data);
-  
-    $response = new stdClass();
-
-    $response->agent = $this->_user_agent();
-    $response->member_idx = $this->member_idx;
-    $response->result = $result['community_detail'];
-    $response->result_list = $result['program_record'];
-
 		$this->_view2(mapping('community').'/view_community_detail',$response);
   }
 
