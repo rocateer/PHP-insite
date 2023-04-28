@@ -96,7 +96,7 @@
 <?}?>
 
 <!-- 지역선택 모달 -->
-  <div class="modal modal_region">
+  <div class="modal modal_region" id="region_ajax" style="display:block">
     <header>
       <a class="btn_back" href="#">
         <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('region')" alt="뒤로가기">
@@ -104,11 +104,31 @@
       <h1>근무 지역 선택</h1>
     </header>
     <!-- header : e -->
-    <div class="body">
-      <div id="edit">
-      날짜
+    <div class="modal_body">
+      <ul class="area_title">
+        <li>지역구분</li>
+        <li>시 · 군 · 구</li>
+      </ul>
+      <div class="region_ui">
+        <ul class="area_item_1">
+          <li class="active">연습</li>
+        <?foreach($city_list as $row){?>
+          <li value="<?=$row->city_name?>"><?=$row->city_name?></li>
+        <?}?>
+        </ul>
+        <ul class="area_item_2" name="region_code" id="region_code">
+          <li class="active">연습</li>
+          <li class="active">연습</li>
+          <li class="active">연습</li>
+          <li class="active">연습</li>
+          <li class="active">연습</li>
+          <li class="active">연습</li>
+          <li class="active">연습</li>
+          <li class="active">연습</li>
+        </ul>
       </div>
     </div>
+    <a href="#" class="btn_point btn_floating">선택</a>
   </div>
 <!-- 지역 선택 모달 -->
 
@@ -226,6 +246,31 @@ function default_reg_in(){
       }
     }
   });
+}
+
+//시,구,군 가져오기
+var region_list = function(city_name) {
+
+$.ajax({
+  url: "/common/region_list",
+  type: 'POST',
+  dataType: 'json',
+  async: true,
+  data: {
+      "city_name" : city_name
+  },
+  success: function(dom){
+    var selectStr = "";
+
+    $('#region_code').html("<li value=''>선택</li>");
+    if(dom.length != 0) {
+      for(var i = 0; i < dom.length; i ++) {
+        selectStr += "<li value='"+ dom[i].region_code  + "'>" + dom[i].region_name + "</li>";
+      }
+      $('#region_code').append(selectStr);
+    }
+  }
+});
 }
 
 </script>

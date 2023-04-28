@@ -100,22 +100,24 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 /* width */
 .w_100p{width:100%;}
+.w_50p{width:50%;}
 .w_16{width:16px;}
 .w_24{width:24px;}
 
 /* modal 공통 레이아웃 */
 .modal{background: #fff; overflow: auto; position: fixed; width:100%; height:100%; z-index: 1000; top:50%; left: 50%; transform: translate(-50%, -50%); display: none; }
+.modal_body{padding-top: 50px; height: calc(100vh - 50px);  overflow: hidden;}
 .modal .md_container{position: relative; margin: 50px auto 0; padding:20px; box-sizing: border-box;}
 .md_overlay{position: fixed; width: 100%; height: 100%; top:0; left:0; background: rgba(0,0,0,.5); opacity: 0; visibility: hidden; z-index: 200}
 
 /* scroll */
-::-webkit-scrollbar {width:4px; height:0px; background: #999; border-radius:30px; padding:5px;}
+::-webkit-scrollbar {width:4px; height:0px; background: #121212; border-radius:30px; padding:5px;}
 ::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block; height:0px;}
-::-webkit-scrollbar-track {background:#fff; -webkit-border-radius:30px; border-radius:30px; }
-::-webkit-scrollbar-thumb {height:20px; width:6px; background:#fff; -webkit-border-radius:30px; border-radius:30px; }
-::-webkit-scrollbar-thumb:hover{background:#fff;}
+::-webkit-scrollbar-track {background:#121212; -webkit-border-radius:30px; border-radius:30px; }
+::-webkit-scrollbar-thumb {height:20px; width:6px; background:#121212; -webkit-border-radius:30px; border-radius:30px; }
+::-webkit-scrollbar-thumb:hover{background:#121212;}
 ::-webkit-scrollbar-thumb:active{background:#fff;}
-::-webkit-scrollbar-thumb:horizontal{background:#fff;}
+::-webkit-scrollbar-thumb:horizontal{background:#121212;}
  
 
 .terms {padding: 30px 20px;overflow: hidden; line-height:1.6;}

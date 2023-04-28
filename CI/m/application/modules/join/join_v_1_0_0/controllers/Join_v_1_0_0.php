@@ -12,6 +12,7 @@ class Join_v_1_0_0 extends MY_Controller{
 		parent::__construct();
 
 		$this->load->model(mapping('join').'/model_join');
+		$this->load->model('common/model_common');
 	}
 
 	//인덱스
@@ -28,11 +29,11 @@ class Join_v_1_0_0 extends MY_Controller{
 	//메인 화면
   public function join_reg2(){
 		$terms_list = $this->model_join->terms_list();
-		$region_list = $this->model_join->region_list();
+		$city_list=$this->model_common->city_list();
 
 		$response = new stdClass();
 
-		$response->region_list = $region_list;
+		$response->city_list = $city_list;
 		$response->terms_list = $terms_list;
 		$response->agent = $this->_user_agent();
 

@@ -7,6 +7,17 @@ class Common extends MY_Controller {
 		$this->load->model('common/model_common');
 	}
 
+	//선호지역 리스트 불러오기 
+	public function region_list(){
+		$city_name = $this->_input_check("city_name",array());
+
+		$data['city_name'] = $city_name;
+
+		$region_list = $this->model_common->region_list($data);
+
+		echo json_encode($region_list);
+	}
+
 	//프로그램 담기
 	public function block_reg_in(){
 	
