@@ -51,7 +51,7 @@ h5{font-weight: normal;font-size: 16px;font-family:'font-b';color:#F5F5F5}
 h6{font-weight: normal;font-size: 14px;font-family:'font-b';color:#F5F5F5}
 /* 라인 */
 hr{width: 100%; height: 0; border: 0; border-bottom: 1px solid #eee;margin: 0;}
-hr.space{width: 100%; height: 0; border: 0; border-bottom: 8px solid #FAF9FE;margin: 0;}
+hr.space{width: 100%; height: 0; border: 0; border-bottom:5px solid #232527;margin: 0;}
 
 h4 .w_20{padding-bottom: 3px;}
 
