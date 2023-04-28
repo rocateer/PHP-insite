@@ -39,7 +39,7 @@
 var member_idx ="<?=$this->member_idx?>";
 var member_gender ="<?=$this->member_gender?>";
 var app_yn ="<?=$this->app_yn?>";
-var agent ="ios";
+var agent ="<?=$agent?>";
 
 //로그인 체크
 function COM_login_check(member_idx,return_url){

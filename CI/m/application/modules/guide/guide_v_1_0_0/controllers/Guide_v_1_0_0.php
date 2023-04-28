@@ -19,7 +19,7 @@ class Guide_v_1_0_0 extends MY_Controller {
 
   //이용약관 동의
   public function guide_detail(){
-		$this->_view2(mapping('guide').'/view_guide_detail');
+		$this->_view(mapping('guide').'/view_guide_detail');
   }
 
 
