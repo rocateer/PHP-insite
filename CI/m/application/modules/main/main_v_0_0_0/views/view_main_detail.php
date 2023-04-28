@@ -129,15 +129,7 @@
   </div>
   <div class="swiper-pagination"></div>
 </div>
-<style>
-footer{padding:50px 20px 30px 20px; box-sizing: border-box;}
-footer .trigger{display: block;}
-footer .footer_controller.active img{transform: rotate(180deg)}
-footer .footer_info li{color:#636363; font-size: 12px; margin:8px 0;}
-footer .footer_info li span{color:#A0A0A0; margin-left: 5px; font-size: 12px;}
-footer .footer_menu li{border:1px solid #444; border-radius: 5px; text-align: center; margin: 5px 0;}
-footer .footer_menu li a{display: block; padding:10px; color:#A0A0A0; font-size: 12px;}
-</style>
+
 <footer class="accordion">
 	<div class="footer_controller trigger">
 		인사이트 사업자정보 <img src="/images/arrow_basic.png" alt="" class="w_16 middle">
