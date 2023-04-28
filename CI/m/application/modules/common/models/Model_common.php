@@ -10,6 +10,47 @@
 
 Class Model_common extends MY_Model {
 
+	// 지역 시도 리스트
+	public function city_list() {
+
+		$sql = "SELECT
+							city_code,
+							city_name
+						FROM
+							tbl_region
+						group by city_code,city_name
+						order by region_idx
+				  ";
+
+		return $this->query_result($sql,array());
+
+	}
+
+	// 구군 리스트
+	public function region_list($data) {
+
+		$city_name = $data['city_name'];
+
+		$sql = "SELECT
+							city_code,
+							city_name,
+							region_code,
+							region_name
+						FROM
+							tbl_region
+						WHERE
+							city_name = ?
+						order by region_idx
+				  ";
+
+		return $this->query_result($sql
+																	,array(
+																					$city_name
+																				)
+																			);
+
+	}
+
 	// 차단
 	public function block_reg_in($data){
 
@@ -265,45 +306,6 @@ Class Model_common extends MY_Model {
 		";
 
 		return $this->query_cnt($sql,array($this->member_idx));
-	}
-
-
-//지역 시도 리스트
-	public function city_list() {
-
-		$sql = "
-				SELECT
-					city_cd,
-					city_name,
-					id_cd
-				FROM
-					tbl_city_cd
-				ORDER BY order_no ASC
-				  ";
-
-		return $this->query_result($sql,array());
-
-	}
-
-//구군 리스트
-	public function region_list($data) {
-
-		$city_cd=$data['city_cd'];
-
-		$sql = "
-				SELECT
-					region_cd,
-					region_name,
-					city_cd
-				FROM
-					tbl_region_cd
-				WHERE
-					city_cd =?
-				ORDER BY order_no ASC
-				  ";
-
-		return $this->query_result($sql,array($city_cd));
-
 	}
 
 //메인 카테고리 리스트
