@@ -1,208 +1,116 @@
 <header>
-  <a class="btn_close" href="/<?=mapping('alarm')?>">
-    <? if($new_alarm_cnt>0){ ?>
-      <img src="/images/head_btn_alarm_on.png" alt="알람">
-    <? } else {?>
-      <img src="/images/head_btn_alarm_off.png" alt="알람">
-    <? } ?>
-  </a>
-  <h1>
-    커뮤니티
-  </h1>
+	<div class="main_header">
+    <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
+		<a href="#"><img src="/images/head_btn_search.png" class="main_search mr5"></a>
+		<a href="#" class="btn_point btn_sm">글쓰기</a>
+	</div>
 </header>
-<div class="body view_community footer_margin inner_wrap">
-  <div class="tab_fix_wrap">
-    <div class="fix_menu_wrap">
-      <ul class="tab_toggle_menu clearfix">
-        <li class="active" id="li_0" onclick="set_board_type('0');">
-          이브의 고민
-        </li>
-        <li class="" id="li_1" onclick="set_board_type('1');">
-          오늘의 운동 완료
-        </li>
-      </ul>
-    </div>
-    <div class="tab_area_wrap">
-      <!-- 탭 영역 1 : s -->
-      <div class="">
-        <?if(count($best_community_list)>0){?>
-          <div class="best_wrap" id="best_0">
-            <h4>이브의 베스트 고민</h4>
-            <div class="swiper-container best_swiper">
-              <div class="swiper-wrapper">
-               
-                <?
-                foreach($best_community_list as $row){?>
-                  <?if($row->del_yn=='Y'){?>
-                     <!-- 베스트 삭제 -->
-                      <div class="swiper-slide">
-                        <a href="#">
-                          <div class="i_lank"><?=$row->rank?></div>
-                          <div class="title"><p>삭제된 글 입니다.</p></div>
-                        </a>
-                      </div>
-                    <?}else{
-                      if($row->display_yn=='N'){?>
-                      <div class="swiper-slide">
-                        <a href="#">
-                          <div class="i_lank"><?=$row->rank?></div>
-                          <div class="title"><p>블라인드 된 게시글 입니다.</p></div>
-                        </a>
-                      </div>
-                      <?}
-                      }?>
-                    <?if($row->del_yn!='Y'&& $row->display_yn=='Y'){?>
-                      <div class="swiper-slide">
-                        <a href="/<?= mapping('community') ?>/community_detail?board_idx=<?=$row->board_idx?>">
-                          <div class="i_lank"><?=$row->rank?></div>
-                          <div class="title"><span><?=$row->category_name?> </span><?=$row->title?></div>
-                          <ul class="info_ul4">
-                            <li>
-                              <?=$row->view_cnt?>
-                            </li>
-                            <li>
-                              <?=$row->like_cnt?>
-                            </li>
-                            <li>
-                              <?=$row->reply_cnt?>
-                            </li>
-                          </ul>
-                        </a>
-                      </div>
-                      <?}?>
-                <?}?>
-              </div>
-            </div>
-          </div>
-        <?}?>
-        <div class="community_filter_ul_wrap">
-          
-          <div class="swiper-wrapper" onchange="set_category()">
-            <div class="swiper-slide">
-              <input type="radio" name="rdo_1" id="rdo_1_0" value="0" checked >
-              <label for="rdo_1_0" >전체</label>
-            </div>
-              <?
-              $j=1;
-              foreach($category_list as $row1){?>
-              
-              <div class="swiper-slide"> 
-                <input type="radio" name="rdo_1" id="rdo_1_<?=$j?>" value="<?=$row1->category_management_idx?>" >
-                <label for="rdo_1_<?=$j?>"><?=$row1->category_name?></label>
-              </div>
-              <?
-              $j++;}?>
-              
-          </div>  
-        </div>  
-        <div class="no_data" id="no_data_0" style="display: none;">
-          <p> 작성된 커뮤니티 글이 없습니다.</p>
-        </div>
-
-        <ul class="community_ul0" id="list_ajax_0"></ul>
-
-        <div class="float_margin"></div>
-          <img src="/images/float_top.png" onclick="gotop()" class="float0" style="display: none;">
-          <a href="/<?= mapping('community') ?>/community_reg1"><img src="/images/float_plus.png" alt="" class="float2"></a>
-        </div>
-      <!-- 탭 영역 1 : e -->
-
-      <!-- 탭 영역 2 : s -->
-      <div class="">
-        <div class="no_data" id="no_data_1" style="display: none;">
-          <p> 작성된 커뮤니티 글이 없습니다.</p>
-        </div>
-        <ul class="mb20_ul mt20 today_board" id="list_ajax_1">
-        </ul>
-
-        <div class="float_margin"></div>
-          <img src="/images/float_top.png" onclick="gotop()" class="float1"  style="display: none;">
-          <a href="/<?= mapping('community') ?>/community_reg2"><img src="/images/float_plus.png" alt="" class="float2"></a>
-        </div>
-      <!-- 탭 영역 2 : e -->
+<div class="body">
+  <div class="board_head">
+    <img src="/images/ic_cate_1.png" class="list_cate_img">
+    <div class="right_area">
+    <p class="board_head_title"><?=$result->title?></p>
+      <p class="board_head_con"><?=$result->contents?></p>
     </div>
   </div>
-</div>
 
-<!-- modal_open_slide : s -->
-<div class="modal_slide modal_slide_more" id="md_more" style="display: none;">
-  <ul>
+  <ul class="community_list" id="list_ajax">
     <li>
-      <a href="javascript:void(0)" onclick="block_reg_in('');">차단</a>
+      <div class="community_list_head">
+        <img src="/images/ic_cate_2.png" class="list_cate_img">
+        <div class="right_area">
+          <p class="txt_cate">자유공간</p>
+          <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+        </div>
+      </div>
+      <div class="community_list_body">
+        <div class="thum_img">
+          <div class="img_box"><img src="/p_images/s3.jpg"></div>
+        </div>
+        <div class="community_list_item">
+          <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
+          <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+        </div>
+      </div>
+      <div class="community_action_area mt15"> 
+        <span><img src="/images/ic_board_heart_off.png">150</span>
+        <span><img src="/images/ic_board_chat.png">10</span>
+        <span><img src="/images/ic_board_visibility.png">1,523</span>
+      </div>
     </li>
     <li>
-      <a href="javascript:void(0)" onclick="modal_open('report');modal_close_slide('more')">신고</a>
+      <div class="community_list_head">
+        <img src="/images/ic_cate_3.png" class="list_cate_img">
+        <div class="right_area">
+          <p class="txt_cate">자유공간</p>
+          <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+        </div>
+      </div>
+      <div class="community_list_body">
+        <div class="community_list_item">
+          <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
+          <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+        </div>
+      </div>
+      <div class="community_action_area mt15"> 
+        <span><img src="/images/ic_board_heart_off.png">150</span>
+        <span><img src="/images/ic_board_chat.png">10</span>
+        <span><img src="/images/ic_board_visibility.png">1,523</span>
+      </div>
     </li>
-  </ul>
-  <ul class="close">
+    <li class="community_noti">
+      신고한 게시글입니다.
+    </li>
+    <li class="community_noti">
+      차단한 게시글입니다.
+      <a href="#">차단 해제</a>
+    </li>
     <li>
-      <a href="javascript:modal_close_slide('more')">취소</a>
+      <div class="community_list_head">
+        <img src="/images/ic_cate_1.png" class="list_cate_img">
+        <div class="right_area">
+          <p class="txt_cate">자유공간</p>
+          <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+        </div>
+      </div>
+      <div class="community_list_body">
+        <div class="community_list_item">
+          <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
+          <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+        </div>
+      </div>
+      <div class="community_action_area mt15"> 
+        <span><img src="/images/ic_board_heart_off.png">150</span>
+        <span><img src="/images/ic_board_chat.png">10</span>
+        <span><img src="/images/ic_board_visibility.png">1,523</span>
+      </div>
     </li>
   </ul>
 </div>
-<div class="md_slide_overlay md_slide_overlay_more" onclick="modal_close_slide('more')"></div>
-<!-- modal_open_slide : e -->
+<a href="#"><img src="/images/floating_top.png" class="top_floating top"></a>
 
-
-<!-- modal_open_slide : s -->
-<div class="modal_slide modal_slide_mymore" id="md_mymore" style="display: none;">
-  <ul>
-    <li>
-      <a href="javascript:void(0)" onclick="board_mod_up();">수정</a>
-    </li>
-    <li>
-      <a href="javascript:void(0)" onclick="default_del();">삭제</a>
-    </li>
-  </ul>
-  <ul class="close">
-    <li>
-      <a href="javascript:modal_close_slide('mymore')">취소</a>
-      </li>
-    </ul>
-  </div>
-<div class="md_slide_overlay md_slide_overlay_mymore" onclick="modal_close_slide('mymore')"></div>
-<!-- modal_open_slide : e -->
-  
-  
-<!-- modal_open_slide : s -->
-<div class="modal modal_report">
-  <div class="md_container">
-    <div class="title">부적절한 내용인가요?<br>모두가 즐길 수 있는 컨텐츠를<br>만들기 위해서는 신고가 필요합니다.</div>
-    <select name="report_type" id="report_type">
-      <option value="">선택</option>
-      <option value="0">영리목적 홍보성</option>
-      <option value="1">불법 정보</option>
-      <option value="2">음란성, 선정성</option>
-      <option value="3">욕설, 인신공격</option>
-      <option value="4">개인정보 노출</option>
-      <option value="5">같은 내용의 반복 게시(도배)</option>
-      <option value="6">기타</option>
-    </select>
-    <div class="label">신고 사유 입력 <span class="essential">*</span></div>
-    <textarea name="report_contents" id="report_contents" cols="" rows=""></textarea>
-    <div class="btn_md_wrap">
-      <span class="btn_md_left" onclick="modal_close('report')">
-        취소
-      </span>
-      <span class="btn_md_right" onclick="report_reg_in()">
-        확인
-      </span>
-    </div>
-  </div>
-</div>
-<div class="md_overlay md_overlay_report" onclick="modal_close('report')"></div>
-<!-- modal_open_slide : e -->
-
-
-<input type="text" name="board_idx" id="board_idx" value="0" style="display:none;">
-<input type="text" name="board_reply_idx" id="board_reply_idx" value="0" style="display:none;">
 
 <script>
-
-  var best_swiper = new Swiper('.best_swiper', {
-    slidesPerView: 1.1,
-    spaceBetween: 20,
+var main_bn_1 = new Swiper(".main_bn_1", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
   });
+
+// top
+$( document ).ready( function() {
+$( window ).scroll( function() {
+    if ( $( this ).scrollTop() > 200 ) {
+    $( '.top' ).fadeIn();
+    } else {
+    $( '.top' ).fadeOut();
+    }
+} );
+$( '.top' ).click( function() {
+    $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+    return false;
+} );
+} );
 
 </script>
 
