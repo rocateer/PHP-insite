@@ -53,8 +53,63 @@ class Join_v_1_0_0 extends MY_Controller{
 		$this->_view(mapping('join').'/view_join_reg3', $response);
   }
 
-	//메인 화면
+	//메일 확인
 	public function join_reg_in(){
+		$member_email = $this->_input_check("member_email",array("regular_msg" => "이메일 형식으로 입력해주세요.", "focus_id"=>"member_email", "type" => "email"));
+		$member_pw = $this->_input_check("member_pw",array("empty_msg"=>"비밀번호를 입력해주세요.","regular_msg" => "비밀번호는 영문, 숫자, 특수문자 조합 8~15자리로 입력해 주세요.","type" => "custom","custom" => "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,15}$/","focus_id"=>"member_pw"));
+		
+		$data['member_email'] = $member_email;
+		$data['member_pw'] = $member_pw;
+		
+		$member_email_check = $this->model_join->member_email_check($data); // 회원 아이디 중복체크
+		$response = new stdClass();
+		
+		if($member_email_check > 0){
+			$response->code = "0";
+			$response->code_msg = "이메일이 중복됩니다. 다른 이메일으로 입력해주세요.";
+		}else{
+			$response->code = "1";
+			$response->code_msg = "회원가입이 완료되었습니다.";
+		}
+		echo json_encode($response);
+		exit;
+	}
+
+	//닉네임 중복
+	public function join_reg_in2(){
+		$member_name = $this->_input_check("member_name",array("empty_msg"=>"이름을 입력해주세요."));
+		$member_nickname = $this->_input_check("member_nickname",array("empty_msg"=>"닉네임을 입력해주세요."));
+		$region_code = $this->_input_check("region_code",array("empty_msg"=>"지역을 선택해주세요."));
+
+		if (preg_match("/^.*[a-zA-Z가-힣]$/i", $member_nickname) == false || !(mb_strlen($member_nickname, "UTF-8")>=2 && mb_strlen($member_nickname, "UTF-8")<9)) {
+			$response = new stdClass;
+			$response->code = "-1";
+			$response->code_msg = "닉네임은 2자~8자내로 입력해주세요.";
+			
+			echo json_encode($response);
+			exit;
+		}
+		
+		$data['member_nickname'] = $member_nickname;
+		$data['region_code'] = $region_code;
+		$data['member_name'] = $member_name;
+		
+		$member_nickname_check = $this->model_join->member_nickname_check($data); // 회원 아이디 중복체크
+		$response = new stdClass();
+		
+		if($member_nickname_check > 0){
+			$response->code = "0";
+			$response->code_msg = "닉네임이 중복됩니다. 다른 닉네임으로 입력해주세요.";
+		}else{
+			$response->code = "1";
+			$response->code_msg = "회원가입이 완료되었습니다.";
+		}
+		echo json_encode($response);
+		exit;
+	}
+
+	//메인 화면
+	public function join_reg_in123(){
 		$member_id = $this->_input_check("member_id",array("empty_msg"=>"아이디를 입력해주세요.","regular_msg" => "아이디는 이메일로 입력해주세요.", "focus_id"=>"member_id", "type" => "email"));
 		$member_pw = $this->_input_check("member_pw",array("empty_msg"=>"비밀번호를 입력해주세요.","regular_msg" => "비밀번호는 영문, 숫자, 특수문자 조합 8~15자리로 입력해 주세요.","type" => "custom","custom" => "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,15}$/","focus_id"=>"member_pw"));
 		$member_pw_confirm = $this->_input_check("member_pw_confirm",array("empty_msg"=>"비밀번호 확인을 입력해주세요."));

@@ -29,23 +29,6 @@ Class Model_join extends MY_Model {
                               );
 	}
 
-	//지역 리스트
-	public function region_list() {
-
-		$sql = "SELECT
-							city_code,
-							city_name
-						FROM
-							tbl_region
-							GROUP BY city_code,city_name
-          	";
-
-  	return $this->query_result($sql,
-                                array(
-																)
-                              );
-	}
-
 	//직종 리스트
 	public function work_list() {
 
