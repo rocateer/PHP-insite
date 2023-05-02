@@ -109,7 +109,6 @@ Class Model_sns_join extends MY_Model {
 							tbl_member
 						WHERE
 							member_phone = FN_AES_ENCRYPT(?)
-							and del_yn='N'
 		";
 
 		return $this->query_cnt($sql,array(
@@ -127,7 +126,6 @@ Class Model_sns_join extends MY_Model {
 							tbl_member
 						WHERE
 							member_nickname = ?
-							and del_yn='N'
 		";
 
 		return $this->query_cnt($sql,array(
@@ -135,7 +133,6 @@ Class Model_sns_join extends MY_Model {
 														$data);
 	}
 
-	
 	 //sns 로그인 
 	 public function sns_member_reg_in($data) {
 

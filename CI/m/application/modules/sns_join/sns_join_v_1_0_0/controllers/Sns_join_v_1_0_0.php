@@ -89,55 +89,23 @@ class Sns_join_v_1_0_0 extends MY_Controller{
 	//메인 화면
 	public function sns_join_reg_in2(){
 		$member_id = $this->_input_check("member_id",array("empty_msg"=>"아이디를 입력해주세요.","regular_msg" => "아이디는 이메일로 입력해주세요.", "focus_id"=>"member_id", "type" => "email"));
-		$member_pw = $this->_input_check("member_pw",array("empty_msg"=>"비밀번호를 입력해주세요.","regular_msg" => "비밀번호는 영문, 숫자, 특수문자 조합 8~15자리로 입력해 주세요.","type" => "custom","custom" => "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,15}$/","focus_id"=>"member_pw"));
-		$member_pw_confirm = $this->_input_check("member_pw_confirm",array("empty_msg"=>"비밀번호 확인을 입력해주세요."));
+		$member_join_type = $this->_input_check("member_join_type",array("empty_msg"=>"가입타입이 누락되었습니다."));
 		$member_nickname = $this->_input_check("member_nickname",array("empty_msg"=>"닉네임을 입력해주세요."));
 		$member_name = $this->_input_check("member_name",array("empty_msg"=>"본인인증을 진행해주세요."));
 		$member_phone = $this->_input_check("member_phone",array("empty_msg"=>"본인인증을 진행해주세요."));
-		$member_gender = $this->_input_check("member_gender",array("empty_msg"=>"본인인증을 진행해주세요."));
-		$member_birth = $this->_input_check("member_birth",array("empty_msg"=>"본인인증을 진행해주세요."));
-		$email_recieved_agree_yn = $this->_input_check("email_recieved_agree_yn",array());
-
-		if (preg_match("/^.*[a-zA-Z가-힣]$/i", $member_nickname) == false || !(mb_strlen($member_nickname, "UTF-8")>=2 && mb_strlen($member_nickname, "UTF-8")<9)) {
-			$response = new stdClass;
-			$response->code = "-1";
-			$response->code_msg = "닉네임은 2자~8자내로 입력해주세요.";
-			
-			echo json_encode($response);
-			exit;
-		}
+		$region_code = $this->_input_check("region_code",array("empty_msg"=>"지역을 선택해주세요."));
+		$marketing_agree_yn = $this->_input_check("marketing_agree_yn",array());
 
 		$response = new stdClass();
 
-		# 비밀번호와 비밀번호확인
-		if($member_pw_confirm != $member_pw){
-			$response->code = "-1";
-			$response->code_msg = "비밀번호와 비밀번호 확인이 일치하지 않습니다. 다시 확인해 주세요.";
-
-			echo json_encode($response);
-			exit;
-		}
-		
 		$data['member_id'] = $member_id;
-		$data['member_email'] = $member_id;
-		$data['member_pw'] = $member_pw;
+		$data['member_join_type'] = $member_join_type;
 		$data['member_nickname'] = $member_nickname;
 		$data['member_name'] = $member_name;
 		$data['member_phone'] = $member_phone;
-		$data['member_gender'] = $member_gender;
-		$data['member_birth'] = $member_birth;
-		$data['email_recieved_agree_yn'] = ($email_recieved_agree_yn=='P')?'Y':'N';
+		$data['region_code'] = $region_code;
+		$data['marketing_agree_yn'] = ($marketing_agree_yn=='')?'N':'Y';
 
-		$member_nickname_check = $this->model_sns_join->member_nickname_check($data); // 회원 아이디 중복체크
-
-		if($member_nickname_check > 0){
-			$response->code = "-1";
-			$response->code_msg = "닉네임이 중복됩니다. 다른 닉네임으로 입력해주세요.";
-
-			echo json_encode($response);
-			exit;
-		}
-		
 		$member_id_check = $this->model_sns_join->member_id_check($data); // 회원 아이디 중복체크
 
 		if($member_id_check > 0){
@@ -158,9 +126,8 @@ class Sns_join_v_1_0_0 extends MY_Controller{
 			exit;
 		}
 
-
 		# model. 회원 가입
-		$result = $this->model_sns_join->member_reg_in($data);
+		$result = $this->model_sns_join->sns_member_reg_in($data);
 
 		if($result == "0"){
 			$response->code = "0";

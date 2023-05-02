@@ -94,6 +94,7 @@ Class Model_join extends MY_Model {
 							tbl_member
 						WHERE
 							member_email = FN_AES_ENCRYPT(?)
+							and del_yn='N'
 		";
 
 		return $this->query_cnt($sql,array($member_email), $data);
@@ -140,9 +141,11 @@ Class Model_join extends MY_Model {
 	 public function sns_member_reg_in($data) {
 
 		$member_id=$data['member_id'];;
-		$gcm_key=$data['gcm_key'];
-		$device_os=$data['device_os'];
 		$member_join_type=$data['member_join_type'];
+		$member_name=$data['member_name'];
+		$member_nickname=$data['member_nickname'];
+		$member_phone=$data['member_phone'];
+		$region_code=$data['region_code'];
 		$marketing_agree_yn=$data['marketing_agree_yn'];
 
 		$this->db->trans_begin();
@@ -151,8 +154,6 @@ Class Model_join extends MY_Model {
 						tbl_member
 					(
 						member_id,        
-						gcm_key,
-						device_os,
             member_join_type,
             marketing_agree_yn,
 						del_yn,
@@ -160,8 +161,6 @@ Class Model_join extends MY_Model {
 						upd_date
 					)VALUES(
 						FN_AES_ENCRYPT(?),
-						?,
-						?,
 						?,					
 						?,					
 						'N',
@@ -173,8 +172,6 @@ Class Model_join extends MY_Model {
 		$this->query($sql
                 ,array(
                 $member_id,              
-                $gcm_key,
-                $device_os,
                 $member_join_type,
                 $marketing_agree_yn
                 ),
@@ -187,79 +184,6 @@ Class Model_join extends MY_Model {
 		}else{
 			$this->db->trans_commit();
 			return $member_idx;
-		}
-	}
-
-	// 회원 가입
-	public function member_reg_in($data){
-
-		$member_id = $data['member_id'];
-		$member_email = $data['member_email'];
-		$member_pw = $data['member_pw'];
-		$member_nickname = $data['member_nickname'];
-		$member_name = $data['member_name'];
-		$member_phone = $data['member_phone'];
-		$member_gender = $data['member_gender'];
-		$member_birth = $data['member_birth'];
-		$email_recieved_agree_yn = $data['email_recieved_agree_yn'];
-
-		$this->db->trans_begin();
-
-		$sql = "INSERT INTO
-							tbl_member
-							(
-								member_id,
-								member_pw,
-								member_email,
-								member_name,
-								member_phone,
-								member_gender,
-								member_birth,
-								member_nickname,
-								email_recieved_agree_yn,
-								member_join_type,
-								del_yn,
-								add_info_yn,
-								ins_date,
-								upd_date
-							) VALUES (
-								FN_AES_ENCRYPT(?),
-								SHA2(?, 512),
-								FN_AES_ENCRYPT(?),
-								FN_AES_ENCRYPT(?),
-								FN_AES_ENCRYPT(?),
-								?,
-								FN_AES_ENCRYPT(?),
-								?,
-								?,
-								'C',
-								'N',
-								'Y',
-                NOW(),
-                NOW()
-              )
-    ";
-
-		$this->query($sql,array(
-                  $member_id,
-                  $member_pw,
-									$member_email,
-									$member_name,
-									$member_phone,
-									$member_gender,
-									$member_birth,
-									$member_nickname,
-									$email_recieved_agree_yn
-							   ),$data
-							 );
-
-		if($this->db->trans_status() === FALSE){
-			$this->db->trans_rollback();
-			return "0";
-		}else{
-  		$member_idx = $this->db->insert_id();
-			$this->db->trans_commit();
-			return "1";
 		}
 	}
 
