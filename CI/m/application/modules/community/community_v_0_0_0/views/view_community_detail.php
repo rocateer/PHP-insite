@@ -1,12 +1,24 @@
 <header>
-  <div class="btn_close" onclick="modal_open_slide('more')">
-    <img src="/images/i_dot_2.png" alt="">
+  <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="닫기"></a>
+  <h1>&nbsp;</h1>
+  <div class="btn_right">
+    <a href="javascript:void(0)" class="btn_scrap" onclick="btn_scrap(this)"></a>
+    <img src="/images/head_btn_more.png" alt="" onclick="modal_open_slide('more')">
   </div>
-  <a class="btn_back" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="닫기"></a>
-  <h1>
-  커뮤니티
-  </h1>
 </header>
+<script>
+  // 위시리스트 토글버튼
+  function btn_scrap(element){
+      // var like_value = Number($(element).text());
+      if($(element).hasClass("on")){
+        $(element).removeClass("on");
+        //$(element).text(like_value - 1);
+      } else {
+        $(element).addClass("on");
+        //$(element).text(like_value + 1);
+      }
+    }
+</script>
 <div class="body community_detail_view">
   <div class="inner_wrap">
     <div class="title"><span>성지식 </span>제가 이해해야 되는 부분일까요?</div>
@@ -238,12 +250,18 @@
 <div class="md_overlay md_overlay_swiper_img_view" onclick="javascript:modal_close('swiper_img_view')"></div>
 
 <script>
-    var swiper = new Swiper(".community_swiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      dynamicBullets: true,
-    },
-  });
+// 스크랩 토글버튼
+function btn_scrap(element){
+    // var like_value = Number($(element).text());
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+      //$(element).text(like_value - 1);
+    } else {
+      $(element).addClass("on");
+      //$(element).text(like_value + 1);
+    }
+  }
+
   function idx(idx){
   // 모달 슬라이더 이미지
     var community_img_view_swiper = new Swiper(".community_img_view_swiper", {
@@ -262,7 +280,7 @@
     e.style.display = 'none';
     siblings.style.display = 'block';
   }
-// 민지 : 모달 슬라이드
+// 모달 슬라이드
 window.onload = function(){
   let md_slide_height;
 	for(var i = 0; i<$('.modal_slide').length;i++){ // 각 모달의 높이 값만큼 -
@@ -270,7 +288,7 @@ window.onload = function(){
 	  $('.modal_slide').eq(i).css('bottom',-md_slide_height);
 	} //모든 모달슬라이드 숨기기
 }
-// 민지
+//
 function modal_open_slide(element){
 	$(".md_slide_overlay_" + element).css("visibility", "visible").animate({opacity: 1}, 200);
 	$(".modal_slide_" + element).animate({bottom: 0},200);
