@@ -23,13 +23,13 @@ class Community_v_0_0_0 extends MY_Controller{
 		$this->_view(mapping('community').'/view_community_list');
   }
 
-// 
-  public function community_detail1(){
-		$this->_view2(mapping('community').'/view_community_detail1');
+// 인기
+  public function community_hot(){
+		$this->_view(mapping('community').'/view_community_hot_list');
   }
 // 
-  public function community_detail2(){
-		$this->_view2(mapping('community').'/view_community_detail2');
+  public function community_detail(){
+		$this->_view(mapping('community').'/view_community_detail');
   }
 
 // 

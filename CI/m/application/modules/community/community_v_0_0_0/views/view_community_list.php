@@ -1,5 +1,5 @@
 <header>
-  <div class="btn_right" onclick="modal_close('category');">
+  <div class="btn_right">
     <img src="/images/head_btn_alarm_on.png" alt="">
   </div>
   <h1>
@@ -7,12 +7,8 @@
   </h1>
 </header>
 
-<div class="swiper main_bn main_bn_1">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="/p_images/b_sample_1.png"></div>
-    <div class="swiper-slide"><img src="/p_images/b_sample_1.png"></div>
-  </div>
-  <div class="swiper-pagination"></div>
+<div class="body">
+  df
 </div>
 
 <script>

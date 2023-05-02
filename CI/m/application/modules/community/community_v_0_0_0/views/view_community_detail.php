@@ -1,62 +1,53 @@
 <header>
-  <div class="btn_close" onclick="modal_open_slide('more')">
-    <img src="/images/i_dot_2.png" alt="">
+  <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="닫기"></a>
+  <h1>&nbsp;</h1>
+  <div class="btn_right">
+    <a href="javascript:void(0)" class="btn_scrap" onclick="btn_scrap(this)"></a>
+    <img src="/images/head_btn_more.png" alt="" onclick="modal_open_slide('more')">
   </div>
-  <a class="btn_back" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="닫기"></a>
-  <h1>
-  커뮤니티
-  </h1>
 </header>
-<div class="body community_detail_view">
-  <div class="inner_wrap">
-    <div class="title"><span>성지식 </span>제가 이해해야 되는 부분일까요?</div>
-    <span class="date">2020.12.10 15:32 ·</span>
-    <ul class="info_ul4">
-      <li>11
-      </li>
-    </ul>
+<div class="body">
+
+  <!-- community head -->
+  <div class="community_detail_head">
+    <div class="detail_info">
+      <span class="detail_category"><img src="/images/ic_cate_1.png">자유공간</span>
+      드림꿈드림임 · 목공 · 서울 남부
+      <span class="detail_date">2023.01.01</span>
+    </div>
+    <div class="detail_title">월넛과 베이지로 차분하게, 무드있는 <img src="/images/ic_vote.png" class="w_24 middle"></div>
+  </div>
+
+  <!-- community body -->
+  <div class="community_detail_body">
+    33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기를 했지만 발코니가 과하게 넓고 활용도도 떨어져 거실 쪽 발코니만 확장 하였답니다. 그 외 욕실, 주방, 중문, 타일, 도배 및 장판등을 진행하였어요.
+    
+    <div class="community_img_view_swiper">
+      <div class="swiper community_swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img_box">
+              <img src="/p_images/s1.png" onclick="modal_open('swiper_img_view');idx(0)">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img_box">
+              <img src="/p_images/s2.png" onclick="modal_open('swiper_img_view');idx(1)">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img_box">
+              <img src="/p_images/s3.png" onclick="modal_open('swiper_img_view');idx(2)">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    
 
   </div>
-  <div class="swiper community_swiper mt20">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="img_box">
-          <img src="/p_images/s2.png"onclick="modal_open('swiper_img_view');idx(0)">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="img_box">
-          <img src="/p_images/s2.png"onclick="modal_open('swiper_img_view');idx(1)">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="img_box">
-          <img src="/p_images/s2.png"onclick="modal_open('swiper_img_view');idx(2)">
-        </div>
-      </div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <div class="p16">
-    <div class="contents_txt">
-      <p>이번주 운동을 5일 내내 했더니 너무 힘들다ㅠ 그래도 변하는 모습을 보니 뿌듯하다. 운동하는 재미를 느끼는 요즘ㅎㅎ 행복이란 이런 걸까 내일도 열심히 해</p>
-    </div>
-  </div>  
-  <hr class="space mb20">
-  <div class="inner_wrap">
-    <ul class="info_ul2">
-      <li>
-        <span class="wish_btn">
-          <a class="" href="javascript:void(0)" onclick="wish_btn(this)"></a>
-        </span>
-        <b>99</b>
-      </li>
-      <li>
-        <img src="/images/i_comment_3.png" alt="">
-        111
-      </li>
-    </ul>
-  </div>
+  
     
   <!-- 댓글:s -->
   <div class="cmt_wrap">
@@ -211,24 +202,23 @@
 <div class="modal modal_swiper_img_view">
   <header class="transparent">
     <div class="btn_back"><img src="/images/head_btn_close_w.png" onclick="javascript:modal_close('swiper_img_view')"></div>
-    <span class="cnt">1/8</span>
   </header>
   <div class="wrap">
     <div class="swiper community_img_view_swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="img_box">
-            <img src="https://cdn.pixabay.com/photo/2021/12/08/05/13/gyeongbok-palace-6854763_960_720.jpg">
+            <img src="/p_images/s1.jpg">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="img_box">
-            <img src="https://cdn.pixabay.com/photo/2021/12/08/05/13/gyeongbok-palace-6854763_960_720.jpg">
+            <img src="/p_images/s2.jpg">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="img_box">
-            <img src="https://cdn.pixabay.com/photo/2021/12/08/05/13/gyeongbok-palace-6854763_960_720.jpg">
+            <img src="/p_images/s3.jpg">
           </div>
         </div>
       </div>
@@ -238,10 +228,18 @@
 <div class="md_overlay md_overlay_swiper_img_view" onclick="javascript:modal_close('swiper_img_view')"></div>
 
 <script>
-    var swiper = new Swiper(".community_swiper", {
+// 스크랩 토글버튼
+function btn_scrap(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
+
+  var swiper = new Swiper(".community_swiper", {
     pagination: {
       el: ".swiper-pagination",
-      dynamicBullets: true,
     },
   });
   function idx(idx){
@@ -250,9 +248,12 @@
       initialSlide: idx,
       slidesPerView: 1,
       autoHeight: true,
+      pagination: {
+      el: ".swiper-pagination",
+    },
       navigation: {
-        nextEl: ".modal_swiper_img_view .swiper-button-next",
-        prevEl: ".modal_swiper_img_view .swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
     });
   }
@@ -262,7 +263,7 @@
     e.style.display = 'none';
     siblings.style.display = 'block';
   }
-// 민지 : 모달 슬라이드
+// 모달 슬라이드
 window.onload = function(){
   let md_slide_height;
 	for(var i = 0; i<$('.modal_slide').length;i++){ // 각 모달의 높이 값만큼 -
@@ -270,7 +271,7 @@ window.onload = function(){
 	  $('.modal_slide').eq(i).css('bottom',-md_slide_height);
 	} //모든 모달슬라이드 숨기기
 }
-// 민지
+//
 function modal_open_slide(element){
 	$(".md_slide_overlay_" + element).css("visibility", "visible").animate({opacity: 1}, 200);
 	$(".modal_slide_" + element).animate({bottom: 0},200);
