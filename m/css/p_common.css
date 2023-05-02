@@ -121,10 +121,10 @@ input[type="radio"]:checked + label span {background:url('../images/radio_on.png
 
 .input_ui li{margin-bottom:30px;}
 .input_ui li label{margin-bottom: 10px; display: block; color:#A0A0A0;}
-.input_ui li .region{width: 200px;display: inline-block;}
+.input_ui li .region{display: inline-block;}
 .input_ui li .btn{float:right;}
 .input_ui li .btn_ghost{float:right;line-height: 50px;color: #A0A0A0;}
-.input_ui li .btn_ghost span{ border: 1px solid #444;padding: 5px 7px; border-radius: 4px;color: #A0A0A0;}
+.input_ui li .btn_ghost span{ border: 1px solid #444;padding: 6px 10px; border-radius: 4px;color: #A0A0A0;font-size: 12px;}
 .essential{color:#20BFA9; margin-left: 5px;}
 
 /* 테이블관련 */
@@ -241,7 +241,7 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .step_ui{float: right;}
 .step_ui span{display: inline-block; width:10px; height: 10px; background: #444444; border-radius:30px; vertical-align: middle; margin: 0 3px;}
 .step_ui .before{display: inline-block; width:10px; height: 10px; background: #164740; border-radius:30px; vertical-align: middle; margin: 0 3px;}
-.step_ui .active{border:1px solid #20BFA9; width:20px; height: 20px; text-align: center; line-height: 20px; color:#20BFA9; background: none;}
+.step_ui .active{border:1px solid #20BFA9; width:20px; height: 20px; text-align: center; line-height: 20px; color:#20BFA9; background: none; font-size: 12px;}
 
 
 /* jdkqfyr=== 창 */
