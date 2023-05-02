@@ -5,7 +5,7 @@
 </header>
 <!-- header : e -->
 <div class="row body">
-  <div class="no_data">
+  <div class="no_data" style="display:none;">
     <p><span class="message_box">새로운 공지사항이 없습니다.</span></p>
   </div>
 
