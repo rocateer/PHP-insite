@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/p_common.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/side_style.css">
 
   <!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
   <link rel="stylesheet" href="/external_css/swiper-bundle.min.css">
