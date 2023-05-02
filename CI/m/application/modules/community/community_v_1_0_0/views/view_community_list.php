@@ -65,6 +65,7 @@
       차단한 게시글입니다.
       <a href="#">차단 해제</a>
     </li>
+    <?php for ($i=0; $i < 6; $i++) {?>
     <li>
       <div class="community_list_head">
         <img src="/images/ic_cate_1.png" class="list_cate_img">
@@ -85,6 +86,7 @@
         <span><img src="/images/ic_board_visibility.png">1,523</span>
       </div>
     </li>
+    <?php }?>
   </ul>
 </div>
 <a href="#"><img src="/images/floating_top.png" class="top_floating top"></a>

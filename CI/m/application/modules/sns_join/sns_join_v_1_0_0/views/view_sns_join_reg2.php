@@ -45,7 +45,8 @@
         </li>
       </ul>
       <div class="btn_space">
-        <a href="javascript:void(0)" class="btn_point btn_floating" onclick="default_reg_in()">시작하기</a>
+        <!-- <a href="javascript:void(0)" class="btn_point btn_floating" onclick="default_reg_in()">시작하기</a> -->
+        <a href="/<?=mapping('login')?>/" class="btn_point btn_floating">시작하기</a>
       </div>
     </form>
   </div>

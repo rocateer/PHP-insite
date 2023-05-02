@@ -3,7 +3,7 @@
 /*
 |------------------------------------------------------------------------
 | Author :	박수인
-| Create-Date : 2022-09-02
+| Create-Date : 2023-05-02
 | Memo : 공지사항
 |------------------------------------------------------------------------
 */
@@ -26,7 +26,7 @@ Class Model_notice extends MY_Model{
 							tbl_notice
 						WHERE
 							del_yn = 'N'
-							AND notice_state = 'Y'
+							AND display_yn = 'Y'
 						";
 
 		$sql .=" ORDER BY notice_idx DESC LIMIT ?, ? ";
@@ -47,7 +47,7 @@ Class Model_notice extends MY_Model{
 							tbl_notice
 						WHERE
 							del_yn = 'N'
-							AND notice_state = 'Y'
+							AND display_yn = 'Y'
 						";
 
 		return $this->query_cnt($sql,array());

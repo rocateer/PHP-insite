@@ -1,7 +1,7 @@
 <!-- header : s -->
 <div class="login_wrap">
   <header class="transparent">
-    <a class="btn_back" href="/<?=mapping('main')?>">
+    <a class="btn_left" href="/<?=mapping('main')?>">
       <img src="/images/head_btn_close.png" alt="닫기">
     </a>
   </header>

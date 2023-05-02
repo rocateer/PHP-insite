@@ -1,6 +1,6 @@
 <!-- header : s -->
 <header>
-  <a class="btn_back" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
+  <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
   <h1 class="head_title">공지사항</h1>
 </header>
 <!-- header : e -->

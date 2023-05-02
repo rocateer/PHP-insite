@@ -18,12 +18,10 @@ class Community_v_0_0_0 extends MY_Controller{
     $this->community_list();
   }
 
-//메인 화면
-public function community_list(){
-
-  $this->_view(mapping('community').'/view_community_list');
-}
-
+  //메인 화면
+  public function community_list(){
+    $this->_view(mapping('community').'/view_community_list');
+  }
 
 // 인기
   public function community_hot(){

@@ -12,9 +12,9 @@
 	<li><a href="#">게시판1</a></li>
 	<li><a href="#">게시판2</a></li>
 	<li><a href="#">게시판3</a></li>
-	<li><a href="#">중고거래</a></li>
-	<li><a href="#">구인구직</a></li>
-	<li><a href="#">공동구매</a></li>
+	<li><a href="/<?=mapping('community')?>/community_list">중고거래</a></li>
+	<li><a href="/<?=mapping('community')?>/community_list">구인구직</a></li>
+	<li><a href="/<?=mapping('community')?>/community_list">공동구매</a></li>
 	<li><a href="#">교육</a></li>
 </ul>
 <hr class="space">

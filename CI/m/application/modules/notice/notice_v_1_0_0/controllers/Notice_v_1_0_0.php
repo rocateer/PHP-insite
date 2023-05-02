@@ -2,7 +2,7 @@
 /*
 |------------------------------------------------------------------------
 | Author :	박수인
-| Create-Date : 2022-09-02
+| Create-Date : 2023-05-02
 | Memo : 공지사항
 |------------------------------------------------------------------------
 */
@@ -21,7 +21,7 @@ class Notice_v_1_0_0 extends MY_Controller{
 
 	//리스트
 	public function notice_list(){
-		$this->_view2(mapping('notice').'/view_notice_list');
+		$this->_view(mapping('notice').'/view_notice_list');
 	}
 
 	// notice_list_get
@@ -56,7 +56,7 @@ class Notice_v_1_0_0 extends MY_Controller{
 
 		$response->result = $result;
 
-		$this->_view2(mapping('notice').'/view_notice_detail',$response);
+		$this->_view(mapping('notice').'/view_notice_detail',$response);
 	}
 
 }// 클래스의 끝
