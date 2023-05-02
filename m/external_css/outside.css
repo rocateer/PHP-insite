@@ -4,6 +4,9 @@
  * 작성일 : 2023/04/25.
 */
 
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .main_bn_1 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,3px)}
+.swiper-pagination-bullet{width:16px; height: 2px; border-radius:2px; background: #fff;}
+
 .main_bn img{width:100%;}
 .main_bn .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .main_bn_1 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,3px)}
 .main_bn .swiper-pagination-bullet{width:16px; height: 2px; border-radius:2px; background: #fff;}

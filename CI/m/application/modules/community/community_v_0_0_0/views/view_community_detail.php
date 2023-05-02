@@ -27,26 +27,30 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="img_box">
-              <img src="/p_images/s1.png" onclick="modal_open('swiper_img_view');idx(0)">
+              <img src="/p_images/s1.jpg" onclick="modal_open('swiper_img_view');idx(0)">
             </div>
           </div>
           <div class="swiper-slide">
             <div class="img_box">
-              <img src="/p_images/s2.png" onclick="modal_open('swiper_img_view');idx(1)">
+              <img src="/p_images/s2.jpg" onclick="modal_open('swiper_img_view');idx(1)">
             </div>
           </div>
           <div class="swiper-slide">
             <div class="img_box">
-              <img src="/p_images/s3.png" onclick="modal_open('swiper_img_view');idx(2)">
+              <img src="/p_images/s3.jpg" onclick="modal_open('swiper_img_view');idx(2)">
             </div>
           </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
-    
-
   </div>
+  <!-- community action -->
+  <ul class="detail_action">
+    <li><a href="javascript:void(0)" onclick="detail_btn_like(this)" class="detail_btn_like ani">좋아요 120</a></li>
+    <li><img src="/images/ic_chat_white.png"> 댓글 23</li>
+    <li><img src="/images/ic_visibility_white.png"> 524</li>
+  </ul>
   
     
   <!-- 댓글:s -->
@@ -201,10 +205,10 @@
 <!-- modal : s -->
 <div class="modal modal_swiper_img_view">
   <header class="transparent">
-    <div class="btn_back"><img src="/images/head_btn_close_w.png" onclick="javascript:modal_close('swiper_img_view')"></div>
+    <div class="btn_left"><img src="/images/head_btn_close_w.png" onclick="javascript:modal_close('swiper_img_view')"></div>
   </header>
   <div class="wrap">
-    <div class="swiper community_img_view_swiper">
+    <div class="swiper img_big_swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="img_box">
@@ -237,6 +241,14 @@ function btn_scrap(element){
     }
   }
 
+// 좋아요 토글버튼
+function detail_btn_like(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
   var swiper = new Swiper(".community_swiper", {
     pagination: {
       el: ".swiper-pagination",
@@ -244,7 +256,7 @@ function btn_scrap(element){
   });
   function idx(idx){
   // 모달 슬라이더 이미지
-    var community_img_view_swiper = new Swiper(".community_img_view_swiper", {
+    var img_big_swiper = new Swiper(".img_big_swiper", {
       initialSlide: idx,
       slidesPerView: 1,
       autoHeight: true,
@@ -252,8 +264,8 @@ function btn_scrap(element){
       el: ".swiper-pagination",
     },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".modal_swiper_img_view .swiper-button-next",
+        prevEl: ".modal_swiper_img_view .swiper-button-prev",
       },
     });
   }
@@ -263,6 +275,7 @@ function btn_scrap(element){
     e.style.display = 'none';
     siblings.style.display = 'block';
   }
+
 // 모달 슬라이드
 window.onload = function(){
   let md_slide_height;

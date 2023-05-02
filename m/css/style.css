@@ -46,3 +46,8 @@
 .community_detail_head .detail_title{font-size: 18px; color:#fff; font-family: 'font-b'; overflow: hidden; margin-top: 12px;}
 .community_detail_head .detail_date{font-size:12px; color:#A0A0A0; float: right; margin-top:6px;}
 .community_detail_body{padding: 20px; line-height: 1.4;}
+.detail_action{border-top: 1px solid #444; border-bottom: 1px solid #444; overflow: hidden;}
+.detail_action li{width:33.3%; float: left; font-size: 12px; height: 48px; line-height: 48px; text-align: center;}
+.detail_action li img{width:24px; margin-right: 2px; vertical-align: middle;}
+.detail_btn_like{display:inline-block; background:url('/images/ic_heart_white.png') 0 50% no-repeat;  background-size:24px 24px; padding-left: 26px;}
+.detail_btn_like.on{background: url('/images/ic_heart_on.png') 0 50% no-repeat; background-size: 24px 24px; color:#20BFA9;}
