@@ -2,29 +2,14 @@
 
 /*
 |------------------------------------------------------------------------
-| Author : 박수인
-| Create-Date : 2022-10-19
+| Author :	박수인
+| Create-Date : 2023-05-02
 | Memo : 커뮤니티
 |------------------------------------------------------------------------
 */
 
 Class Model_community extends MY_Model{
 	
-	public function new_alarm_cnt(){
-		$member_idx = $this->member_idx;
-
-		$sql = "SELECT
-            	count(*) as cnt
-            FROM
-            	tbl_alarm
-            WHERE
-            	del_yn = 'N'
-            	AND read_yn = 'N'
-              AND member_idx = ?
-    ";
-
-		return $this->query_cnt($sql,array($member_idx));
-	}
 	// 베스트 고민 리스트
 	public function best_community_list(){
 
@@ -56,52 +41,34 @@ Class Model_community extends MY_Model{
 															);
 	}
 
-	// 완료한 프로그램
-	public function complete_program_list(){
-		$date = date('Y-m-d');
-		$member_idx = $this->member_idx;
+	// 게시판 상세
+	public function board_detail($data){
+		$board_idx = $data['board_idx'];
 
 		$sql = "SELECT
-							a.member_program_record_idx,
-							a.member_program_idx,
-							b.program_idx,
-							b.title,
-							b.img_path,
-							b.exercise_time,
-							a.excercise_yn,
-							a.record_time
+							board_idx, 
+							hot_community_idx, 
+							title, 
+							contents, 
+							img, 
+							work_yn, 
+							work_arr, 
+							detail_yn, 
+							anony_yn, 
+							display_yn, 
+							del_yn, 
+							ins_date, 
+							upd_date
 						FROM
-							tbl_member_program_record as a
-							JOIN tbl_program as b ON b.program_idx = a.program_idx and b.del_yn='N'
+							tbl_board
 						WHERE
-							a.del_yn='N'
-							and a.excercise_yn='Y'
-							and DATE_FORMAT(a.excercise_date, '%Y-%m-%d')='$date'
-							and a.member_idx= $member_idx
-						ORDER BY a.ins_date
-		";
-
-		return $this->query_result($sql, array());
-	}
-
-	// 카테고리 리스트
-	public function category_list(){
-
-		$sql = "SELECT
-							a.category_management_idx,
-							a.category_name
-						FROM
-							tbl_category_management as a
-						WHERE
-							a.del_yn = 'N'
-							and a.type=1
-							and a.state=1
-							order by order_no
+							board_idx=?
 			";
 
-			return $this->query_result($sql,
+			return $this->query_row($sql,
 															array(
-															)
+																$board_idx
+															),$data
 															);
 	}
 

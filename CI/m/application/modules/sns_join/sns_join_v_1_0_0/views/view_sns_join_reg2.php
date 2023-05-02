@@ -11,8 +11,7 @@
         <h2>인증
           <div class="step_ui">
             <span class="before"></span>
-            <span class="before"></span>
-            <span class="active">3</span>
+            <span class="active">2</span>
           </div>
         </h2>
       </div>

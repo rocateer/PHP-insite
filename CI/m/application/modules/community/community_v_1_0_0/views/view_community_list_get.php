@@ -4,61 +4,17 @@ $display =(count($result_list)==0)? "block":"none";
 
 if(!empty($result_list)){
 	foreach($result_list as $row){
-    if($board_type=='0'){?>
-
-        <?if($row->board_report_idx>0){
-        ?>
-        <li class="blind">
-          <p class="mt10">신고한 게시물 입니다.</p>
+   ?>
+      <?if($row->board_report_idx>0){?>
+        <li class="community_noti">
+          신고한 게시글입니다.
         </li>
-
-        <?}else{
-          if($row->block_yn=='Y'){?>
-          <li class="blind">
-              <p>차단한 게시글입니다.</p>
-              <button onclick="block_reg_in('<?=$row->board_idx?>');">차단해제</button>
-            </li>
-
-            <?}else{?>
-              <li>
-                <a href="javascript:void(0)" onclick="detail_url('/<?= mapping('community') ?>/community_detail?board_idx=<?=$row->board_idx?>')">
-                  <div class="title"><span><?=$row->category_name?> </span><?=$row->title?></div>
-                  <ul class="info_ul4">
-                    <li>
-                    <?=$row->view_cnt?>
-                    </li>
-                    <li>
-                    <?=$row->like_cnt?>
-                    </li>
-                    <li>
-                    <?=$row->reply_cnt?>
-                    </li>
-                  </ul>
-                </a>
-              </li>
-          <?}
-        }?>
-
-  <?}else if($board_type=='1'){?>
-
-      <?if($row->board_report_idx>0){
-          ?>
-          <li class="blind">
-            <div class="board_shadow_box">
-              <p>신고한 게시물 입니다.</p>
-            </div>
-          </li>
-
           <?}else{
             if($row->block_yn=='Y'){?>
-
-              <li class="blind">
-                <div class="board_shadow_box">
-                  <p>차단한 게시글입니다.</p>
-                  <button onclick="block_reg_in('<?=$row->board_idx?>');">차단해제</button>
-                </div>
+              <li class="community_noti">
+                차단한 게시글입니다.
+                <a href="#">차단 해제</a>
               </li>
-
               <?}else{
                 $member_s_img = $this->global_function->get_small_img($row->member_img);?>
                   <li>
@@ -177,7 +133,6 @@ if(!empty($result_list)){
                   </li>
             <?}
           }?>
-      <?}?>
     <?php
         }
       }

@@ -2,7 +2,7 @@
 /*
 |------------------------------------------------------------------------
 | Author :	박수인
-| Create-Date : 2022-10-19
+| Create-Date : 2023-05-02
 | Memo : 커뮤니티
 |------------------------------------------------------------------------
 */
@@ -11,6 +11,7 @@ class Community_v_1_0_0 extends MY_Controller{
 	function __construct(){
 		parent::__construct();
 
+    $this->load->model(mapping('community').'/model_community');
 	}
 
 //인덱스
@@ -20,13 +21,23 @@ class Community_v_1_0_0 extends MY_Controller{
 
 //메인 화면
   public function community_list(){
+    $board_idx = $this->_input_check("board_idx",array("empty_msg"=>"키를 입력해 주세요."));
+
+    $data['board_idx'] = $board_idx;
+
+    $result = $this->model_community->board_detail($data);
+
+    $response = new stdClass();
+
+    $response->result = $result;
+
 		$this->_view(mapping('community').'/view_community_list',$response);
   }
 
-//인기
-public function community_hot(){
-  $this->_view(mapping('community').'/view_community_hot_list');
-}
+  //인기
+  public function community_hot(){
+    $this->_view(mapping('community').'/view_community_hot_list');
+  }
 
 // 커뮤니티 상세
   public function community_detail(){

@@ -3,7 +3,6 @@
   <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
   <h1>회원가입</h1>
 </header>
-
 <!-- header : e -->
 <div class="body row">
   <div class="inner_wrap">
@@ -11,8 +10,7 @@
       <div>
         <h2>계정 정보 입력
           <div class="step_ui">
-            <span class="before"></span>
-            <span class="active">2</span>
+            <span class="active">1</span>
             <span></span>
           </div>
         </h2>
@@ -82,7 +80,7 @@
   <!-- modal : s -->
   <div class="modal modal_terms<?=$row->type?>">
     <header>
-      <a class="btn_back" href="#">
+      <a class="btn_left" href="#">
         <img class="w_100" src="/images/haed_btn_back.png" onclick="modal_close('terms<?=$row->type?>')" alt="뒤로가기">
       </a>
       <h1><?=$row->title?></h1>
@@ -100,7 +98,7 @@
 <!-- 지역선택 모달 -->
   <div class="modal modal_region" id="region_ajax" style="display:none;">
     <header>
-      <a class="btn_back" href="#">
+      <a class="btn_left" href="#">
         <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('region')" alt="뒤로가기">
       </a>
       <h1>근무 지역 선택</h1>
@@ -128,6 +126,8 @@
 <input type="text" name="city_name" id="city_name" value="" style="display: none;">
 <input type="text" name="region_name" id="region_name" value="" style="display: none;">
 <input type="text" name="region_code" id="region_code" value="" style="display: none;">
+<input type="text" name="member_id" id="member_id" value="" style="display: none;">
+<input type="text" name="member_sns_join_type" id="member_sns_join_type" value="" style="display: none;">
 
 <script type="text/javascript">
 
@@ -140,6 +140,8 @@ function default_reg_in(){
     return  false;
   }
 
+  var member_id = $("#member_id").val();
+  var member_sns_join_type = $("#member_sns_join_type").val();
   var member_name = $("#member_name").val();
   var member_nickname = $("#member_nickname").val();
   var region_code = $("#region_code").val();
@@ -153,7 +155,7 @@ function default_reg_in(){
   };
 
   $.ajax({
-    url      : "/<?=mapping('join')?>/join_reg_in2",
+    url      : "/<?=mapping('sns_join')?>/sns_join_reg_in",
     type     : 'POST',
     dataType : 'json',
     async    : true,
@@ -169,12 +171,14 @@ function default_reg_in(){
       if(result.code == 0) {
         alert(result.code_msg);
       }else{
+        sessionStorage.member_id = member_id;
+        sessionStorage.member_sns_join_type = member_sns_join_type;
         sessionStorage.member_name = member_name;
         sessionStorage.member_nickname = member_nickname;
         sessionStorage.region_code = region_code;
         sessionStorage.marketing_agree_yn = marketing_agree_yn;
 
-        location.href = "/<?=mapping('join')?>/join_reg3";
+        location.href = "/<?=mapping('sns_join')?>/sns_join_reg2";
       }
     }
   });
@@ -229,7 +233,7 @@ function region_reg(){
     var region_full_name = city_name+' > '+region_name;
 
     if(region_name==''||city_name==''){
-      alert("근무 지역을 선택해주세요.");
+      alert("지역을 선택해주세요.");
       return;
     }
 
