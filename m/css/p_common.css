@@ -185,11 +185,10 @@ header{height:50px; box-sizing: border-box; position:fixed; top:0; left: 0; widt
 header.transparent{background: transparent}
 header.fixed.transparent{background:#fff;}
 header .main_header{text-align: right; width:100%; padding:0 20px; top:50%; transform: translateY(-50%); position: absolute; box-sizing: border-box;}
-header .main_header a{margin-left:5px;}
-header .main_search{margin-top:2px;}
-header .btn_right{position: absolute; right:5px; top:50%; transform: translateY(-50%); padding: 13px;line-height: 0;}
+header .btn_right{position: absolute; right:0px; top:50%; transform: translateY(-50%); padding: 13px;line-height: 0;}
+header .btn_right img{margin-left: 10px;}
+header .btn_left{position: absolute; left:15px; top:50%; transform: translateY(-50%); width: 24px; line-height: 0;}
 header img{width:24px; vertical-align:middle;}
-header .btn_left{position: absolute; left:5px; top:50%; transform: translateY(-50%); width: 24px; padding: 13px; line-height: 0;}
 header h1{font-size:16px;font-family: 'font-b'; text-align: center; line-height:1; padding: 15px; color:#fff}
 header .head_txt{color:#20BFA9;font-size:16px; position: absolute; z-index: 1; top:15px; right:20px;}
 header .btn_scrap{display:inline-block; vertical-align: middle; background:url('/images/head_btn_bookmark_off.png') no-repeat; height:24px; width:24px; background-size:24px 24px;}

@@ -33,7 +33,7 @@
       foreach($img_arr as $img){?>
       <div class="swiper-slide">
         <div class="img_box">
-          <img src="<?=$img?>"onclick="modal_open('swiper_img_view');idx(0)">
+          <img src="<?=$img?>" onclick="modal_open('swiper_img_view');idx(0)">
         </div>
       </div>
       <?}?>

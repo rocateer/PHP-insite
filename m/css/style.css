@@ -20,7 +20,7 @@
 .action_ui li img{width:16px; vertical-align:middle; margin-right:4px;}
 .action_ui li:last-child{margin-right:0px;}
 
-/* list */
+/* community */
 .community_list{overflow: hidden;}
 .community_list li{border-bottom: 1px solid #444; overflow: hidden; padding: 20px; box-sizing: border-box;}
 .community_list li.community_noti{padding:17px 20px; background:#232527; color: #A0A0A0;}
@@ -37,6 +37,12 @@
 .community_list_body .community_list_item .community_list_con{color: #A0A0A0; margin-top: 8px; white-space: normal; overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:3; -webkit-box-orient: vertical; line-height: 1.4;}
 .community_list_body .thum_img{float: right; width:88px; height: 88px; margin-left: 20px; }
 .community_list_body .thum_img .img_box{width:88px; height: 88px; border-radius: 5px;}
-
 .community_action_area span{color:#636363; margin-right: 20px;}
 .community_action_area img{width:16px; margin-right: 4px; vertical-align: middle;}
+.detail_category{vertical-align: middle; background: #444; border-radius:3px; padding:5px 8px 4px 8px; font-size: 12px; display: inline-block;}
+.detail_category img{width:16px; margin-right:4px; vertical-align: middle;}
+.community_detail_head{overflow: hidden; border-bottom: 1px solid #444; padding: 20px;}
+.community_detail_head .detail_info{font-size: 12px; color:#A0A0A0;}
+.community_detail_head .detail_title{font-size: 18px; color:#fff; font-family: 'font-b'; overflow: hidden; margin-top: 12px;}
+.community_detail_head .detail_date{font-size:12px; color:#A0A0A0; float: right; margin-top:6px;}
+.community_detail_body{padding: 20px; line-height: 1.4;}
