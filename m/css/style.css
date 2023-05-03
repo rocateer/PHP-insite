@@ -62,7 +62,8 @@
 .cmt_ul>li{padding-bottom:20px; border-bottom: 1px solid #444; padding: 20px;}
 .cmt_item_1{font-size: 12px; color: #A0A0A0;}
 .cmt_item_2{margin-top: 10px; line-height: 1.4;}
-.cmt_action{}
+.cmt_action{margin-top: 20px;}
+.cmt_action span{width:55px; display: inline-block;}
 .cmt_wrap .cmt_blind{padding: 15px 0;box-sizing:border-box; color:#BBBBBB;line-height:1;}
 .cmt_wrap .cmt_blind button{color:#737373;font-weight: 800;margin-left: 10px;line-height:1;}
 .cmt_ul>li table{padding:20px;box-sizing:border-box; border-radius:15px;}
