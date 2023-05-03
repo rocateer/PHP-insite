@@ -14,44 +14,49 @@
 
   <ul class="community_list" id="list_ajax">
     <li>
-      <div class="community_list_head">
-        <div class="mark_hot">
-          <img src="/images/ic_fire.png" alt="hot아이콘" class="w_16 middle">
-          HOT
+      <a href="/<?=mapping('community')?>/community_detail">
+        <div class="community_list_head">
+          <div class="mark_hot">
+            <img src="/images/ic_fire.png" alt="hot아이콘" class="w_16 middle">
+            HOT
+          </div>
+          <p class="txt_nickname">딸기맛바나나킥1 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+          
         </div>
-        <p class="txt_nickname">딸기맛바나나킥1 · 서울 남부 <span class="f_right list_date">12.21</span></p>
-        
-      </div>
-      <div class="community_list_body">
-        <div class="thum_img">
-          <div class="img_box">
-            <img src="/p_images/s3.jpg">
+        <div class="community_list_body">
+          <div class="thum_img relative">
+            <div class="img_box">
+              <img src="/p_images/s3.jpg">
+            </div>
+            <div class="img_cnt_box">3</div>
+          </div>
+          <div class="community_list_item">
+            <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
+            <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
           </div>
         </div>
-        <div class="community_list_item">
-          <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
-          <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+        <div class="community_action_area mt15"> 
+          <span><img src="/images/ic_board_heart_off.png">150</span>
+          <span><img src="/images/ic_board_chat.png">10</span>
+          <span><img src="/images/ic_board_visibility.png">1,523</span>
         </div>
-      </div>
-      <div class="community_action_area mt15"> 
-        <span><img src="/images/ic_board_heart_off.png">150</span>
-        <span><img src="/images/ic_board_chat.png">10</span>
-        <span><img src="/images/ic_board_visibility.png">1,523</span>
-      </div>
+      </a>
     </li>
     <li>
-    <p class="txt_nickname">딸기맛바나나킥1 · 서울 남부 <span class="f_right list_date">12.21</span></p>
-      <div class="community_list_body">
-        <div class="community_list_item">
-          <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
-          <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+      <a href="/<?=mapping('community')?>/community_detail">  
+        <p class="txt_nickname">드림꿈드림 · 목공 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+        <div class="community_list_body">
+          <div class="community_list_item">
+            <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
+            <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+          </div>
         </div>
-      </div>
-      <div class="community_action_area mt15"> 
-        <span><img src="/images/ic_board_heart_off.png">150</span>
-        <span><img src="/images/ic_board_chat.png">10</span>
-        <span><img src="/images/ic_board_visibility.png">1,523</span>
-      </div>
+        <div class="community_action_area mt15"> 
+          <span><img src="/images/ic_board_heart_off.png">150</span>
+          <span><img src="/images/ic_board_chat.png">10</span>
+          <span><img src="/images/ic_board_visibility.png">1,523</span>
+        </div>
+      </a>
     </li>
     <li class="community_noti">
       신고한 게시글입니다.
@@ -62,25 +67,28 @@
     </li>
     <?php for ($i=0; $i < 6; $i++) {?>
     <li>
-      <div class="board_list_head">
-        <div class="right_area">
-          <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+      <a href="/<?=mapping('community')?>/community_detail">  
+        <div class="board_list_head">
+          <div class="right_area">
+            <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">2022.01.23</span></p>
+          </div>
         </div>
-      </div>
-      <div class="community_list_body">
-        <div class="thum_img">
-          <div class="img_box"><img src="/p_images/s3.jpg"></div>
+        <div class="community_list_body">
+          <div class="thum_img relative">
+            <div class="img_box"><img src="/p_images/s3.jpg"></div>
+            <div class="img_cnt_box">5</div>
+          </div>
+          <div class="community_list_item">
+            <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
+            <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+          </div>
         </div>
-        <div class="community_list_item">
-          <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
-          <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+        <div class="community_action_area mt15"> 
+          <span><img src="/images/ic_board_heart_off.png">150</span>
+          <span><img src="/images/ic_board_chat.png">10</span>
+          <span><img src="/images/ic_board_visibility.png">1,523</span>
         </div>
-      </div>
-      <div class="community_action_area mt15"> 
-        <span><img src="/images/ic_board_heart_off.png">150</span>
-        <span><img src="/images/ic_board_chat.png">10</span>
-        <span><img src="/images/ic_board_visibility.png">1,523</span>
-      </div>
+      </a>
     </li>
     <?php }?>
   </ul>
