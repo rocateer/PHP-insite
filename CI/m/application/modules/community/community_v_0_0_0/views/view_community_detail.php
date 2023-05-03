@@ -2,7 +2,7 @@
   <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="닫기"></a>
   <h1>&nbsp;</h1>
   <div class="btn_right">
-    <a href="javascript:void(0)" class="btn_scrap" onclick="btn_scrap(this)"></a>
+    <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
     <img src="/images/head_btn_more.png" alt="" onclick="modal_open_slide('more')">
   </div>
 </header>
@@ -74,7 +74,7 @@
   </div>
   <!-- community action -->
   <ul class="detail_action">
-    <li><a href="javascript:void(0)" onclick="detail_btn_like(this)" class="detail_btn_like ani">좋아요 120</a></li>
+    <li><a href="javascript:void(0)" onclick="detail_btn_like(this)" class="detail_btn_like ease">좋아요 120</a></li>
     <li><img src="/images/ic_chat_white.png"> 댓글 23</li>
     <li><img src="/images/ic_visibility_white.png"> 524</li>
   </ul>
@@ -92,109 +92,68 @@
         <div class="cmt_item_2">월넛과 베이지의 조화가 넘 멋지네요. 집도 따뜻해 보이면서도 안정감이 들어 집에만 있고 싶어질거 같아요!</div>
         <div class="cmt_action">
           <span>00:00</span>
-          <span><a href="">120</a></span>
+          <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
           <span onclick="reg_reply()">대댓글</span>
-        </div>
-        <!-- <table class="tbl_cmt">
-          <tr>
-            <th class="relative">
-              <div class="img_box">
-                <img src="/p_images/p1.png" alt="">
-              </div>
-              <span class="name">HELLOWORLD</span>
-
-              <img src="/images/i_dot_2.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="btn_more">
-            </th>
-          </tr>
-          <tr>
-            <td>
-              <p class="p">이사 온 지 얼마 안 됐는데 담비한테 친구들이 생겨서 다행이에요 매주 모이면 좋겠어요!</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="date">2020.01.01</span>
-              <span class="reg_reply" onclick="reg_reply()">답글 달기</span>
-            </td>
-          </tr>
-        </table> -->
-      </li>
-      <li>  
-        <div class="cmt_blind">
-          삭제된 글입니다.
         </div>
       </li>
       <li>
-        <table class="tbl_cmt">
-          <tr>
-            <th class="relative">
-              <div class="img_box">
-                <img src="/p_images/p1.png" alt="">
-              </div>
-              <span class="name"><span class="blue">작성자</span></span>
-
-              <img src="/images/i_dot_2.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="btn_more">
-
-            </th>
-          </tr>
-          <tr>
-            <td>
-              <p class="p">이사 온 지 얼마 안 됐는데 담비한테 친구들이 생겨서 다행이에요 매주 모이면 좋겠어요!</p>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="date">2020.01.01</span>
-              <span class="reg_reply" onclick="reg_reply()">답글 달기</span>
-            </td>
-          </tr>
-        </table>
-        
-        <table class="tbl_reply">
-          <tr>
-            <th class="relative">
-              <div class="img_box">
-                <img src="/p_images/p1.png" alt="">
-              </div>
-              <span class="name"><span class="pink">관리자</span>슈퍼맨 </span>
-
-              <img src="/images/i_dot_2.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="btn_more">
-            </th>
-          </tr>
-          <tr>
-            <td>
-              <p class="cmt_blind">차단한 댓글 입니다<button class="button">차단해제</button></p>
-            </td>
-          </tr>
-        </table>
+        <div class="cmt_item_1">분홍색개구리 · 인천 미추홀구<span class="f_right"><img src="/images/ic_more.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="w_16"></span></div>
+        <div class="cmt_item_2">세상 살다보니 이러기도 하네요.</div>
+        <div class="cmt_action">
+          <span>00:00</span>
+          <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
+          <span onclick="reg_reply()">대댓글</span>
+        </div>
+      </li>
+      <li class="cmt_re">
+        <div class="cmt_item_1"><span class="name_active">책방주인</span> · 제주 서귀포<span class="f_right"><img src="/images/ic_more.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="w_16"></span></div>
+        <div class="cmt_item_2">무슨 뜬금없는 소린가요?</div>
+        <div class="cmt_action">
+          <span>00:00</span>
+          <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
+          <span onclick="reg_reply()">대댓글</span>
+        </div>
+      </li>
+      <li class="cmt_re">  
+        <div class="item_blind">관리자에 의해 블라인드 된 글입니다.</div>
+      </li>
+      <li class="cmt_re">  
+        <div class="item_blind">삭제된 글입니다.</div>
+      </li>
+      <li>  
+        <div class="item_blind">관리자에 의해 블라인드 된 글입니다.</div>
+      </li>
+      <li>  
+        <div class="item_blind">삭제된 글입니다.</div>
+      </li>
+      <li>  
+        <div class="item_blind">차단한 글입니다. <a href="#" class="blind_clear">차단 해제</a></div>
       </li>
     </ul>
     
-    <button class="btn_cmt_more">댓글 더보기</button>
     <div class="cmt_reg">
-      <div class="tag">왕이로다님에게 답글 남기는 중</div>
-      <input type="text" class="input" id="input" placeholder="매너있는 댓글을 입력해 주세요.">
+      <!-- <div class="tag">분홍색개구리님에게 답글 남기는 중</div> -->
+      <input type="text" class="input" id="input" placeholder="댓글을 입력하여 주세요.">
       <img src="/images/btn_send.png" alt="등록" class="btn_send">
     </div>
   </div>
-  <div id="reply_back" onclick="reply_back_close()"></div>
+  <!-- <div id="reply_back" onclick="reply_back_close()"></div> -->
   <!-- 댓글:e -->
 </div>
 
-<a href="#"><img src="/images/floating_top.png" class="top_floating top"></a>
+<a href="#"><img src="/images/floating_top.png" class="top_floating type_1 top"></a>
 
 <!-- modal_open_slide : s -->
 <div class="modal_slide modal_slide_cmt_more">
-  <ul>
+  <ul class="slide_modal_menu">
     <li>
-      <a href="javascript:void(0)" onclick="modal_open('report');modal_close_slide('cmt_more')">신고</a>
+      <a href="javascript:void(0)" onclick="modal_open_slide('report');modal_close_slide('cmt_more')">신고</a>
     </li>
     <li>
-      <a href="javascript:void(0)" onclick="modal_open('report');modal_close_slide('cmt_more')">삭제</a>
+      <a href="javascript:void(0)">삭제</a>
     </li>
-  </ul>
-  <ul class="close">
     <li>
-      <a href="javascript:modal_close_slide('cmt_more')">취소</a>
+    <a href="javascript:modal_close_slide('cmt_more')">취소</a>
     </li>
   </ul>
 </div>
@@ -202,15 +161,13 @@
 <!-- modal_open_slide : e -->
 <!-- modal_open_slide : s -->
 <div class="modal_slide modal_slide_more">
-  <ul>
+  <ul class="slide_modal_menu">
     <li>
       <a href="/<?=mapping('community')?>/community_mod">수정</a>
     </li>
     <li>
-      <a href="javascript:void(0)" onclick="modal_open('report');modal_close_slide('more')">신고</a>
+      <a href="javascript:void(0)" onclick="modal_open_slide('report');modal_close_slide('more')">신고</a>
     </li>
-  </ul>
-  <ul class="close">
     <li>
       <a href="javascript:modal_close_slide('more')">취소</a>
     </li>
@@ -218,25 +175,27 @@
 </div>
 <div class="md_slide_overlay md_slide_overlay_more" onclick="modal_close_slide('more')"></div>
 <!-- modal_open_slide : e -->
-<div class="modal modal_report">
-  <div class="md_container">
-    <div class="title">부적절한 내용인가요?<br>모두가 즐길 수 있는 컨텐츠를<br>만들기 위해서는 신고가 필요합니다.</div>
+<div class="modal_slide modal_slide_report" style="bottom: 0px;">
+  <div class="">
+    <div class="modal_title">신고</div>
+    <p class="modal_txt">부적절한 내용이 포함되어 있나요?<br>신고하는 이유를 선택해주세요.</p>
     <select name="" id="">
+      <option value="">선택</option>
       <option value="">선택</option>
     </select>
     <div class="label">신고 사유 입력 <span class="essential">*</span></div>
     <textarea name="" id="" cols="" rows=""></textarea>
-    <div class="btn_md_wrap">
-      <spab class="btn_md_left" onclick="modal_close('report')">
+    <div class="btn_report">
+      <span onclick="modal_close_slide('report')">
         취소
-      </spab>
-      <spab class="btn_md_right">
-        확인
-      </spab>
+      </span>
+      <span class="txt_red">
+        신고
+      </span>
     </div>
   </div>
 </div>
-<div class="md_overlay md_overlay_report" onclick="modal_close('report')"></div>
+<div class="md_slide_overlay md_slide_overlay_report" onclick="modal_close_slide('report')"></div>
 
 <!-- modal : s -->
 <div class="modal modal_swiper_img_view">
@@ -290,6 +249,22 @@ function detail_btn_like(element){
       el: ".community_swiper .swiper-pagination",
     },
   });
+
+// 댓글 좋아요 토글버튼
+function cmt_btn_like(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
+  var swiper = new Swiper(".community_swiper", {
+    pagination: {
+      el: ".community_swiper .swiper-pagination",
+    },
+  });
+
+
   function idx(idx){
   // 모달 슬라이더 이미지
     var img_big_swiper = new Swiper(".img_big_swiper", {
@@ -336,14 +311,14 @@ function modal_close_slide(element){
 
   // 답글달기
   function reg_reply(){
-    $('.comment_reg .tag').css('display','block');
+    $('.tag').css('display','block');
     $('#reply_back').css('display','block');
     $('#input').focus();
   }
   // 답글닫기
   function reply_back_close(){
     $('#input').val('');
-    $('.comment_reg .tag').css('display','none');
+    $('.tag').css('display','none');
     $('#reply_back').css('display','none');
   }
 
