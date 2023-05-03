@@ -375,10 +375,10 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .faq_list li .arrow{width: 10px;position: absolute; top:25px; right:20px;}
 .faq_list li .answer_wrap{line-height: 24px;display: none;background:#232527 url('/images/A.png') no-repeat 20px 20px; background-size: 10px;padding: 20px 20px;padding-left: 38px;   box-sizing: border-box;}
 header .qa_title{color:#222;font-size:14px; position: absolute;z-index: 1;top:16px;right:20px;}
-.qa_ul > li{border-bottom: 1px solid #ddd; background: url('/images/i_question.png') no-repeat 20px 12px; background-size: 27px;padding: 16px 20px 16px 30px; box-sizing: border-box;}
+.qa_ul > li{border-bottom: 1px solid #999; padding: 20px; box-sizing: border-box;height:73px;}
+.qa_ul > li .title{font-size: 14px;margin-bottom: 3px;}
 .qa_ul > li .deactive{font-weight:600;margin-bottom: 10px;}
 .qa_ul > li .active{font-weight:600;color:#60DDE1;margin-bottom: 10px;}
-.qa_ul > li .title{font-size: 16px;margin-bottom: 5px;}
 .qa_ul > li span{font-size: 12px;color:#999}
 .qa_top_txt{line-height: 24px;background: url('/images/i_question.png') no-repeat 20px 12px; background-size: 27px;padding: 16px 20px 16px 30px; box-sizing: border-box;}
 .qa_top_txt .title{font-size: 16px;margin-bottom: 6px;}

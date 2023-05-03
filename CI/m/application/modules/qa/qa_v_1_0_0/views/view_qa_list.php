@@ -1,6 +1,6 @@
 <!-- header : s -->
 <header>
-  <a class="btn_back" href="javascript: location.href='/<?=mapping('setting')?>';"><img class="w100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
+  <a class="btn_left" href="/<?=mapping('mypage')?>"><img class="w100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
   <h1>
     1:1 문의
   </h1>
@@ -10,11 +10,19 @@
 
 <!-- body : s -->
 <div class="body">
-  <div class="no_data" id="no_data">
+  <div class="no_data" id="no_data" style="display: none;">
     <p><span class="message_box">FAQ으로는 해결이 어려우신가요?<br>문의 글을 작성하시면확인 후에 답변을 드립니다.</span></p>
   </div>
 	<ul class="qa_ul" id="list_ajax">
-
+  <li style="height:73px;">
+		<a href="/<?=mapping('qa')?>/qa_detail?qa_idx=1" class="block">
+			<div class="f_left">
+					<span>미답변</span>
+					<div class="title">그린필 전기자동차 충전에 대한 데이터 질문</div>
+					<span  class="qa_date">2023.01.12</span>
+				</div>
+      </a>
+		</li>
 	</ul>
 </div>
 <!-- body : e -->
@@ -22,14 +30,13 @@
 <input type="text" name="scrollPosition" id="scrollPosition" value="0" style="display:none">
 <script type="text/javascript">
 
-$(function(){
-	setTimeout("get_list()", 200);
-});
+// $(function(){
+// 	setTimeout("get_list()", 200);
+// });
 
 function get_list(){ 
  default_list_get('1');
 }
-
 
 var page_num=1;
 var tab_click_yn="N";//탭클릭 여부

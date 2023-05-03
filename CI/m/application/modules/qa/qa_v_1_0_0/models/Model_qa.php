@@ -10,20 +10,6 @@
 
 Class Model_qa extends MY_Model {
 
-	// 1. 구매자 1:1 문의 총 카운트
-	public function total_qa(){
-
-		$sql = "SELECT
-							COUNT(*) AS cnt
-						FROM
-							tbl_qa
-						WHERE
-							del_yn ='N'
-					";
-
-		return $this->query_cnt($sql,array());
-	}
-
 	// 1:1 질문 리스트 가져오기
 	public function qa_list($data) {
 		$page_size = (int)$data['page_size'];
@@ -43,7 +29,7 @@ Class Model_qa extends MY_Model {
 							tbl_qa
 						WHERE
 							del_yn ='N'
-						AND member_idx = ?
+						AND member_idx = 1
 						";
 
 		$sql .= " ORDER BY qa_idx DESC LIMIT ?, ? ";
@@ -65,7 +51,7 @@ Class Model_qa extends MY_Model {
 							tbl_qa
 						WHERE
 							del_yn ='N'
-							AND member_idx = ?
+							AND member_idx = 1
 						";
 
 		return	$this->query_cnt($sql,

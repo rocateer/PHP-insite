@@ -29,7 +29,7 @@ class Qa_v_1_0_0 extends MY_Controller {
   // 1:1 질문 리스트
 	public function qa_list(){
 
-		$this->_view2(mapping('qa').'/view_qa_list');
+		$this->_view(mapping('qa').'/view_qa_list');
 	}
 
   // 1:1 질문 리스트 가져오기
@@ -68,7 +68,7 @@ class Qa_v_1_0_0 extends MY_Controller {
 
 		$response->result = $result;
 
-		$this->_view2(mapping('qa').'/view_qa_detail', $response);
+		$this->_view(mapping('qa').'/view_qa_detail', $response);
 	}
 
 	// 1:1 질문 등록
@@ -76,7 +76,7 @@ class Qa_v_1_0_0 extends MY_Controller {
 		$response = new stdClass();
 		$response->agent = $this->_user_agent();
 
-		$this->_view2(mapping('qa').'/view_qa_reg', $response);
+		$this->_view(mapping('qa').'/view_qa_reg', $response);
 	}
 
 	// 1:1 질문 등록하기
