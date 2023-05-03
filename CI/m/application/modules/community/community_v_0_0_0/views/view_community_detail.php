@@ -44,6 +44,33 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <!-- 설문 : s -->
+    <div class="box_vote">
+      <div class="vote_title">가장 잘 된 인테리어 공간은?</div>
+      <div class="vote_sub_txt">복수선택<span class="f_right">150명 참여</span></div>
+      <ul class="mt30">
+        <li>
+          <input type="checkbox" name="vote" id="vote_1" value="Y" class="type_circle" checked>
+          <label for="vote_1"><span></span>모루유리가 들어간 짙은 우드 중문</label>
+        </li>
+        <li>
+          <input type="checkbox" name="vote" id="vote_2" value="Y" class="type_circle">
+          <label for="vote_2"><span></span>육백각타일을 사용한 화장실</label>
+        </li>
+        <li>
+          <input type="checkbox" name="vote" id="vote_3" value="Y" class="type_circle">
+          <label for="vote_3"><span></span>홈바가 있는 넓은 주방</label>
+        </li>
+        <li>
+          <input type="checkbox" name="vote" id="vote_4" value="Y" class="type_circle">
+          <label for="vote_4"><span></span>야외에 있는 느낌을 준는 캠핑존 베란다</label>
+        </li>
+      </ul>
+      <a href="#" class="btn_point btn_full_thin mt20">투표하기</a>
+    </div>
+    <!-- 설문 : e -->
+  
   </div>
   <!-- community action -->
   <ul class="detail_action">
@@ -51,91 +78,97 @@
     <li><img src="/images/ic_chat_white.png"> 댓글 23</li>
     <li><img src="/images/ic_visibility_white.png"> 524</li>
   </ul>
-  
+
     
   <!-- 댓글:s -->
   <div class="cmt_wrap">
-    <div class="cmt_area">
-      <div class="no_data">
-        <p>아직 댓글이 없습니다.<br>댓글을 달아주세요!</p>
-      </div>
+      <!-- <div class="no_data">
+        <p><span class="message_box">작성된 댓글이 없습니다.</span></p>
+      </div> -->
       <!-- 댓글: tbl_cmt, 답글: tbl_reply, etc: cmt_blind -->
-      <ul class="cmt_ul">
-        <li>
-          <table class="tbl_cmt">
-            <tr>
-              <th class="relative">
-                <div class="img_box">
-                  <img src="/p_images/p1.png" alt="">
-                </div>
-                <span class="name">HELLOWORLD</span>
+    <ul class="cmt_ul">
+      <li>
+        <div class="cmt_item_1">벚꽃보러가요 · 서울 동부<span class="f_right"><img src="/images/ic_more.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="w_16"></span></div>
+        <div class="cmt_item_2">월넛과 베이지의 조화가 넘 멋지네요. 집도 따뜻해 보이면서도 안정감이 들어 집에만 있고 싶어질거 같아요!</div>
+        <div class="cmt_action">
+          <span>00:00</span>
+          <span><a href="">120</a></span>
+          <span onclick="reg_reply()">대댓글</span>
+        </div>
+        <!-- <table class="tbl_cmt">
+          <tr>
+            <th class="relative">
+              <div class="img_box">
+                <img src="/p_images/p1.png" alt="">
+              </div>
+              <span class="name">HELLOWORLD</span>
 
-                <img src="/images/i_dot_2.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="btn_more">
-              </th>
-            </tr>
-            <tr>
-              <td>
-                <p class="p">이사 온 지 얼마 안 됐는데 담비한테 친구들이 생겨서 다행이에요 매주 모이면 좋겠어요!</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span class="date">2020.01.01</span>
-                <span class="reg_reply" onclick="reg_reply()">답글 달기</span>
-              </td>
-            </tr>
-          </table>
-        </li>
-        <li>  
-          <div class="cmt_blind">
-            삭제된 글입니다.
-          </div>
-        </li>
-        <li>
-          <table class="tbl_cmt">
-            <tr>
-              <th class="relative">
-                <div class="img_box">
-                  <img src="/p_images/p1.png" alt="">
-                </div>
-                <span class="name"><span class="blue">작성자</span></span>
+              <img src="/images/i_dot_2.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="btn_more">
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p class="p">이사 온 지 얼마 안 됐는데 담비한테 친구들이 생겨서 다행이에요 매주 모이면 좋겠어요!</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="date">2020.01.01</span>
+              <span class="reg_reply" onclick="reg_reply()">답글 달기</span>
+            </td>
+          </tr>
+        </table> -->
+      </li>
+      <li>  
+        <div class="cmt_blind">
+          삭제된 글입니다.
+        </div>
+      </li>
+      <li>
+        <table class="tbl_cmt">
+          <tr>
+            <th class="relative">
+              <div class="img_box">
+                <img src="/p_images/p1.png" alt="">
+              </div>
+              <span class="name"><span class="blue">작성자</span></span>
 
-                <img src="/images/i_dot_2.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="btn_more">
+              <img src="/images/i_dot_2.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="btn_more">
 
-              </th>
-            </tr>
-            <tr>
-              <td>
-                <p class="p">이사 온 지 얼마 안 됐는데 담비한테 친구들이 생겨서 다행이에요 매주 모이면 좋겠어요!</p>
-              </td>
-            </tr>
-            <tr>
-              <td><span class="date">2020.01.01</span>
-                <span class="reg_reply" onclick="reg_reply()">답글 달기</span>
-              </td>
-            </tr>
-          </table>
-          
-          <table class="tbl_reply">
-            <tr>
-              <th class="relative">
-                <div class="img_box">
-                  <img src="/p_images/p1.png" alt="">
-                </div>
-                <span class="name"><span class="pink">관리자</span>슈퍼맨 </span>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p class="p">이사 온 지 얼마 안 됐는데 담비한테 친구들이 생겨서 다행이에요 매주 모이면 좋겠어요!</p>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="date">2020.01.01</span>
+              <span class="reg_reply" onclick="reg_reply()">답글 달기</span>
+            </td>
+          </tr>
+        </table>
+        
+        <table class="tbl_reply">
+          <tr>
+            <th class="relative">
+              <div class="img_box">
+                <img src="/p_images/p1.png" alt="">
+              </div>
+              <span class="name"><span class="pink">관리자</span>슈퍼맨 </span>
 
-                <img src="/images/i_dot_2.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="btn_more">
-              </th>
-            </tr>
-            <tr>
-              <td>
-                <p class="cmt_blind">차단한 댓글 입니다<button class="button">차단해제</button></p>
-              </td>
-            </tr>
-          </table>
-        </li>
-      </ul>
-    </div>
+              <img src="/images/i_dot_2.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="btn_more">
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <p class="cmt_blind">차단한 댓글 입니다<button class="button">차단해제</button></p>
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+    
     <button class="btn_cmt_more">댓글 더보기</button>
     <div class="cmt_reg">
       <div class="tag">왕이로다님에게 답글 남기는 중</div>
@@ -146,6 +179,9 @@
   <div id="reply_back" onclick="reply_back_close()"></div>
   <!-- 댓글:e -->
 </div>
+
+<a href="#"><img src="/images/floating_top.png" class="top_floating top"></a>
+
 <!-- modal_open_slide : s -->
 <div class="modal_slide modal_slide_cmt_more">
   <ul>
@@ -251,7 +287,7 @@ function detail_btn_like(element){
   }
   var swiper = new Swiper(".community_swiper", {
     pagination: {
-      el: ".swiper-pagination",
+      el: ".community_swiper .swiper-pagination",
     },
   });
   function idx(idx){
@@ -320,5 +356,18 @@ function modal_close_slide(element){
     };
   })
 
-
+// top
+$( document ).ready( function() {
+$( window ).scroll( function() {
+    if ( $( this ).scrollTop() > 200 ) {
+    $( '.top' ).fadeIn();
+    } else {
+    $( '.top' ).fadeOut();
+    }
+} );
+$( '.top' ).click( function() {
+    $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+    return false;
+} );
+} );
 </script>

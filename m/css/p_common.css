@@ -32,7 +32,7 @@
     url(/fonts/NanumSquareR.ttf) format('truetype');
 }
 body{background:#121212;}
-body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r", sans-serif; font-size:14px; color:#E2E2E2;}
+body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r", sans-serif; font-size:14px; color:#F5F5F5;}
 input[type=password] {font-family:'Malgun gothic', dotum, sans-serif;}
 /* 대표 컬러 설정 */
 .point_color{color:#20BFA9 !important;}
@@ -72,6 +72,7 @@ a.btn_dark_gray {background:#232527; color: #fff;}
 .btn_half_left{flex:1; margin-right:5px;}
 .btn_half_right{flex:1}
 .btn_full_basic {border-radius:5px; display:block; text-align:center; height:50px; line-height:50px; font-size:16px; font-family:'font-b';}
+.btn_full_thin {border-radius:5px; display:block; text-align:center; height:40px; line-height:40px; font-size:14px; font-family:'font-b';}
 .btn_md {border-radius:5px; display:block; text-align:center; height:40px; line-height:40px; font-size:16px; font-family:'font-b';}
 a.btn_sm {border-radius:3px; display:inline-block; text-align:center; padding:8px 12px; font-size:12px; font-family:'font-b'; }
 /* button custom : e */
@@ -103,14 +104,14 @@ input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none}
 input.input_calendar{background: url('../images/ic_input_calendar.png') no-repeat calc(100% - 10px) 50%; background-size:20px auto;}
 
 input[type="checkbox"] {display:none;}
-input[type="checkbox"] + label {display:inline-block; color: #333; font-size: 14px; font-style: normal;}
+input[type="checkbox"] + label {display:inline-block; color:#E2E2E2; font-size: 14px; font-style: normal;}
 input[type="checkbox"] + label span {display:inline-block; width:20px; height:20px; margin:-3px 8px 0 0; vertical-align:middle; background:url('../images/checkbox_off.png') right center no-repeat; cursor:pointer; background-size:20px;}
 input[type="checkbox"]:checked + label span {background:url('../images/checkbox_on.png') right center no-repeat; background-size:20px;}
 
 input.type_circle[type="checkbox"] {display:none;}
-input.type_circle[type="checkbox"] + label {display:inline-block; color: #333; font-size: 14px; font-style: normal;}
-input.type_circle[type="checkbox"] + label span {display:inline-block; width:18px; height:18px; margin:-3px 8px 0 0; vertical-align:middle; background:url('../images/checkbox_off.png') right center no-repeat; cursor:pointer; background-size:18px;}
-input.type_circle[type="checkbox"]:checked + label span {background:url('../images/checkbox_on.png') right center no-repeat; background-size:18px;}
+input.type_circle[type="checkbox"] + label {display:inline-block; color: #E2E2E2; font-size: 14px; font-style: normal;}
+input.type_circle[type="checkbox"] + label span {display:inline-block; width:20px; height:20px; margin:-3px 8px 0 0; vertical-align:middle; background:url('../images/check_round_off.png') right center no-repeat; cursor:pointer; background-size:20px;}
+input.type_circle[type="checkbox"]:checked + label span {background:url('../images/check_round_on.png') right center no-repeat; background-size:20px;}
 
 input[type="radio"] {display:none;}
 input[type="radio"] + label {display:inline-block; font-size:14px; color: #333; font-style: normal;}
@@ -246,7 +247,7 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .step_ui .active{border:1px solid #20BFA9; width:20px; height: 20px; text-align: center; line-height: 20px; color:#20BFA9; background: none; font-size: 12px;}
 
 
-/* jdkqfyr=== 창 */
+/* madal 창 */
 .modal_slide{padding: 40px 30px;box-sizing: border-box; z-index: 201; width: 100%; position:fixed; left:0;bottom:0;border-top-left-radius: 20px;border-top-right-radius: 20px; background: #121212;}
 .md_slide_overlay{position: fixed; width: 100%; height: 100%; top:0; left:0; background: rgba(0,0,0,.5); opacity: 0; visibility: hidden; z-index: 200} 
 .modal_slide_find_result img{width: 32px;margin-bottom: 12px;}
