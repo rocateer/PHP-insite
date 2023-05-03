@@ -28,7 +28,7 @@ class Join_v_1_0_0 extends MY_Controller{
 
 	//메인 화면
   public function join_reg2(){
-		$terms_list = $this->model_join->terms_list();
+		$terms_list = $this->model_common->terms_list();
 		$city_list=$this->model_common->city_list();
 
 		$response = new stdClass();
@@ -42,8 +42,8 @@ class Join_v_1_0_0 extends MY_Controller{
 
 	//메인 화면
   public function join_reg3(){
-		$work_list = $this->model_join->work_list();
-		$info_detail = $this->model_join->info_detail();
+		$work_list = $this->model_common->work_list();
+		$info_detail = $this->model_common->info_detail();
 
 		$response = new stdClass();
 
