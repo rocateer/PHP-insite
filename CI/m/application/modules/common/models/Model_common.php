@@ -10,6 +10,64 @@
 
 Class Model_common extends MY_Model {
 
+	//약관 리스트
+	public function terms_list() {
+
+		$sql = "SELECT
+							terms_management_idx,
+							title,
+							type,
+							contents,
+							upd_date
+						FROM
+							tbl_terms_management
+          	";
+
+  	return $this->query_result($sql,
+                                array(
+																)
+                              );
+	}
+
+	//직종 리스트
+	public function work_list() {
+
+		$sql = "SELECT
+							work_idx, 
+							work_name, 
+							del_yn
+						FROM
+							tbl_work
+						WHERE
+						 del_yn='N'
+          	";
+
+  	return $this->query_result($sql,
+                                array(
+																)
+                              );
+	}
+
+	//직종 리스트
+	public function info_detail() {
+
+		$sql = "SELECT
+							info_idx, 
+							img, 
+							contents, 
+							upd_date
+						FROM
+							tbl_info
+						WHERE
+						 type=0
+          	";
+
+  	return $this->query_row($sql,
+                                array(
+																)
+                              );
+	}
+
 	// 지역 시도 리스트
 	public function city_list() {
 

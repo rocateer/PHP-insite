@@ -25,7 +25,7 @@ class Faq_v_1_0_0 extends MY_Controller {
 // faq_list
 	public function faq_list(){
 
-		$this->_view2(mapping('faq').'/view_faq_list');
+		$this->_view(mapping('faq').'/view_faq_list');
 	}
 
   // faq 리스트 get

@@ -1,6 +1,6 @@
 <!-- header : s -->
 <header>
-  <a class="btn_back" href="javascript:history.go(-1)"><img class="w100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
+  <a class="btn_left" href="javascript:history.go(-1)"><img class="w100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
   <h1>
     FAQ
   </h1>
@@ -9,9 +9,7 @@
 
 <!-- body : s -->
 <div >
-  
   <ul class="faq_list mt50" id="list_ajax">
-
   </ul>
 </div>
 <!-- body : e -->

@@ -31,7 +31,7 @@ class Terms_v_1_0_0 extends MY_Controller {
 
 		$response->result = $result;
 
-		$this->_view2(mapping('terms').'/view_terms_detail',$response);
+		$this->_view(mapping('terms').'/view_terms_detail',$response);
   }
 
 

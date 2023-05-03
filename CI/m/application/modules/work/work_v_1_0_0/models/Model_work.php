@@ -9,18 +9,18 @@
 
 */
 
-Class Model_terms extends MY_Model {
+Class Model_work extends MY_Model {
 
-	public function terms_list() {
+	public function work_list() {
 
 		$sql = "SELECT
-							terms_management_idx,
+							work_management_idx,
 							title,
 							type,
 							contents,
 							upd_date
 						FROM
-							tbl_terms_management
+							tbl_work_management
 						WHERE
 							member_type = '0'
 						";
@@ -34,7 +34,7 @@ Class Model_terms extends MY_Model {
 	}
 
 	// 약관 상세
-	public function terms_detail($data){
+	public function work_detail($data){
 
 		$type = $data['type'];
 
@@ -42,7 +42,7 @@ Class Model_terms extends MY_Model {
 							title,
 							contents
 	        	FROM
-	          	tbl_terms_management
+	          	tbl_work_management
 	        	WHERE
 	           	type = ?
 					";
