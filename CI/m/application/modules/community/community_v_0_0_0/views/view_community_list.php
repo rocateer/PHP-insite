@@ -6,24 +6,21 @@
 	</div>
 </header>
 <div class="body">
-  <div class="board_head">
-    <img src="/images/ic_cate_1.png" class="list_cate_img">
-    <div class="right_area">
-      <p class="board_head_title">자유공간</p>
-      <p class="board_head_con">자유공간은 인테리어 내용 뿐만 아니라 자유롭게 서로 소통하는 공간입니다.</p>
-    </div>
+  <div class="community_head">
+      <img src="/images/ic_cate_1.png">
+      <p class="title">자유공간</p>
+      <p class="sub_txt">자유공간은 인테리어 내용 뿐만 아니라 자유롭게 서로 소통하는 공간입니다.</p>
   </div>
 
-  <ul class="board_list" id="list_ajax">
+  <ul class="community_list" id="list_ajax">
     <li>
-      <div class="board_list_head">
-        <div class="mb20">
-          <img src="/images/ic_fire.png" alt="hot아이콘" class="hot_ic">
-          <p class="hot_title">HOT</p>
+      <div class="community_list_head">
+        <div class="mark_hot">
+          <img src="/images/ic_fire.png" alt="hot아이콘" class="w_16 middle">
+          HOT
         </div>
-        <div class="right_area">
-          <p class="txt_nickname">딸기맛바나나킥1 · 서울 남부 <span class="f_right list_date">12.21</span></p>
-        </div>
+        <p class="txt_nickname">딸기맛바나나킥1 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+        
       </div>
       <div class="community_list_body">
         <div class="thum_img">
@@ -43,11 +40,7 @@
       </div>
     </li>
     <li>
-      <div class="board_list_head">
-        <div class="right_area">
-          <p class="txt_nickname">딸기맛바나나킥2 · 서울 남부 <span class="f_right list_date">12.21</span></p>
-        </div>
-      </div>
+    <p class="txt_nickname">딸기맛바나나킥1 · 서울 남부 <span class="f_right list_date">12.21</span></p>
       <div class="community_list_body">
         <div class="community_list_item">
           <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
