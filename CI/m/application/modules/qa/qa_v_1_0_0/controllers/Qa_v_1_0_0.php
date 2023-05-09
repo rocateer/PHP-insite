@@ -73,31 +73,20 @@ class Qa_v_1_0_0 extends MY_Controller {
 
 	// 1:1 질문 등록
 	public function qa_reg(){
-		$response = new stdClass();
-		$response->agent = $this->_user_agent();
 
-		$this->_view(mapping('qa').'/view_qa_reg', $response);
+		$this->_view(mapping('qa').'/view_qa_reg');
 	}
 
 	// 1:1 질문 등록하기
   public function qa_reg_in(){
     // $member_idx = $this->_input_check("member_idx",array("empty_msg"=>"member_idx 코드 누락"));
-    $member_idx = $this->member_idx;
-		$qa_type = $this->_input_check("qa_type",array("empty_msg"=>"필수 입력 정보가 입력 되지 않았습니다. 다시 한번 확인 해 주세요.","focus_id"=>"qa_type"));
-		$qa_title = $this->_input_check("qa_title",array("empty_msg"=>"필수 입력 정보가 입력 되지 않았습니다. 다시 한번 확인 해 주세요.","focus_id"=>"qa_title"));
-		$qa_contents = $this->_input_check("qa_contents",array("empty_msg"=>"필수 입력 정보가 입력 되지 않았습니다. 다시 한번 확인 해 주세요.","focus_id"=>"qa_contents"));
-		$device_os = $this->_input_check("device_os",array());
-		$app_version = $this->_input_check("app_version",array());
-		$os_version = $this->_input_check("os_version",array());
-		
+    $member_idx = 1;
+		$qa_title = $this->_input_check("qa_title",array("empty_msg"=>"제목이 입력 되지 않았습니다. 다시 한번 확인 해 주세요.","focus_id"=>"qa_title"));
+		$qa_contents = $this->_input_check("qa_contents",array("empty_msg"=>"내용이 입력 되지 않았습니다. 다시 한번 확인 해 주세요.","focus_id"=>"qa_contents"));
 
     $data['member_idx'] = $member_idx;
-    $data['qa_type'] = $qa_type;
     $data['qa_title'] = $qa_title;
 		$data['qa_contents'] = $qa_contents;
-		$data['device_os'] = $device_os;
-		$data['app_version'] = $app_version;
-		$data['os_version'] = $os_version;
 
 		$result = $this->model_qa->qa_reg_in($data); // 1:1 질문 등록하기
 

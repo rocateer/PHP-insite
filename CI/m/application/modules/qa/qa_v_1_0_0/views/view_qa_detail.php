@@ -1,35 +1,31 @@
 <!-- header : s -->
 <header>
-  <a class="btn_back" href="javascript:document.referrer ? history.go(-1): location.href='/<?=mapping('main')?>';"><img class="w100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
+  <a class="btn_left" href="javascript:document.referrer ? history.go(-1): location.href='/<?=mapping('main')?>';"><img class="w100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
   <h1>
     1:1 문의
   </h1>
-  <p class="qa_title btn_del"><a href="javascript:void(0)" onclick="qa_del()">삭제</a></p>
+  <p class="btn_del"><a href="javascript:void(0)" onclick="qa_reg_in();">삭제</a></p>
 </header>
 <!-- header : e -->
 
 <!-- body : s -->
 <div class="body">
   <div class="qa_top_txt">
-  <img src="/images/i_question.png" alt="" class="question">
-    <span class="category">카테고리</span>
-    <div class="txt_wrap mt10">
-      <div class="title"><?=$result->qa_title?></div>
-      <div  class="contents mt10">
-        <?=nl2br($result->qa_contents)?>
-      </div>
-      <div class="date"><?=$result->ins_date?></div>
+    <div class="qa_top_head">
+      <span class="tag">미답변</span>
+      <div class="title"> 그린필 전기자동차 충전에 대한 데이터 질문</div>
+      <span class="qa_date">2023.01.12</span>
     </div>
-   
+    <div class="qa_top_con">
+      <div class="qa_con" id="qa_contents" name="qa_contents" placeholder="내용을 입력하세요.">단순히 보면 우리는 Android + IOS + Web Cloud System 을 개발하고 만드는 사람 들일 뿐 입니다. ​하지만 우리는 당신의 새로운 "비즈니스 아이디어"를 최신 IT기술을 활용하 여 다양한 모바일 플랫폼을 구현하여 온라인, 오프라인을 연결하여 당신에게 다채로운 마케팅 활동이 가능하도록 플랫폼서비스를 구체화하여 실현하고 많은 사람들이 더 편리하고 스마트한 생활을 누릴수 있는 삶의 혜택을 만드는 일을 하는 사람들입니다.</div>
+    </div>
   </div>
-  <? if($result->reply_yn=='Y'){ ?>
-    <div class="qa_bottom_txt">
+  <div class="qa_bottom_txt">
       <p>
         <?=nl2br($result->reply_contents)?>
       </p>
       <div class="date"><?=$result->reply_date?></div>
     </div>
-  <? } ?>
 </div>
 <!-- body : e -->
 

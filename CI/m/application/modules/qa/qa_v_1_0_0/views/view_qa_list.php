@@ -14,14 +14,23 @@
     <p><span class="message_box">FAQ으로는 해결이 어려우신가요?<br>문의 글을 작성하시면확인 후에 답변을 드립니다.</span></p>
   </div>
 	<ul class="qa_ul" id="list_ajax">
-  <li style="height:73px;">
-		<a href="/<?=mapping('qa')?>/qa_detail?qa_idx=1" class="block">
-			<div class="f_left">
-					<span>미답변</span>
-					<div class="title">그린필 전기자동차 충전에 대한 데이터 질문</div>
-					<span  class="qa_date">2023.01.12</span>
+		<li>
+			<a href="/<?=mapping('qa')?>/qa_detail?qa_idx=1" class="block">
+				<div>
+					<span class="tag">미답변</span>
+					<div class="title"> 그린필 전기자동차 충전에 대한 데이터 질문</div>
+					<span class="qa_date">2023.01.12</span>
 				</div>
-      </a>
+			</a>
+		</li>
+		<li>
+			<a href="/<?=mapping('qa')?>/qa_detail?qa_idx=1" class="block">
+				<div>
+					<span class="tag point_color">답변완료</span>
+					<div class="title"> 그린필 전기자동차 충전에 대한 데이터 질문</div>
+					<span class="qa_date">2023.01.12</span>
+				</div>
+			</a>
 		</li>
 	</ul>
 </div>

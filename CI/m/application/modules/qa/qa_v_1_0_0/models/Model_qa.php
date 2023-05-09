@@ -96,10 +96,6 @@ Class Model_qa extends MY_Model {
 		$member_idx = $data['member_idx'];
 		$qa_title = $data['qa_title'];
 		$qa_contents = $data['qa_contents'];
-		$qa_type = $data['qa_type'];
-		$device_os = $data['device_os'];
-		$app_version = $data['app_version'];
-		$os_version = $data['os_version'];
 
 		$this->db->trans_begin();
 
@@ -109,17 +105,9 @@ Class Model_qa extends MY_Model {
 							member_idx,
 							qa_title,
 							qa_contents,
-							qa_type,
-							device_os,
-							app_version,
-							os_version,
 							ins_date,
 							upd_date
 						) VALUES (
-							?,
-							?,
-							?,
-							?,
 							?,
 							?,
 							?,
@@ -131,11 +119,7 @@ Class Model_qa extends MY_Model {
 		$this->query($sql,array(
 									$member_idx,
 								  $qa_title,
-								  $qa_contents,
-								  $qa_type,
-								  $device_os,
-									$app_version,
-									$os_version
+								  $qa_contents
 								 ),$data
 							 );
 

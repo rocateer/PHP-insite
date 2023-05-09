@@ -70,3 +70,5 @@
 .product_list_body .product_list_title{font-size: 16px; color:#F5F5F5;}
 .product_list_body .product_list_item{font-size: 14px; color:#A0A0A0; margin-top: 5px;}
 .product_list_body .product_list_item .product_list_price{ color:#F5F5F5; font-family: 'font-b';display: inline-block;width: calc(100% - 70px);}
+
+/* 1대1문의 */

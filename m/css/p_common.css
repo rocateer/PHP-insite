@@ -375,17 +375,24 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .faq_list li .arrow{width: 10px;position: absolute; top:25px; right:20px;}
 .faq_list li .answer_wrap{line-height: 24px;display: none;background:#232527 url('/images/A.png') no-repeat 20px 20px; background-size: 10px;padding: 20px 20px;padding-left: 38px;   box-sizing: border-box;}
 header .qa_title{color:#222;font-size:14px; position: absolute;z-index: 1;top:16px;right:20px;}
-.qa_ul > li{border-bottom: 1px solid #999; padding: 20px; box-sizing: border-box;height:73px;}
-.qa_ul > li .title{font-size: 14px;margin-bottom: 3px;}
+header .btn_del{color:#F60032;font-size:16px; position: absolute; z-index: 1; top:15px; right:20px;}
+.qa_ul > li{border-bottom: 1px solid #444; padding: 20px; box-sizing: border-box;height:73px;}
+.qa_ul > li .title{font-size: 14px; color:#E2E2E2;}
 .qa_ul > li .deactive{font-weight:600;margin-bottom: 10px;}
 .qa_ul > li .active{font-weight:600;color:#60DDE1;margin-bottom: 10px;}
-.qa_ul > li span{font-size: 12px;color:#999}
-.qa_top_txt{line-height: 24px;background: url('/images/i_question.png') no-repeat 20px 12px; background-size: 27px;padding: 16px 20px 16px 30px; box-sizing: border-box;}
-.qa_top_txt .title{font-size: 16px;margin-bottom: 6px;}
-.qa_top_txt .date{font-size: 12px;color:#999}
+.qa_ul > li span{font-size: 14px; color:#999}
+.qa_ul > li span.qa_date{font-size: 12px; color:#A0A0A0}
+.qa_ul > li span.tag{font-family:'font-b'; margin-right: 5px; float: left;}
+.qa_top_head{border-bottom: 1px solid #444; padding: 20px;font-size: 16px;}
+.qa_top_head .title{color:#F5F5F5;}
+.qa_top_head span.qa_date{font-size: 12px; color:#A0A0A0}
+.qa_top_head span.tag{font-family:'font-b'; margin-right: 5px; float: left;}
+.qa_top_con{padding:30px 20px 20px 20px;}
+.qa_top_con .qa_con{border-bottom: 0px; color:#E2E2E2;}
 .qa_bottom_txt .date{font-size: 12px;color:#999;margin-top: 6px;}
-.qa_bottom_txt {line-height: 24px;background: #F6F6F6 url('/images/i_answer.png') no-repeat 17px 17px; background-size: 27px;padding: 30px 20px 56px 30px; box-sizing: border-box;}
-.qa_reg_page textarea{height: 340px; margin-top: 15px;}
+.qa_bottom_txt {background: #232527; margin-top: 10px; width: 100%;display: flex;flex-direction: row;}
+.qa_reg_page .qa_title{padding:0 20px;}
+.qa_reg_page .qa_con{padding:0 20px; border-bottom: none; margin-top: 20px;height: 340px;}
 .qa_mark_1{display: inline-block; width:68px; padding:4px 0; border-radius: 3px; border: 1px solid #F68582; background: #FFF9F9; color:#F68582; text-align: center; margin-bottom: 12px;}
 .qa_mark_2{display: inline-block; width:68px; padding:4px 0; border-radius: 3px; border: 1px solid #CDCDCD; background: #F6F6F6; color:#999; text-align: center; margin-bottom: 12px;}
 
