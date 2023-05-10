@@ -57,6 +57,20 @@
 .trade_list_body .thum_img .img_box{width:94px; height: 94px; border-radius: 5px;}
 .trade_action_area span{color:#636363; margin-right: 20px; font-size: 12px;}
 .trade_action_area img{width:16px; margin-right: 4px; vertical-align: middle;}
+.trade_detail_head .head_img{width: 100%;}
+.trade_detail_head {border-bottom: 1px solid #444;}
+.trade_detail_head .detail_info{padding: 20px; line-height: 1.4;}
+.trade_detail_head .trade_info{font-size: 14px;}
+.trade_detail_head .trade_info tr{height: 22px;}
+.trade_detail_head .trade_info th{color: #A0A0A0;}
+.trade_detail_head .trade_info td{color: #E2E2E2;}
+.trade_detail_head .trade_state{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #164740; display: inline;}
+.trade_detail_head .trade_state_end{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #444; display: inline;}
+.trade_detail_head .trade_title{margin-top: 20px;color: #F5F5F5; font-size: 18px;font-family: 'font-b';}
+.trade_detail_head .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b'; margin-top: 3px;}
+.trade_detail_head .txt_nickname .detail_date{font-size: 12px; color:#A0A0A0;}
+.trade_detail_head .trade_price{font-size: 20px; color:#F5F5F5; font-family: 'font-b'; margin-top: 30px;}
+.trade_detail_body{padding: 20px; line-height: 1.4;}
 
 /* 공동구매 */
 .product_list{overflow: hidden;}
@@ -71,4 +85,11 @@
 .product_list_body .product_list_item{font-size: 14px; color:#A0A0A0; margin-top: 5px;}
 .product_list_body .product_list_item .product_list_price{ color:#F5F5F5; font-family: 'font-b';display: inline-block;width: calc(100% - 70px);}
 
-/* 1대1문의 */
+/* 탈퇴 */
+
+.member_out_body{ padding-top: 50px; min-height: 100%;}
+.member_out_page h2{font-size: 16px; font-family:'font-b'; color: #E2E2E2;}
+.member_out_page .circle_ul li{background: url('/images/ic_check_on.png') no-repeat left top; background-size: 16px; padding-left: 20px; font-size: 14px; margin-bottom: 15px; color: #E2E2E2;}
+.member_out_page .member_out_q{margin-top: 50px;font-size: 14px; color: #A0A0A0;}
+.member_out_page .place_wrap{margin-bottom: 30px;}
+.member_out_page .btn_space{margin: 30px 0 30px 0;}

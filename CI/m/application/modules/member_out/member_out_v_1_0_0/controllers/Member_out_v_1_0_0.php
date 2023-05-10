@@ -56,7 +56,7 @@ class Member_out_v_1_0_0 extends MY_Controller{
 
 	//알림목록
   public function member_out_detail(){
-		$this->_view2(mapping('member_out').'/view_member_out_detail');
+		$this->_view(mapping('member_out').'/view_member_out_detail');
   }
 	
 	public function member_out_mod_up(){

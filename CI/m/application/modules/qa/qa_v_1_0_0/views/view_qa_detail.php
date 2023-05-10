@@ -23,6 +23,7 @@
   <div class="qa_bottom_txt">
       <p>
         <?=nl2br($result->reply_contents)?>
+        단순히 보면 우리는 Android + IOS + Web Cloud System 을 개발하고 만드는 사람 들일 뿐 입니다. ​하지만 우리는 당신의 새로운 "비즈니스 아이디어"를 최신 IT기술을 활용하 여 다양한 모바일 플랫폼을 구현하여 온라인, 오프라인을 연결하여 당신에게 다채로운 마케팅 활동이 가능하도록 플랫폼서비스를 구체화하여 실현하고 많은 사람들이 더 편리하고 스마트한 생활을 누릴수 있는 삶의 혜택을 만드는 일을 하는 사람들입니다.
       </p>
       <div class="date"><?=$result->reply_date?></div>
     </div>

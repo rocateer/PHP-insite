@@ -82,7 +82,7 @@
   <!-- modal : s -->
   <div class="modal modal_terms<?=$row->type?>">
     <header>
-      <a class="btn_back" href="#">
+      <a class="btn_left" href="#">
         <img class="w_100" src="/images/haed_btn_back.png" onclick="modal_close('terms<?=$row->type?>')" alt="뒤로가기">
       </a>
       <h1><?=$row->title?></h1>
@@ -100,7 +100,7 @@
 <!-- 지역선택 모달 -->
   <div class="modal modal_region" id="region_ajax" style="display:none;">
     <header>
-      <a class="btn_back" href="#">
+      <a class="btn_left" href="#">
         <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('region')" alt="뒤로가기">
       </a>
       <h1>근무 지역 선택</h1>

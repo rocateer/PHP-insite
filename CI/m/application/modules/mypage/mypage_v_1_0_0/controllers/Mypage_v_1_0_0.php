@@ -11,10 +11,10 @@ class Mypage_v_1_0_0 extends MY_Controller{
 	function __construct(){
 		parent::__construct();
 		
-		if(!$this->session->userdata("member_idx") ){
-			redirect("/".mapping('login')."?return_url=/".mapping('mypage'));
-			exit;
-		}
+		// if(!$this->session->userdata("member_idx") ){
+		// 	redirect("/".mapping('login')."?return_url=/".mapping('mypage'));
+		// 	exit;
+		// }
 
 		$this->load->model(mapping('mypage').'/model_mypage');
 	}
@@ -28,13 +28,13 @@ class Mypage_v_1_0_0 extends MY_Controller{
 	//마이페이지
   public function mypage_list(){
 
-		$result = $this->model_mypage->member_info(); // 회원 정보
+		// $result = $this->model_mypage->member_info(); // 회원 정보
 
-		$response = new stdClass();
+		// $response = new stdClass();
 
-		$response->agent = $this->_user_agent();
-		$response->result = $result['member_info'];
-		$response->alarm_new_cnt = $result['alarm_new_cnt'];
+		// $response->agent = $this->_user_agent();
+		// $response->result = $result['member_info'];
+		// $response->alarm_new_cnt = $result['alarm_new_cnt'];
 
 		$this->_view(mapping('mypage').'/view_mypage_list', $response);
   }
