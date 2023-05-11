@@ -20,7 +20,27 @@ class My_scrap_v_0_0_0 extends MY_Controller{
 
 //메인 화면
   public function my_scrap_list(){
-		$this->_view2(mapping('my_scrap').'/view_my_scrap_list');
+		$this->_view(mapping('my_scrap').'/view_my_scrap_list');
+  }
+
+  public function scrap_list_trade(){
+		$this->_view(mapping('my_scrap').'/view_my_scrap_list_trade');
+  }
+
+  public function scrap_list_job(){
+		$this->_view(mapping('my_scrap').'/view_my_scrap_list_job');
+  }
+
+  public function scrap_list_profile(){
+		$this->_view(mapping('my_scrap').'/view_my_scrap_list_profile');
+  }
+
+  public function scrap_list_product(){
+		$this->_view(mapping('my_scrap').'/view_my_scrap_list_product');
+  }
+
+  public function scrap_list_study(){
+		$this->_view(mapping('my_scrap').'/view_my_scrap_list_study');
   }
 
 }// 클래스의 끝

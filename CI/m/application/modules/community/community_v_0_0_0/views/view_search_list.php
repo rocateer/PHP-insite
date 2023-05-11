@@ -1,9 +1,8 @@
 <header>
-	<div class="main_header">
-    <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
-    <input class="search_txt" type="text" placeholder="검색어를 입력해 주세요.">
-		<a href="/<?=mapping('community')?>/search_list_get"><img src="/images/head_btn_search.png" class="main_search"></a>
-	</div>
+  <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
+  <input class="header_search" type="text" placeholder="검색어를 입력해 주세요.">
+  <a href="/<?=mapping('community')?>/search_list_get"><img src="/images/head_btn_search.png" class="btn_right"></a>
+
 </header>
 <div class="body">
   <div class="search_head">최근검색어
@@ -31,5 +30,5 @@
       </li>
     </ul>
   </div>
-  <div class="no_data_box" style="display:none1;">최근 검색한 내용이 없어요.</div>
+  <div class="no_data" style="display:none1;"><p><span class="message_box">최근 검색한 내용이 없어요.</span></p></div>
 </div>
