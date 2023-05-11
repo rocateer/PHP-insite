@@ -70,6 +70,12 @@
       <a href="#" class="btn_point btn_full_thin mt20">투표하기</a>
     </div>
     <!-- 설문 : e -->
+
+    <!-- 설문 결과 : s -->
+    <div>
+      
+    </div>
+    <!-- 설문 결과 : e -->
   
   </div>
   <!-- community action -->
@@ -82,9 +88,9 @@
     
   <!-- 댓글:s -->
   <div class="cmt_wrap">
-      <!-- <div class="no_data">
+      <div class="no_data">
         <p><span class="message_box">작성된 댓글이 없습니다.</span></p>
-      </div> -->
+      </div>
       <!-- 댓글: tbl_cmt, 답글: tbl_reply, etc: cmt_blind -->
     <ul class="cmt_ul">
       <li>
