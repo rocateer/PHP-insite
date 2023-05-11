@@ -24,8 +24,9 @@
         <div class="trade_list_item">
           <p class="trade_list_title">가디호텔 철거공사</p>
           <p class="trade_list_con">아이폰 12pro 랑 에어팟 세트로 팝니다.</p>
+          <p class="trade_date">아이폰 12pro 랑 에어팟 세트로 팝니다.</p>
+          <p class="trade_list_con">아이폰 12pro 랑 에어팟 세트로 팝니다.</p>
           <p class="trade_list_price">100,000원 <span class="trade_state">예약</span></p>
-        
         </div>
       </div>
       </a>
