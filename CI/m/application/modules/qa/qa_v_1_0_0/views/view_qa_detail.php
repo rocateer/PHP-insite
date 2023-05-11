@@ -9,7 +9,7 @@
 <!-- header : e -->
 
 <!-- body : s -->
-<div class="body">
+<div class="body type_2">
   <div class="qa_top_txt">
     <div class="qa_top_head">
       <span class="tag">미답변</span>

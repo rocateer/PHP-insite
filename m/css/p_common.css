@@ -32,6 +32,8 @@
     url(/fonts/NanumSquareR.ttf) format('truetype');
 }
 body{background:#121212;}
+.body.type_2{background:#232527;}
+
 body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r", sans-serif; font-size:14px; color:#F5F5F5; line-height: 1.4;}
 input[type=password] {font-family:'Malgun gothic', dotum, sans-serif;}
 /* 대표 컬러 설정 */
@@ -59,6 +61,7 @@ h4 .w_20{padding-bottom: 3px;}
 	-moz-transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;}
+
 /* only colors */
 a.btn_disabled {background:#444; color: #A0A0A0; cursor: none;}
 a.btn_point{background: #20BFA9; color: #121212;}
@@ -74,6 +77,7 @@ a.btn_dark_gray {background:#232527; color: #fff;}
 .btn_full_thin {border-radius:5px; display:block; text-align:center; height:40px; line-height:40px; font-size:14px; font-family:'font-b';}
 .btn_md {border-radius:5px; display:block; text-align:center; height:40px; line-height:40px; font-size:16px; font-family:'font-b';}
 a.btn_sm {border-radius:3px; display:inline-block; text-align:center; padding:8px 12px; font-size:12px; font-family:'font-b'; }
+
 /* button custom : e */
 .btn_floating{position:fixed; width:100%; height:50px; z-index: 99; bottom:0px; left:0; box-sizing: border-box; text-align: center; line-height: 50px; font-size: 16px; font-family:'font-b';}
 .top_floating{position:fixed; width:50px; z-index:10; bottom: 20px; right: 20px;}
@@ -108,6 +112,7 @@ input[type="checkbox"] + label {display:inline-block; color:#E2E2E2; font-size: 
 input[type="checkbox"] + label span {display:inline-block; width:20px; height:20px; margin:-3px 8px 0 0; vertical-align:middle; background:url('../images/checkbox_off.png') right center no-repeat; cursor:pointer; background-size:20px;}
 input[type="checkbox"]:checked + label span {background:url('../images/checkbox_on.png') right center no-repeat; background-size:20px;}
 
+/* 투표 css */
 input.type_circle[type="checkbox"] {display:none;}
 input.type_circle[type="checkbox"] + label {display:inline-block; color: #E2E2E2; font-size: 14px; font-style: normal;}
 input.type_circle[type="checkbox"] + label span {display:inline-block; width:20px; height:20px; margin:-3px 8px 0 0; vertical-align:middle; background:url('../images/check_round_off.png') right center no-repeat; cursor:pointer; background-size:20px;}
@@ -118,6 +123,7 @@ input[type="radio"] + label {display:inline-block; font-size:14px; color: #333; 
 input[type="radio"] + label span {display:inline-block; width:20px; height:20px; margin:-3px 6px 0 0; vertical-align:middle; background:url('../images/radio_off.png') right center no-repeat; cursor:pointer; background-size:20px;}
 input[type="radio"]:checked + label span {background:url('../images/radio_on.png') right center no-repeat; background-size:20px;}
 
+/* textarea 입력 custom => 수정예정 */
 .place_wrap{position: relative;}
 .place_wrap textarea{height: 240px;}
 .place_wrap .place_p{color:#CDCDCD; padding:15px; top:10px; left:0px; box-sizing:border-box; overflow:hidden; pointer-events:none; display: block; position: absolute; z-index:1; background: transparent;}
@@ -164,15 +170,13 @@ input:checked + .check_slider:before {-webkit-transform: translateX(16px); -ms-t
 /* 대표 wrap */
 .body{padding-top:50px; min-height: 100%; box-sizing: border-box;}
 .inner_wrap{padding:0px 20px;}
-.inner_wrap .find_result{border:1px solid #444444; border-radius: 5px; height:300px;margin: 0 auto;}
-.inner_wrap2{padding-left:30px; padding-right: 30px;}
 
-.find_result{text-align: center;}
+/* 비밀번호찾기,아이디찾기 결과 */
+.find_result{border:1px solid #444; border-radius: 5px; height:300px;margin: 0 auto; text-align:center;}
 .find_result img{width: 35px;margin: 0 auto;display: block;padding-top: 70px;}
 .find_result h2{color: #F5F5F5;}
 .find_result .text{color: #E2E2E2;}
 
-.footer_margin{padding-bottom: 60px; box-sizing: border-box;}
 body, html , .wrap{height: 100%;}
 .vh_wrap{position: relative; min-height: 100vh; overflow: hidden}
 .vh_wrap.body{min-height: 100vh;}
@@ -182,7 +186,6 @@ body, html , .wrap{height: 100%;}
 /* 이미지센터 */
 .img_box{overflow: hidden; display: block;}
 .img_box > img{object-fit: cover; width: 100%; height: 100%;}
-.img_box_2 > img{object-fit: cover; width: 100%; height: 100%;}
 .img_cnt_box{position:absolute;top: 65px;left: 65px; width: 24px;height: 24px;font-size:14px; background: #000000; opacity:50%; border-radius: 5px 0 5px 0; text-align: center;line-height: 24px;}
 
 /* ------------------------------------------------------------------------------------------------------------- */
@@ -198,7 +201,7 @@ header h1{font-size:16px;font-family: 'font-b'; text-align: center; line-height:
 header .head_txt{color:#20BFA9;font-size:16px; position: absolute; z-index: 1; top:15px; right:20px;}
 header .btn_scrap{display:inline-block; vertical-align: middle; background:url('/images/head_btn_bookmark_off.png') no-repeat; height:24px; width:24px; background-size:24px 24px;}
 header .btn_scrap.on{background: url('/images/head_btn_bookmark_on.png') no-repeat; background-size: 24px 24px;}
-
+header .header_search{width:calc(100% - 100px); margin: 0 auto; position: absolute; left:50px; border-bottom:none !important;}
 
 footer{padding:50px 20px 30px 20px; box-sizing: border-box;}
 footer .trigger{display: block;}
@@ -207,15 +210,8 @@ footer .footer_info li{color:#636363; font-size: 12px; margin:8px 0;}
 footer .footer_info li span{color:#A0A0A0; margin-left: 5px; font-size: 12px;}
 footer .footer_menu li{border:1px solid #444; border-radius: 5px; text-align: center; margin: 5px 0;}
 footer .footer_menu li a{display: block; padding:10px; color:#A0A0A0; font-size: 12px;}
-/* footer ul{position: fixed; z-index: 100;bottom:0; width: 100%; height: 60px; background: #fff;border-top-left-radius: 25px; border-top-right-radius: 25px;}
-footer li{height: 100%;width: 25%; font-size: 10px; float: left; text-align: center;}
-footer li a{height: 100%;width: 100%;display: inline-block;letter-spacing: -0.5px; font-size: 11px;}
-footer li img{width: 48px;left:-24px;position: relative;}
-footer li a span{overflow: hidden; margin: 11px auto 2px auto; width:24px; height: 24px; display: block;}
-footer li.active a{color:#262626; font-weight:600}
-footer li.active img{position: relative; top: 0; left: 0; height: 24px; display: block} */
 
-/* reg */
+/* member reg */
 .login_wrap .logo{width: 135px;text-align: center; margin:100px auto 80px; display: block;}
 .login_wrap{width:100%; padding: 0 50px; box-sizing: border-box; margin: 0 auto;}
 .login_wrap .or{width: 146px; font-size: 12px;color:#A0A0A0;padding: 0 0px; position:relative; margin:109px auto 30px;box-sizing: border-box; text-align: center;}
@@ -274,16 +270,9 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .modal textarea{height: 140px;}
 .modal .md_container{position: relative; padding: 30px 20px; box-sizing: border-box;}
 .md_overlay{position: fixed; width: 100%; height: 100%; top:0; left:0; background: rgba(0,0,0,.5); opacity: 0; visibility: hidden; z-index: 200}
-.modal_terms0{width:100%; height:100%;}
-.modal_terms0 #edit{padding: 20px;box-sizing: border-box;}
-.modal_terms1{width:100%; height:100%;}
-.modal_terms1 #edit{padding: 20px;box-sizing: border-box;}
-.modal_terms2{width:100%; height:100%;}
-.modal_terms2 #edit{padding: 20px;box-sizing: border-box;}
-.modal_region{width:100%; height:100%;}
-.modal_region #edit{padding: 20px;box-sizing: border-box;}
-.modal_confirm{width:100%; height:100%;}
-.modal_confirm #edit{padding: 20px;box-sizing: border-box;}
+.modal_full{width:100%; height:100%;}
+.modal_full #edit{padding: 20px;box-sizing: border-box;}
+
 .btn_md_wrap{overflow: hidden;margin-top: 30px;display: flex;}
 .btn_md_right{border-radius:10px;background:#4C35CA;color:#121212;float: right;display:inline-block;flex:1;padding: 9px 0; text-align:center}
 .btn_md_left{border-radius:10px;color:#737373;border:1px solid #BBBBBB;float: right;margin-right: 10px;display:inline-block;flex:1;padding: 9px 0; text-align:center}
@@ -293,9 +282,6 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .no_data img{display: block; margin: 0 auto; margin-bottom:30px; width:80px;}
 .no_data p{text-align: center; font-size: 14px; color:#BFBFBF; line-height: 1.6; }
 .no_data p .message_box{background: #232527; border-radius: 5px; padding: 16px 20px; display: inline-block; color:#A0A0A0;}
-.no_data2{padding:50px 0; box-sizing: border-box;}
-.no_data2 img{display: block; margin: 0 auto; margin-bottom:30px; width:80px;}
-.no_data2 p{text-align: center; font-size: 14px; color:#BFBFBF; line-height: 1.6}
 .login_info_box{background: #FBFBFB; padding: 60px 0; text-align: center; color:#BFBFBF;}
 .login_info_box p{margin-bottom: 20px;}
 
@@ -348,11 +334,6 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .flex_5 select:last-child{margin-left:5px; width: 100px;}
 .flex_term span{line-height: 50px; margin: 0 5px;}
 
-/* gride */
-.ul_2_ui li{float: left; width: 50%;}
-.ul_3_ui li{float: left; width: 33.3%;}
-.ul_4_ui li{float: left; width: 25%;}
-
 /* complete 공통 */
 .complete_wrap{margin:0 auto;text-align: center;}
 .complete_wrap img{max-width:100px;width:100%; margin:130px auto 50px; }
@@ -383,14 +364,14 @@ header .btn_del{color:#F60032;font-size:16px; position: absolute; z-index: 1; to
 .qa_ul > li span{font-size: 14px; color:#999}
 .qa_ul > li span.qa_date{font-size: 12px; color:#A0A0A0}
 .qa_ul > li span.tag{font-family:'font-b'; margin-right: 5px; float: left;}
-.qa_top_head{border-bottom: 1px solid #444; padding: 20px;font-size: 16px;}
+.qa_top_head{border-bottom: 1px solid #444; padding: 20px;font-size: 16px; background: #121212;}
 .qa_top_head .title{color:#F5F5F5;}
 .qa_top_head span.qa_date{font-size: 12px; color:#A0A0A0}
 .qa_top_head span.tag{font-family:'font-b'; margin-right: 5px; float: left;}
-.qa_top_con{padding:30px 20px 20px 20px;}
+.qa_top_con{padding:30px 20px 20px 20px; background: #121212;}
 .qa_top_con .qa_con{border-bottom: 0px; color:#E2E2E2;}
 .qa_bottom_txt .date{font-size: 12px;color:#999;margin-top: 20px;}
-.qa_bottom_txt {padding: 30px 20px; background: #232527; margin-top: 10px; height: 100vh; }
+.qa_bottom_txt {padding: 30px 20px; background: #232527; margin-top: 10px; }
 .qa_reg_page .qa_title{padding:0 20px;}
 .qa_reg_page .qa_con{padding:0 20px; border-bottom: none; margin-top: 20px;height: 340px;}
 .qa_mark_1{display: inline-block; width:68px; padding:4px 0; border-radius: 3px; border: 1px solid #F68582; background: #FFF9F9; color:#F68582; text-align: center; margin-bottom: 12px;}

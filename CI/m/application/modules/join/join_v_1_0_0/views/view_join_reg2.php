@@ -80,7 +80,7 @@
 <?foreach($terms_list as $row){
     ?>
   <!-- modal : s -->
-  <div class="modal modal_terms<?=$row->type?>">
+  <div class="modal modal_full modal_terms<?=$row->type?>">
     <header>
       <a class="btn_left" href="#">
         <img class="w_100" src="/images/haed_btn_back.png" onclick="modal_close('terms<?=$row->type?>')" alt="뒤로가기">
@@ -98,7 +98,7 @@
 <?}?>
 
 <!-- 지역선택 모달 -->
-  <div class="modal modal_region" id="region_ajax" style="display:none;">
+  <div class="modal modal_full modal_region" id="region_ajax" style="display:none;">
     <header>
       <a class="btn_left" href="#">
         <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('region')" alt="뒤로가기">

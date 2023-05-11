@@ -119,7 +119,7 @@
 <!-- 모달 -->
 
 <!-- 지역선택 모달 -->
-<div class="modal modal_confirm">
+<div class="modal modal_full modal_confirm">
   <header>
     <a class="btn_left" href="#">
       <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('confirm')" alt="뒤로가기">
