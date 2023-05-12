@@ -81,11 +81,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .fs_18{font-size: 18px;}
 .fs_20{font-size: 20px;}
 .font_gray_f{color: #fff;}
-.font_gray_cd{color: #cdcdcd;}
-.font_gray_3{color: #262626;}
-.font_gray_6{color: #666;}
-.font_gray_9{color: #999 !important;}
-.font_gray_0{color: #000;}
+.font_gray_A0{color: #A0A0A0;}
+.font_gray_63{color: #636363;}
 
 /* 정렬 */
 .middle{vertical-align: middle;}

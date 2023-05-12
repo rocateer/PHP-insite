@@ -20,4 +20,9 @@ class Main_v_0_0_0 extends MY_Controller{
   public function main_detail(){
 		$this->_view2(mapping('main').'/view_main_detail');
   }
+
+//글쓰기 선택
+public function reg_select(){
+  $this->_view(mapping('main').'/view_reg_select');
+}
 }// 클래스의 끝

@@ -40,8 +40,8 @@ class Community_v_0_0_0 extends MY_Controller{
     $this->_view(mapping('community').'/view_search_list_product');
   }
 
-  public function search_list_study(){
-    $this->_view(mapping('community').'/view_search_list_study');
+  public function search_list_edu(){
+    $this->_view(mapping('community').'/view_search_list_edu');
   }
 
   // 인기
