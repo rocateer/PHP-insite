@@ -64,6 +64,33 @@ Class Model_common extends MY_Model {
 
 	}
 
+	public function board_list() {
+
+		$sql = "SELECT
+							board_idx, 
+							hot_community_idx, 
+							title, 
+							contents, 
+							img, 
+							work_yn, 
+							work_arr, 
+							detail_yn, 
+							anony_yn, 
+							display_yn, 
+							del_yn, 
+							ins_date, 
+							upd_date
+						FROM
+							tbl_board
+							where
+						del_yn='N'
+						order by board_idx
+				  ";
+
+		return $this->query_result($sql,array());
+
+	}
+
   // smtp 조회
   public function smtp_detail2(){
 

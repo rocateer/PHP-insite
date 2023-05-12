@@ -33,14 +33,14 @@ $arr_right = explode(',',$this->admin_right);
           <p><span>ID : <?=$this->admin_id?></span></p>
         </li>
 
-
         <!-- 회원관리 -->
         <li class="<?php if($this->uri->segment(1)==mapping('member')||$this->uri->segment(1)==mapping('work')) echo "active";?>">
           <a href="#" data-toggle="collapse" data-target="#member">
             <span class="material-icons">
             people_alt
             </span>
-            <span>회원 관리</span> <span class="material-icons">arrow_drop_down</span>
+            <span>회원 관리</span>
+            <span class="material-icons">arrow_drop_down</span>
           </a>
 
           <ul id="member" class="collapse <?php if($this->uri->segment(1)==mapping('member')||$this->uri->segment(1)==mapping('work')){ echo "in";}?>" aria-expanded="true">
@@ -49,21 +49,22 @@ $arr_right = explode(',',$this->admin_right);
           </ul>
         </li>
         <!-- 회원관리 -->
-
         
+
         <!-- 커뮤니티 관리 -->
-        <li class="<?php if($this->uri->segment(1) == mapping('board')){echo "active";} ?>">
+        <li class="<?php if($this->uri->segment(1) == mapping('board')||$this->uri->segment(1) == mapping('community')){echo "active";} ?>">
           <a href="#" data-toggle="collapse" data-target="#admin_board">
             <span class="material-icons">
             forum
             </span>
-            <span>커뮤니티 게시판 관리</span> <span class="material-icons">arrow_drop_down</span>
+            <span>커뮤니티 게시판 관리</span> 
+            <span class="material-icons">arrow_drop_down</span>
           </a>
 
-          <ul id="admin_board" class="collapse <?php if($this->uri->segment(1)==mapping('board')){ echo "in";}?>" aria-expanded="true">
+          <ul id="admin_board" class="collapse <?php if($this->uri->segment(1)==mapping('board')||$this->uri->segment(1) == mapping('community')){ echo "in";}?>" aria-expanded="true">
             <li><a href="/<?=mapping('board')?>">게시판 큐레이션</a></li>
-            <li><a href="/<?=mapping('board')?>/counselor_board_list">게시판 관리</a></li>
-            <li><a href="/<?=mapping('board')?>/main_section_2">커뮤니티 게시글 관리</a></li>
+            <li><a href="/<?=mapping('board')?>">게시판 관리</a></li>
+            <li><a href="/<?=mapping('community')?>">게시글 관리</a></li>
             <li><a href="/<?=mapping('board')?>/main_section_2">구인 관리</a></li>
             <li><a href="/<?=mapping('board')?>/main_section_2">중고거래 게시글 관리</a></li>
           </ul>
@@ -75,7 +76,8 @@ $arr_right = explode(',',$this->admin_right);
         <li class="<?php if($this->uri->segment(1) == mapping('news')){echo "active";} ?>">
           <a href="#" data-toggle="collapse" data-target="#admin_news">
             <span class="material-icons">category</span>
-            <span>공동구매 관리</span> <span class="material-icons">arrow_drop_down</span>
+            <span>공동구매 관리</span>
+            <span class="material-icons">arrow_drop_down</span>
           </a>
 
           <ul id="admin_news" class="collapse <?php if($this->uri->segment(1)==mapping('news')){ echo "in";}?>" aria-expanded="true">
@@ -92,7 +94,8 @@ $arr_right = explode(',',$this->admin_right);
 
           <a href="#" data-toggle="collapse" data-target="#admin_category">
             <span class="material-icons">widgets</span>
-            <span>교육 관리</span> <span class="material-icons">arrow_drop_down</span>
+            <span>교육 관리</span>
+            <span class="material-icons">arrow_drop_down</span>
           </a>
 
           <ul id="admin_category" class="collapse <?php if( $this->uri->segment(1)==mapping('category_management') ) echo "in";?>" aria-expanded="true">
@@ -110,7 +113,8 @@ $arr_right = explode(',',$this->admin_right);
             <span class="material-icons">
               report_problem
               </span>
-            <span>신고관리</span> <span class="material-icons">arrow_drop_down</span>
+            <span>신고관리</span>
+            <span class="material-icons">arrow_drop_down</span>
           </a>
 
           <ul id="admin_report" class="collapse <?php if($this->uri->segment(1)==mapping('board_report')|| $this->uri->segment(1)==mapping('board_reply_report')  ){ echo "in";}?>" aria-expanded="true">
@@ -140,7 +144,8 @@ $arr_right = explode(',',$this->admin_right);
         <li class="<?php if($this->uri->segment(1)==mapping('info')) echo "active";?>">
           <a href="#" data-toggle="collapse" data-target="#info">
             <span class="material-icons">note</span>
-            <span>안내 관리</span> <span class="material-icons">arrow_drop_down</span>
+            <span>안내 관리</span>
+            <span class="material-icons">arrow_drop_down</span>
           </a>
 
           <ul id="info" class="collapse <?php if( $this->uri->segment(1)==mapping('info') ) echo "in";?>" aria-expanded="true">
@@ -156,7 +161,8 @@ $arr_right = explode(',',$this->admin_right);
 
           <a href="#" data-toggle="collapse" data-target="#admin_cscenter">
             <span class="material-icons">support_agent</span>
-            <span>고객센터</span> <span class="material-icons">arrow_drop_down</span>
+            <span>고객센터</span>
+            <span class="material-icons">arrow_drop_down</span>
           </a>
 
           <ul id="admin_cscenter" class="collapse <?php if( $this->uri->segment(1)==mapping('notice')  ||  $this->uri->segment(1)==mapping('faq') ||  $this->uri->segment(1)==mapping('qa') ) echo "in";?>" aria-expanded="true">

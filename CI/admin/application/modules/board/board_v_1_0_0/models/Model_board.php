@@ -16,44 +16,40 @@ Class Model_board extends MY_Model{
 		$page_no 	 = (int)$data['page_no'];
 
 		$title = $data['title'];
-		$member_nickname = $data['member_nickname'];
+		$display_yn = $data['display_yn'];
 		$s_date = $data['s_date'];
 		$e_date = $data['e_date'];
-		$display_yn = $data['display_yn'];
-		$board_type = $data['board_type'];
-		$orderby = $data['orderby'];
+		$anony_yn = $data['anony_yn'];
+		$work_arr = $data['work_arr'];
 
 		$sql = "SELECT
-							a.board_idx,
-							b.member_nickname,
-							FN_AES_DECRYPT(b.member_name) AS member_name,
-							b.member_state,
-							c.category_name,
-							a.title,
-							a.like_cnt,
-							a.contents,
-							a.view_cnt,
-							a.reply_cnt,
-							a.report_cnt,
-							a.display_yn,
-							a.ins_date,
-							a.upd_date,
-							a.del_yn
+							board_idx, 
+							hot_community_idx, 
+							title, 
+							contents, 
+							img, 
+							work_yn, 
+							work_arr, 
+							detail_yn, 
+							anony_yn, 
+							display_yn, 
+							del_yn, 
+							ins_date, 
+							upd_date
 						FROM
-							tbl_board a
-							left JOIN tbl_member b ON b.member_idx = a.member_idx
-							left join tbl_category_management c on c.category_management_idx=a.category_idx 
+							tbl_board as a
 						WHERE
-							a.del_yn = 'N'
-							and a.board_type=$board_type
+							del_yn = 'N'
 		";
 
 		if($title != ""){
 			$sql .= " AND a.title LIKE '%$title%' ";
 		}
-		
-		if($member_nickname != ""){
-			$sql .= " AND b.member_nickname LIKE '%$member_nickname%'";
+		if($display_yn != ""){
+			$sql .= " AND a.display_yn = '$display_yn' ";
+		}
+		if($anony_yn != ""){
+			$sql .= " AND a.anony_yn = '$anony_yn' ";
 		}
 		if($display_yn != ""){
 			$sql .= " AND a.display_yn = '$display_yn' ";
@@ -64,22 +60,8 @@ Class Model_board extends MY_Model{
 		if($e_date != ""){
 			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') <= '$e_date' ";
 		}
-		if($orderby != ""){
-			if($orderby == "0"){
-					$sql .= " ORDER BY a.ins_date DESC LIMIT ?, ?";
-			}
-			if($orderby == "1"){
-					$sql .= " ORDER BY a.report_cnt DESC LIMIT ?, ?";
-			}
-			if($orderby == "2"){
-					$sql .= " ORDER BY a.reply_cnt DESC LIMIT ?, ?";
-			}
-
- 	 }else{
-		 $sql .= " ORDER BY a.ins_date DESC LIMIT ?, ?";
-	 }
-
-
+		
+		$sql .= " ORDER BY a.ins_date DESC LIMIT ?, ?";
 
 		return $this->query_result($sql,
 															 array(
@@ -93,30 +75,28 @@ Class Model_board extends MY_Model{
 	public function board_list_count($data){
 
 		$title = $data['title'];
-		$member_nickname = $data['member_nickname'];
+		$display_yn = $data['display_yn'];
 		$s_date = $data['s_date'];
 		$e_date = $data['e_date'];
-		$display_yn = $data['display_yn'];
-		$board_type = $data['board_type'];
-		$orderby = $data['orderby'];
+		$anony_yn = $data['anony_yn'];
+		$work_arr = $data['work_arr'];
 
 		$sql = "SELECT
 							COUNT(*) AS cnt
 						FROM
-							tbl_board a
-							left JOIN tbl_member b ON b.member_idx = a.member_idx
-							left join tbl_category_management c on c.category_management_idx=a.category_idx 
+							tbl_board as a
 						WHERE
-							a.del_yn = 'N'
-							and a.board_type=$board_type
+							del_yn = 'N'
 		";
-		
+
 		if($title != ""){
 			$sql .= " AND a.title LIKE '%$title%' ";
 		}
-
-		if($member_nickname != ""){
-			$sql .= " AND b.member_nickname LIKE '%$member_nickname%' ";
+		if($display_yn != ""){
+			$sql .= " AND a.display_yn = '$display_yn' ";
+		}
+		if($anony_yn != ""){
+			$sql .= " AND a.anony_yn = '$anony_yn' ";
 		}
 		if($display_yn != ""){
 			$sql .= " AND a.display_yn = '$display_yn' ";
@@ -134,199 +114,41 @@ Class Model_board extends MY_Model{
 														$data);
 	}
 
-	// 이브의 고민 관리 리스트
-	public function counselor_board_list($data){
-		$page_size = (int)$data['page_size'];
-		$page_no 	 = (int)$data['page_no'];
-
-		$title = $data['title'];
-		$category = $data['category'];
-		$member_nickname = $data['member_nickname'];
-		$s_date = $data['s_date'];
-		$e_date = $data['e_date'];
-		$display_yn = $data['display_yn'];
-		$board_type = $data['board_type'];
-		$orderby = $data['orderby'];
-
-		$sql = "SELECT
-							a.board_idx,
-							b.member_nickname,
-							b.member_state,
-							FN_AES_DECRYPT(b.member_name) AS member_name,
-							c.category_management_idx,
-							c.category_name,
-							a.title,
-							a.like_cnt,
-							a.contents,
-							a.view_cnt,
-							a.reply_cnt,
-							a.report_cnt,
-							a.display_yn,
-							a.ins_date,
-							a.upd_date,
-							a.del_yn
-						FROM
-							tbl_board a
-							left JOIN tbl_member b ON b.member_idx = a.member_idx
-							left join tbl_category_management c on c.category_management_idx=a.category_idx and c.del_yn='N'
-						WHERE
-							a.del_yn = 'N'
-							and a.board_type=$board_type
-		";
-
-		if($title != ""){
-			$sql .= " AND a.title LIKE '%$title%' ";
-		}
-		
-		if($member_nickname != ""){
-			$sql .= " AND b.member_nickname LIKE '%$member_nickname%'";
-		}
-		if($display_yn != ""){
-			$sql .= " AND a.display_yn = '$display_yn' ";
-		}
-		if($category != ""){
-			$sql .= " AND a.category_idx = '$category' ";
-		}
-		if($s_date != ""){
-			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') >= '$s_date' ";
-		}
-		if($e_date != ""){
-			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') <= '$e_date' ";
-		}
-		if($orderby != ""){
-			if($orderby == "0"){
-					$sql .= " ORDER BY a.ins_date DESC LIMIT ?, ?";
-			}
-			if($orderby == "1"){
-					$sql .= " ORDER BY a.report_cnt DESC LIMIT ?, ?";
-			}
-			if($orderby == "2"){
-					$sql .= " ORDER BY a.reply_cnt DESC LIMIT ?, ?";
-			}
-
- 	 }else{
-		 $sql .= " ORDER BY a.ins_date DESC LIMIT ?, ?";
-	 }
-
-
-
-		return $this->query_result($sql,
-															 array(
-															 $page_no,
-															 $page_size
-															 ),
-															 $data);
-	}
-
-	// 이브의 고민 관리 리스트 총 카운트
-	public function counselor_board_list_count($data){
-
-		$title = $data['title'];
-		$category = $data['category'];
-		$member_nickname = $data['member_nickname'];
-		$s_date = $data['s_date'];
-		$e_date = $data['e_date'];
-		$display_yn = $data['display_yn'];
-		$board_type = $data['board_type'];
-		$orderby = $data['orderby'];
-
-		$sql = "SELECT
-							COUNT(*) AS cnt
-						FROM
-							tbl_board a
-							left JOIN tbl_member b ON b.member_idx = a.member_idx
-						WHERE
-							a.del_yn = 'N'
-							and a.board_type=$board_type
-		";
-		
-		if($title != ""){
-			$sql .= " AND a.title LIKE '%$title%' ";
-		}
-		if($member_nickname != ""){
-			$sql .= " AND b.member_nickname LIKE '%$member_nickname%' ";
-		}
-		if($display_yn != ""){
-			$sql .= " AND a.display_yn = '$display_yn' ";
-		}
-		if($category != ""){
-			$sql .= " AND a.category_idx = '$category' ";
-		}
-		if($s_date != ""){
-			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') >= '$s_date' ";
-		}
-		if($e_date != ""){
-			$sql .= " AND DATE_FORMAT(a.ins_date, '%Y-%m-%d') <= '$e_date' ";
-		}
-
-		return $this->query_cnt($sql,
-														array(
-														),
-														$data);
-	}
-
-	// 상태 변경
-	public function board_state_mod_up($data){
-
-		$board_idx  = $data['board_idx'];
-		$display_yn = $data['display_yn'];
-
-		$this->db->trans_begin();
-
-		$sql = "UPDATE
-							tbl_board
-						SET
-							display_yn = ?,
-							report_cycle = if('$display_yn'='Y',0,report_cycle),
-							upd_date = NOW()
-						WHERE
-							board_idx = ?
-						";
-
-		$this->query($sql,
-								 array(
-								 $display_yn,
-								 $board_idx
-								 ),
-								 $data
-							 );
-
-		if($this->db->trans_status() === FALSE){
-			$this->db->trans_rollback();
-			return "0";
-		}else{
-			$this->db->trans_commit();
-			return "1";
-		}
-	}
-
+	
 
 	public function board_reg_in($data){
 
 		$title 		= $data['title'];
 		$contents = $data['contents'];
-		$board_img 			= $data['board_img'];
-		$board_img_detail 			= $data['board_img_detail'];
+		$work_yn 			= $data['work_yn'];
+		$detail_yn 			= $data['detail_yn'];
+		$anony_yn 			= $data['anony_yn'];
+		$img_path 			= $data['img_path'];
+		$work_arr 			= $data['work_arr'];
 
 		$this->db->trans_begin();
 
 		$sql = "INSERT INTO
 							tbl_board
 						(
-							board_type,
 							title,
 							contents,
-							board_img,
-							board_img_detail,
+							work_yn,
+							detail_yn,
+							anony_yn,
+							img,
+							work_arr,
 							del_yn,
 							ins_date,
 							upd_date
 						) VALUES (
-							1,
-							?, -- title
-							?, -- contents
-							?, -- img_path
-							?, -- img_path
+							?, 
+							?, 
+							?, 
+							?, 
+							?, 
+							?, 
+							?, 
 							'N',
 							NOW(),
 							NOW()
@@ -334,10 +156,13 @@ Class Model_board extends MY_Model{
 						";
 
 		$this->query($sql,array(
-								 $title,
-								 $contents,
-								 $board_img,
-								 $board_img_detail,
+											$title,
+											$contents,
+											$work_yn,
+											$detail_yn,
+											$anony_yn,
+											$img_path,
+											$work_arr
 								 ),$data
 							 );
 
@@ -355,18 +180,24 @@ Class Model_board extends MY_Model{
 		$board_idx 		= $data['board_idx'];
 		$title 		= $data['title'];
 		$contents = $data['contents'];
-		$board_img 			= $data['board_img'];
-		$board_img_detail 			= $data['board_img_detail'];
+		$work_yn 			= $data['work_yn'];
+		$detail_yn 			= $data['detail_yn'];
+		$anony_yn 			= $data['anony_yn'];
+		$img_path 			= $data['img_path'];
+		$work_arr 			= $data['work_arr'];
 
 		$this->db->trans_begin();
 
 		$sql = "UPDATE
 							tbl_board
 						SET
-							title =?,
-							contents =?,
-							board_img =?,
-							board_img_detail =?,
+							title = ?,
+							contents = ?,
+							work_yn = ?,
+							detail_yn = ?,
+							anony_yn = ?,
+							img = ?,
+							work_arr = ?,	
 							upd_date = NOW()
 						WHERE
 							board_idx = ?
@@ -374,10 +205,13 @@ Class Model_board extends MY_Model{
 
 		$this->query($sql,
 								 array(
-								 $title,
-								 $contents,
-								 $board_img,
-								 $board_img_detail,
+									$title,
+									$contents,
+									$work_yn,
+									$detail_yn,
+									$anony_yn,
+									$img_path,
+									$work_arr,
 								 $board_idx,
 								 ),
 								 $data);
@@ -391,40 +225,29 @@ Class Model_board extends MY_Model{
 		}
 	}
 
-
-
 	// 커뮤니티 상세
 	public function board_detail($data){
 
 		$board_idx = $data['board_idx'];
 
 		$sql = "SELECT
-							a.board_idx,
-							a.board_type,
-							a.program_record,
-							b.member_nickname,
-							b.member_state,
-							FN_AES_DECRYPT(b.member_name) as  member_name,
-							c.category_management_idx,
-							c.category_name,
-							a.title,
-							a.contents,
-							a.like_cnt,
-							a.view_cnt,
-							a.scrap_cnt,
-							a.reply_cnt,
-						  a.report_cnt,
-							a.display_yn,
-							a.ins_date,
-							a.upd_date,
-							a.url_link,
-							a.board_img
+							board_idx, 
+							hot_community_idx, 
+							title, 
+							contents, 
+							img, 
+							work_yn, 
+							work_arr, 
+							detail_yn, 
+							anony_yn, 
+							display_yn, 
+							del_yn, 
+							ins_date, 
+							upd_date
 						FROM
-							tbl_board a
-							left JOIN tbl_member b ON b.member_idx = a.member_idx
-							left join tbl_category_management c on c.category_management_idx=a.category_idx and c.del_yn='N'
+							tbl_board as a
 						WHERE
-							a.del_yn = 'N'
+							del_yn = 'N'
 							and board_idx=?
 		";
 
@@ -646,25 +469,24 @@ Class Model_board extends MY_Model{
 	// 노출여부 상태 변경
 	public function display_yn_mod_up($data){
 
-		$board_reply_idx  = $data['board_reply_idx'];
+		$board_idx  = $data['board_idx'];
 		$display_yn = $data['display_yn'];
 
 		$this->db->trans_begin();
 
 		$sql = "UPDATE
-							tbl_board_reply
+							tbl_board
 						SET
 							display_yn = ?,
-							report_cycle = if('$display_yn'='Y',0,report_cycle),
 							upd_date = NOW()
 						WHERE
-							board_reply_idx = ?
+							board_idx = ?
 						";
 
 		$this->query($sql,
 								 array(
 								 $display_yn,
-								 $board_reply_idx
+								 $board_idx
 							   ),
 								 $data);
 
