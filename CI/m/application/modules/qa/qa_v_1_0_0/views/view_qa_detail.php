@@ -4,7 +4,7 @@
   <h1>
     1:1 문의
   </h1>
-  <p class="btn_del"><a href="javascript:void(0)" onclick="qa_reg_in();">삭제</a></p>
+  <p class="btn_txt"><a href="javascript:void(0)" onclick="qa_reg_in();">삭제</a></p>
 </header>
 <!-- header : e -->
 

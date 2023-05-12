@@ -100,3 +100,13 @@
 .cmt_reg input{height:40px; border:0; text-indent:20px; border-radius:100px; padding-right:40px; box-sizing: border-box; background:#232527;}
 .cmt_reg .btn_send{display:none;position: absolute;z-index: 1;width: 36px;top:9px;right:22px;}
 #reply_back{display: none;width: 100%;height: 100%;position: fixed; z-index: 9;top:0;left:0;background: rgba(0,0,0,0.5);}
+
+/* tab */
+.tab_1{border-bottom: 1px solid #444; padding: 0 20px; box-sizing: border-box; overflow-y: hidden; overflow-x: auto; width: auto; word-break: break-all;  white-space: nowrap; margin-top: 50px;}
+.tab_1 li{padding: 0 15px; text-align: center; display:inline-block; color:#A0A0A0; font-size: 16px; line-height: 50px;}
+.tab_1 li span{color:#636363; font-size: 12px;}
+.tab_1 li.active{color:#fff;border-bottom: 2px solid #FAFAFA;}
+
+.community_category{padding: 15px 20px; overflow-y: hidden; overflow-x: auto; width: auto; word-break: break-all;  white-space: nowrap;}
+.community_category li{font-size: 12px; display: inline-block; margin-right: 10px; border: 1px solid #444; background: #232527; color:#A0A0A0; border-radius: 3px; text-align: center; padding:7px 10px; box-sizing: border-box;}
+.community_category li img{width:16px; margin-right: 5px; vertical-align: middle;}

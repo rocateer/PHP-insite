@@ -1,22 +1,22 @@
 <header>
 	<div class="main_header">
     <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
-    <input class="search_txt " type="text" placeholder="검색어를 입력해 주세요." value="아이폰">
-		<a href="#"><img src="/images/btn_sm_delete.png" class="mr5"></a>
+    <input class="search_txt " type="text" placeholder="검색어를 입력해 주세요." value="아이폰" id="search_input">
+		<a href="#"><img src="/images/btn_sm_delete.png" class="mr5 btn_del"></a>
 		<a href="#"><img src="/images/head_btn_search.png" class="main_search"></a>
 	</div>
 </header>
-<ul class="search_gnb_wrap">
+<ul class="tab_1">
   <li class="active"><a href="#">게시글 <span>12,345</span></a></li>
   <li><a href="/<?=mapping('community')?>/search_list_trade">중고거래 <span>0</span></a></li>
   <li><a href="/<?=mapping('community')?>/search_list_product">공동구매 <span>12</span></a></li>
   <li><a href="/<?=mapping('community')?>/search_list_study">교육 <span>7</span></a></li>
 </ul>
 
-<ul class="search_cate">
-  <li><img class="w_16 middle" src="/images/ic_cate_1.png"> 자유공간</li>
-  <li><img class="w_16 middle" src="/images/ic_cate_2.png"> 인사이트</li>
-  <li><img class="w_16 middle" src="/images/ic_cate_3.png"> 비밀공간</li>
+<ul class="community_category">
+  <li><img src="/images/ic_cate_1.png"> 자유공간</li>
+  <li><img src="/images/ic_cate_2.png"> 인사이트</li>
+  <li><img src="/images/ic_cate_3.png"> 비밀공간</li>
 </ul>
 
 <div class="search_list">
@@ -101,4 +101,11 @@
     $(this).addClass("active");
     // function
   } );
+
+//검색어 삭제
+$('.btn_del').click(function(){
+$('#search_input').val('');
+$('#search_input').focus();
+
+})
 </script>

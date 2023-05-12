@@ -30,17 +30,12 @@
 .data_box li{margin-bottom: 15px;}
 .data_box img{vertical-align: middle; width: 16px; float: right;}
 .no_data_box{background: #232527; padding:15px 25px; line-height: 20px; font-size: 14px; border-radius: 5px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; color: #A0A0A0;}
-.search_gnb_wrap{border-bottom: 1px solid #444; padding: 0 20px; box-sizing: border-box; overflow-y: hidden; overflow-x: auto; width: auto; word-break: break-all;  white-space: nowrap; margin-top: 50px;}
-.search_gnb_wrap li{padding: 0 15px; text-align: center; display:inline-block; color:#A0A0A0; font-size: 16px; line-height: 50px;}
-.search_gnb_wrap li span{color:#636363; font-size: 12px;}
-.search_gnb_wrap li.active{color:#fff;border-bottom: 2px solid #FAFAFA;}
 
-.search_cate{padding: 15px 20px;}
 .search_cnt{padding: 0 20px;color: #A0A0A0; font-size: 14px;margin-bottom: 30px;}
 .search_cnt span{padding-left: 20px; background: url('/images/ic_check_off.png') no-repeat left center; background-size: 16px; color: #A0A0A0; font-size: 14px;}
 .search_cnt span.on{padding-left: 20px;background: url('/images/ic_check_on.png') no-repeat left center; color:#20BFA9; background-size: 16px;}
 .search_cnt img{vertical-align: middle;}
-.search_cate li{ font-size: 12px; width: 85px; line-height: 30px; display: inline-block; margin-right: 10px; border: 1px solid #444; background: #232527; color:#A0A0A0; border-radius: 3px;text-align: center;}
+
 .search_list ul li{position: relative;}
 .search_list ul li .btn_close{ width: 16px; float:right; position: absolute; right: 20px; z-index: 10;}
 
