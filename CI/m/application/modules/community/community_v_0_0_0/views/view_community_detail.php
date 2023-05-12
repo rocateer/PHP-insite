@@ -72,8 +72,27 @@
     <!-- 설문 : e -->
 
     <!-- 설문 결과 : s -->
-    <div>
-      
+    <div class="box_vote">
+      <div class="vote_title">가장 잘 된 인테리어 공간은?</div>
+      <div class="vote_sub_txt">복수선택<span class="f_right">150명 참여</span></div>
+      <ul class="vote_result">
+        <li>
+          <p><img src="/images/ic_vote_check.png">모루유리가 들어간 짙은 우드 중문</p>
+          <div class="progress_bg">
+            <span class="txt_1">150표</span>
+            <span class="txt_2">66.7%</span>
+            <div class="progress_bar check" style="width:60%"></div>
+          </div>
+        </li>
+        <li>
+          <p>모루유리가 들어간 짙은 우드 중문</p>
+          <div class="progress_bg">
+            <span class="txt_1">70표</span>
+            <span class="txt_2">66.7%</span>
+            <div class="progress_bar" style="width:20%"></div>
+          </div>
+        </li>
+      </ul>
     </div>
     <!-- 설문 결과 : e -->
   

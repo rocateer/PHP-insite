@@ -58,6 +58,13 @@
 .box_vote .vote_title{font-size: 16px;}
 .box_vote .vote_sub_txt, .vote_sub_txt span{font-size:12px; color:#A0A0A0; margin-top:6px;}
 .box_vote li{padding: 10px 0; display: block; overflow: hidden; box-sizing: border-box;}
+.vote_result{overflow: hidden; margin-top: 15px;}
+.vote_result p img{width:12px; margin-right: 5px;}
+.progress_bg{position: relative; background: #232527; border-radius: 3px; height:20px; width:100%; margin-top:8px;}
+.progress_bg .txt_1{font-size:10px; color:#F5F5F5; position: absolute; left:12px; top:4px; z-index: 2;}
+.progress_bg .txt_2{font-size:10px; color:#A0A0A0; position: absolute; right:12px; top:4px; z-index: 2;}
+.progress_bg .progress_bar{background: #636363; height:20px; border-radius: 3px;}
+.progress_bg .progress_bar.check{background: #20BFA9;}
 
 /* comment */
 .cmt_wrap .btn_cmt_more{display: block; padding:10px;text-align: center;width: auto;background:url('/images/select_arrow.png') no-repeat center right;background-size: 12px;padding-right: 20px;box-sizing: border-box;margin: 0 auto 30px;}
