@@ -2,7 +2,7 @@
 /*
 |------------------------------------------------------------------------
 | Author : 박수인
-| Create-Date : 2021-11-03
+| Create-Date : 2023-05-12
 | Memo : 커뮤니티 관리
 |------------------------------------------------------------------------
 
@@ -44,6 +44,7 @@ class Board_v_1_0_0 extends MY_Controller{
 		parent::__construct();
 
 		$this->load->model(mapping('board').'/model_board');
+		$this->load->model('common/model_common');
 	}
 
 	// Index
@@ -53,96 +54,34 @@ class Board_v_1_0_0 extends MY_Controller{
 
 	// 커뮤니티 리스트
 	public function board_list(){
-		$board_type = 1;
+		$result_list = $this->model_common->work_list();
 
 		$response = new stdClass();
 
-		$response->board_type = $board_type;
+		$response->result_list = $result_list;
 
 		$this->_view(mapping('board').'/view_board_list', $response);
-	}
-
-	// 고민상담 커뮤니티 리스트
-	public function counselor_board_list(){
-		$result_list = $this->model_common->counselor_list();
-
-		$board_type = 0;
-
-		$response = new stdClass();
-
-		$response->board_type = $board_type;
-		$response->result_list = $result_list;
-
-		$this->_view(mapping('board').'/view_counselor_board_list', $response);
-	}
-
-	// 커뮤니티 리스트 가져오기
-	public function counselor_board_list_get(){
-
-		$title = $this->_input_check("title",array());
-		$member_nickname = $this->_input_check("member_nickname",array());
-		$s_date = $this->_input_check("s_date",array());
-		$e_date = $this->_input_check("e_date",array());
-		$category = $this->_input_check("category",array());
-		$display_yn = $this->_input_check("display_yn",array());
-		$board_type = $this->_input_check("board_type",array());
-		$orderby = $this->_input_check("orderby",array());
-		$history_data = $this->_input_check("history_data",array());
-    $page_num = $this->_input_check("page_num",array("ternary"=>'1'));
-		$page_size = PAGESIZE;
-
-		$data['title'] = $title;
-		$data['member_nickname'] = $member_nickname;
-		$data['s_date'] = $s_date;
-		$data['e_date'] = $e_date;
-		$data['display_yn'] = $display_yn;
-		$data['category'] = $category;
-		$data['board_type'] = $board_type;
-		$data['orderby'] = $orderby;
-		$data['page_no'] = ($page_num-1)*$page_size;
-		$data['page_size'] = $page_size;
-
-		$result_list = $this->model_board->counselor_board_list($data);
-		$result_list_count = $this->model_board->counselor_board_list_count($data);
-
-		$no = $result_list_count-($page_size*($page_num-1));
-		$paging = $this->global_function->paging($result_list_count, $page_size, $page_num);
-
-		$response = new stdClass();
-
-		$response->result_list = $result_list;
-		$response->result_list_count = $result_list_count;
-		$response->no = $no;
-		$response->paging = $paging;
-		$response->page_num = $page_num;
-		$response->board_type = $board_type;
-		$response->history_data = $history_data;
-
-		$this->_list_view(mapping('board').'/view_counselor_board_list_get', $response);
-
 	}
 
 	// 커뮤니티 리스트 가져오기
 	public function board_list_get(){
 
 		$title = $this->_input_check("title",array());
-		$member_nickname = $this->_input_check("member_nickname",array());
+		$display_yn = $this->_input_check("display_yn",array());
+		$anony_yn = $this->_input_check("anony_yn",array());
+		$work_arr = $this->_input_check("work_arr",array());
 		$s_date = $this->_input_check("s_date",array());
 		$e_date = $this->_input_check("e_date",array());
-		$display_yn = $this->_input_check("display_yn",array());
-		$board_type = $this->_input_check("board_type",array());
-		$orderby = $this->_input_check("orderby",array());
 		$history_data = $this->_input_check("history_data",array());
     $page_num = $this->_input_check("page_num",array("ternary"=>'1'));
 		$page_size = PAGESIZE;
 
 		$data['title'] = $title;
-		$data['member_nickname'] = $member_nickname;
+		$data['display_yn'] = $display_yn;
+		$data['anony_yn'] = $anony_yn;
+		$data['work_arr'] = $work_arr;
 		$data['s_date'] = $s_date;
 		$data['e_date'] = $e_date;
-		$data['display_yn'] = $display_yn;
-		$data['board_type'] = $board_type;
-		$data['orderby'] = $orderby;
 		$data['page_no'] = ($page_num-1)*$page_size;
 		$data['page_size'] = $page_size;
 
@@ -159,48 +98,48 @@ class Board_v_1_0_0 extends MY_Controller{
 		$response->no = $no;
 		$response->paging = $paging;
 		$response->page_num = $page_num;
-		$response->board_type = $board_type;
 		$response->history_data = $history_data;
 
 		$this->_list_view(mapping('board').'/view_board_list_get', $response);
-
 	}
 
 	// 커뮤니티 상세
 	public function board_detail(){
 		$board_idx = $this->_input_check("board_idx",array("empty_msg"=>"커뮤니티 키가 누락되었습니다."));
-		$board_type = $this->_input_check("board_type",array("empty_msg"=>"커뮤니티 타입키가 누락되었습니다."));
 		$history_data = $this->_input_check("history_data",array());
 
 		$data['board_idx'] = $board_idx;
 
 		$result = $this->model_board->board_detail($data);
+		$result_list = $this->model_common->work_list();
 
 		$response = new stdClass();
 
+		$response->result_list = $result_list;
+
 		$response->result = $result;
-		$response->board_type = $board_type;
 		$response->history_data = $history_data;
 
-		if($board_type=='0'){
-			$this->_view(mapping('board').'/view_counselor_board_detail', $response);
-		}if($board_type=='1'){
-			$this->_view(mapping('board').'/view_board_detail', $response);
-		}
+		$this->_view(mapping('board').'/view_board_detail',$response);
 	}
 
 	public function board_mod_up(){
-		$board_idx = $this->_input_check("board_idx",array("empty_msg"=>"키를 입력해주세요."));
+		$board_idx = $this->_input_check("board_idx",array("empty_msg"=>"게시판키를 입력해주세요."));
 		$title = $this->_input_check("title",array("empty_msg"=>"제목을 입력해주세요."));
-		$board_img = $this->_input_check("board_img",array("empty_msg"=>"대표이미지를 입력해주세요."));
-		$board_img_detail = $this->_input_check("board_img_detail",array("empty_msg"=>"이미지를 입력해주세요."));
-		$contents = $this->_input_check("contents",array("empty_msg"=>"내용을 입력해주세요."));
-	  $contents =$this->input->post("contents");
+		$work_yn = $this->_input_check("work_yn",array("empty_msg"=>"접근권한을 선택해주세요."));
+		$detail_yn = $this->_input_check("detail_yn",array("empty_msg"=>"상세보기권한을 선택해주세요."));
+		$anony_yn = $this->_input_check("anony_yn",array("empty_msg"=>"익명을 선택해주세요."));
+		$img_path = $this->_input_check("img_path",array("empty_msg"=>"이미지를 등록해주세요."));
+		$contents = $this->_input_check("contents",array("empty_msg"=>"소개글을 입력해주세요."));
+		$work_arr = $this->_input_check("work_arr",array());
 
 		$data['board_idx'] = $board_idx;
 		$data['title'] = $title;
-		$data['board_img'] = $board_img;
-		$data['board_img_detail'] = $board_img_detail;
+		$data['work_yn'] = $work_yn;
+		$data['detail_yn'] = $detail_yn;
+		$data['anony_yn'] = $anony_yn;
+		$data['img_path'] = $img_path;
+		$data['work_arr'] = $work_arr;
 		$data['contents'] = $contents;
 
 		$result = $this->model_board->board_mod_up($data);
@@ -219,166 +158,12 @@ class Board_v_1_0_0 extends MY_Controller{
 		exit;
 	}
 
-	// 댓글 등록
-	public function board_comment_reg_in(){
-		$board_idx = $this->_input_check('board_idx',array("empty_msg"=>"게시판키을 입력해주세요.","focus_id"=>"board_idx"));
-		$board_reply_idx = $this->_input_check('board_reply_idx',array());
-		$cmt_member_nickname = $this->_input_check('cmt_member_nickname',array());
-		$type =  $this->_input_check('type',array()); //1번 답글 0번 댓글
-		$reply_comment = $this->_input_check('reply_comment',array());
-		$pop_reply_comment = $this->_input_check('pop_reply_comment',array());
-		
-		if($type=='0'){
-			if($reply_comment==''){
-
-				$response = new stdClass();
-				$response->code = -1;
-				$response->code_msg 	= "댓글을 입력해주세요.";
-				echo json_encode($response);
-				exit;
-			}
-			$depth=0;
-			$board_reply_idx=0;
-			$parent_board_reply_idx=0;
-		}else{
-			if($pop_reply_comment==''){
-
-				$response = new stdClass();
-				$response->code = -1;
-				$response->code_msg 	= "답글을 입력해주세요.";
-				echo json_encode($response);
-				exit;
-			}
-			$depth=1;
-			$parent_board_reply_idx=$board_reply_idx;
-			$reply_comment = '['.$cmt_member_nickname.'] '.$pop_reply_comment;
-		}
-
-		$data['type'] = $type;
-		$data['admin_idx'] = "1";
-		$data['board_idx'] = $board_idx;
-		$data['reply_comment'] = $reply_comment;
-		$data['parent_board_reply_idx'] = $parent_board_reply_idx;
-		$data['depth']  = $depth;
-		$data['board_reply_idx']  = $board_reply_idx;
-
-		$result = $this->model_board->board_comment_reg_in($data);//# model 5. 댓글 등록
-		$alarm_detail = $this->model_board->cmt_detail($data); 
-
-		$response = new stdClass();
-
-		if($result == "0") {
-			$response->code = 0;
-			$response->code_msg 	= "실패하였습니다. 다시 시도 해주시기 바랍니다.";
-		} else {
-			$response->code = 1;
-			$response->code_msg 	= "정상적으로 처리되었습니다.";
-
-			if($type=='0'){
-
-				$index="101";
-				$alarm_data['board_idx'] = $board_idx;
-				$member_idx = $alarm_detail->member_idx;
-				$this->_alarm_action($member_idx,'0',$index, $alarm_data);
-		
-			  }else if($type=='1'){
-		
-				$index="102";
-				$alarm_data['board_idx'] = $board_idx;
-				$member_idx = $alarm_detail->member_idx;
-				$this->_alarm_action($member_idx,'0',$index, $alarm_data);
-			  }
-		}
-		echo json_encode($response);
-		exit;
-	}
-
-	// 커뮤니티 댓글 리스트 가져오기
-	public function reply_list_get(){
-		$board_idx = $this->_input_check("board_idx",array());
-		$member_nickname = $this->_input_check("member_nickname",array());
-		$board_type = $this->_input_check("board_type",array());
-		$orderby = $this->_input_check("orderby",array());
-    $page_num = $this->_input_check("page_num",array("ternary"=>'1'));
-		$page_size = PAGESIZE;
-
-		$data['board_idx'] = $board_idx;
-		$data['member_nickname'] = $member_nickname;
-		$data['board_type'] = $board_type;
-		$data['orderby'] = $orderby;
-		$data['page_no'] = ($page_num-1)*$page_size;
-		$data['page_size'] = $page_size;
-
-		$result_list = $this->model_board->reply_list($data);
-		$result_list_count = $this->model_board->reply_list_count($data);
-
-		$no = $result_list_count-($page_size*($page_num-1));
-		$paging = $this->global_function->paging($result_list_count, $page_size, $page_num, 'reply_list_get');
-
-		$response = new stdClass();
-
-		$response->result_list = $result_list;
-		$response->result_list_count = $result_list_count;
-		$response->no = $no;
-		$response->board_type = $board_type;
-		$response->paging = $paging;
-		$response->page_num = $page_num;
-
-		$this->_list_view(mapping('board').'/view_reply_list_get', $response);
-	}
-
-	// 상태 변경
-	public function board_state_mod_up(){
-		$board_idx = $this->_input_check("board_idx",array("empty_msg"=>"키가 누락되었습니다."));
-		$display_yn = $this->_input_check("display_yn",array("empty_msg"=>"상태 코드가 누락되었습니다."));
-
-		$data['board_idx']  = $board_idx;
-		$data['display_yn'] = $display_yn;
-
-		$result = $this->model_board->board_state_mod_up($data);
-
-		$response = new stdClass();
-
-		if($result == "0") {
-			$response->code = 0;
-			$response->code_msg 	= "노출변경 실패하였습니다. 다시 시도 해주시기 바랍니다.";
-		} else if($result == "1") {
-			$response->code = 1;
-			$response->code_msg 	= "상태변경 되었습니다.";
-		}
-		echo json_encode($response);
-		exit;
-	}
-
 	// 노출여부 상태 변경
-	public function board_display_yn_mod_up(){
+	public function display_yn_mod_up(){
 		$board_idx = $this->_input_check("board_idx",array());
 		$display_yn = $this->_input_check("display_yn",array());
 
 		$data['board_idx']  = $board_idx;
-		$data['display_yn'] = $display_yn;
-
-		$result = $this->model_board->board_display_yn_mod_up($data);
-
-		$response = new stdClass();
-
-		if($result == "0") {
-			$response->code = 0;
-			$response->code_msg 	= "상태변경 실패하였습니다. 다시 시도 해주시기 바랍니다.";
-		} else if($result == "1") {
-			$response->code = 1;
-			$response->code_msg 	= "상태변경 성공하였습니다.";
-		}
-		echo json_encode($response);
-		exit;
-	}
-
-	// 댓글 노출여부 상태 변경
-	public function display_yn_mod_up(){
-		$board_reply_idx = $this->_input_check("board_reply_idx",array());
-		$display_yn = $this->_input_check("display_yn",array());
-
-		$data['board_reply_idx']  = $board_reply_idx;
 		$data['display_yn'] = $display_yn;
 
 		$result = $this->model_board->display_yn_mod_up($data);
@@ -412,6 +197,49 @@ class Board_v_1_0_0 extends MY_Controller{
 			$response->code = 1;
 			$response->code_msg 	= "상태변경 성공하였습니다.";
 		}
+		echo json_encode($response);
+		exit;
+	}
+
+	// 등록
+	public function board_reg(){
+
+		$result_list = $this->model_common->work_list();
+		$response = new stdClass();
+		$response->result_list = $result_list;
+		
+		$this->_view(mapping('board').'/view_board_reg', $response);
+	}
+
+	public function board_reg_in(){
+		$title = $this->_input_check("title",array("empty_msg"=>"제목을 입력해주세요."));
+		$work_yn = $this->_input_check("work_yn",array("empty_msg"=>"접근권한을 선택해주세요."));
+		$detail_yn = $this->_input_check("detail_yn",array("empty_msg"=>"상세보기권한을 선택해주세요."));
+		$anony_yn = $this->_input_check("anony_yn",array("empty_msg"=>"익명을 선택해주세요."));
+		$img_path = $this->_input_check("img_path",array("empty_msg"=>"이미지를 등록해주세요."));
+		$contents = $this->_input_check("contents",array("empty_msg"=>"소개글을 입력해주세요."));
+		$work_arr = $this->_input_check("work_arr",array());
+
+		$data['title'] = $title;
+		$data['work_yn'] = $work_yn;
+		$data['detail_yn'] = $detail_yn;
+		$data['anony_yn'] = $anony_yn;
+		$data['img_path'] = $img_path;
+		$data['work_arr'] = $work_arr;
+		$data['contents'] = $contents;
+
+		$result = $this->model_board->board_reg_in($data);
+
+		$response = new stdClass;
+
+		if($result == "0") {
+			$response->code = "0";
+			$response->code_msg = "정보를 불러오지 못했습니다. 다시 한번 시도해주세요.";
+		}else{
+			$response->code = "1";
+			$response->code_msg = "등록되었습니다.";
+		}
+
 		echo json_encode($response);
 		exit;
 	}

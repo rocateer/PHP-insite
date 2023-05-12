@@ -548,6 +548,32 @@ keyboard_double_arrow_right</span> </a>
 			return $rt;
 	}
 
+	function get_work_type($str){
+
+		switch ($str) {
+			case 1 : $rt='철거'; break;
+			case 2 : $rt='설비'; break;
+			case 3 : $rt='전기'; break;
+			case 4 : $rt='목공'; break;
+			case 5 : $rt ='타일'; break;
+			case 6 : $rt ='필름'; break;
+			case 7 : $rt ='도장'; break;
+			case 8 : $rt ='도배'; break;
+			case 9 : $rt ='마루'; break;
+			case 10 : $rt ='장판'; break;
+			case 11 : $rt ='가구'; break;
+			case 12 : $rt ='도기'; break;
+			case 13 : $rt ='샷시'; break;
+			case 14 : $rt ='유리'; break;
+			case 15 : $rt ='금속'; break;
+			case 16 : $rt ='소장'; break;
+			case 17 : $rt ='디자이너'; break;
+			case 18 : $rt ='일반'; break;
+			default:  $rt=''; break;
+			}
+			return $rt;
+	}
+
 	function get_career_type($str){
 
 		switch ($str) {
@@ -599,32 +625,6 @@ keyboard_double_arrow_right</span> </a>
 			return $rt;
 	}
 
-	function get_exercise_goal_type($str){
-
-		$rt='';
-
-		switch ($str) {
-			case '0' : $rt ='체력 및 몸매 관리'; break;
-			case '1' : $rt='근력 강화'; break;
-			case '2' : $rt='살빼기'; break;
-			case '3' : $rt='여성 성건강 관리'; break;
-			case '4' : $rt='기타'; break;
-			}
-			return $rt;
-	}
-	
-	function get_exercise_part_type($str){
-
-		$rt='';
-
-		switch ($str) {
-			case '0' : $rt ='복근 '; break;
-			case '1' : $rt='엉덩이 '; break;
-			case '2' : $rt='전신 '; break;
-			case '3' : $rt='기타'; break;
-			}
-			return $rt;
-	}
 
 	// 이미지 가로 사이즈 가져오기
 	function get_images_width($url){
@@ -657,91 +657,6 @@ keyboard_double_arrow_right</span> </a>
 	    ++$i;
 	  }
 	  return $i;
-	}
-
-	//상품 카테고리
-	function get_product_category($str){
-
-		switch ($str) {
-			case '0' : $rt ='드라이버'; break;
-			case '1' : $rt='우드,유틸리티'; break;
-			case '2' : $rt='아이언'; break;
-			case '3' : $rt='웨지'; break;
-			case '4' : $rt='퍼터'; break;
-			case '5' : $rt='기타'; break;
-			case '6' : $rt='골프용품'; break;
-			case '7' : $rt='골프의류'; break;
-		
-			}
-			return $rt;
-	}
-
-	//거래 상태
-	function get_product_state($str){
-
-		switch ($str) {
-			case '0' : $rt ='판매중'; break;
-			case '1' : $rt='예약'; break;
-			case '2' : $rt='거래완료'; break;
-			case '3' : $rt='삭제'; break;
-		}
-			return $rt;
-	}
-//판매원
-	function get_product_vendor($str){
-
-		switch ($str) {
-			case '0' : $rt ='국내정품'; break;
-			case '1' : $rt='해외병행수입'; break;
-			case '2' : $rt='모름'; break;
-			case '3' : $rt='기타'; break;
-		}
-			return $rt;
-	}
-
-	//제조국가
-	function get_manufacturing_country($str){
-
-		switch ($str) {
-			case '0' : $rt ='미국'; break;
-			case '1' : $rt='일본'; break;
-			case '2' : $rt='한국'; break;
-		}
-			return $rt;
-	}
-
-// 샤프트 강도 
-	function get_shaft_strength($str){
-
-		switch ($str) {
-			case '0' : $rt ='X'; break;
-			case '1' : $rt='S'; break;
-			case '2' : $rt='SR'; break;
-			case '3' : $rt='R'; break;
-			case '4' : $rt='L'; break;
-			case '5' : $rt='시니어'; break;
-			case '6' : $rt='기타'; break;
-		}
-			return $rt;
-	}
-
-	//상품 상태 
-	function get_goods_state($str){
-
-		switch ($str) {
-			case '0' : $rt ='A++ 미사용 신품'; break;
-			case '1' : $rt='A+ 신동품'; break;
-			case '2' : $rt='시타'; break;
-			case '3' : $rt='A- 필드 3회, 연습장 1회 이하'; break;
-			case '4' : $rt='B++ 2~3개월 사용'; break;
-			case '5' : $rt='B+ 6개월 이상 1년 미만 사용'; break;
-			case '6' : $rt='B 1년 이상 2년 미만 사용'; break;
-			case '7' : $rt='B- 2년 이상 3년 미만 사용'; break;
-			case '8' : $rt='C+ 3년 이상 5년 미만 사용'; break;
-			case '9' : $rt='C 5년 이상 10년 미만 사용'; break;
-			case '10' : $rt='C- 10년 이상 사용'; break;
-		}
-			return $rt;
 	}
 
 		//검수 상태 

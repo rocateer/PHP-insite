@@ -3,9 +3,7 @@
 
   <!-- Page Heading -->
   <div class="page-header">
-
-    <h1>오늘의 운동 완료 관리</h1>
-
+    <h1>게시판 관리</h1>
   </div>
 
   <!-- body : s -->
@@ -21,25 +19,23 @@
         </colgroup>
         <tbody>
           <tr>
-            <th style="text-align:center;">닉네임</th>
-            <td>
-              <input name="member_nickname" id="member_nickname" class="form-control" autocomplete="off">
-            </td>
-            <th style="text-align:center;">제목</th>
+            <th style="text-align:center;">게시판 명</th>
             <td>
               <input name="title" id="title" class="form-control" autocomplete="off">
             </td>
+            <th style="text-align:center;">게시판 상태</th>
+            <td>
+              <label class="radio-inline"><input type="radio" name="display_yn" value="" checked> 전체</label>
+              <label class="radio-inline"><input type="radio" name="display_yn" value="Y"> 활성화</label>
+              <label class="radio-inline"><input type="radio" name="display_yn" value="N"> 비활성화</label>
+            </td>
           </tr>
           <tr>
-          <th style="text-align:center;">정렬</th>
-            <td>
-              <select class="form-control" id="orderby" name="orderby" >
-              <option value="">전체</option>
-              <option value="0">최신 등록순</option>
-              <option value="1">신고수 많은순</option>
-              <option value="2">댓글&답글 수 많은순</option>
-
-              </select>
+          <th style="text-align:center;">익명</th>
+           <td>
+              <label class="radio-inline"><input type="radio" name="anony_yn" value="" checked> 전체</label>
+              <label class="radio-inline"><input type="radio" name="anony_yn" value="Y"> 익명</label>
+              <label class="radio-inline"><input type="radio" name="anony_yn" value="N"> 공개</label>
             </td>
             <th style="text-align:center;">등록일</th>
             <td colspan="3">
@@ -48,11 +44,13 @@
             </td>
           </tr>
           <tr>
-            <th style="text-align:center;">게시 상태</th>
+            <th style="text-align:center;">접근 권한</th>
             <td colspan="3">
-              <label class="radio-inline"><input type="radio" name="display_yn" value="" checked> 전체</label>
-              <label class="radio-inline"><input type="radio" name="display_yn" value="Y"> 게시중</label>
-              <label class="radio-inline"><input type="radio" name="display_yn" value="N"> 블라인드</label>
+            &nbsp;<label class="checkbox-inline" style="width: 10%;"><input type="checkbox" name="_work_right" value="">전체</label>
+              <label class="checkbox-inline" style="width: 10%;"><input type="checkbox" name="work_yn" value="N" >제한없음</label>
+              <?foreach($result_list as $row){?>
+              <label class="checkbox-inline" style="width: 10%;"><input type="checkbox" name="_work_right" value="<?=$row->work_idx?>" ><?=$row->work_name?></label>
+              <?}?>
             </td>
           </tr>
         </tbody>
@@ -63,17 +61,11 @@
       </div>
     </div>
     <!-- search : e -->
+    <div class="bg_wh" id="list_ajax"></div>
   </div>
-
-  <div class="bg_wh mt20" id="list_ajax"></div>
-
-
-  <!-- body : e -->
-
 </div>
 <!-- container-fluid : e -->
 <input type="text" name="page_num" id="page_num" value="1"  style="display:none">
-<input type="text" name="board_type" id="board_type" value="<?=$board_type?>"  style="display:none">
 
 <script>
 
@@ -86,13 +78,12 @@
     $('#page_num').val(page_num);
 
     var formData = {
-      'member_nickname' :  $('#member_nickname').val(),
       'title' : $('#title').val(),
       'display_yn' :  $("input[name='display_yn']:checked").val(),
+      'anony_yn' :  $("input[name='anony_yn']:checked").val(),
+      'work_arr' : get_checkbox_value('_work_right'),
       's_date' : $('#s_date').val(),
       'e_date' : $('#e_date').val(),
-      'board_type' :$('#board_type').val(),
-      'orderby' : $('#orderby').val(),
       'history_data' : window.history.length,
       'page_num' : page_num,
     };
