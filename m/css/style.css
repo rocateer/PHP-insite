@@ -32,7 +32,7 @@
 .community_list_head .list_cate_img{width:28px; margin-right:6px; float: left;}
 .community_list_head .right_area{float: left; width:calc(100% - 34px);}
 .community_list .txt_cate{font-size: 12px; color:#E2E2E2; font-family: 'font-b';}
-.community_list .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b'; margin-top: 3px;}
+.community_list .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b';}
 .community_list .txt_nickname .list_date{font-size: 12px; color:#A0A0A0;}
 .community_list_body{overflow: hidden; margin-top: 16px;}
 .community_list_body .community_list_item{overflow: hidden; box-sizing: border-box;}

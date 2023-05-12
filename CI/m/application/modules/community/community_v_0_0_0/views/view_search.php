@@ -10,6 +10,9 @@
   </div>
   <div class="data_box">
     <ul>
+      <li><a href="/<?=mapping('community')?>/search_list_community">아이폰</a>
+        <img src="/images/head_btn_close.png" alt="">
+      </li>
       <li>아이패드 펜슬 2세대 새제품
         <img src="/images/head_btn_close.png" alt="">
       </li>

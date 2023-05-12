@@ -6,7 +6,7 @@
 		<a href="#"><img src="/images/head_btn_search.png" class="main_search"></a>
 	</div>
 </header>
-<ul class="search_gnb_wrap">
+<ul class="tab_1">
   <li><a href="#">게시글 <span>12,345</span></a></li>
   <li class="active"><a href="/<?=mapping('community')?>/search_list_trade">중고거래 <span>0</span></a></li>
   <li><a href="/<?=mapping('community')?>/search_list_product">공동구매 <span>12</span></a></li>
@@ -15,8 +15,8 @@
 
 <div class="search_list">
   <div class="search_cnt mt30">
-    검색 결과 <p class="point_color" style="display: inline-block;">8</p>
-    <span class="f_right on"> 판매중만 보기</span>
+    검색 결과 <span class="point_color">8</span>
+    <p class="f_right on"> 판매중만 보기</p>
   </div>
   <div class="no_data_box" style="display:none;">검색 결과가 없습니다. <br> 다시 검색해 주세요.</div>
   <ul class="trade_list" style="display:none1;">
@@ -83,7 +83,7 @@
 </div>
 
 <script>
-  $( '.search_cnt span' ).click( function() {
+  $( '.search_cnt p' ).click( function() {
     $(this).toggleClass("on");
   } );
 </script>

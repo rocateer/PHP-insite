@@ -1,13 +1,13 @@
 <header>
 	<div class="main_header">
     <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
-    <input class="search_txt " type="text" placeholder="검색어를 입력해 주세요." value="아이폰" id="search_input">
+    <input class="search_txt" type="text" placeholder="검색어를 입력해 주세요." value="아이폰" id="search_input">
 		<a href="#"><img src="/images/btn_sm_delete.png" class="mr5 btn_del"></a>
 		<a href="#"><img src="/images/head_btn_search.png" class="main_search"></a>
 	</div>
 </header>
 <ul class="tab_1">
-  <li class="active"><a href="#">게시글 <span>12,345</span></a></li>
+  <li class="active"><a href="/<?=mapping('community')?>/search_list_community">게시글 <span>12,345</span></a></li>
   <li><a href="/<?=mapping('community')?>/search_list_trade">중고거래 <span>0</span></a></li>
   <li><a href="/<?=mapping('community')?>/search_list_product">공동구매 <span>12</span></a></li>
   <li><a href="/<?=mapping('community')?>/search_list_study">교육 <span>7</span></a></li>
@@ -20,7 +20,7 @@
 </ul>
 
 <div class="search_list">
-  <div class="search_cnt mt15">검색 결과  <span class="point_color">12,345</span></div>
+  <div class="search_cnt mt20">검색 결과  <span class="point_color">12,345</span></div>
   <div class="no_data_box" style="display:none;">검색 결과가 없습니다. <br> 다시 검색해 주세요.</div>
   <ul class="community_list" style="display:none1;">
     <li>
@@ -106,6 +106,5 @@
 $('.btn_del').click(function(){
 $('#search_input').val('');
 $('#search_input').focus();
-
 })
 </script>
