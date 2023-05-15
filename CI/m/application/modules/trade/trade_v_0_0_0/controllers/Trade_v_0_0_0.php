@@ -32,12 +32,8 @@ class Trade_v_0_0_0 extends MY_Controller{
 		$this->_view(mapping('trade').'/view_trade_detail');
   }
 
-  // 
-  public function trade_reg1(){
-		$this->_view2(mapping('trade').'/view_trade_reg1');
-  }
-  // 
-  public function trade_reg2(){
-		$this->_view2(mapping('trade').'/view_trade_reg2');
+  // 중고거래 등록
+  public function trade_reg(){
+		$this->_view(mapping('trade').'/view_trade_reg');
   }
 }// 클래스의 끝

@@ -1,9 +1,3 @@
-/* 커뮤니티 */
-.community_head {background:#232527;padding: 30px 20px;height:190px;box-sizing: border-box;}
-.community_head img {width: 40px;}
-.community_head .title {font-size: 20px;font-weight:600;margin-top:20px;color:#F5F5F5;}
-.community_head .sub_txt {font-size: 14px;margin-top:10px;white-space: normal;overflow: hidden;text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.4; color: #E2E2E2;}
-
 /* 마이페이지 */
 .mypage_head{padding: 40px 0 0 20px;line-height: 30px;font-size: 22px;}
 .mypage_head a{font-size: 22px;font-weight:600;color: #20BFA9;display: inline-block; border-bottom: 2px solid #20BFA9;}

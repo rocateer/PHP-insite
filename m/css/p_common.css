@@ -295,7 +295,7 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 
 /* x scroll wrap */
 .x_scroll_img_reg{position: relative;}
-.x_scroll_img_reg .cnt_num{position:absolute; z-index: 1; position:absolute; top:70%; transform:translateY(-50%); left:0; font-size:12px; color:#A0A0A0; width:100%; text-align: center;}
+.x_scroll_img_reg .img_reg_ul>li .cnt_num{position:absolute; z-index: 1; position:absolute; top:70%; transform:translateY(-50%); left:0; font-size:12px; color:#A0A0A0; width:100%; text-align: center;}
 .x_scroll_img_reg .cnt_num span{color:#20BFA9; font-size: 12px;}
 .x_scroll_img_reg .img_box{width:94px;height:94px;border-radius:5px;overflow: hidden;}
 .x_scroll_img_reg .img_reg_ul>li{position: relative; display:inline-block; margin-right:10px;}
@@ -391,5 +391,8 @@ header .btn_txt{color:#F60032;font-size:16px; position: absolute; z-index: 1; to
 
 .txt_height_1{line-height: 1.6;}
 .txt_height_2{line-height: 1.4;}
+
+/* gride */
+.gride_2 li{width: 50%; float: left;}
 
 

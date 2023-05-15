@@ -28,6 +28,10 @@
 .mark_hot{color:#E54524; font-family: 'font-b'; font-size: 16px; margin-bottom: 20px;}
 
 /* community */
+.community_head {background:#232527; padding: 30px 20px; box-sizing: border-box;}
+.community_head img {width: 40px;}
+.community_head .title {font-size: 20px;font-weight:600;margin-top:20px;color:#F5F5F5;}
+.community_head .sub_txt {font-size: 14px; margin-top:10px; color: #E2E2E2;}
 .community_list{overflow: hidden;}
 .community_list li{border-bottom: 1px solid #444; overflow: hidden; padding: 20px; box-sizing: border-box;}
 .community_list li.community_noti{padding:20px 20px; background:#232527; color: #A0A0A0;}
@@ -119,6 +123,7 @@
 .reg_view{padding-bottom:60px;}
 .reg_view input{padding:0 20px; box-sizing: border-box;}
 .reg_view textarea{padding:20px; box-sizing: border-box;}
+.reg_view .input_wrap{border-bottom: 1px solid #444; padding:15px 20px; overflow: hidden;}
 .reg_btn_bottom{position:fixed; z-index: 5; left: 0; bottom:0; width: 100%; padding:10px 10px; box-sizing: border-box; border-top: 1px solid #444; background: #121212;}
 .reg_btn_bottom img{width:24px; margin: 0 10px;}
 .reg_btn_bottom .btn_vote{width:24px; height: 24px; display: inline-block; overflow: hidden;}
