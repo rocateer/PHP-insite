@@ -7,7 +7,7 @@
     <p class="mt30">게시판</p>
     <ul class="reg_select mt10">
       <li>
-        <a href="#"><img src="/images/ic_cate_1.png">자유게시판</a>
+        <a href="/<?=mapping('community')?>/community_reg"><img src="/images/ic_cate_1.png">자유게시판</a>
       </li>
       <li>
         <a href="#"><img src="/images/ic_cate_2.png">인사이트</a>

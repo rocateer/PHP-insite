@@ -124,9 +124,9 @@ input[type="radio"] + label span {display:inline-block; width:20px; height:20px;
 input[type="radio"]:checked + label span {background:url('../images/radio_on.png') right center no-repeat; background-size:20px;}
 
 /* textarea 입력 custom => 수정예정 */
-.place_wrap{position: relative;}
-.place_wrap textarea{height: 240px;}
-.place_wrap .place_p{color:#CDCDCD; padding:15px; top:10px; left:0px; box-sizing:border-box; overflow:hidden; pointer-events:none; display: block; position: absolute; z-index:1; background: transparent;}
+.textarea_wrap{position: relative;}
+.textarea_wrap textarea{height: 240px; border-bottom: none;}
+.textarea_wrap .placeholder{color:#636363; padding:20px; top:0px; left:0px; box-sizing:border-box; overflow:hidden; pointer-events:none; display: block; position: absolute; z-index:1; background: transparent;}
 
 .input_ui li{margin-bottom:30px;}
 .input_ui li label{margin-bottom: 10px; display: block; color:#A0A0A0;}

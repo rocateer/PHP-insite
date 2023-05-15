@@ -53,12 +53,9 @@ class Community_v_0_0_0 extends MY_Controller{
 		$this->_view(mapping('community').'/view_community_detail');
   }
 
-  // 
-  public function community_reg1(){
-		$this->_view2(mapping('community').'/view_community_reg1');
+  // 커뮤니티 글쓰기
+  public function community_reg(){
+		$this->_view(mapping('community').'/view_community_reg');
   }
-  // 
-  public function community_reg2(){
-		$this->_view2(mapping('community').'/view_community_reg2');
-  }
+
 }// 클래스의 끝
