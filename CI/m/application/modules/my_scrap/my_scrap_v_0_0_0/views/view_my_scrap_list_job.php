@@ -4,7 +4,7 @@
     <h1 class="head_title">스크랩</h1>
 	</div>
 </header>
-<ul class="search_gnb_wrap">
+<ul class="tab_1">
   <li><a href="/<?=mapping('my_scrap')?>">게시글</a></li>
   <li><a href="/<?=mapping('my_scrap')?>/scrap_list_trade">중고거래</a></li>
   <li class="active"><a href="/<?=mapping('my_scrap')?>/scrap_list_job">구인 공고</a></li>

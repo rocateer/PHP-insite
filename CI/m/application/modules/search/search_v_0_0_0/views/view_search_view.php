@@ -1,7 +1,7 @@
 <header>
   <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
   <input class="header_search" type="text" placeholder="검색어를 입력해 주세요.">
-  <a href="/<?=mapping('community')?>/search_list_get"><img src="/images/head_btn_search.png" class="btn_right"></a>
+  <a href="/<?=mapping('search')?>/search_list_get"><img src="/images/head_btn_search.png" class="btn_right"></a>
 
 </header>
 <div class="body">
@@ -10,7 +10,7 @@
   </div>
   <div class="data_box">
     <ul>
-      <li><a href="/<?=mapping('community')?>/search_list_community">아이폰</a>
+      <li><a href="/<?=mapping('search')?>/search_list_community">아이폰</a>
         <img src="/images/head_btn_close.png" alt="">
       </li>
       <li>아이패드 펜슬 2세대 새제품

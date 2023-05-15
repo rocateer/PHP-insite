@@ -7,10 +7,10 @@
 	</div>
 </header>
 <ul class="tab_1">
-  <li class="active"><a href="/<?=mapping('community')?>/search_list_community">게시글 <span>12,345</span></a></li>
-  <li><a href="/<?=mapping('community')?>/search_list_trade">중고거래 <span>0</span></a></li>
-  <li><a href="/<?=mapping('community')?>/search_list_product">공동구매 <span>12</span></a></li>
-  <li><a href="/<?=mapping('community')?>/search_list_edu">교육 <span>7</span></a></li>
+  <li class="active"><a href="/<?=mapping('search')?>/search_list_community">게시글 <span>12,345</span></a></li>
+  <li><a href="/<?=mapping('search')?>/search_list_trade">중고거래 <span>0</span></a></li>
+  <li><a href="/<?=mapping('search')?>/search_list_product">공동구매 <span>12</span></a></li>
+  <li><a href="/<?=mapping('search')?>/search_list_edu">교육 <span>7</span></a></li>
 </ul>
 
 <ul class="community_category">

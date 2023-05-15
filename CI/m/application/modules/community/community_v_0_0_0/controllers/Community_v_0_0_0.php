@@ -23,27 +23,6 @@ class Community_v_0_0_0 extends MY_Controller{
     $this->_view(mapping('community').'/view_community_list');
   }
 
-  //검색 화면
-  public function search(){
-    $this->_view(mapping('community').'/view_search');
-  }
-
-  public function search_list_community(){
-    $this->_view(mapping('community').'/view_search_list_community');
-  }
-
-  public function search_list_trade(){
-    $this->_view(mapping('community').'/view_search_list_trade');
-  }
-
-  public function search_list_product(){
-    $this->_view(mapping('community').'/view_search_list_product');
-  }
-
-  public function search_list_edu(){
-    $this->_view(mapping('community').'/view_search_list_edu');
-  }
-
   // 인기
   public function community_hot(){
 		$this->_view(mapping('community').'/view_community_hot_list');
