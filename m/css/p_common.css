@@ -99,7 +99,7 @@ select::-ms-expand {display: none; /* remove default arrow in IE 10 and 11 */}
 select:focus > option:checked {background: #fff !important;}
 select[multiple]:focus option:checked {background: red linear-gradient(0deg, red 0%, red 100%);}
 
-input[type="text"]:disabled { border-bottom: 1px solid #444;}
+input[type="text"]:disabled { border-bottom: 1px solid #444; color:#A0A0A0;}
 input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0; }
 input{ border: none; border-bottom: 1px solid #444; width: 100%; height:50px; box-sizing: border-box; background: none;}
 input[type='text'],input[type='tel'],input[type='password'],input[type='number'],input[type='submit'],input[type='search'] {-webkit-appearance:none; height:50px; box-sizing: border-box; }
@@ -111,6 +111,8 @@ input[type="checkbox"] {display:none;}
 input[type="checkbox"] + label {display:inline-block; color:#E2E2E2; font-size: 14px; font-style: normal;}
 input[type="checkbox"] + label span {display:inline-block; width:20px; height:20px; margin:-3px 8px 0 0; vertical-align:middle; background:url('../images/checkbox_off.png') right center no-repeat; cursor:pointer; background-size:20px;}
 input[type="checkbox"]:checked + label span {background:url('../images/checkbox_on.png') right center no-repeat; background-size:20px;}
+input[type='checkbox']:disabled + label span{display:inline-block; width:20px; height:20px; margin:-3px 8px 0 0; vertical-align:middle; background:url('../images/checkbox_disabled.png') right center no-repeat; cursor:pointer; background-size:20px;} 
+input[type='checkbox']:disabled + label{color:#A0A0A0;}
 
 /* 투표 css */
 input.type_circle[type="checkbox"] {display:none;}

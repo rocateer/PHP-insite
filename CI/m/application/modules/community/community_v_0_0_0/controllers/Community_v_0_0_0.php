@@ -58,4 +58,9 @@ class Community_v_0_0_0 extends MY_Controller{
 		$this->_view(mapping('community').'/view_community_reg');
   }
 
+  // 커뮤니티 글쓰기 수정
+  public function community_mod(){
+		$this->_view(mapping('community').'/view_community_mod');
+  }
+
 }// 클래스의 끝

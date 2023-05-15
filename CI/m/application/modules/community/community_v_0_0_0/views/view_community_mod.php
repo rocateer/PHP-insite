@@ -3,7 +3,7 @@
   <h1>
   게시글 등록
   </h1>
-  <span class="head_txt"><a href="#">등록</a></span>
+  <span class="head_txt"><a href="#">수정</a></span>
 </header>
 <div class="body">
   <div class="community_head">
@@ -21,27 +21,25 @@
       <textarea id="" cols="" class="reg_textarea"></textarea>
     </div>
     <!-- 투표 등록 : s -->
-    <div class="vote_area">
+    <div class="vote_area mod_type" style="display:block">
       <hr class="space">
-      <input type="text" placeholder="투표 제목">
+      <input type="text" value="저정도 스크래치면 교환하러 간다?" disabled>
       <div class="inner_wrap">
         <p class="fs_12 txt_red mt20">※ 글 등록 후 투표는 수정할 수 없습니다.</p>
         <div class="mt20">
-          <input type="checkbox" name="vote_check" id="vote_check" value="Y">
+          <input type="checkbox" name="vote_check" id="vote_check" value="Y" disabled>
           <label for="vote_check"><span></span>복수 선택 가능</label>
         </div>
         <ul class="reg_vote_list mt20 mb20">
           <li>
             <p>모루유리가 들어간 짙은 우드 중문</p>
-            <img src="/images/btn_sm_delete.png" class="btn_vote_delete">
           </li>
           <li>
             <p>모루유리가 들어간 짙은 우드 중문</p>
-            <img src="/images/btn_sm_delete.png" class="btn_vote_delete">
           </li>
-          <li class="btn_add">
+          <!-- <li class="btn_add">
             <a href="#"><img src="/images/btn_add_full.png" class="w_100p"></a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
