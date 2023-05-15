@@ -114,6 +114,11 @@
 .tab_1 li{padding: 0 15px; text-align: center; display:inline-block; color:#A0A0A0; font-size: 16px; line-height: 50px;}
 .tab_1 li span{color:#636363; font-size: 12px;}
 .tab_1 li.active{color:#fff;border-bottom: 2px solid #FAFAFA;}
+.tab_2{border-bottom: 1px solid #444; padding: 0; box-sizing: border-box; border-bottom:1px solid #444; overflow: hidden;}
+.tab_2 li{width:50%; float: left; text-align: center; font-size: 16px; color:#A0A0A0; }
+.tab_2 li a{padding:13px 27px; display: inline-block; position: relative;}
+.tab_2 li.active{color:#FAFAFA;}
+.tab_2 li.active a::after{content: ''; z-index: 2; position: absolute; bottom: 0; left:0; height: 2px; width:100%; background: #FAFAFA;}
 
 .community_category{padding: 15px 20px; overflow-y: hidden; overflow-x: auto; width: auto; word-break: break-all;  white-space: nowrap;}
 .community_category li{font-size: 12px; display: inline-block; margin-right: 10px; border: 1px solid #444; background: #232527; color:#A0A0A0; border-radius: 3px; text-align: center; padding:7px 10px; box-sizing: border-box;}
