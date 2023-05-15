@@ -95,8 +95,9 @@ textarea{border:none; border-bottom:1px solid #444; height:100px; width: 100%; r
 input::placeholder {color:#636363;}/* Internet Explorer 10-11 */
 textarea::placeholder {color:#636363;}/* Internet Explorer 10-11 */
 select{border:none; border-bottom: 1px solid #444; vertical-align:middle; width:100%; height:50px; box-sizing: border-box; padding: 0 32px 0 0px; background:transparent url('../images/select_arrow.png') no-repeat calc(100% - 5px) 50%; background-size:24px; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+select option{background:#121212;}
 select::-ms-expand {display: none; /* remove default arrow in IE 10 and 11 */}
-select:focus > option:checked {background: #fff !important;}
+select:focus > option:checked {background: #121212 !important;}
 select[multiple]:focus option:checked {background: red linear-gradient(0deg, red 0%, red 100%);}
 
 input[type="text"]:disabled { border-bottom: 1px solid #444; color:#A0A0A0;}
@@ -132,7 +133,7 @@ input[type="radio"]:checked + label span {background:url('../images/radio_on.png
 
 .input_ui li{margin-bottom:30px;}
 .input_ui li label{margin-bottom: 10px; display: block; color:#A0A0A0;}
-.input_ui li .region{display: inline-block;}
+.input_ui li .region, .input_ui li .label_left{display: inline-block;}
 .input_ui li .btn{float:right;}
 .input_ui li .btn_ghost{float:right;line-height: 50px;color: #A0A0A0;}
 .input_ui li .btn_ghost span{ border: 1px solid #444;padding: 6px 10px; border-radius: 4px;color: #A0A0A0;font-size: 12px;}
@@ -335,6 +336,8 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .flex_4 input{flex:1}
 .flex_5 select:last-child{margin-left:5px; width: 100px;}
 .flex_term span{line-height: 50px; margin: 0 5px;}
+.w_half{width:calc(50% - 8px); display: inline-block;}
+.input_right_txt{position: absolute; right:0; top:20px; color:#A0A0A0}
 
 /* complete 공통 */
 .complete_wrap{margin:0 auto;text-align: center;}
@@ -352,7 +355,7 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .notice_content{padding: 20px;color:#666;box-sizing: border-box;font-size: 14px;line-height: 24px}
 .faq_list li{position: relative;}
 .faq_list li .trigger{min-height:58px; padding:20px; box-sizing: border-box; background-size:18px; font-family:'font-b'; border-bottom: 1px solid #444;}
-.faq_list li .trigger.active{background: background-size: 18px}
+.faq_list li .trigger.active{background-size: 18px}
 .faq_list li .question{vertical-align: middle; margin-top: -4px;width: 15px; margin-right:8px;}
 .faq_list li .arrow.rotate{transform: rotate(180deg);}
 .faq_list li .arrow{width: 10px;position: absolute; top:25px; right:20px;}

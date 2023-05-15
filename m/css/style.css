@@ -126,7 +126,7 @@
 .reg_view .input_wrap{border-bottom: 1px solid #444; padding:15px 20px; overflow: hidden;}
 .reg_btn_bottom{position:fixed; z-index: 5; left: 0; bottom:0; width: 100%; padding:10px 10px; box-sizing: border-box; border-top: 1px solid #444; background: #121212;}
 .reg_btn_bottom img{width:24px; margin: 0 10px;}
-.reg_btn_bottom .btn_vote{width:24px; height: 24px; display: inline-block; overflow: hidden;}
+.reg_btn_bottom .btn_vote{width:24px; height: 24px; display: inline-block; overflow: hidden; margin-left: 10px;}
 .reg_btn_bottom .btn_vote img{margin: 0;}
 .reg_btn_bottom .btn_vote.active img{margin-top: -24px;}
 .reg_img_list li{position: relative; padding: 0 20px;}

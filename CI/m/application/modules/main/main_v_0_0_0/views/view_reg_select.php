@@ -23,7 +23,7 @@
     <p class="mt30">중고거래</p>
     <ul class="reg_select mt10">
       <li>
-        <a href="#"><img src="/images/ic_cate_4.png">중고거래 등록</a>
+        <a href="/<?=mapping('trade')?>/trade_reg"><img src="/images/ic_cate_4.png">중고거래 등록</a>
       </li>
     </ul>
     <p class="mt30">구인구직</p>
