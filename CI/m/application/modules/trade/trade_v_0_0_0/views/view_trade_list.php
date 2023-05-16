@@ -1,7 +1,7 @@
 <div class="search_list">
-  <div class="search_cnt mt30">
-     <p class="point_color" style="display: inline-block;"></p>
-    <span class="f_right on"> 판매중만 보기</span>
+  <div class="search_cnt mt30 row">
+     <!-- <p class="point_color" style="display: inline-block;">ss</p> -->
+    <p class="f_right"> 판매중만 보기</p>
   </div>
   <div class="no_data_box" style="display:none;">검색 결과가 없습니다. <br> 다시 검색해 주세요.</div>
   <ul class="trade_list" style="display:none1;">
@@ -68,7 +68,7 @@
 </div>
 
 <script>
-  $( '.search_cnt span' ).click( function() {
+  $( '.search_cnt p' ).click( function() {
     $(this).toggleClass("on");
   } );
 </script>

@@ -43,7 +43,7 @@ input[type=password] {font-family:'Malgun gothic', dotum, sans-serif;}
 
 /* 폰트 */
 .b{font-weight:bold;} 
-.date{font-size: 12px;color:#999;}
+.date{font-size: 12px; color:#A0A0A0;}
 h1{font-weight: normal;font-size: 30px;font-family:'font-b';color:#F5F5F5;}
 h2{font-weight: normal;font-size: 24px;font-family:'font-b';color:#F5F5F5;}
 h3{font-weight: normal;font-size: 18px;font-family:'font-eb';color:#F5F5F5}
@@ -65,8 +65,8 @@ h4 .w_20{padding-bottom: 3px;}
 /* only colors */
 a.btn_disabled {background:#444; color: #A0A0A0; cursor: none;}
 a.btn_point{background: #20BFA9; color: #121212;}
-a.btn_point_ghost{border:1px solid #20BFA9; color: #20BFA9;}
-a.btn_gray_ghost{border:1px solid #444; color: #E2E2E2;}
+a.btn_point_ghost{border:1px solid #20BFA9; color: #20BFA9; box-sizing: border-box;}
+a.btn_gray_ghost{border:1px solid #444; color: #E2E2E2; box-sizing: border-box;}
 a.btn_dark_gray {background:#232527; color: #fff;}
 
 /* only shape */
@@ -80,6 +80,9 @@ a.btn_sm {border-radius:3px; display:inline-block; text-align:center; padding:8p
 
 /* button custom : e */
 .btn_floating{position:fixed; width:100%; height:50px; z-index: 99; bottom:0px; left:0; box-sizing: border-box; text-align: center; line-height: 50px; font-size: 16px; font-family:'font-b';}
+.btn_floating a{display: block; height: 50px; text-align: center; line-height: 50px;}
+.btn_floating.float_half{background:#121212;}
+.btn_floating.float_half a{width: 50%; height: 50px; display: block;  float: left;}
 .top_floating{position:fixed; width:50px; z-index:10; bottom: 20px; right: 20px;}
 .top_floating.type_1{bottom:60px !important;}
 
@@ -114,6 +117,11 @@ input[type="checkbox"] + label span {display:inline-block; width:20px; height:20
 input[type="checkbox"]:checked + label span {background:url('../images/checkbox_on.png') right center no-repeat; background-size:20px;}
 input[type='checkbox']:disabled + label span{display:inline-block; width:20px; height:20px; margin:-3px 8px 0 0; vertical-align:middle; background:url('../images/checkbox_disabled.png') right center no-repeat; cursor:pointer; background-size:20px;} 
 input[type='checkbox']:disabled + label{color:#A0A0A0;}
+
+.checkbox_box input[type="checkbox"] + label{display: block; border-radius:3px; padding:8px; box-sizing:border-box; text-align: center; color:#BFBFBF; border: 1px solid #444; margin-bottom: 0;}
+.checkbox_box input[type="checkbox"]:checked + label{background: #164740; color:#BFBFBF; border: 1px solid #20BFA9;}
+
+
 
 /* 투표 css */
 input.type_circle[type="checkbox"] {display:none;}
@@ -397,5 +405,7 @@ header .btn_txt{color:#F60032;font-size:16px; position: absolute; z-index: 1; to
 
 /* gride */
 .gride_2 li{width: 50%; float: left;}
+.gride_4{margin: 0 -3px;}
+.gride_4 li{width:calc(25% - 6px); margin:4px 3px; float: left;}
 
 

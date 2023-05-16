@@ -9,10 +9,10 @@
 
 <ul class="gnb_wrap">
 	<li class="active"><a href="/<?=mapping('main')?>">홈</a></li>
-	<li><a href="#">게시판1</a></li>
-	<li><a href="#">게시판2</a></li>
+	<li><a href="/<?=mapping('community')?>/community_list">게시판1</a></li>
+	<li><a href="/<?=mapping('community')?>/community_list">게시판2</a></li>
 	<li><a href="/<?=mapping('trade')?>">중고거래</a></li>
-	<li><a href="/<?=mapping('job')?>">구인구직</a></li>
+	<li><a href="/<?=mapping('recruit')?>">구인구직</a></li>
 	<li><a href="/<?=mapping('community')?>/community_list">공동구매</a></li>
 	<li><a href="#">교육</a></li>
 </ul>

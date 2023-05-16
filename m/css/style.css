@@ -74,8 +74,21 @@
 .progress_bg .progress_bar{background: #636363; height:20px; border-radius: 3px;}
 .progress_bg .progress_bar.check{background: #20BFA9;}
 
+/* recruit */
+.recruit_mark{background: #444; border-radius: 3px; padding: 4px 8px; vertical-align: middle; font-size: 12px; float: left; margin-right:8px;}
+.recruit_list{overflow: hidden; padding-bottom:80px;}
+.recruit_list li{border-bottom: 1px solid #444; overflow: hidden; padding: 20px; box-sizing: border-box;}
+.recruit_list li.recruit_noti{padding:20px 20px; background:#232527; color: #A0A0A0;}
+.recruit_list li.recruit_noti a{float: right; border-bottom: 1px solid #A0A0A0;}
+.recruit_list li .item_1{font-size: 12px;}
+.recruit_list li .item_2{font-size: 12px; color:#A0A0A0; margin-top: 5px;}
+.recruit_list li .item_2 .info_ic{vertical-align: middle; width:16px; margin-right:4px;}
+.recruit_list li .txt_title{display:inline-block; width:calc(100% - 50px); overflow:hidden; text-overflow: ellipsis; white-space: nowrap; padding-top: 5px;}
+.select_result_wrap span{background: #232527; border-radius: 3px; padding: 8px 12px; font-size: 12px; color:#A0A0A0;}
+.select_result_wrap span img{width:16px; margin-left: 3px; vertical-align: middle;}
+
 /* comment */
-.cmt_wrap .btn_cmt_more{display: block; padding:10px;text-align: center;width: auto;background:url('/images/select_arrow.png') no-repeat center right;background-size: 12px;padding-right: 20px;box-sizing: border-box;margin: 0 auto 30px;}
+.cmt_wrap .btn_cmt_more{display: block; padding:10px; text-align: center; width: auto; background:url('/images/select_arrow.png') no-repeat center right; background-size: 12px;padding-right: 20px;box-sizing: border-box;margin: 0 auto 30px;}
 .cmt_ul{padding-bottom:120px;}
 .cmt_ul>li{padding-bottom:20px; border-bottom: 1px solid #444; padding: 20px;}
 .cmt_item_1{font-size: 12px; color: #A0A0A0;}
@@ -145,3 +158,24 @@
 .vote_area.active{display: block;}
 .mod_type{background:#1E2021;}
 .mod_type .reg_vote_list p{color:#A0A0A0; width:100%;}
+
+/* detail */
+.detail_head .head_img{width: 100%;}
+.detail_head {border-bottom: 1px solid #444; padding:20px;}
+.detail_head .detail_info{padding: 20px; line-height: 1.4;}
+.detail_head .trade_info{font-size: 14px;}
+.detail_head .trade_info tr{height: 22px;}
+.detail_head .trade_info th{color: #A0A0A0;}
+.detail_head .trade_info td{color: #E2E2E2;}
+.detail_head .trade_state{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #164740; display: inline;}
+.detail_head .trade_state_end{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #444; display: inline;}
+.detail_head .detail_title{color: #F5F5F5; font-size: 18px;font-family: 'font-b';}
+.detail_head .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b'; margin-top: 3px;}
+.detail_head .txt_nickname .detail_date{font-size: 12px; color:#A0A0A0;}
+.detail_head .trade_price{font-size: 20px; color:#F5F5F5; font-family: 'font-b'; margin-top: 30px;}
+
+
+/* table */
+.table_info{font-size: 14px;}
+.table_info th{color: #A0A0A0; padding: 6px 0;}
+.table_info td{color: #E2E2E2; padding: 6px 0;}
