@@ -188,12 +188,23 @@
 .detail_head .txt_price{font-size: 20px; color:#F5F5F5; font-family: 'font-b';}
 .detail_body{padding: 20px; line-height: 1.4;}
 .detail_body img{width:100%; margin-bottom: 20px;}
-
 .detail_qna_list li{margin-bottom: 30px;}
 .detail_qna_list li .qa_answer_wrap{background:#232527; padding: 20px; margin-top: 20px; display: none;}
 .detail_qna_list li .txt_q{margin-top: 12px;}
 .detail_qna_list li .txt_q img{width:12px; margin-right: 3px; vertical-align: middle;}
-
+.product_amount_box{border: 1px solid #444; border-radius: 2px; padding: 20px 15px;}
+.view_price{font-size: 12px; color:#A0A0A0; overflow: hidden;}
+.view_price span{font-size:20px; color:#F5F5F5; font-family: 'font-b'; float: right;}
+.amount_wrap{position: relative; margin-top:16px; float: left;}
+.amount_wrap img{width:24px; vertical-align: middle;}
+.amount_wrap .num{width:30px; display:inline-block; text-align: center;}
+.product_view_box{border: 1px solid #444; border-radius: 5px; overflow: hidden; box-sizing: border-box;}
+.product_view_box .product_view_img{width:123px; height: 123px; position: relative; float: left;}
+.product_view_box .product_view_img .img_box{ width:123px; height: 123px; border-radius: 5px 0 0 5px;}
+.product_view_box .product_view_info{float: left; padding: 15px; width: calc(100% - 123px); box-sizing: border-box;}
+.product_view_box .txt_title{overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.4;}
+.account_box{background: #232527; border-radius: 5px; padding: 20px;}
+.account_box .ic_copy{width:16px; vertical-align: middle; margin-top: -3px;}
 
 /* table */
 .table_info{font-size: 14px;}

@@ -112,7 +112,7 @@
 
 
   <div class="btn_floating">
-    <a href="#" class="btn_point">구매하기</a>
+    <a href="javascript:void(0)" onclick="modal_open_slide('amount')" class="btn_point">구매하기</a>
   </div>
 
 <!-- 문의 작성 modal : s -->
@@ -143,22 +143,38 @@
   </div>
 </div>
 <!-- 문의 작성 modal : e -->
-<!-- modal_open_slide : s -->
-<div class="modal_slide modal_slide_cmt_more">
-  <ul class="slide_modal_menu">
-    <li>
-      <a href="javascript:void(0)" onclick="modal_open_slide('report');modal_close_slide('cmt_more')">신고</a>
-    </li>
-    <li>
-      <a href="javascript:void(0)">삭제</a>
-    </li>
-    <li>
-    <a href="javascript:modal_close_slide('cmt_more')">취소</a>
-    </li>
-  </ul>
+
+<!-- 수량선택 : s -->
+<div class="modal_slide modal_slide_amount" style="bottom: 0px;">
+  <div class="">
+    <div class="product_amount_box">
+      <p>23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 BLACK</p>
+      <div class="row">
+        <div class="amount_wrap">
+          <a href="javascipt:void(0)" onclick="amount_control(this, 'minus')" class="minus_btn">
+            <img src="/images/ic_minus.png" alt="-">
+          </a>
+          <span class="num">1</span>
+          <a href="javascipt:void(0)" onclick="amount_control(this, 'plus')" class="plus_btn">
+            <img src="/images/ic_plus.png" alt="+">
+          </a>
+        </div>
+        <h3 class="f_right mt15">175,200원</h3>
+      </div>
+    </div>
+    <div class="view_price mt30">
+      총 상품 금액
+      <span>175,200원</span>
+    </div>
+    <div class="mt30">
+      <a href="/<?=mapping('product')?>/product_app" class="btn_point btn_full_basic">구매 신청</a>
+    </div>
+  </div>
 </div>
-<div class="md_slide_overlay md_slide_overlay_cmt_more" onclick="modal_close_slide('cmt_more')"></div>
-<!-- modal_open_slide : e -->
+<div class="md_slide_overlay md_slide_overlay_amount" onclick="modal_close_slide('amount')"></div>
+<!-- 수량선택 : e -->
+
+
 <!-- modal_open_slide : s -->
 <div class="modal_slide modal_slide_more">
   <ul class="slide_modal_menu">
@@ -175,6 +191,8 @@
 </div>
 <div class="md_slide_overlay md_slide_overlay_more" onclick="modal_close_slide('more')"></div>
 <!-- modal_open_slide : e -->
+
+<!-- 신고하기 : s -->
 <div class="modal_slide modal_slide_report" style="bottom: 0px;">
   <div class="">
     <div class="modal_title">신고</div>
@@ -196,6 +214,7 @@
   </div>
 </div>
 <div class="md_slide_overlay md_slide_overlay_report" onclick="modal_close_slide('report')"></div>
+<!-- 신고하기 : e -->
 
 <!-- modal : s -->
 <div class="modal modal_swiper_img_view">
@@ -242,6 +261,22 @@ var swiper = new Swiper(".detail_img_swiper", {
     el: ".detail_img_swiper .swiper-pagination",
   },
 });
+
+ //수량
+ function amount_control(element, type){
+  var amount_num = $(element).siblings("span");
+  var current_num = Number(amount_num.text());
+
+  if(type == "minus"){
+    if(current_num == 0){
+      return false;
+      }
+      current_num--;
+    } else {
+      current_num++;
+    }
+    amount_num.text(current_num);
+  }
 
 // 댓글 좋아요 토글버튼
 function cmt_btn_like(element){

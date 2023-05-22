@@ -147,6 +147,9 @@ input[type="radio"]:checked + label span {background:url('../images/radio_on.png
 .input_ui li .btn{float:right;}
 .input_ui li .btn_ghost{float:right;line-height: 50px;color: #A0A0A0;}
 .input_ui li .btn_ghost span{ border: 1px solid #444;padding: 6px 10px; border-radius: 4px;color: #A0A0A0;font-size: 12px;}
+.input_ui li .btn_right{position: absolute; z-index: 2; right:0; top:14px;}
+.input_address_wrap{position: relative;}
+.input_address_wrap input{padding-right:80px; box-sizing: border-box;}
 .essential{color:#20BFA9; margin-left: 5px;}
 
 /* 테이블관련 */

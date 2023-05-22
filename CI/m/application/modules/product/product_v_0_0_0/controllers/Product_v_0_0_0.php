@@ -37,4 +37,9 @@ public function product_detail(){
   $this->_view(mapping('product').'/view_product_detail');
 }
 
+//공동구매 신청
+public function product_app(){
+  $this->_view(mapping('product').'/view_product_app');
+}
+
 }// 클래스의 끝
