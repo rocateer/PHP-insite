@@ -3,7 +3,6 @@
   <h1>&nbsp;</h1>
   <div class="btn_right">
     <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
-    <img src="/images/head_btn_more.png" alt="" onclick="modal_open_slide('more')">
   </div>
 </header>
 
@@ -30,9 +29,8 @@
   </div>
 </div>
 
-  <!-- <div class="detail_state_bar">구매 신청 완료</div> -->
+  <div class="detail_state_bar">교육 신청 완료</div>
   <!-- <div class="detail_state_bar">
-    <span>취소 신청</span>
     <div class="f_left fs_12">취소하신 공동구매로 재신청이 어렵습니다.<br>궁금하신 사항은 Q&A에 남겨주세요.</div>
   </div> -->
   <!-- <div class="detail_state_bar">
@@ -40,56 +38,63 @@
     <div class="f_left fs_12">취소하신 공동구매로 재신청이 어렵습니다.<br>궁금하신 사항은 Q&A에 남겨주세요.</div>
   </div> -->
   <!-- <div class="detail_state_bar">입금 확인</div> -->
-  <div class="detail_state_bar">
-    <span>발송 완료</span>
-    <div class="f_left fs_12">신청하신 상품이 발송되었습니다.<br>궁금하신 사항은 Q&A에 남겨주세요.</div>
-  </div>
+  <!-- <div class="detail_state_bar">
+    <span>교육 신청 완료</span>
+    <div class="f_left fs_12">신청하신 교육이 확정되었습니다.<br>궁금하신 사항은 Q&A에 남겨주세요.</div>
+  </div> -->
   
   <div class="btn_floating">
-    <!-- <a href="javascript:void(0)" onclick="modal_open_slide('amount')" class="btn_point">구매하기</a> -->
-    <a href="javascript:void(0)" onclick="modal_open_slide('cancel')" class="btn_point">구매 취소 신청</a>
-    <!-- <a href="javascript:void(0)" onclick="modal_open_slide('amount')" class="btn_disabled">마감되었어요</a> -->
+    <a href="/<?=mapping('edu')?>/edu_app" class="btn_point">교육 신청</a>
+    <!-- <a href="javascript:void(0)" onclick="modal_open_slide('cancel')" class="btn_point">교육 취소 신청</a> -->
+    <!-- <a href="javascript:void(0)" onclick="modal_open_slide('amount')" class="btn_disabled">교육 모집이 마감 되었어요.</a> -->
   </div>
 
   <!-- community head -->
   <div class="detail_head">
       <!-- <div class="trade_state">예약</div> -->
       <div class="mb20">
-        <span class="state_1">D-11</span>
+        <span class="state_1">장판</span>
       </div>
       <p class="txt_title">월넛과 베이지로 차분하게, 무드있는 신혼집</p>
-
-      <div class="font_gray_f mt30"><b class="point_color fs_20">88% </b>달성</div>
-      <div class="txt_price">180,000원</div>
-      <table class="mt25 table_info">
-        <colgroup>
-          <col width='130px'>
-          <col width='*'>
-        </colgroup>
-        <tr>
-          <th>판매기간</th>
-          <td>9월 18일(일) 까지</td>
-        </tr>
-        <tr>
-          <th>1인 최소 구매</th>
-          <td>2</td>
-        </tr>
-        <tr>
-          <th>1인 최대 구매 가능</th>
-          <td>5</td>
-        </tr>
-      </table>
+      <div class="point_color fs_16 mt20">모집중</div>
   </div>
   <ul class="tab_2">
-    <li class="active"><a href="#">상품정보</a></li>
+    <li class="active"><a href="#">교육과정</a></li>
     <li><a href="#qna">Q&A</a></li>
   </ul>
   <!-- community body -->
   <div class="detail_body">
-    <img src="/p_images/s2.jpg">
-    3비닐만 벗겨놓은 상태입니다.<br>직거래시 직접 확인하시고 구매하셔도 되요.<br><br>
-    사이즈가 큰 편이어서 SUV 정도의 차량 아니면 들어가지 않아요. 01012345678 로 문자 남겨주세요.
+    <h5 class="mb20">상세내용</h5>
+    <img src="/p_images/s5.jpg">
+    목공전문학원의 목공입문과정입니다.<br>목공사에 필요한 각종 공구의 안전한 사용법을 배우며, 주거 및 상업공간의 인테리어/ 리모델링 목공사에 필요한 기술 원리를 배웁니다.
     <div id="qna"></div>
+  </div>
+  <hr>
+  <div class="inner_wrap">
+    <h5 class="mt30">예약금</h5>
+    <p class="mb30 mt20">200,000 원</p>
+  </div>
+  <hr>
+
+  <div class="inner_wrap">
+    <h5 class="mt20">모집인원</h5>
+    <ul class="ul_info mb30 mt20">
+      <li>1차 2023.01.01 00:00<span class="right_info">5/20명</span></li>
+      <li>2차 2023.01.01 00:00<span class="right_info">1/20명</span></li>
+      <li>3차 2023.01.01 00:00<span class="right_info"><span class="point_color">16</span>/20명</span></li>
+      <li class="state_end">2차 2023.01.01 00:00<span class="right_info">1/20명</span></li>
+      <li>4차 2023.01.01 00:00<span class="right_info"><span class="point_color">18</span>/20명</span></li>
+    </ul>
+  </div>
+  <hr>
+
+  <div class="inner_wrap">
+    <h5 class="mt20">교육기관</h5>
+    <div class="map_wrap">
+      <img src="/p_images/map.png">
+    </div>
+    <p class="b">(재)건설기술교육원</p>
+    <p class="mt5 mb30">서울특별시 금천구 가산디지털 1로 124-12, 101호</p>
   </div>
   <hr>
  
@@ -130,9 +135,6 @@
     </li>
   </ul>
 
-
-
-
 <!-- 문의 작성 modal : s -->
 <div class="modal modal_full modal_qa_reg vh_wrap">
   <header>
@@ -144,7 +146,7 @@
   </header>
   <div class="vh_body">
     <div class="community_head">
-      <p class="fs_12 font_gray_A0">공동구매와 관련없는 문의는 플랫폼 내 1:1 문의를 이용해주세요.<br>
+      <p class="fs_12 font_gray_A0">교육 신청과 관련없는 문의는 플랫폼 내 1:1 문의를 이용해주세요.<br>
       작성하신 문의는 <span class="font_gray_f fs_12">‘마이페이지 > 문의 내역’</span> 에서 확인 할 수 있습니다.</p>
     </div>
     <div class="mt20 inner_wrap">
@@ -195,24 +197,23 @@
 <!-- 취소신청 : s -->
 <div class="modal_slide modal_slide_cancel">
   <div class="">
-  <h6>구매 취소 신청</h6>
-  <p class="mt5">구매 취소 후 재구매 신청이 어렵습니다.<br>정말 구매 신청을 취소하시겠어요?</p>
+  <h6>교육 취소 신청</h6>
+  <p class="mt5">교육 신청을 취소하시겠어요?</p>
     <!-- 상품 썸네일 : s -->
     <div class="product_view_box mt30">
       <div class="product_view_img">
           <div class="img_box"><img src="/p_images/s3.jpg"></div>
       </div>
       <div class="product_view_info">
-          <p class="txt_title">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 블랙로우 스니커즈</p>
-          <p class="fs_12 font_gray_A0 mt10">1개</p>
-          <p class="fs_16"><b>175,200</b>원</p>
+        <span class="mark">삿시</span>
+        <p class="txt_title mt20">실내건축설계 디자인 캐드(Auto CAD), 스케치업 인테리어 디자이너 양성 과정A</p>
       </div>
     </div>
     <!-- 상품 썸네일 : e -->
     
     <div class="btn_md_wrap">
       <a href="javascript:void(0)" class="btn_point_ghost btn_full_basic btn_md_left" onclick="modal_close_slide('cancel')">닫기</a>
-      <a href="javascript:void(0)" class="btn_point btn_full_basic btn_md_right">구매 취소 신청</a>
+      <a href="javascript:void(0)" class="btn_point btn_full_basic btn_md_right">교육 취소 신청</a>
     </div>
   </div>
 </div>

@@ -1,87 +1,109 @@
-<header class="transparent ease">
+<header>
   <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="닫기"></a>
   <h1>&nbsp;</h1>
   <div class="btn_right">
-    <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
     <img src="/images/head_btn_more.png" alt="" onclick="modal_open_slide('more')">
   </div>
 </header>
+<div class="body">
 
-<div class="row">
-  <div class="swiper detail_img_swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="img_box">
-          <img src="/p_images/s1.jpg" onclick="modal_open('swiper_img_view');idx(0)">
+  <!-- community head -->
+  <div class="community_detail_head">
+    <div class="detail_info">
+      <span class="detail_category">진행중</span>
+      <span class="detail_date">2023.01.01</span>
+    </div>
+    <div class="detail_title">월넛과 베이지로 차분하게, 무드있는 아파트.</div>
+  </div>
+
+  <!-- community body -->
+  <div class="community_detail_body">
+    33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기를 했지만 발코니가 과하게 넓고 활용도도 떨어져 거실 쪽 발코니만 확장 하였답니다. 그 외 욕실, 주방, 중문, 타일, 도배 및 장판등을 진행하였어요.
+    
+    <div class="community_img_view_swiper">
+      <div class="swiper community_swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img_box">
+              <img src="/p_images/s1.jpg" onclick="modal_open('swiper_img_view');idx(0)">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img_box">
+              <img src="/p_images/s2.jpg" onclick="modal_open('swiper_img_view');idx(1)">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img_box">
+              <img src="/p_images/s3.jpg" onclick="modal_open('swiper_img_view');idx(2)">
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="img_box">
-          <img src="/p_images/s2.jpg" onclick="modal_open('swiper_img_view');idx(1)">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="img_box">
-          <img src="/p_images/s3.jpg" onclick="modal_open('swiper_img_view');idx(2)">
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
-</div>
 
+    <!-- 설문 : s -->
+    <div class="box_vote">
+      <div class="vote_title">가장 잘 된 인테리어 공간은?</div>
+      <div class="vote_sub_txt">복수선택<span class="f_right">150명 참여</span></div>
+      <ul class="mt30">
+        <li>
+          <input type="checkbox" name="vote" id="vote_1" value="Y" class="type_circle" checked>
+          <label for="vote_1"><span></span>모루유리가 들어간 짙은 우드 중문</label>
+        </li>
+        <li>
+          <input type="checkbox" name="vote" id="vote_2" value="Y" class="type_circle">
+          <label for="vote_2"><span></span>육백각타일을 사용한 화장실</label>
+        </li>
+        <li>
+          <input type="checkbox" name="vote" id="vote_3" value="Y" class="type_circle">
+          <label for="vote_3"><span></span>홈바가 있는 넓은 주방</label>
+        </li>
+        <li>
+          <input type="checkbox" name="vote" id="vote_4" value="Y" class="type_circle">
+          <label for="vote_4"><span></span>야외에 있는 느낌을 준는 캠핑존 베란다</label>
+        </li>
+      </ul>
+      <a href="#" class="btn_point btn_full_thin mt20">투표하기</a>
+    </div>
+    <!-- 설문 : e -->
+
+    <!-- 설문 결과 : s -->
+    <div class="box_vote">
+      <div class="vote_title">가장 잘 된 인테리어 공간은?</div>
+      <div class="vote_sub_txt">복수선택<span class="f_right">150명 참여</span></div>
+      <ul class="vote_result">
+        <li>
+          <p><img src="/images/ic_vote_check.png">모루유리가 들어간 짙은 우드 중문</p>
+          <div class="progress_bg">
+            <span class="txt_1">150표</span>
+            <span class="txt_2">66.7%</span>
+            <div class="progress_bar check" style="width:60%"></div>
+          </div>
+        </li>
+        <li>
+          <p>모루유리가 들어간 짙은 우드 중문</p>
+          <div class="progress_bg">
+            <span class="txt_1">70표</span>
+            <span class="txt_2">66.7%</span>
+            <div class="progress_bar" style="width:20%"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- 설문 결과 : e -->
   
-  <!-- community head -->
-  <div class="detail_head">
-      <!-- <div class="trade_state">예약</div> -->
-      <div class="mb20">
-        <span class="state_1">거래완료</span>
-        <span class="state_2">예약</span>
-      </div>
-      
-      <p class="txt_title">월넛과 베이지로 차분하게, 무드있는 신혼집</p>
-      <p class="txt_nickname">드림꿈드림임 · 목공 · 서울 남부  <span class="f_right date">2022.12.21</span></p>
-
-      <div class="txt_price mt30">180,000원</div>
-      <table class="mt25 table_info">
-        <colgroup>
-          <col width='80px'>
-          <col width='*'>
-        </colgroup>
-        <tr>
-          <th>거래방법</th>
-          <td>직거래</td>
-        </tr>
-        <tr>
-          <th>장소</th>
-          <td>가산디지털단지역 2번 출구 앞</td>
-        </tr>
-      </table>
-
-  </div>
-  <hr>
-  <!-- community body -->
-  <div class="detail_body">
-    33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기를 했지만 발코니가 과하게 넓고 활용도도 떨어져 거실 쪽 발코니만 확장 하였답니다. 그 외 욕실, 주방, 중문, 타일, 도배 및 장판등을 진행하였어요.
-    <br><br>
-    비닐만 벗겨놓은 상태입니다. 직거래시 직접 확인하시고 구매하셔도 되요. 사이즈가 큰 편이어서 SUV 정도의 차량 아니면 들어가지 않아요. 01012345678 로 문자 남겨주세요.
-  
-    <a href="#" class="btn_point btn_full_thin mt20">전화번호 확인</a>
-
   </div>
   <!-- community action -->
-  <ul class="detail_action">
-    <li><a href="javascript:void(0)" onclick="detail_btn_like(this)" class="detail_btn_like ease">좋아요 120</a></li>
-    <li><img src="/images/ic_chat_white.png"> 댓글 23</li>
-    <li><img src="/images/ic_visibility_white.png"> 524</li>
-  </ul>
+  <hr class="space">
 
     
   <!-- 댓글:s -->
   <div class="cmt_wrap">
-      <!-- <div class="no_data">
+      <div class="no_data">
         <p><span class="message_box">작성된 댓글이 없습니다.</span></p>
-      </div> -->
+      </div>
       <!-- 댓글: tbl_cmt, 답글: tbl_reply, etc: cmt_blind -->
     <ul class="cmt_ul">
       <li>
@@ -108,7 +130,7 @@
         <div class="cmt_action">
           <span>00:00</span>
           <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
-          <span onclick="reg_reply()">대댓글</span>
+          <!-- <span onclick="reg_reply()">대댓글</span> -->
         </div>
       </li>
       <li class="cmt_re">  
@@ -136,7 +158,7 @@
   </div>
   <!-- <div id="reply_back" onclick="reply_back_close()"></div> -->
   <!-- 댓글:e -->
-
+</div>
 
 <a href="#"><img src="/images/floating_top.png" class="top_floating type_1 top"></a>
 
@@ -159,15 +181,7 @@
 <!-- modal_open_slide : s -->
 <div class="modal_slide modal_slide_more">
   <ul class="slide_modal_menu">
-    <li>
-      <a href="/<?=mapping('community')?>/community_mod">수정</a>
-    </li>
-    <li>
-      <a href="javascript:void(0)" onclick="modal_open_slide('report');modal_close_slide('more')">신고</a>
-    </li>
-    <li>
-      <a href="javascript:modal_close_slide('more')">취소</a>
-    </li>
+  <a href="javascript:void(0)">숨기기</a>
   </ul>
 </div>
 <div class="md_slide_overlay md_slide_overlay_more" onclick="modal_close_slide('more')"></div>
@@ -224,15 +238,6 @@
 <div class="md_overlay md_overlay_swiper_img_view" onclick="javascript:modal_close('swiper_img_view')"></div>
 
 <script>
-// 스크랩 토글버튼
-function btn_scrap(element){
-    if($(element).hasClass("on")){
-      $(element).removeClass("on");
-    } else {
-      $(element).addClass("on");
-    }
-  }
-
 // 좋아요 토글버튼
 function detail_btn_like(element){
     if($(element).hasClass("on")){
@@ -241,12 +246,11 @@ function detail_btn_like(element){
       $(element).addClass("on");
     }
   }
-//이미지 배너
-var swiper = new Swiper(".detail_img_swiper", {
-  pagination: {
-    el: ".detail_img_swiper .swiper-pagination",
-  },
-});
+  var swiper = new Swiper(".community_swiper", {
+    pagination: {
+      el: ".community_swiper .swiper-pagination",
+    },
+  });
 
 // 댓글 좋아요 토글버튼
 function cmt_btn_like(element){
@@ -343,21 +347,4 @@ $( '.top' ).click( function() {
     return false;
 } );
 } );
-
-// header scroll
-let criteria_scroll_top = 0;
-$(window).on('scroll',function (){
-	let scrollTop = $(this).scrollTop();
-	if(scrollTop > criteria_scroll_top){
-    $('header').addClass('fixed');
-		$('header').find('.btn_back').find('img').attr('src','/images/head_btn_back.png');
-		$('header').find('.btn_close').find('img').attr('src','/images/head_btn_dot.png');
-	}else{
-    $('header').removeClass('fixed');
-		$('header').find('.btn_back').find('img').attr('src','/images/head_btn_back_w.png');
-		$('header').find('.btn_close').find('img').attr('src','/images/head_btn_dot_w.png');
-
-	}
-})
-
 </script>

@@ -26,6 +26,7 @@
 
 /* mark */
 .mark_hot{color:#E54524; font-family: 'font-b'; font-size: 16px; margin-bottom: 20px;}
+.mark{background: #444; border-radius: 3px; color:#E2E2E2; font-size: 12px; padding: 0 10px; line-height: 25px; display: inline-block;}
 
 /* community */
 .community_head {background:#232527; padding: 30px 20px; box-sizing: border-box;}
@@ -205,8 +206,17 @@
 .product_view_box .txt_title{overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.4;}
 .account_box{background: #232527; border-radius: 5px; padding: 20px;}
 .account_box .ic_copy{width:16px; vertical-align: middle; margin-top: -3px;}
+.detail_state_bar{background: #164740; padding: 10px 20px; overflow: hidden;}
+.detail_state_bar span{float: left; margin-right: 10px;}
+.map_wrap{margin:20px 0 20px 0;}
+.map_wrap img{max-width:100%; border-radius: 5px;}
+.radio_select label{margin-bottom:15px !important; color:#F5F5F5 !important; display: block !important;}
+.radio_select label p{float: right;}
 
 /* table */
 .table_info{font-size: 14px;}
 .table_info th{color: #A0A0A0; padding: 5px 0;}
 .table_info td{color: #E2E2E2; padding: 5px 0;}
+.ul_info li{padding:4px 0;}
+.ul_info li .right_info{float: right;}
+.ul_info li.state_end, .ul_info li.state_end span{color:#A0A0A0 !important;}

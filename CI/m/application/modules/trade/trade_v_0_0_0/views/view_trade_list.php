@@ -6,7 +6,7 @@
   <div class="no_data_box" style="display:none;">검색 결과가 없습니다. <br> 다시 검색해 주세요.</div>
   <ul class="trade_list" style="display:none1;">
     <li>
-      <a href="/<?=mapping('community')?>/community_detail">
+      <a href="/<?=mapping('trade')?>/trade_detail">
       <p class="txt_nickname">드림꿈드림 · 목공 · 서울 남부 <span class="f_right list_date">12.21</span></p>
       <div class="trade_list_body">
         <div class="thum_img">
@@ -25,7 +25,7 @@
       </a>
     </li>
     <li>
-      <a href="/<?=mapping('community')?>/community_detail">
+    <a href="/<?=mapping('trade')?>/trade_detail">
       <p class="txt_nickname">딸기맛바나나킥 · 목공 · 서울 남부 <span class="f_right list_date">12.21</span></p>
       <div class="trade_list_body">
         <div class="thum_img">
@@ -45,7 +45,7 @@
     </li>
     <?php for ($i=0; $i < 3; $i++) {?>
     <li>
-      <a href="/<?=mapping('community')?>/community_detail">
+    <a href="/<?=mapping('trade')?>/trade_detail">
       <p class="txt_nickname">테헤란 · 서울 동부 <span class="f_right list_date">12.21</span></p>
       <div class="trade_list_body">
         <div class="thum_img">

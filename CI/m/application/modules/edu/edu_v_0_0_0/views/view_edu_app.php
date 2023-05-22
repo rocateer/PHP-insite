@@ -1,6 +1,6 @@
 <header>
   <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="닫기"></a>
-  <h1>공동구매 신청</h1>
+  <h1>교육 신청</h1>
 </header>
 
 <div class="body">
@@ -12,30 +12,34 @@
                 <div class="img_box"><img src="/p_images/s3.jpg"></div>
             </div>
             <div class="product_view_info">
-                <p class="txt_title">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 블랙로우 스니커즈</p>
-                <p class="fs_12 font_gray_A0 mt10">1개</p>
-                <p class="fs_16"><b>175,200</b>원</p>
+                <span class="mark">삿시</span>
+                <p class="txt_title mt20">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 블랙로우 스니커즈</p>
             </div>
         </div>
         <!-- 상품 썸네일 : e -->
 
-        <h5 class="mt30">배송정보</h5>
+        <h5 class="mt30">교육 정보</h5>
         <ul class="input_ui row mt20">
             <li>
-                <label>받는분<span class="essential">*</span></label>
-                <input type="text" id="" name="" placeholder="받으시는 분의 이름을 입력해 주세요.">
+                <label>항목 선택<span class="essential">*</span></label>
+                <div class="radio_select">
+                    <input type="radio" id="radio_0" name="radio" checked="">
+                    <label for="radio_0" class="mr15"><span></span>1차 2023.01.01 00:00<p>5/20명</p></label>
+
+                    <input type="radio" id="radio_1" name="radio">
+                    <label for="radio_1" class="mr15"><span></span>2차 2023.01.01 00:00<p>5/20명</p></label>
+
+                    <input type="radio" id="radio_2" name="radio" disabled>
+                    <label for="radio_2" class="mr15"><span></span>3차 2023.01.01 00:00<p>20/20명</p></label>
+                </div>
+            </li>
+            <li>
+                <label>교육 받는 분<span class="essential">*</span></label>
+                <input type="text" id="" name="" placeholder="교육 받으시는 분의 이름을 입력해 주세요.">
             </li>
             <li>
                 <label>연락처<span class="essential">*</span></label>
-                <input type="tel" id="" name="" placeholder="받으시는 분의 연락처를 입력해 주세요.">
-            </li>
-            <li>
-                <label>배송지</label>
-                <div class="input_address_wrap">
-                    <a href="#" class="btn_right">주소 검색</a>
-                    <input type="tel" id="" name="" placeholder="">
-                </div>
-                <input type="text" id="" name="" placeholder="상세 주소를 입력해 주세요.">
+                <input type="tel" id="" name="" placeholder="교육 받으시는 분의 연락처를 입력해 주세요.">
             </li>
             <li>
                 <label>예금주명<span class="essential">*</span></label>
@@ -72,7 +76,7 @@
     <hr class="space">
     <div class="inner_wrap">
 
-        <h5 class="mt30">공동구매 신청 금액</h5>
+        <h5 class="mt30">교육 신청 예약금</h5>
 
         <div class="view_price mt30">
             결제금액
@@ -89,7 +93,7 @@
         </div>
 
         <div class="mt30 pdb30">
-            <a href="/<?=mapping('product')?>/product_app_complete" class="btn_point btn_full_basic">신청하기</a>
+            <a href="/<?=mapping('edu')?>/edu_app_complete" class="btn_point btn_full_basic">신청하기</a>
         </div>
     </div>
 

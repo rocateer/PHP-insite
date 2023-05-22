@@ -42,4 +42,10 @@ public function product_app(){
   $this->_view(mapping('product').'/view_product_app');
 }
 
+//공동구매 완료
+public function product_app_complete(){
+  $this->_view(mapping('product').'/view_product_app_complete');
+}
+
+
 }// 클래스의 끝

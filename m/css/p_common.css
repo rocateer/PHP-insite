@@ -123,8 +123,6 @@ input[type='checkbox']:disabled + label{color:#A0A0A0;}
 .checkbox_box input[type="checkbox"] + label{display: block; border-radius:3px; padding:8px; box-sizing:border-box; text-align: center; color:#BFBFBF; border: 1px solid #444; margin-bottom: 0;}
 .checkbox_box input[type="checkbox"]:checked + label{background: #164740; color:#BFBFBF; border: 1px solid #20BFA9;}
 
-
-
 /* 투표 css */
 input.type_circle[type="checkbox"] {display:none;}
 input.type_circle[type="checkbox"] + label {display:inline-block; color: #E2E2E2; font-size: 14px; font-style: normal;}
@@ -135,6 +133,10 @@ input[type="radio"] {display:none;}
 input[type="radio"] + label {display:inline-block; font-size:14px; color: #333; font-style: normal;}
 input[type="radio"] + label span {display:inline-block; width:20px; height:20px; margin:-3px 6px 0 0; vertical-align:middle; background:url('../images/radio_off.png') right center no-repeat; cursor:pointer; background-size:20px;}
 input[type="radio"]:checked + label span {background:url('../images/radio_on.png') right center no-repeat; background-size:20px;}
+
+input[type="radio"] {display:none;}
+input[type="radio"]:disabled + label {display:inline-block; font-size:14px; color:#636363 !important; font-style: normal;}
+input[type="radio"]:disabled + label span {display:inline-block; width:20px; height:20px; margin:-3px 6px 0 0; vertical-align:middle; background:url('../images/radio_disabled.png') right center no-repeat; cursor:pointer; background-size:20px;}
 
 /* textarea 입력 custom => 수정예정 */
 .textarea_wrap{position: relative;}
@@ -289,9 +291,9 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .modal_full{width:100%; height:100%;}
 .modal_full #edit{padding: 20px;box-sizing: border-box;}
 
-.btn_md_wrap{overflow: hidden;margin-top: 30px;display: flex;}
-.btn_md_right{border-radius:10px;background:#4C35CA;color:#121212;float: right;display:inline-block;flex:1;padding: 9px 0; text-align:center}
-.btn_md_left{border-radius:10px;color:#737373;border:1px solid #BBBBBB;float: right;margin-right: 10px;display:inline-block;flex:1;padding: 9px 0; text-align:center}
+.btn_md_wrap{ margin-top: 30px; display: flex;}
+a.btn_md_right{float: right; display:inline-block; flex:1; text-align:center;}
+a.btn_md_left{float: left; margin-right: 5px; display:inline-block; flex:100px 0 0; text-align:center;}
 
 /* no_search_data */
 .no_data{padding:150px 0; box-sizing: border-box;}
@@ -407,6 +409,9 @@ header .btn_txt{color:#F60032;font-size:16px; position: absolute; z-index: 1; to
 
 .txt_height_1{line-height: 1.6;}
 .txt_height_2{line-height: 1.4;}
+
+.complete_wrap{text-align: center;}
+.complete_wrap img{width:70px;}
 
 /* gride */
 .gride_2 li{width: 50%; float: left;}
