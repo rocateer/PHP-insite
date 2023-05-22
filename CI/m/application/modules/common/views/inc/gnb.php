@@ -13,7 +13,7 @@
 	<li><a href="/<?=mapping('community')?>/community_list">게시판2</a></li>
 	<li><a href="/<?=mapping('trade')?>">중고거래</a></li>
 	<li><a href="/<?=mapping('recruit')?>">구인구직</a></li>
-	<li><a href="/<?=mapping('community')?>/community_list">공동구매</a></li>
+	<li><a href="/<?=mapping('product')?>">공동구매</a></li>
 	<li><a href="#">교육</a></li>
 </ul>
 <hr class="space">

@@ -122,6 +122,25 @@
 .cmt_reg .btn_send{display:none;position: absolute;z-index: 1;width: 36px;top:9px;right:22px;}
 #reply_back{display: none;width: 100%;height: 100%;position: fixed; z-index: 9;top:0;left:0;background: rgba(0,0,0,0.5);}
 
+/* 공동구매&교육 */
+.product_list{overflow: hidden;}
+.product_list li{margin-bottom: 10px; position: relative;}
+.product_list li .mark{background: #444; border-radius: 3px; color:#E2E2E2; font-size: 12px; padding: 0 10px; z-index: 10; position: absolute; top: 20px; left: 20px; line-height: 25px;}
+.product_list li .btn_delete{position: absolute; right:10px; top:10px; z-index: 2; width:24px;}
+.product_list li .img_box{width:100%; height: 0; padding-bottom: 48%; overflow: hidden;}
+.product_list li .img_box img{position: absolute; top: 0;left: 0; width: 100%; height: 100%; object-fit: cover;}
+.product_list li .scrap{position: absolute; top: 20px; right: 20px; background: url('/images/head_btn_bookmark_off.png') no-repeat left center; background-size: 24px;width: 24px; height: 24px;z-index: 10;}
+.product_list li .scrap.on{position: absolute; top: 20px; right: 20px; background: url('/images/head_btn_bookmark_on.png') no-repeat left center; background-size: 24px;width: 24px; height: 24px;z-index: 10;}
+.product_list_body{padding:20px;}
+.product_list_body .product_list_title{font-size: 16px; color:#F5F5F5; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+.product_list_body .product_list_item{font-size: 14px; color:#A0A0A0; margin-top: 5px;}
+.before_vote_bar{background: #20BFA9; color:#fff; font-family: 'font-b'; height: 40px; line-height: 40px; padding: 0 20px;}
+.before_vote_bar img{width: 24px; float: right; margin-top:7px;}
+.noti_bar{padding:20px 20px; background:#232527; color: #A0A0A0;}
+.noti_bar a{float: right; border-bottom: 1px solid #A0A0A0;}
+
+
+
 /* tab */
 .tab_1{border-bottom: 1px solid #444; padding: 0 20px; box-sizing: border-box; overflow-y: hidden; overflow-x: auto; width: auto; word-break: break-all;  white-space: nowrap; margin-top: 50px;}
 .tab_1 li{padding: 0 15px; text-align: center; display:inline-block; color:#A0A0A0; font-size: 16px; line-height: 50px;}
@@ -160,22 +179,23 @@
 .mod_type .reg_vote_list p{color:#A0A0A0; width:100%;}
 
 /* detail */
-.detail_head .head_img{width: 100%;}
-.detail_head {border-bottom: 1px solid #444; padding:20px;}
-.detail_head .detail_info{padding: 20px; line-height: 1.4;}
-.detail_head .trade_info{font-size: 14px;}
-.detail_head .trade_info tr{height: 22px;}
-.detail_head .trade_info th{color: #A0A0A0;}
-.detail_head .trade_info td{color: #E2E2E2;}
-.detail_head .trade_state{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #164740; display: inline;}
-.detail_head .trade_state_end{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #444; display: inline;}
-.detail_head .detail_title{color: #F5F5F5; font-size: 18px;font-family: 'font-b';}
+.state_1{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #444; display: inline;}
+.state_2{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #164740; display: inline;}
+.detail_head {padding:20px;}
+.detail_head .txt_title{color: #F5F5F5; font-size: 18px;font-family: 'font-b';}
 .detail_head .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b'; margin-top: 3px;}
 .detail_head .txt_nickname .detail_date{font-size: 12px; color:#A0A0A0;}
-.detail_head .trade_price{font-size: 20px; color:#F5F5F5; font-family: 'font-b'; margin-top: 30px;}
+.detail_head .txt_price{font-size: 20px; color:#F5F5F5; font-family: 'font-b';}
+.detail_body{padding: 20px; line-height: 1.4;}
+.detail_body img{width:100%; margin-bottom: 20px;}
+
+.detail_qna_list li{margin-bottom: 30px;}
+.detail_qna_list li .qa_answer_wrap{background:#232527; padding: 20px; margin-top: 20px; display: none;}
+.detail_qna_list li .txt_q{margin-top: 12px;}
+.detail_qna_list li .txt_q img{width:12px; margin-right: 3px; vertical-align: middle;}
 
 
 /* table */
 .table_info{font-size: 14px;}
-.table_info th{color: #A0A0A0; padding: 6px 0;}
-.table_info td{color: #E2E2E2; padding: 6px 0;}
+.table_info th{color: #A0A0A0; padding: 5px 0;}
+.table_info td{color: #E2E2E2; padding: 5px 0;}

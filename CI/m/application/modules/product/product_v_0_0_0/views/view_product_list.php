@@ -1,24 +1,26 @@
-<header>
-	<div class="main_header">
-    <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
-    <input class="search_txt" type="text" placeholder="검색어를 입력해 주세요." value="아이폰" id="search_input">
-		<a href="#"><img src="/images/btn_sm_delete.png" class="mr5 btn_del"></a>
-		<a href="#"><img src="/images/head_btn_search.png" class="main_search"></a>
-	</div>
-</header>
-<ul class="tab_1">
-  <li><a href="/<?=mapping('search')?>/search_list_community">게시글 <span>12,345</span></a></li>
-  <li><a href="/<?=mapping('search')?>/search_list_trade">중고거래 <span>0</span></a></li>
-  <li class="active"><a href="/<?=mapping('search')?>/search_list_product">공동구매 <span>12</span></a></li>
-  <li><a href="/<?=mapping('search')?>/search_list_edu">교육 <span>7</span></a></li>
-</ul>
-
-<div class="search_list">
-  <div class="search_cnt mt30">
-    검색 결과 <span class="point_color">8</span>
-    <p class="f_right on ease"> 진행중만 보기</p>
+<div class="swiper main_bn main_bn_1">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="/p_images/b_sample_1.png"></div>
+    <div class="swiper-slide"><img src="/p_images/b_sample_1.png"></div>
   </div>
-  <div class="no_data_box" style="display:none;">검색 결과가 없습니다. <br> 다시 검색해 주세요.</div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<div class="before_vote_bar">
+<a href="/<?=mapping('product')?>/product_vote_list">
+  공동구매 사전투표
+  <img src="/images/btn_more.png">
+</a>
+</div>
+
+<div class="search_cnt mt30 row">
+  <p class="f_right on ease"> 진행중만 보기</p>
+</div>
+<div class="no_data">
+  <p><span class="message_box">공동구매 상품을 준비 중입니다.</span></p>
+</div>
+
+
   <ul class="product_list mt20" style="display:none1;">
     <li>
       <span class="mark">D-11</span>
@@ -70,20 +72,23 @@
     </li>
    
   </ul>
-</div>
+
 
 <script>
+  //배너
+  var main_bn_1 = new Swiper(".main_bn_1", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
   $( '.search_cnt p' ).click( function() {
     $(this).toggleClass("on");
   } );
 
-  $( '.img_box .scrap' ).click( function() {
+  $( '.scrap' ).click( function() {
     $(this).toggleClass("on");
   } );
 
-//검색어 삭제
-$('.btn_del').click(function(){
-$('#search_input').val('');
-$('#search_input').focus();
-})
+
 </script>

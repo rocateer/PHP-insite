@@ -2,19 +2,13 @@
   <div class="btn_back" onclick="COM_history_back_fn()">
     <img src="/images/head_btn_back.png" alt="">
   </div>
-  <h1>
-  스크랩
-  </h1>
+  <h1>스크랩</h1>
 </header>
 <div class="body footer_margin inner_wrap">
   <div class="">
     <ul class="tab_toggle_menu clearfix" id="type" onchange="">
-      <li class="active" id="li_0" onclick="set_scrap_type('0');"> 
-      프로그램
-      </li>
-      <li class="" id="li_1" onclick="set_scrap_type('1');">
-      매거진
-      </li>
+      <li class="active" id="li_0" onclick="set_scrap_type('0');">프로그램</li>
+      <li class="" id="li_1" onclick="set_scrap_type('1');">매거진</li>
     </ul>
     <div class="tab_area_wrap">
       <!-- 탭 영역 1 : s -->

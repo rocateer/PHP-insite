@@ -1,4 +1,4 @@
-<header class="transparent">
+<header class="transparent ease">
   <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="닫기"></a>
   <h1>&nbsp;</h1>
   <div class="btn_right">
@@ -35,111 +35,114 @@
   <div class="detail_head">
       <!-- <div class="trade_state">예약</div> -->
       <div class="mb20">
-        <span class="state_1">거래완료</span>
-        <span class="state_2">예약</span>
+        <span class="state_1">D-11</span>
       </div>
-      
       <p class="txt_title">월넛과 베이지로 차분하게, 무드있는 신혼집</p>
-      <p class="txt_nickname">드림꿈드림임 · 목공 · 서울 남부  <span class="f_right date">2022.12.21</span></p>
 
-      <div class="txt_price mt30">180,000원</div>
+      <div class="font_gray_f mt30"><b class="point_color fs_20">88% </b>달성</div>
+      <div class="txt_price">180,000원</div>
       <table class="mt25 table_info">
         <colgroup>
-          <col width='80px'>
+          <col width='130px'>
           <col width='*'>
         </colgroup>
         <tr>
-          <th>거래방법</th>
-          <td>직거래</td>
+          <th>판매기간</th>
+          <td>9월 18일(일) 까지</td>
         </tr>
         <tr>
-          <th>장소</th>
-          <td>가산디지털단지역 2번 출구 앞</td>
+          <th>1인 최소 구매</th>
+          <td>2</td>
+        </tr>
+        <tr>
+          <th>1인 최대 구매 가능</th>
+          <td>5</td>
         </tr>
       </table>
-
   </div>
-  <hr>
+  <ul class="tab_2">
+    <li class="active"><a href="#">상품정보</a></li>
+    <li><a href="#qna">Q&A</a></li>
+  </ul>
   <!-- community body -->
   <div class="detail_body">
-    33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기를 했지만 발코니가 과하게 넓고 활용도도 떨어져 거실 쪽 발코니만 확장 하였답니다. 그 외 욕실, 주방, 중문, 타일, 도배 및 장판등을 진행하였어요.
-    <br><br>
-    비닐만 벗겨놓은 상태입니다. 직거래시 직접 확인하시고 구매하셔도 되요. 사이즈가 큰 편이어서 SUV 정도의 차량 아니면 들어가지 않아요. 01012345678 로 문자 남겨주세요.
-  
-    <a href="#" class="btn_point btn_full_thin mt20">전화번호 확인</a>
-
+    <img src="/p_images/s2.jpg">
+    3비닐만 벗겨놓은 상태입니다.<br>직거래시 직접 확인하시고 구매하셔도 되요.<br><br>
+    사이즈가 큰 편이어서 SUV 정도의 차량 아니면 들어가지 않아요. 01012345678 로 문자 남겨주세요.
+    <div id="qna"></div>
   </div>
-  <!-- community action -->
-  <ul class="detail_action">
-    <li><a href="javascript:void(0)" onclick="detail_btn_like(this)" class="detail_btn_like ease">좋아요 120</a></li>
-    <li><img src="/images/ic_chat_white.png"> 댓글 23</li>
-    <li><img src="/images/ic_visibility_white.png"> 524</li>
-  </ul>
-
-    
-  <!-- 댓글:s -->
-  <div class="cmt_wrap">
-      <!-- <div class="no_data">
-        <p><span class="message_box">작성된 댓글이 없습니다.</span></p>
-      </div> -->
-      <!-- 댓글: tbl_cmt, 답글: tbl_reply, etc: cmt_blind -->
-    <ul class="cmt_ul">
-      <li>
-        <div class="cmt_item_1">벚꽃보러가요 · 서울 동부<span class="f_right"><img src="/images/ic_more.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="w_16"></span></div>
-        <div class="cmt_item_2">월넛과 베이지의 조화가 넘 멋지네요. 집도 따뜻해 보이면서도 안정감이 들어 집에만 있고 싶어질거 같아요!</div>
-        <div class="cmt_action">
-          <span>00:00</span>
-          <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
-          <span onclick="reg_reply()">대댓글</span>
-        </div>
-      </li>
-      <li>
-        <div class="cmt_item_1">분홍색개구리 · 인천 미추홀구<span class="f_right"><img src="/images/ic_more.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="w_16"></span></div>
-        <div class="cmt_item_2">세상 살다보니 이러기도 하네요.</div>
-        <div class="cmt_action">
-          <span>00:00</span>
-          <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
-          <span onclick="reg_reply()">대댓글</span>
-        </div>
-      </li>
-      <li class="cmt_re">
-        <div class="cmt_item_1"><span class="name_active">책방주인</span> · 제주 서귀포<span class="f_right"><img src="/images/ic_more.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="w_16"></span></div>
-        <div class="cmt_item_2">무슨 뜬금없는 소린가요?</div>
-        <div class="cmt_action">
-          <span>00:00</span>
-          <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
-          <span onclick="reg_reply()">대댓글</span>
-        </div>
-      </li>
-      <li class="cmt_re">  
-        <div class="item_blind">관리자에 의해 블라인드 된 글입니다.</div>
-      </li>
-      <li class="cmt_re">  
-        <div class="item_blind">삭제된 글입니다.</div>
-      </li>
-      <li>  
-        <div class="item_blind">관리자에 의해 블라인드 된 글입니다.</div>
-      </li>
-      <li>  
-        <div class="item_blind">삭제된 글입니다.</div>
-      </li>
-      <li>  
-        <div class="item_blind">차단한 글입니다. <a href="#" class="blind_clear">차단 해제</a></div>
-      </li>
-    </ul>
-    
-    <div class="cmt_reg">
-      <!-- <div class="tag">분홍색개구리님에게 답글 남기는 중</div> -->
-      <input type="text" class="input" id="input" placeholder="댓글을 입력하여 주세요.">
-      <img src="/images/btn_send.png" alt="등록" class="btn_send">
+  <hr>
+ 
+  <!-- Q&A : s -->
+  <div class="row">
+    <div class="inner_wrap">
+      <h5 class="mt30">Q&A</h5>
+      <a href="javascript:void(0)" onclick="modal_open('qa_reg')" class="btn_point_ghost btn_full_basic mt20">문의하기</a>
     </div>
   </div>
-  <!-- <div id="reply_back" onclick="reply_back_close()"></div> -->
-  <!-- 댓글:e -->
+  <!-- Q&A : e -->
+
+  <div class="no_data">
+    <p><span class="message_box">작성된 문의글이 없습니다.</span></p>
+  </div>
+
+  <ul class="detail_qna_list pdb55">
+    <li class="accordion">
+      <div class="inner_wrap trigger">
+        <p class="fs_12 point_color">답변완료</p>
+        <div class="fs_12 mt5">벚꽃보러가요 <span class="f_right date">2023.01.01 09:20</span></div>
+        <p class="txt_q">이거 언제 보내주실 거에요??</p>
+      </div>
+      
+      <div class="panel qa_answer_wrap">
+          <div class="fs_12 mb10">답변<span class="f_right date">2023.01.01 09:20</span></div>
+          안녕하세요 고객님.<br>
+          최근 주문량 증가로 인해 순차적으로 출고 진행이<br>
+          되고 있으니 조금만 양해 부탁드립니다.<br>
+      </div>
+    </li>
+    <li class="accordion">
+      <div class="inner_wrap"><!-- 비밀글일 경우 trigger를 삭제한다 -->
+        <p class="fs_12 font_gray_A0">미답변</p>
+        <div class="fs_12 mt5">벚꽃보러가요 <span class="f_right date">2023.01.01 09:20</span></div>
+        <p class="txt_q"><img src="/images/ic_login_lock.png">비밀글 입니다.</p>
+      </div>
+    </li>
+  </ul>
 
 
-<a href="#"><img src="/images/floating_top.png" class="top_floating type_1 top"></a>
+  <div class="btn_floating">
+    <a href="#" class="btn_point">구매하기</a>
+  </div>
 
+<!-- 문의 작성 modal : s -->
+<div class="modal modal_full modal_qa_reg vh_wrap">
+  <header>
+    <a class="btn_left" href="#">
+      <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('qa_reg')" alt="뒤로가기">
+    </a>
+    <h1>&nbsp;</h1>
+    <span class="head_txt"><a href="#">등록</a></span>
+  </header>
+  <div class="vh_body">
+    <div class="community_head">
+      <p class="fs_12 font_gray_A0">공동구매와 관련없는 문의는 플랫폼 내 1:1 문의를 이용해주세요.<br>
+      작성하신 문의는 <span class="font_gray_f fs_12">‘마이페이지 > 문의 내역’</span> 에서 확인 할 수 있습니다.</p>
+    </div>
+    <div class="mt20 inner_wrap">
+      <textarea class="ghost" placeholder="문의 내용"></textarea>
+    </div>
+    
+  </div>
+  
+  <div class="vh_footer mb30">
+    <div class="mt20">
+        <input type="checkbox" name="check" id="check_0" value="Y">
+        <label for="check_0"><span></span><b>나만 보기</b></label>
+      </div>
+  </div>
+</div>
+<!-- 문의 작성 modal : e -->
 <!-- modal_open_slide : s -->
 <div class="modal_slide modal_slide_cmt_more">
   <ul class="slide_modal_menu">
@@ -233,14 +236,6 @@ function btn_scrap(element){
     }
   }
 
-// 좋아요 토글버튼
-function detail_btn_like(element){
-    if($(element).hasClass("on")){
-      $(element).removeClass("on");
-    } else {
-      $(element).addClass("on");
-    }
-  }
 //이미지 배너
 var swiper = new Swiper(".detail_img_swiper", {
   pagination: {

@@ -41,7 +41,7 @@
   <?php }?>
 </ul>
 
-<a href="javascript:void(0)" onclick="modal_open('filter')"><img src="/images/floating_filter.png" class="top_floating top"></a>
+<a href="javascript:void(0)" onclick="modal_open('filter')"><img src="/images/floating_filter.png" class="top_floating"></a>
 
 
 <!-- modal : s -->
