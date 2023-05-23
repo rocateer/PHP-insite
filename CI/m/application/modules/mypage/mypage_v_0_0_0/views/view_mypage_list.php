@@ -63,7 +63,7 @@
       <a href="/<?= mapping('my_community') ?>">내가 작성한 글</a>
     </li>
     <li>
-      <a href="/<?= mapping('faq') ?>">구인구직 관리</a>
+      <a href="/<?= mapping('my_recruit') ?>">구인구직 관리</a>
     </li>
     <li>
       <a href="/<?= mapping('faq') ?>">신청내역</a>

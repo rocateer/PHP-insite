@@ -97,6 +97,12 @@
   <a href="#" class="btn_disabled">마감되었어요</a>
 </div> -->
 
+<!-- 작성자가 볼 경우 
+<div class="btn_floating float_half">
+  <a href="#" class="btn_point_ghost">마감하기</a>
+  <a href="/<?=mapping('my_recruit')?>/my_recruit_applicant_list" class="btn_point">지원자 보기</a>
+</div>-->
+
 <!-- modal_open_slide : s -->
 <div class="modal_slide modal_slide_more">
   <ul class="slide_modal_menu">
