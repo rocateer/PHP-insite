@@ -1,21 +1,6 @@
-/* 마이페이지 */
-.mypage_head{padding: 40px 0 0 20px;line-height: 30px;font-size: 22px;}
-.mypage_head a{font-size: 22px;font-weight:600;color: #20BFA9;display: inline-block; border-bottom: 2px solid #20BFA9;}
-.mypage_head .mypage_nickname{font-size: 22px;font-weight:600;color: #20BFA9;display: inline-block;}
-.mypage_ul{padding: 0 20px;}
-.mypage_title{font-size: 12px;font-weight:600; padding: 45px 20px 10px 20px;}
-.mypage_ul li{font-size: 16px; line-height: 55px;}
 
-.mypage_profile{padding: 0 20px;margin-top: 30px;}
-.mypage_profile li{font-size: 16px; line-height: 50px;}
-.mypage_profile a{font-size: 12px; color: #A0A0A0;}
 
-/* 직종인증 */
-.work_body{font-size: 14px;}
-.work_body img{ width:100%; border-radius: 5px;}
-.work_body tr{ height:45px; vertical-align: top;}
-.work_body th{ color:#A0A0A0;}
-.work_body td{ color:#E2E2E2}
+
 
 /* 검색어 */
 .search_txt{border-bottom: none;display: inline; width: calc(100% - 90px); font-size: 16px;}
@@ -32,14 +17,10 @@
 .search_list ul li{position: relative;}
 .search_list ul li .btn_close{ width: 16px; float:right; position: absolute; right: 20px; z-index: 10;}
 
-/* 중고거래 */
-.trade_list{overflow: hidden;}
-.trade_list li{border-bottom: 1px solid #444; overflow: hidden; padding: 20px; box-sizing: border-box;}
-.trade_list .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b';}
-.trade_list .txt_nickname .list_date{font-size: 12px; color:#A0A0A0; margin-right: 20px;}
+
 .trade_list_body{overflow: hidden; margin-top: 13px;}
 .trade_list_body .trade_list_item{overflow: hidden; box-sizing: border-box;}
-.trade_list_body .trade_list_item .trade_list_title{font-size: 16px; color:#fff;}
+.trade_list_body .trade_list_item .trade_list_title{font-size: 14px; color:#fff;}
 .trade_list_body .trade_list_item .trade_list_price{font-size: 16px; color:#fff; font-family: 'font-b'; margin-top: 15px;}
 .trade_list_body .trade_list_item .trade_state{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #164740; float: right;}
 .trade_list_body .trade_list_item .trade_state_end{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #444; float: right;}

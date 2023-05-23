@@ -2,8 +2,8 @@
 <!-- 인기 : s -->
 <div class="main_list_wrap">
 	<div class="main_list_head">
-		<img src="/images/ic_cate_5.png">인기
-		<a href="#"><img src="/images/btn_more.png" class="f_right"></a>
+		<img src="/images/ic_cate_5.png" class="mr10">인기
+		<a href="/<?=mapping('community')?>/community_hot "><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">
 		<li>
@@ -54,7 +54,7 @@
 <!-- 자유공간 : s -->
 <div class="main_list_wrap">
 	<div class="main_list_head">
-		<img src="/images/ic_cate_1.png">자유공간
+		<img src="/images/ic_cate_1.png" class="mr10">자유공간
 		<a href="#"><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">
@@ -75,7 +75,7 @@
 <!-- 인사이트 : s -->
 <div class="main_list_wrap mt50">
 	<div class="main_list_head">
-		<img src="/images/ic_cate_2.png">인사이트
+		<img src="/images/ic_cate_2.png" class="mr10">인사이트
 		<a href="#"><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">
@@ -104,7 +104,7 @@
 <!-- 비밀공간 : s -->
 <div class="main_list_wrap">
 	<div class="main_list_head">
-		<img src="/images/ic_cate_3.png">비밀공간
+		<img src="/images/ic_cate_3.png" class="mr10">비밀공간
 		<a href="#"><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">

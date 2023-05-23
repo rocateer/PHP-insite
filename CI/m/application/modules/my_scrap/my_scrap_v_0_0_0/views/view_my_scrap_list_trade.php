@@ -4,23 +4,27 @@
     <h1 class="head_title">스크랩</h1>
 	</div>
 </header>
-<ul class="search_gnb_wrap">
+<ul class="tab_1">
   <li><a href="/<?=mapping('my_scrap')?>">게시글</a></li>
   <li class="active"><a href="/<?=mapping('my_scrap')?>/scrap_list_trade">중고거래</a></li>
-  <li><a href="/<?=mapping('my_scrap')?>/scrap_list_job">구인 공고</a></li>
+  <li><a href="/<?=mapping('my_scrap')?>/scrap_list_recruit">구인 공고</a></li>
   <li><a href="/<?=mapping('my_scrap')?>/scrap_list_profile">구직 프로필</a></li>
   <li><a href="/<?=mapping('my_scrap')?>/scrap_list_product">공동구매</a></li>
-  <li><a href="/<?=mapping('my_scrap')?>/scrap_list_study">교육</a></li>
+  <li><a href="/<?=mapping('my_scrap')?>/scrap_list_edu">교육</a></li>
 </ul>
 
-<div class="search_list">
+
   <div class="no_data_box" style="display:none;">검색 결과가 없습니다. <br> 다시 검색해 주세요.</div>
   <ul class="trade_list" style="display:none1;">
     <li>
-      <img class="btn_close" src="/images/head_btn_close.png" alt="">
+      <p class="txt_nickname">
+        드림꿈드림 · 목공 · 서울 남부 
+        <span class="f_right date">
+          12.21
+          <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
+        </span>
+      </p>
       <a href="/<?=mapping('community')?>/community_detail">
-      <p class="txt_nickname">드림꿈드림 · 목공 · 서울 남부 
-        <span class="f_right list_date">12.21</span></p>
         <div class="trade_list_body">
         <div class="thum_img">
           <div class="img_box"><img src="/p_images/s3.jpg"></div>
@@ -40,9 +44,14 @@
       </a>
     </li>
     <li>
-      <img class="btn_close" src="/images/head_btn_close.png" alt="">
+      <p class="txt_nickname">
+        드림꿈드림 · 목공 · 서울 남부 
+        <span class="f_right date">
+          12.21
+          <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
+        </span>
+      </p>
       <a href="/<?=mapping('community')?>/community_detail">
-      <p class="txt_nickname">딸기맛바나나킥 · 목공 · 서울 남부 <span class="f_right list_date">12.21</span></p>
       <div class="trade_list_body">
         <div class="thum_img">
           <div class="img_box"><img src="/p_images/s8.jpg"></div>
@@ -63,9 +72,14 @@
     </li>
     <?php for ($i=0; $i < 3; $i++) {?>
     <li>
-      <img class="btn_close" src="/images/head_btn_close.png" alt="">
+      <p class="txt_nickname">
+        드림꿈드림 · 목공 · 서울 남부 
+        <span class="f_right date">
+          12.21
+          <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
+        </span>
+      </p>
       <a href="/<?=mapping('community')?>/community_detail">
-      <p class="txt_nickname">딸기맛바나나킥 · 목공 · 서울 남부 <span class="f_right list_date">12.21</span></p>
       <div class="trade_list_body">
         <div class="thum_img">
           <div class="img_box"><img src="/p_images/s4.jpg"></div>
@@ -86,7 +100,7 @@
     </li>
     <?php }?>
   </ul>
-</div>
+
 
 <script>
   $( '.search_cnt span' ).click( function() {

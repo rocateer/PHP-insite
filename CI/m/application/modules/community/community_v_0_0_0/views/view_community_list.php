@@ -68,11 +68,7 @@
     <?php for ($i=0; $i < 6; $i++) {?>
     <li>
       <a href="/<?=mapping('community')?>/community_detail">  
-        <div class="board_list_head">
-          <div class="right_area">
-            <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">2022.01.23</span></p>
-          </div>
-        </div>
+      <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">2022.01.23</span></p>
         <div class="community_list_body">
           <div class="thum_img relative">
             <div class="img_box"><img src="/p_images/s3.jpg"></div>

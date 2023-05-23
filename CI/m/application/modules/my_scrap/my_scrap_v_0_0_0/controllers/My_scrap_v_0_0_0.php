@@ -27,8 +27,8 @@ class My_scrap_v_0_0_0 extends MY_Controller{
 		$this->_view(mapping('my_scrap').'/view_my_scrap_list_trade');
   }
 
-  public function scrap_list_job(){
-		$this->_view(mapping('my_scrap').'/view_my_scrap_list_job');
+  public function scrap_list_recruit(){
+		$this->_view(mapping('my_scrap').'/view_my_scrap_list_recruit');
   }
 
   public function scrap_list_profile(){
@@ -39,7 +39,7 @@ class My_scrap_v_0_0_0 extends MY_Controller{
 		$this->_view(mapping('my_scrap').'/view_my_scrap_list_product');
   }
 
-  public function scrap_list_study(){
+  public function scrap_list_edu(){
 		$this->_view(mapping('my_scrap').'/view_my_scrap_list_study');
   }
 

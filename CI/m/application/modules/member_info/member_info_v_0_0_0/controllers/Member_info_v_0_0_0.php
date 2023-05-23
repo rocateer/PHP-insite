@@ -52,6 +52,6 @@ class Member_info_v_0_0_0 extends MY_Controller
 	//
 	public function member_info_mod()
 	{
-		$this->_view2(mapping('member_info') . '/view_member_info_mod');
+		$this->_view(mapping('member_info') . '/view_member_info_mod');
 	}
 }// 클래스의 끝

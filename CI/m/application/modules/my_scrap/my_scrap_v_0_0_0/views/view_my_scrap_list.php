@@ -4,20 +4,20 @@
     <h1 class="head_title">스크랩</h1>
 	</div>
 </header>
-<ul class="search_gnb_wrap">
+<ul class="tab_1">
   <li class="active"><a href="/<?=mapping('my_scrap')?>">게시글</a></li>
   <li><a href="/<?=mapping('my_scrap')?>/scrap_list_trade">중고거래</a></li>
-  <li><a href="/<?=mapping('my_scrap')?>/scrap_list_job">구인 공고</a></li>
+  <li><a href="/<?=mapping('my_scrap')?>/scrap_list_recruit">구인 공고</a></li>
   <li><a href="/<?=mapping('my_scrap')?>/scrap_list_profile">구직 프로필</a></li>
   <li><a href="/<?=mapping('my_scrap')?>/scrap_list_product">공동구매</a></li>
-  <li><a href="/<?=mapping('my_scrap')?>/scrap_list_study">교육</a></li>
+  <li><a href="/<?=mapping('my_scrap')?>/scrap_list_edu">교육</a></li>
 </ul>
 
-<div class="search_list">
+
   <div class="no_data_box" style="display:none;">검색 결과가 없습니다. <br> 다시 검색해 주세요.</div>
   <ul class="community_list" style="display:none1;">
     <li>
-      <img class="btn_close" src="/images/head_btn_close.png" alt="">
+      <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
       <a href="/<?=mapping('community')?>/community_detail">
       <div class="community_list_head">
         <img src="/images/ic_cate_2.png" class="list_cate_img">
@@ -43,7 +43,7 @@
       </a>
     </li>
     <li>
-      <img class="btn_close" src="/images/head_btn_close.png" alt="">
+      <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
       <a href="/<?=mapping('community')?>/community_detail">
       <div class="community_list_head">
         <img src="/images/ic_cate_3.png" class="list_cate_img">
@@ -70,7 +70,7 @@
     </li>
     <?php for ($i=0; $i < 3; $i++) {?>
     <li>
-      <img class="btn_close" src="/images/head_btn_close.png" alt="">
+      <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
       <a href="/<?=mapping('community')?>/community_detail">
       <div class="community_list_head">
         <img src="/images/ic_cate_3.png" class="list_cate_img">
@@ -97,7 +97,7 @@
     </li>
     <?php }?>
   </ul>
-</div>
+
 
 <script>
   $( '.search_gnb_wrap li' ).click( function() {

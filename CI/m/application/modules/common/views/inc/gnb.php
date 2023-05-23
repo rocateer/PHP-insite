@@ -1,8 +1,8 @@
 <header>
 	<div class="main_header">
 		<a href="/<?=mapping('search')?>"><img src="/images/head_btn_search.png" class="main_search"></a>
-		<a href="#" class="btn_gray_ghost btn_sm">로그인</a>
-		<a href="#" class="btn_gray_ghost btn_sm">MY</a>
+		<a href="/<?=mapping('login')?>" class="btn_gray_ghost btn_sm">로그인</a>
+		<a href="/<?=mapping('mypage')?>" class="btn_gray_ghost btn_sm">MY</a>
 		<a href="/<?=mapping('main')?>/reg_select" class="btn_point btn_sm">글쓰기</a>
 	</div>
 </header>

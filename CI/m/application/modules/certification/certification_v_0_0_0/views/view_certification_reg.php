@@ -6,7 +6,7 @@
   <div class="body">
   <div class="inner_wrap">
     <form class="find_form">
-      <div>
+      <div class="mt30">
         <h2>직종 인증 신청</h2>
         <span class="subtext mt10">
           내 직종을 인증하세요! <br>
@@ -28,7 +28,7 @@
         </li>
         <li>
           <label class="">인증<span class="essential">*</span>
-            <img src="/images/ic_info.png" alt=""  class="btn" style="width: 15px;" onclick="modal_open('confirm')">
+            <img src="/images/ic_info.png" alt="" class="btn" style="width: 15px;" onclick="modal_open('info')">
           </label>
           <span class="subtext">
             명함 또는 현장 사진을 첨부해 주세요.
@@ -57,3 +57,25 @@
     </div>
   </div>
   </div>
+
+  <!--  modal : s -->
+<div class="modal modal_full modal_info vh_wrap">
+  <header>
+    <a class="btn_left" href="#">
+      <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('info')" alt="닫기">
+    </a>
+    <h1>인증 안내</h1>
+    <!-- <span class="head_txt"><a href="#">등록</a></span> -->
+  </header>
+    <div class="body">
+      <div id="edit" class="inner_wrap">
+        <img src="/media/commonfile/202304/19/5d347021c1913f481ce7cf8051f98185.jpg" class="img_block mt20">
+        <img src="/media/commonfile/202304/19/5d347021c1913f481ce7cf8051f98185.jpg" class="img_block mt20">
+        <img src="/media/commonfile/202304/19/5d347021c1913f481ce7cf8051f98185.jpg" class="img_block mt20">
+      </div>
+    </div>
+    
+
+  
+</div>
+<!--  modal : e -->

@@ -13,7 +13,7 @@
         <a href="#"><img src="/images/ic_cate_2.png">인사이트</a>
       </li>
       <li>
-        <div class="dim">직종 인증 후 사용할 수 있어요.</div>
+        <div class="dim"><img src="/images/ic_login_lock.png">직종 인증 후 사용할 수 있어요.</div>
         <a href="#">
           <img src="/images/ic_cate_3.png" class="f_left">
           <div class="f_left">비밀공간<p class="fs_12 font_gray_A0">익명으로 못했던 이야기를 다 풀어보세요.</p></div>

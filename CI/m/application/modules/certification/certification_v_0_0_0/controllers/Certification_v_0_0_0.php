@@ -6,21 +6,21 @@
 |------------------------------------------------------------------------
 */
 
-class Work_v_1_0_0 extends MY_Controller {
+class Certification_v_0_0_0 extends MY_Controller {
   function __construct(){
     parent::__construct();
 
-    $this->load->model(mapping('work').'/model_work');
+    $this->load->model(mapping('certification').'/model_work');
     $this->load->model('common/model_common');
   }
 
   //인덱스
   public function index() {
-    $this->work_detail();
+    $this->certification_reg();
   }
 
   //등록
-  public function work_reg(){
+  public function certification_reg(){
     $work_list = $this->model_common->work_list();
 		$info_detail = $this->model_common->info_detail();
 
@@ -29,11 +29,11 @@ class Work_v_1_0_0 extends MY_Controller {
 		$response->info_detail = $info_detail;
 		$response->work_list = $work_list;
 
-    $this->_view(mapping('work').'/view_work_reg', $response);
+    $this->_view(mapping('certification').'/view_certification_reg', $response);
   }
 
   //이용약관 동의
-  public function work_detail(){
+  public function certification_detail(){
     $type = $this->_input_check("type",array());
 
 		$data['type'] = $type;
@@ -44,7 +44,7 @@ class Work_v_1_0_0 extends MY_Controller {
 
 		$response->result = $result;
 
-		$this->_view(mapping('work').'/view_work_detail',$response);
+		$this->_view(mapping('certification').'/view_certification_detail',$response);
   }
 
   //인증 반려
