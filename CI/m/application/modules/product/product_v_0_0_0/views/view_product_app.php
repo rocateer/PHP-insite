@@ -101,7 +101,7 @@
 <div class="modal_slide modal_slide_info">
     <div>
         <b>입금 안내</b>
-        <div class="f_right"><img src="/images/head_btn_close_w.png" class="w_24" onclick="javascript:modal_close('info')"></div>
+        <div class="f_right"><img src="/images/head_btn_close_w.png" class="w_24" onclick="javascript:modal_close_slide('info')"></div>
     </div>
     <div class="mt20">
      <img src="/p_images/s8.jpg" class="w_100p">

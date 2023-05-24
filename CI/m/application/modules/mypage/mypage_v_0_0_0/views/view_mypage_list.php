@@ -66,7 +66,7 @@
       <a href="/<?= mapping('my_recruit') ?>">구인구직 관리</a>
     </li>
     <li>
-      <a href="/<?= mapping('faq') ?>">신청내역</a>
+      <a href="/<?= mapping('my_order') ?>">신청내역</a>
     </li>
     <li>
       직종 재인증 <img src="/images/ic_result_success.png" alt="인증완료" class="w_16 middle ml10">

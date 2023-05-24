@@ -18,18 +18,6 @@
 .search_list ul li .btn_close{ width: 16px; float:right; position: absolute; right: 20px; z-index: 10;}
 
 
-.trade_list_body{overflow: hidden; margin-top: 13px;}
-.trade_list_body .trade_list_item{overflow: hidden; box-sizing: border-box;}
-.trade_list_body .trade_list_item .trade_list_title{font-size: 14px; color:#fff;}
-.trade_list_body .trade_list_item .trade_list_price{font-size: 16px; color:#fff; font-family: 'font-b'; margin-top: 15px;}
-.trade_list_body .trade_list_item .trade_state{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #164740; float: right;}
-.trade_list_body .trade_list_item .trade_state_end{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #444; float: right;}
-.trade_list_body .trade_list_item .trade_list_con{color: #A0A0A0; white-space: normal; overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.2;}
-.trade_list_body .thum_img{float: left; width:94px; height: 94px; margin-right: 20px; }
-.trade_list_body .thum_img .img_box{width:94px; height: 94px; border-radius: 5px;}
-.trade_action_area span{color:#636363; margin-right: 20px; font-size: 12px;}
-.trade_action_area img{width:16px; margin-right: 4px; vertical-align: middle;}
-
 
 /* 탈퇴 */
 .member_out_body{ padding-top: 50px; min-height: 100%;}
