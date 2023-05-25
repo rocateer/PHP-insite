@@ -42,4 +42,14 @@ public function order_edu_detail(){
   $this->_view(mapping('my_order').'/view_order_edu_detail');
 }
 
+//문의 내역
+public function order_qa_list(){
+  $this->_view(mapping('my_order').'/view_order_qa_list');
+}
+
+//문의 상세
+public function order_qa_detail(){
+  $this->_view(mapping('my_order').'/view_order_qa_detail');
+}
+
 }// 클래스의 끝

@@ -13,7 +13,7 @@
   <div class="my_order_title mt30">공동구매</div>
   <ul class="product_list">
     <li>
-      <a href="/<?=mapping('my_order')?>/product_order_detail">
+      <a href="/<?=mapping('my_order')?>/order_product_detail">
         <div class="img_box relative">
             <img src="/p_images/s3.jpg">
         </div>
@@ -32,9 +32,9 @@
   <ul class="product_list">
     <li>
     <span class="mark">삿시</span>
-      <a href="/<?=mapping('my_order')?>/product_order_detail">
+      <a href="/<?=mapping('my_order')?>/order_edu_detail">
         <div class="img_box relative">
-            <img src="/p_images/s3.jpg">
+            <img src="/p_images/s2.jpg">
         </div>
         <div class="product_list_body">
           <p class="product_list_title">23SS 꼼데가르송 컨버스 척테일러 1</p>
@@ -49,12 +49,12 @@
 
   <div class="inner_wrap">
     <h3 class="mt30">
-      <a href="#">최근 Q&A 문의내역 <span class="f_right"><img src="/images/btn_more.png" class="w_24"></span></a>
+      <a href="/<?=mapping('my_order')?>/order_qa_list">최근 Q&A 문의내역 <span class="f_right"><img src="/images/btn_more.png" class="w_24"></span></a>
     </h3>
 
     <ul class="order_qa_list mt30">
       <li>
-        <a href="/<?=mapping('my_order')?>/product_order_detail">
+        <a href="/<?=mapping('my_order')?>/order_qa_detail">
           <div class="row">
             <div class="thum_img">
               <div class="img_box"><img src="/p_images/s1.jpg"></div>
@@ -71,7 +71,7 @@
         </a>
       </li>
       <li>
-        <a href="/<?=mapping('my_order')?>/product_order_detail">
+        <a href="/<?=mapping('my_order')?>/order_qa_detail">
           <div class="row">
             <div class="thum_img">
               <div class="img_box"><img src="/p_images/s4.jpg"></div>
@@ -88,7 +88,7 @@
         </a>
       </li>
       <li>
-        <a href="/<?=mapping('my_order')?>/product_order_detail">
+        <a href="/<?=mapping('my_order')?>/order_qa_detail">
           <div class="row">
             <div class="thum_img">
               <div class="img_box"><img src="/p_images/s2.jpg"></div>

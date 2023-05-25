@@ -221,6 +221,7 @@
 .product_view_box .product_view_img .img_box{ width:123px; height: 123px; border-radius: 5px 0 0 5px;}
 .product_view_box .product_view_info{float: left; padding: 15px; width: calc(100% - 123px); box-sizing: border-box;}
 .product_view_box .txt_title{overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.4;}
+.product_view_box .mark{position: absolute; left:10px; top:10px; z-index: 2;}
 .account_box{background: #232527; border-radius: 5px; padding: 20px;}
 .account_box .ic_copy{width:16px; vertical-align: middle; margin-top: -3px;}
 .detail_state_bar{background: #164740; padding: 10px 20px; overflow: hidden;}

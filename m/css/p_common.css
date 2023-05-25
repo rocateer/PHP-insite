@@ -36,10 +36,12 @@ body{background:#121212;}
 
 body,th,td,input,select,textarea,button, div, span, label {font-family:"font-r", sans-serif; font-size:14px; color:#F5F5F5; line-height: 1.4;}
 input[type=password] {font-family:'Malgun gothic', dotum, sans-serif;}
+
 /* 대표 컬러 설정 */
 .point_color{color:#20BFA9 !important;}
 .txt_red{color:#E54524 !important;}
 .sub_color{color:#F68582}
+.main_bg{background: #121212;}
 
 /* 폰트 */
 .b{font-weight:bold;} 
