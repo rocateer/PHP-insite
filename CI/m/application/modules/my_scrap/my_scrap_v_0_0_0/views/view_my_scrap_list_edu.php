@@ -1,6 +1,6 @@
 <header>
 	<div class="main_header">
-    <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
+    <a class="btn_left" href="/<?=mapping('mypage')?>"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
     <h1 class="head_title">스크랩</h1>
 	</div>
 </header>
@@ -13,11 +13,11 @@
   <li class="active"><a href="/<?=mapping('my_scrap')?>/scrap_list_edu">교육</a></li>
 </ul>
 
-<div class="search_list">
+
   <div class="no_data_box" style="display:none;">검색 결과가 없습니다. <br> 다시 검색해 주세요.</div>
   <ul class="product_list" style="display:none1;">
     <li>
-      <img class="btn_close pdt20" src="/images/head_btn_close.png" alt="">
+      <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
       <div class="img_box relative">
         <a href="/<?=mapping('product')?>/product_detail">
           <img src="/p_images/s6.jpg">
@@ -34,7 +34,7 @@
       </a>
     </li>
     <li>
-      <img class="btn_close pdt20" src="/images/head_btn_close.png" alt="">
+      <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
       <div class="img_box relative">
         <a href="/<?=mapping('product')?>/product_detail">
           <img src="/p_images/s9.jpg">
@@ -51,7 +51,7 @@
       </a>
     </li>
     <li> 
-      <img class="btn_close pdt20" src="/images/head_btn_close.png" alt="">
+      <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
       <div class="img_box relative">
         <a href="/<?=mapping('product')?>/product_detail">
           <img src="/p_images/s3.jpg">
@@ -69,14 +69,4 @@
     </li>
    
   </ul>
-</div>
 
-<script>
-  $( '.search_cnt span' ).click( function() {
-    $(this).toggleClass("on");
-  } );
-
-  $( '.img_box .scrap' ).click( function() {
-    $(this).toggleClass("on");
-  } );
-</script>

@@ -1,5 +1,5 @@
 <header>
-  <div class="btn_left"><img src="/images/head_btn_back.png" alt=""></div>
+  <a class="btn_left" href="javascript:history.go(-1)"><img src="/images/head_btn_back.png" alt=""></a>
   <h1>인기</h1>
 </header>
 <div class="body">
@@ -20,15 +20,17 @@
           <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
         </div>
       </div>
-      <div class="community_list_body">
-        <div class="thum_img">
-          <div class="img_box"><img src="/p_images/s3.jpg"></div>
+      <a href="/<?=mapping('community')?>/community_detail">
+        <div class="community_list_body">
+          <div class="thum_img">
+            <div class="img_box"><img src="/p_images/s3.jpg"></div>
+          </div>
+          <div class="community_list_item">
+            <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
+            <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+          </div>
         </div>
-        <div class="community_list_item">
-          <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
-          <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
-        </div>
-      </div>
+      </a>
       <div class="community_action_area mt15"> 
         <span><img src="/images/ic_board_heart_off.png">150</span>
         <span><img src="/images/ic_board_chat.png">10</span>

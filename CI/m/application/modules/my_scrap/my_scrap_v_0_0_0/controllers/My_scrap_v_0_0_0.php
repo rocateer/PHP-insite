@@ -40,7 +40,7 @@ class My_scrap_v_0_0_0 extends MY_Controller{
   }
 
   public function scrap_list_edu(){
-		$this->_view(mapping('my_scrap').'/view_my_scrap_list_study');
+		$this->_view(mapping('my_scrap').'/view_my_scrap_list_edu');
   }
 
 }// 클래스의 끝

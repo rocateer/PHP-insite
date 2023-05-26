@@ -261,7 +261,7 @@
 .box_line{border: 1px solid #444; border-radius: 5px; padding: 25px 20px;}
 
 /* order */
-.my_order_title{padding: 10px 20px;}
+.my_order_title{padding: 10px 20px; background: #232527;}
 .order_qa_list{overflow: hidden;}
 .order_qa_list li{overflow: hidden; padding-bottom: 30px; box-sizing: border-box;}
 .order_qa_list .thum_img{float: left; width:60px; height:60px; margin-right:20px; }

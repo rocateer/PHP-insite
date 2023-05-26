@@ -1,6 +1,6 @@
 <header>
 	<div class="main_header">
-    <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
+    <a class="btn_left" href="/<?=mapping('mypage')?>"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
     <h1 class="head_title">스크랩</h1>
 	</div>
 </header>

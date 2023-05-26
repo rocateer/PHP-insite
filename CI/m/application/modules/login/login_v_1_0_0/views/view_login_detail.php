@@ -13,7 +13,7 @@
 
     
     <div class="btn_space mt30">
-      <a href="#" class="btn_point btn_full_basic">로그인</a>
+      <a href="/<?=mapping('main')?>" class="btn_point btn_full_basic">로그인</a>
     </div>
 
     <div class="login_find_ul">

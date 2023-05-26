@@ -1,6 +1,6 @@
 <!-- header : s -->
 <header>
-  <a class="btn_back" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
+  <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
   <h1>아이디 찾기</h1>
 </header>
 

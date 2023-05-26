@@ -283,11 +283,7 @@ function cmt_btn_like(element){
       $(element).addClass("on");
     }
   }
-  var swiper = new Swiper(".community_swiper", {
-    pagination: {
-      el: ".community_swiper .swiper-pagination",
-    },
-  });
+
 
 
   function idx(idx){

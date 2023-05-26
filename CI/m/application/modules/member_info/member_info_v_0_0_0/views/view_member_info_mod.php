@@ -3,8 +3,8 @@
   <h1>내 정보 수정</h1>
   <!-- <span class="head_txt"><a href="#">등록</a></span> -->
 </header>
-<div class="body relative">
-  <div class="inner_wrap">
+<div class="vh_wrap relative">
+  <div class="inner_wrap vh_body">
     <div class="box_line mt30">
       <table class="table_info">
         <tr>
@@ -34,15 +34,21 @@
         </li>
     </ul>
 
-    <p>마케팅 활용동의 및 광고 수신 동의</p>
-    <div class="mt10">
-      <input type="checkbox" name="checkOne" id="marketing_agree_yn" value="Y" >
-      <label for="marketing_agree_yn"><span></span>이메일 수신에 동의합니다.</label>
+    <div class="vh_footer">
+
+      <p>마케팅 활용동의 및 광고 수신 동의</p>
+      <div class="mt10">
+        <input type="checkbox" name="checkOne" id="marketing_agree_yn" value="Y" >
+        <label for="marketing_agree_yn"><span></span>이메일 수신에 동의합니다.</label>
+      </div>
+
+      <div class="mt30 mb30">
+        <a href="#" class="btn_point btn_full_basic">수정하기</a>
+      </div>
+
     </div>
 
-    <div class="mt30">
-      <a href="#" class="btn_point btn_full_basic">수정하기</a>
-    </div>
+    
 
     
     
