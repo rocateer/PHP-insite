@@ -46,8 +46,8 @@
   </div>
   
   <div class="btn_floating">
-    <!-- <a href="javascript:void(0)" onclick="modal_open_slide('amount')" class="btn_point">구매하기</a> -->
-    <a href="javascript:void(0)" onclick="modal_open_slide('cancel')" class="btn_point">구매 취소 신청</a>
+    <a href="javascript:void(0)" onclick="modal_open_slide('amount')" class="btn_point">구매하기</a>
+    <!-- <a href="javascript:void(0)" onclick="modal_open_slide('cancel')" class="btn_point">구매 취소 신청</a> -->
     <!-- <a href="javascript:void(0)" onclick="modal_open_slide('amount')" class="btn_disabled">마감되었어요</a> -->
   </div>
 

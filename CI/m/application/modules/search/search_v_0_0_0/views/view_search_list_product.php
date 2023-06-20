@@ -16,7 +16,7 @@
 <div class="search_list">
   <div class="search_cnt mt30">
     검색 결과 <span class="point_color">8</span>
-    <p class="f_right on ease"> 진행중만 보기</p>
+    <p class="f_right ease"> 진행중만 보기</p>
   </div>
   <div class="no_data_box" style="display:none;">검색 결과가 없습니다. <br> 다시 검색해 주세요.</div>
   <ul class="product_list mt20" style="display:none1;">
