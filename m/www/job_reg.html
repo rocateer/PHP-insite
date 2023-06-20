@@ -1,0 +1,485 @@
+<html lang="kor"><head>
+	<title>인사이트</title>
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!--메타 : 메타 태그만 사용-->
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p_common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+	<link rel="stylesheet" href="/external_css/swiper-bundle.min.css">
+
+	<!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
+	<link rel="stylesheet" href="/external_css/outside.css">
+
+	<!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+
+	<!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+	<script src="/external_js/swiper.jquery.js"></script>
+	<script src="/external_js/swiper-bundle.min.js"></script>
+	<script src="/external_js/pinch-zoom.js"></script>
+
+
+  <!-- wrap : s -->
+  <div class="wrap">
+
+    <header>
+      <div class="inner_wrap">
+          <div class="header_top">
+              <a class="header_logo">INSITE</a>
+              <div class="header_search">
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <a href="search_list_community.html"><img src="images/ic_search.png" class="btn"></a>
+              </div>
+              <ul class="util_menu">
+                <li><a href="login.html" class="btn_gray_ghost">로그인</a></li>
+                <li><a href="my_community.html" class="btn_gray_ghost">MY</a></li>
+                <li><a href="join.html" class="btn_point">회원가입</a></li>
+                <li><a href="reg_select.html" class="btn_point">글쓰기</a></li>
+              </ul>
+          </div>
+          <ul class="gnb row">
+              <li><a href="main.html">홈</a></li>
+              <li><a href="trade_list.html">중고거래</a></li>
+              <li><a href="human_list.html">구인구직</a></li>
+              <li><a href="product_list.html">공동구매</a></li>
+              <li><a href="edu_list.html">교육</a></li>
+          </ul>
+      </div>
+    </header>
+
+    <div class="body">
+      <div class="inner_mid_wrap row">
+        <h1 class="title">구인공고</h1>
+
+        <div class="row">
+            <div class="w_400 f_left">
+                <ul class="input_ui row">
+                    <li>
+                      <label>회사 또는 팀 이름<span class="essential">*</span></label>
+                      <input type="text" id="" name="" placeholder="회사명 또는 팀명을 입력해 주세요.">
+                    </li>
+                </ul>
+            </div>
+            <div class="w_400 f_right">
+              <ul class="input_ui row">
+                  <li>
+                    <label>담당자 연락처<span class="essential">*</span></label>
+                    <input type="text" id="" name="" placeholder="">
+                  </li>
+              </ul>
+          </div>
+        </div>
+
+        <hr class="space mt50">
+
+        <div class="fs_16 txt_bold mt70">모집내용</div>
+
+        <div class="row mt30">
+            <div class="w_400 f_left">
+                <ul class="input_ui row">
+                    <li>
+                      <label>마감일<span class="essential">*</span></label>
+                      <select>
+                        <option>마감일 선택</option>
+                      </select>
+                      <input type="text" id="" name="" class="input_calendar" placeholder="이름을 입력해 주세요.">
+                    </li>
+                    <li>
+                      <label>
+                          지역선택<span class="essential">*</span>
+                          <a href="javascript:void(0)" onclick="modal_open('region')" class="f_right essential">근무지역 선택</a>
+                      </label>
+                      <input type="text" class="input_dark mt5" id="work_confirm_idx" name="work_confirm_idx" placeholder="주로 활동하는 지역을 선택해주세요.">
+                  </li>
+                  <li>
+                    <label>성별<span class="f_right"><img src="images/ic_info.png" class="i_16" onclick="modal_open('info_gender')"></span></label>
+                    <select>
+                      <option>선택안함</option>
+                    </select>
+                  </li>
+                  <li>
+                    <label>연령<span class="f_right"><img src="images/ic_info.png" class="i_16" onclick="modal_open('info_age')"></span></label>
+                    <select>
+                      <option>연령제한</option>
+                    </select>
+                    <div class="flex_between">
+                      <div class="w_half relative">
+                        <span class="input_right_txt">이상</span>
+                        <input type="text" name="" id="">
+                      </div>
+                      <div class="w_half relative">
+                        <span class="input_right_txt">이하</span>
+                        <input type="text" name="" id="">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="w_400 f_right">
+                <ul class="input_ui row">
+                    <li>
+                        <label>모집분야<span class="essential">*</span></label>
+                        <select>
+                          <option>장판</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>경력</label>
+                        <select>
+                          <option>경력</option>
+                        </select>
+                        <select>
+                          <option>1년미만</option>
+                          <option>1년 이상 ~ 3년 미만</option>
+                          <option>3년 이상 ~ 5년 미만</option>
+                        </select>
+                    </li>
+                    <li>
+                      <label>급여<span class="essential">*</span></label>
+                      <div class="flex_between">
+                        <div class="w_half relative">
+                          <select>
+                            <option>일급</option>
+                          </select>
+                        </div>
+                        <div class="w_half relative">
+                          <span class="input_right_txt">만원</span>
+                          <input type="text" name="" id="">
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="space mt40">
+        <div class="row mt70">
+
+          <ul class="input_ui row">
+            <li>
+              <label>제목<span class="essential">*</span></label>
+              <input type="text" id="" name="" placeholder="">
+            </li>
+            <li>
+              <label>상세내용<span class="essential">*</span></label>
+              <textarea></textarea>
+            </li>
+            <li>
+              <label>사진</label>
+              <div class="x_scroll_img_reg mt20">
+                <ul class="img_reg_ul pdl20" id="">
+                  <li>
+                    <div class="cnt_num"><span class="point_color">1</span>/10</div>
+                    <div class="img_box">
+                      <img src="images/img_add.png" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <img src="images/btn_sm_delete.png" alt="x" class="btn_delete">
+                    <div class="img_box">
+                      <img src="p_images/s7.jpg" alt="">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+        </ul>
+
+        </div>
+
+        <div class="mt50 w_300 center">
+            <a href="#" class="btn_point btn_full_basic">등록</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- modal 지역선택 : s-->
+    <div class="modal modal_region">
+      <ul class="area_title">
+        <li>지역구분</li>
+        <li>시 · 군 · 구</li>
+      </ul>
+      <div class="region_ui">
+        <ul class="area_item_1">
+          <li class="">서울 동부</li>
+          <li class="">서울 서부</li>
+          <li>서울 남부</li>
+          <li class="">서울 북부</li>
+          <li class="">경기 동부</li>
+          <li>경기 서부</li>
+          <li class="active">경기 남부</li>
+          <li>경기 북부</li>
+          <li>충청북도</li>
+          <li>충청남도</li>
+          <li>강원도</li>
+          <li>전라북도</li>
+          <li>전라남도</li>
+          <li>경상북도</li>
+          <li>경상남도</li>
+          <li>제주도</li>
+          <li>부산</li>
+          <li>대구</li>
+          <li>인천</li>
+          <li>광주</li>
+          <li>대전</li>
+          <li>울산</li>
+          <li>세종</li>
+        </ul>
+        <ul class="area_item_2" name="region_idx" id="region_idx">
+          <li value="3111" onclick="region_func(this)">과천</li>
+          <li value="3117" onclick="region_func(this)">의왕</li>
+          <li value="3102" onclick="region_func(this)">성남</li>
+          <li value="3101" onclick="region_func(this)">수원</li>
+          <li value="3119" onclick="region_func(this)">용인</li>
+          <li value="3114" onclick="region_func(this)">오산</li>
+          <li value="3124" onclick="region_func(this)">화성</li>
+          <li value="3107" onclick="region_func(this)">평택</li>
+          <li value="3122" onclick="region_func(this)">안성</li>
+        </ul>
+      </div>
+      <a href="#" class="btn">선택</a>
+    </div>
+    <div class="md_overlay md_overlay_region" onclick="modal_close('region')"></div>
+    <!-- modal 지역선택 : e-->
+
+    <!-- modal 성별 안내 : s-->
+    <div class="modal modal_info_gender">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('info_gender')">
+      <div class="md_container">
+        <div class="md_title">성별차별금지 안내</div>
+        <div class="md_terms_wrap mt30">
+          성별차별금지 안내 에디터가 들어가는 자리 입니다.
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_info_gender" onclick="modal_close('info_gender')"></div>
+    <!-- modal 성별 안내 : e-->
+
+    <!-- modal 연령 안내 : s-->
+    <div class="modal modal_info_age">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('info_age')">
+      <div class="md_container">
+        <div class="md_title">연령차별금지 안내</div>
+        <div class="md_terms_wrap mt30">
+          연령차별금지 안내 에디터가 들어가는 자리 입니다.
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_info_age" onclick="modal_close('info_age')"></div>
+    <!-- modal 연령 안내 : e-->
+
+    <!-- modal 직종 인증 : s-->
+    <div class="modal modal_md modal_certification">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('certification')">
+      <div class="md_container">
+        <div class="md_title">직종 인증</div>
+        <div class="md_inner_wrap mt30">
+          내 직종을 인증하세요!<br>
+          나와 같은 직종에서 일하는 사람들과 공유할 수 있어요.
+          <ul class="input_ui row mt50">
+            <li>
+                <label>직종 선택<span class="essential">*</span></label>
+                <p class="fs_12 font_gray_a0">현재 일하고 계신 직종을 선택해 주세요. 기타 직종은 '일반'</p>
+                <select>
+                  <option>직종을 선택해 주세요.</option>
+                </select>
+            </li>
+            <li>
+              <label>인증<span class="essential">*</span> <img src="images/ic_info.png" class="f_right i_16" onclick="modal_open('info')"></label>
+              <p class="fs_12 font_gray_a0">명함 또는 현장 사진을 첨부해 주세요.</p>
+              <div class="btn_w_reg relative mt20">
+                <p class="cnt_num"><span>1</span>/2</p>
+                <a href="#"><img src="images/img_w_add.png" class="w_100p"></a>
+              </div>
+              <ul class="img_w_reg_ul">
+                <li>
+                  <img src="images/btn_sm_delete.png" alt="x" class="btn_delete">
+                  <div class="img_box">
+                    <img src="p_images/s8.jpg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <img src="images/btn_sm_delete.png" alt="x" class="btn_delete">
+                  <div class="img_box">
+                    <img src="p_images/s9.jpg" alt="">
+                  </div>
+                </li>
+              </ul>
+          </li>
+        </ul>
+        </div>
+        <a href="#" class="btn_point btn_full_basic mt30">인증 신청</a>
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_certification" onclick="modal_close('certification')"></div>
+    <!-- modal 직종 인증 : e-->
+
+    <!-- modal 인증 안내 : s-->
+    <div class="modal modal_md modal_info" style="z-index:200;">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('info')">
+      <div class="md_container">
+        <div class="md_title">인증 안내</div>
+
+        <div id="edit" class="md_inner_wrap mt30">
+          <img src="p_images/s7.jpg" alt="">
+        </div>
+
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_info" onclick="modal_close('info')" style="z-index:199;"></div>
+    <!-- modal 인증 안내 : e-->
+
+
+    <script type="text/javascript">
+
+        // 가입하기
+        function default_reg_in(){
+          var selected_idx = get_checkbox_value('checkOne');
+
+          if(selected_idx !="Y,Y,Y" && selected_idx !="Y,Y"){
+            alert("필수 약관 동의에 체크해주세요.");
+            return  false;
+          }
+
+          var member_name = $("#member_name").val();
+          var member_nickname = $("#member_nickname").val();
+          var region_code = $("#region_code").val();
+          var marketing_agree_yn = $("input[id='marketing_agree_yn']:checked").val();
+
+          var formData = {
+            'member_name' :  member_name,
+            'member_nickname' :  member_nickname,
+            'region_code' : region_code,
+            'marketing_agree_yn' : marketing_agree_yn
+          };
+
+          $.ajax({
+            url      : "/<?=mapping('join')?>/join_reg_in2",
+            type     : 'POST',
+            dataType : 'json',
+            async    : true,
+            data     : formData,
+            success: function(result){
+              if(result.code == '-1'){
+
+                alert(result.code_msg);
+                $("#"+result.focus_id).focus();
+                return;
+              }
+              // 0:실패 1:성공
+              if(result.code == 0) {
+                alert(result.code_msg);
+              }else{
+                sessionStorage.member_name = member_name;
+                sessionStorage.member_nickname = member_nickname;
+                sessionStorage.region_code = region_code;
+                sessionStorage.marketing_agree_yn = marketing_agree_yn;
+
+                location.href = "/<?=mapping('join')?>/join_reg3";
+              }
+            }
+          });
+        }
+
+        //시,구,군 가져오기
+        var region_list = function(city_name) {
+
+        $.ajax({
+          url: "/common/region_list",
+          type: 'POST',
+          dataType: 'json',
+          async: true,
+          data: {
+              "city_name" : city_name
+          },
+          success: function(dom){
+            var selectStr = "";
+            var func = "onclick='region_func(this)'";
+
+            $('#region_idx').html("");
+            if(dom.length != 0) {
+              for(var i = 0; i < dom.length; i ++) {
+                selectStr += "<li value='"+ dom[i].region_code  + "' "+func+">" + dom[i].region_name + "</li>";
+              }
+              $('#region_idx').append(selectStr);
+            }
+          }
+        });
+        }
+
+        //시도 선택시
+        $('.area_item_1 li').click(function(){
+              $('.area_item_1 li').removeClass( 'active' );
+              $(this).addClass( 'active' );
+              $("#city_name").val($(this).text());
+              region_list($(this).text());
+        })
+
+        //시군구 선택시
+        function region_func(element){
+            $('.area_item_2 li').removeClass( 'active' );
+            element.classList.add("active");
+            $('#region_code').val(element.value);
+            $('#region_name').val(element.innerHTML);
+        }
+
+        //근무지역선택
+        function region_reg(){
+            var region_name = $("#region_name").val();
+            var city_name = $("#city_name").val();
+            var region_full_name = city_name+' > '+region_name;
+
+            if(region_name==''||city_name==''){
+              alert("근무 지역을 선택해주세요.");
+              return;
+            }
+
+            $('#region_full_name').val(region_full_name);
+            modal_close('region')
+        }
+
+        </script>
+
+    <!-- footer : s -->
+    <footer>
+      <div class="inner_wrap row">
+				<ul class="footer_menu">
+          <li><a href="notice_list.html">공지사항</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="qa_list.html">1:1문의</a></li>
+          <li><a href="terms.html">서비스 이용약관</a></li>
+          <li><a href="terms.html">개인정보 취급방침</a></li>
+          <li><a href="terms.html">사업자정보확인</a></li>
+        </ul>
+        <div>
+          대표이사 인사이<span class="txt_line">|</span>서울특별시 금천구 가산디지털1로<span class="txt_line">|</span>사업자등록번호 5124-2356-23<span class="txt_line">|</span>통신판매업신고 제 2023-서울강남-169호<br>
+          개인정보관리책임자 김대표<span class="txt_line">|</span>제휴문의 email@email.com<span class="txt_line">|</span>고객문의 help@email.com
+        </div>
+        <p>Copyright ⓒ 2023 All Rights Reserved</p>
+      </div>
+
+    </footer>
+    <!-- footer : s -->
+
+  </div>
+  <!-- wrap : e -->
+
+
+
+</body>
+</html>

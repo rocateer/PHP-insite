@@ -1,0 +1,336 @@
+<html lang="kor"><head>
+	<title>인사이트</title>
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!--메타 : 메타 태그만 사용-->
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p_common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+	<link rel="stylesheet" href="external_css/swiper-bundle.min.css">
+
+	<!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
+	<link rel="stylesheet" href="external_css/outside.css">
+
+	<!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+
+	<!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+	<script src="external_js/swiper.jquery.js"></script>
+	<script src="external_js/swiper-bundle.min.js"></script>
+	<script src="external_js/pinch-zoom.js"></script>
+
+
+  <!-- wrap : s -->
+  <div class="wrap">
+    <header>
+        <div class="inner_wrap">
+            <div class="header_top">
+                <a class="header_logo">INSITE</a>
+                <div class="header_search">
+                  <input type="text" placeholder="검색어를 입력하세요.">
+                  <a href="search_list_community.html"><img src="images/ic_search.png" class="btn"></a>
+                </div>
+                <ul class="util_menu">
+                  <li><a href="login.html" class="btn_gray_ghost">로그인</a></li>
+                  <li><a href="my_community.html" class="btn_gray_ghost">MY</a></li>
+                  <li><a href="join.html" class="btn_point">회원가입</a></li>
+                  <li><a href="reg_select.html" class="btn_point">글쓰기</a></li>
+                </ul>
+            </div>
+            <ul class="gnb row">
+                <li><a href="main.html">홈</a></li>
+                <li><a href="trade_list.html">중고거래</a></li>
+                <li><a href="human_list.html">구인구직</a></li>
+                <li><a href="product_list.html">공동구매</a></li>
+                <li><a href="edu_list.html">교육</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="sticky_body">
+      <!-- right area : s -->
+      <div class="right_sticky_wrap mt50">
+        
+        <div class="sticky_box">
+          <!-- 상태 : 디폴트 -->
+          <p class="txt_h_1">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 BLACK</p>
+          <hr class="mt20">
+          <ul class="ul_info mt10">
+            <li>공동구매 가<span>85,200원</span></li>
+            <li>수량<span>2개</span></li>
+          </ul>
+          <hr class="mt10">
+          <div class="sticky_bottom">
+            <p class="txt_price_wrap">최종 공동구매 <span>175,200원</span></p>
+            <a href="javascript:void(0)" class="btn_point btn_full_thin mt20" onclick="modal_open('complete')">신청하기</a>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- right area : e -->
+      <div class="inner_wrap">
+
+        <div class="body_detail">
+          <table class="table_board mt30">
+            <colgroup>
+              <col width="120">
+              <col width="*">
+              <col width="70">
+              <col width="140">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th>상품명</th>
+                <th>수량</th>
+                <th>가격</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td class="td_center">
+                    <div class="app_product_img">
+                      <div class="img_box"><img src="p_images/s3.jpg"></div>
+                    </div>
+                  </td>
+                  <td><a href="#">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 BLACK</a></td>
+                  <td class="td_center">2</td>
+                  <td class="td_center">140,500원</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h5 class="mt100">배송정보</h5>
+
+          <table class="table_board_view mt30">
+              <colgroup>
+                <col width="120">
+                <col width="*">
+              </colgroup>
+              <tr>
+                  <th>받는분<span class="essential">*</span></th>
+                  <td><div class="w_500"><input type="text" id="" name="" value="홍길동" placeholder=""></div></td>
+              </tr>
+              <tr>
+                <th>연락처<span class="essential">*</span></th>
+                <td><div class="w_500"><input type="text" id="" name="" value="01024518956" placeholder=""></div></td>
+              </tr>
+              <tr>
+                <th>배송지<span class="essential">*</span></th>
+                <td>
+                  <div class="w_500">
+                    <div class="flex_1">
+                      <input type="text" id="address" name="address" placeholder="">
+                      <a href="#">주소 검색</a>
+                    </div>
+                    <input type="text" id="address" name="address" placeholder="">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>예금주명<span class="essential">*</span></th>
+                <td>
+                  <div class="w_500">
+                    <input type="text" id="" name="" value="" placeholder="송금하실 계좌의 예금주명을 입력해 주세요.">
+                    <p class="mt14 fs_12 font_gray_a0">빠른 입금 확인을 위해 예금주명과 연락처 뒤 4자리를 입력하여 입금해 주세요.</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>현금영수증</th>
+                <td>
+                  <div class="w_500">
+                    <input type="text" id="" name="" value="" placeholder="">
+                    <p class="mt14 fs_12 font_gray_a0">현금영수증 발급을 원하시는 경우, 휴대폰번호 또는 현금영수증 전용 카드 번호를 입력해주세요.</p>
+                  </div>
+                </td>
+              </tr>
+          </table>
+
+          <h5 class="mt100">환불 계좌 정보</h5>
+
+          <table class="table_board_view mt30">
+              <colgroup>
+                <col width="120">
+                <col width="*">
+              </colgroup>
+              <tr>
+                  <th>은행<span class="essential">*</span></th>
+                  <td>
+                    <div class="w_400">
+                      <select>
+                        <option>은행을 선택해 주세요.</option>
+                      </select>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <th>예금주명<span class="essential">*</span></th>
+                <td><div class="w_400"><input type="text" id="" name="" value="" placeholder=""></div></td>
+              </tr>
+              
+              <tr>
+                <th>계좌번호<span class="essential">*</span></th>
+                <td><div class="w_400"><input type="text" id="" name="" value="" placeholder=""></div></td>
+              </tr>
+          </table>
+
+          <h5 class="mt100">
+            입금 계좌 
+            <span class="f_right fs_16 font_gray_a0"><img src="images/ic_info.png" class="i_24" onclick="modal_open('info')"> 입금 안내</span>
+          </h5>
+
+          <table class="table_board_view mt30">
+            <tr>
+                <td>
+                  <div class="box_gray">
+                    <table class="table_info">
+                      <colgroup>
+                        <col width="120">
+                        <col width="*">
+                      </colgroup>
+                      <tr>
+                        <th>예금주명</th>
+                        <td>인사이트</td>
+                      </tr>
+                      <tr>
+                        <th>은행</th>
+                        <td>국민은행</td>
+                      </tr>
+                      <tr>
+                        <th>계좌번호</th>
+                        <td>512-02-153585</td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+            </tr>
+          </table>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <!-- modal 문의하기 : s-->
+    <div class="modal modal_md modal_qa_reg">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('qa_reg')">
+      <div class="md_container">
+        <div class="md_title">공동구매 문의</div>
+        <div class="mt20 txt_h_1">
+          공동구매와 관련 없는 문의는 1:1 문의를 이용해주세요.<br>작성하신 문의는 <br><span class="txt_bold">MY > 공구/교육 관리</span>“에서 확인 할 수 있습니다.</div>
+        <div class="scrollbar mt30">
+            <ul class="input_ui row">
+              <li>
+                <label>문의 내용<span class="essential">*</span></label>
+                <textarea></textarea>
+              </li>
+              <li>
+                <input type="checkbox" name="check" id="only_check" value="Y">
+                <label for="only_check"><span></span>나만 보기</label>
+              </li>
+            </ul>
+        </div>
+				<div class="mt10 mb10 center">
+						<a href="#" class="btn_point btn_full_basic">등록</a>
+				</div>
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_qa_reg" onclick="modal_close('qa_reg')"></div>
+    <!-- modal 문의하기 : e-->
+
+    <!-- modal 입금 안내 : s-->
+    <div class="modal modal_md modal_info">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('info')">
+      <div class="md_container">
+        <div class="md_title">입금 안내</div>
+
+        <div id="edit" class="md_inner_wrap mt30">
+          <img src="p_images/s7.jpg" alt="">
+        </div>
+
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_info" onclick="modal_close('info')"></div>
+    <!-- modal 입금 안내 : e-->
+
+    <!-- modal 공동구매 신청 완료 : s-->
+    <div class="modal modal_md modal_complete">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('complete')">
+      <div class="md_container">
+        <div class="md_title">공동구매 신청 완료</div>
+        <div class="fs_16 mt20 txt_h_1">입금 확인된 후 배송이 진행됩니다.<br>MY > 공구/교육 관리 에서 확인하실 수 있습니다.</div>
+
+        <div class="box_gray mt30">
+          <table class="table_info">
+            <colgroup>
+              <col width="100">
+              <col width="*">
+            </colgroup>
+            <tr>
+              <th>예금주명</th>
+              <td>인사이트</td>
+            </tr>
+            <tr>
+              <th>은행</th>
+              <td>국민은행</td>
+            </tr>
+            <tr>
+              <th>계좌번호</th>
+              <td>512-02-153585</td>
+            </tr>
+          </table>
+          <p class="fs_12 red_color">※ 빠른 입금 확인을 위해 예금주명과 연락처 뒤 4자리를<br> 입력하여 입금해 주세요.</p>
+        </div>
+
+        <a href="#" class="btn_point btn_full_basic mt30">확인</a>
+
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_complete" onclick="modal_close('complete')"></div>
+    <!-- modal 공동구매 신청 완료 : e-->
+
+    <!-- footer : s -->
+    <footer>
+      <div class="inner_wrap row">
+				<ul class="footer_menu">
+          <li><a href="notice_list.html">공지사항</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="qa_list.html">1:1문의</a></li>
+          <li><a href="terms.html">서비스 이용약관</a></li>
+          <li><a href="terms.html">개인정보 취급방침</a></li>
+          <li><a href="terms.html">사업자정보확인</a></li>
+        </ul>
+        <div>
+          대표이사 인사이<span class="txt_line">|</span>서울특별시 금천구 가산디지털1로<span class="txt_line">|</span>사업자등록번호 5124-2356-23<span class="txt_line">|</span>통신판매업신고 제 2023-서울강남-169호<br>
+          개인정보관리책임자 김대표<span class="txt_line">|</span>제휴문의 email@email.com<span class="txt_line">|</span>고객문의 help@email.com
+        </div>
+        <p>Copyright ⓒ 2023 All Rights Reserved</p>
+      </div>
+
+    </footer>
+    <!-- footer : s -->
+
+  </div>
+  <!-- wrap : e -->
+
+  <script>
+
+
+
+  </script>
+
+</body>
+</html>

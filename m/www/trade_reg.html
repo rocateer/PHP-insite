@@ -1,0 +1,169 @@
+<html lang="kor"><head>
+	<title>인사이트</title>
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!--메타 : 메타 태그만 사용-->
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p_common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+	<link rel="stylesheet" href="external_css/swiper-bundle.min.css">
+
+	<!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
+	<link rel="stylesheet" href="external_css/outside.css">
+
+	<!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+
+	<!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+	<script src="external_js/swiper.jquery.js"></script>
+	<script src="external_js/swiper-bundle.min.js"></script>
+	<script src="external_js/pinch-zoom.js"></script>
+
+
+  <!-- wrap : s -->
+  <div class="wrap">
+
+    <header>
+      <div class="inner_wrap">
+          <div class="header_top">
+              <a class="header_logo">INSITE</a>
+              <div class="header_search">
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <a href="search_list_community.html"><img src="images/ic_search.png" class="btn"></a>
+              </div>
+              <ul class="util_menu">
+                <li><a href="login.html" class="btn_gray_ghost">로그인</a></li>
+                <li><a href="my_community.html" class="btn_gray_ghost">MY</a></li>
+                <li><a href="join.html" class="btn_point">회원가입</a></li>
+                <li><a href="reg_select.html" class="btn_point">글쓰기</a></li>
+              </ul>
+          </div>
+          <ul class="gnb row">
+              <li><a href="main.html">홈</a></li>
+              <li><a href="trade_list.html">중고거래</a></li>
+              <li><a href="human_list.html">구인구직</a></li>
+              <li><a href="product_list.html">공동구매</a></li>
+              <li><a href="edu_list.html">교육</a></li>
+          </ul>
+      </div>
+    </header>
+
+    <div class="body">
+        <div class="head_box">
+            <div class="inner_wrap row">
+              <img src="images/ic_cate_4.png">
+              <h1 class="mt20">중고거래</h1>
+              <p>중고거래에서는 자신이 쓰지 않는 물건을 자유롭게 사용자들과 거래하는 공간입니다.</p>
+            </div>
+        </div>
+      <div class="inner_wrap">
+
+        <div class="reg_wrap">
+            <div class="pdlr30">
+                <input type="text" placeholder="제목을 입력하세요.">
+                <input type="text" class="sm" placeholder="연락처를 입력해주세요.">
+                <input type="text" class="sm" placeholder="가격단위 (원)">
+                <div class="reg_row">
+                    <input type="checkbox" name="vote_check" id="vote_check" value="Y">
+                    <label for="vote_check" class="mr100"><span></span>택배</label>
+
+                    <input type="checkbox" name="vote_check" id="vote_check" value="Y">
+                    <label for="vote_check"><span></span>직거래</label>
+
+                    <span class="txt_line">|</span>
+
+                    <input type="text" placeholder="직거래 장소를 입력해 주세요.">
+                </div>
+                <div class="x_scroll_img_reg mt20">
+                  <ul class="img_reg_ul pdl20" id="">
+                    <li>
+                      <div class="cnt_num"><span class="point_color">1</span>/10</div>
+                      <div class="img_box">
+                        <img src="images/img_add.png" alt="">
+                      </div>
+                    </li>
+                    <li>
+                      <img src="images/btn_sm_delete.png" alt="x" class="btn_delete">
+                      <div class="img_box">
+                        <img src="p_images/s7.jpg" alt="">
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <hr class="mt10">
+                <div class="community_reg_wrap mt20 relative">
+                    <p class="place_p">브랜드, 색상, 사용감 등의 자세한 정보를 입력하시면<br> 판매 확률이 높아져요!</p>
+                    <textarea></textarea>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="mt50 w_300 center">
+            <a href="#" class="btn_point btn_full_basic">등록</a>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+    <!-- footer : s -->
+    <footer>
+      <div class="inner_wrap row">
+				<ul class="footer_menu">
+          <li><a href="notice_list.html">공지사항</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="qa_list.html">1:1문의</a></li>
+          <li><a href="terms.html">서비스 이용약관</a></li>
+          <li><a href="terms.html">개인정보 취급방침</a></li>
+          <li><a href="terms.html">사업자정보확인</a></li>
+        </ul>
+        <div>
+          대표이사 인사이<span class="txt_line">|</span>서울특별시 금천구 가산디지털1로<span class="txt_line">|</span>사업자등록번호 5124-2356-23<span class="txt_line">|</span>통신판매업신고 제 2023-서울강남-169호<br>
+          개인정보관리책임자 김대표<span class="txt_line">|</span>제휴문의 email@email.com<span class="txt_line">|</span>고객문의 help@email.com
+        </div>
+        <p>Copyright ⓒ 2023 All Rights Reserved</p>
+      </div>
+
+    </footer>
+    <!-- footer : s -->
+
+  </div>
+  <!-- wrap : e -->
+
+<script>
+
+ // ios placeholder not showing
+ for(var i =0; i < $('.community_reg_wrap textarea').length; i++){
+    if ($('.community_reg_wrap').eq(i).find('textarea').val().length === 0) {
+      $('.community_reg_wrap').eq(i).find('textarea').siblings('.place_p').css('display','block');
+    }else{
+      $('.community_reg_wrap').eq(i).find('textarea').siblings('.place_p').css('display','none');
+    }
+  }
+  $(".community_reg_wrap textarea").on("propertychange change keyup paste input", function(){
+    if ($(this).val().length === 0) {
+      $(this).siblings('.place_p').css('display','block');
+      }else{
+      $(this).siblings('.place_p').css('display','none');
+    };
+  });
+</script>
+
+</body>
+</html>

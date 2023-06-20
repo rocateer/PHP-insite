@@ -1,0 +1,138 @@
+/*
+ *  MEMO : 공통 스타일 파일입니다.
+ * 작성자 : 민지
+ * 작성일 : 2021/03/29.
+*/
+
+/* css 초기화 */
+*{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+*:focus{outline:none;-webkit-touch-callout:none; -webkit-user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none; -webkit-tap-highlight-color:transparent;}
+input,select,textarea,button {font-size:100%;vertical-align:middle}
+button {border:0 none;background-color:transparent;cursor:pointer;outline:none;}
+table {border-collapse:collapse;border-spacing:0;width: 100%;text-align: left; font-weight: normal; }
+body {-webkit-text-size-adjust:none; background:#fff} /* 뷰표트 변환시 폰트크기 자동확대 방지 */
+html{-webkit-text-size-adjust:antialiased;-moz-osx-font-sommthing:grayscale;}
+a{outline: 0;color:inherit;text-decoration:none; border:none; -webkit-tap-highlight-color:transparent;}
+a.inherit{color:inherit;}
+a:active, a:hover {text-decoration:none}
+a[href^=tel] {text-decoration:inherit;color: inherit;}
+input:focus,select:focus,textarea:focus{outline: none;}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-internal-autofill-selected {background: #fff !important; -webkit-box-shadow: 0 0 0 1000px white inset;}
+[onclick]{cursor:pointer;}
+
+/* 퀵 클래스 */
+.row{overflow: hidden;}
+.img_block{width: 100%; display: block;}
+.hide{display: none;}
+.block{display: block!important;}
+.inline_block{display: inline-block;}
+.relative{position: relative;}
+.txt_hidden{text-indent: 100%; white-space: nowrap; overflow: hidden;}
+.txt_overflow{text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.accordion .trigger{cursor: pointer;}
+
+/* layout */
+.wrap{position: relative}
+.m10{margin: 10px;}
+.mt5{margin-top: 5px}
+.mt10{margin-top: 10px}
+.mt14{margin-top: 14px}
+.mt20{margin-top: 20px !important;}
+.mt30{margin-top: 30px !important;}
+.mt40{margin-top: 40px !important;}
+.mt50{margin-top: 50px!important}
+.mt70{margin-top: 70px !important;}
+.mt80{margin-top: 80px !important;}
+.mt100{margin-top: 100px !important;}
+.mr10{margin-right: 10px;}
+.mr100{margin-right: 100px !important;}
+.mb5{margin-bottom: 5px !important;}
+.mb10{margin-bottom: 10px !important;}
+.mb14{margin-bottom: 14px;}
+.mb15{margin-bottom: 15px;}
+.mb20{margin-bottom: 20px !important;}
+.mb30{margin-bottom: 30px;}
+.mb40{margin-bottom: 40px !important;}
+.mb60{margin-bottom: 60px !important;}
+.mb100{margin-bottom: 100px !important;}
+.mb130{margin-bottom: 130px !important;}
+.pdb10{padding-bottom: 10px;}
+.pdlr30{padding: 0 30px;}
+
+/* font */ 
+.fs_12{font-size: 12px;}
+.fs_14{font-size: 14px !important;}
+.fs_16{font-size: 16px;}
+.fs_18{font-size: 18px;}
+.fs_20{font-size: 20px;}
+.fs_24{font-size: 24px;}
+.font_gray_a0{color: #A0A0A0;}
+.font_gray_a{color: #aaa;}
+.font_gray_4{color: #444;}
+.font_black{color: #232527;}
+.txt_date{font-size: 12px; color: #A0A0A0;}
+.txt_line{font-size: 12px; color:#E2E2E2; margin: 0 7px;}
+
+/* 정렬 */
+.f_left{float: left;}
+.f_right{float: right;}
+.center{margin: 0 auto;}
+.middle{vertical-align: middle;}
+.txt_right{text-align: right;}
+.txt_center{text-align: center;}
+.txt_left{text-align: left;} 
+.clearfix:before, .clearfix:after {
+  display: block; content: ''; line-height: 0;
+}
+/* modal_img_origin */
+.modal_img_origin{background: #000; overflow: auto; display: none; position: fixed; width: 100%; height: 100%; top:0; left:0; z-index: 1001;}
+.modal_img_origin .img_box{ width: auto; height: auto;}
+
+.clearfix:after {
+  clear:both;
+}
+/* edit */
+#edit{line-height: 1.8;}
+#edit blockquote{padding:5px 20px !important; margin: 0 0 20px 0; border-left: 5px solid #eee; font-size: 17px;}
+#edit pre{display: block; padding: 9.5px!important; margin: 0 0 10px; font-size: 13px; line-height: 1.42857143; color: #333; word-break: break-all; word-wrap: break-word; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px;}
+#edit span{color:inherit;font-size: inherit}
+#edit a, #edit b{color:inherit; font-size: inherit;}
+#edit h1{color:inherit;font-family: inherit; font-weight: inherit;}
+#edit h2, #edit h3, #edit h4, #edit h5, #edit h6{color:inherit;font-family: inherit; font-weight: inherit;}
+#edit body, #edit div, #edit dl, #edit dt, #edit dd, #edit ul, #edit ol, #edit li, #edit h1, #edit h2, #edit h3, #edit h4, #edit h5, #edit h6, #edit pre, #edit code,
+#edit form, #edit fieldset, #edit legend, #edit textarea, #edit p, #edit blockquote, #edit th, #edit td, #edit input, #edit select, #edit textarea, #edit button{padding:revert;}
+#edit dl, #edit ul, #edit ol, #edit menu, #edit li{list-style: revert;}
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{border:1px solid #ddd; vertical-align: middle;}
+#edit .table > thead > tr > th, #edit .table > tbody > tr > th,
+#edit .table > tfoot > tr > th, #edit .table > thead > tr > td, #edit .table > tbody > tr > td, #edit .table > tfoot > tr > td{padding: 8px 12px;line-height: 1.5;}
+#edit iframe, #edit img{max-width: 100% !important;}
+#edit iframe{width: 100% !important; height:100%; position: absolute; top: 0; left: 0;}
+#edit .iframe_wrap{position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;}
+
+
+
+/* 이미지센터 */
+.img_box{overflow: hidden; display: block;}
+.img_box > img{object-fit: cover; width: 100%; height: 100%;}
+.img_box.w_100{width: 100px;height: 100px;border-radius: 10px;}
+.center_crop_frame{position: relative;}
+.center_crop_area{position: absolute; top:0;left:0;right:0;bottom:0;transform: translate(50%,50%);}
+.center_crop_area img{position: absolute; top:0;left:0;transform: translate(-50%,-50%); max-width: 100%; min-height:100%;}
+
+/* 테이블관련 */
+th.th_top, td.td_top{vertical-align: text-top;}
+th{font-weight: normal}
+table{table-layout: fixed}
+
+/* scrollbar design */
+.scroller::-webkit-scrollbar {width:8px; height:0px; background: #FF4F82; border-radius:30px; padding:5px;}
+.scroller::-webkit-scrollbar-button:start:decrement, .scroller::-webkit-scrollbar-button:end:increment {display: block; height:0px;}
+.scroller::-webkit-scrollbar-track {background:#fff; -webkit-border-radius:30px; border-radius:30px; }
+.scroller::-webkit-scrollbar-thumb {height:20px; width:6px; background:#FF4F82; -webkit-border-radius:30px; border-radius:30px; }
+.scroller::-webkit-scrollbar-thumb:hover{background:#FF4F82;}
+.scroller::-webkit-scrollbar-thumb:active{background:#FF4F82;}
+.scroller::-webkit-scrollbar-thumb:horizontal{background:#FF4F82;}
+

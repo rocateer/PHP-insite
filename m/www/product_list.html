@@ -1,0 +1,204 @@
+<html lang="kor"><head>
+	<title>인사이트</title>
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!--메타 : 메타 태그만 사용-->
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p_common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+	<link rel="stylesheet" href="external_css/swiper-bundle.min.css">
+
+	<!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
+	<link rel="stylesheet" href="external_css/outside.css">
+
+	<!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+
+	<!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+	<script src="external_js/swiper.jquery.js"></script>
+	<script src="external_js/swiper-bundle.min.js"></script>
+	<script src="external_js/pinch-zoom.js"></script>
+
+
+  <!-- wrap : s -->
+  <div class="wrap">
+
+    <header>
+      <div class="inner_wrap">
+          <div class="header_top">
+              <a class="header_logo">INSITE</a>
+              <div class="header_search">
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <a href="search_list_community.html"><img src="images/ic_search.png" class="btn"></a>
+              </div>
+              <ul class="util_menu">
+                <li><a href="login.html" class="btn_gray_ghost">로그인</a></li>
+                <li><a href="my_community.html" class="btn_gray_ghost">MY</a></li>
+                <li><a href="join.html" class="btn_point">회원가입</a></li>
+                <li><a href="reg_select.html" class="btn_point">글쓰기</a></li>
+              </ul>
+          </div>
+          <ul class="gnb row">
+              <li><a href="main.html">홈</a></li>
+              <li><a href="trade_list.html">중고거래</a></li>
+              <li><a href="human_list.html">구인구직</a></li>
+              <li class="active"><a href="product_list.html">공동구매</a></li>
+              <li><a href="edu_list.html">교육</a></li>
+          </ul>
+      </div>
+    </header>
+
+    <div class="body">
+      <div class="inner_wrap">
+
+        <div class="no_data">
+            <p><span class="message_box">공동구매 상품을 준비 중입니다.</span></p>
+        </div>
+
+        <div class="list_sort"><span class="ease">진행중만 보기</span></div>
+
+        <ul class="product_list mt20" style="display:none1;">
+            <li>
+                <span class="mark">D-11</span>
+                <a href="product_detail.html">
+                    <div class="img_box relative">
+                        <img src="p_images/s3.jpg">
+                    </div>
+                </a>
+                <div class="product_list_body">
+                    <div class="row">
+                        <span class="txt_1">80% 달성</span>
+                        <span class="scrap ease"></span>
+                    </div>
+                    <a href="product_detail.html"></a>
+                        <p class="product_list_title">'봄의 향' 심신안정 방향효과 인센스스틱</p>
+                        <div class="product_list_item">
+                            공동구매가 <b class="">75,000원</b>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <span class="mark">D-11</span>
+                <a href="product_detail.html">
+                    <div class="img_box relative">
+                        <img src="p_images/s3.jpg">
+                    </div>
+                </a>
+                <div class="product_list_body">
+                    <div class="row">
+                        <span class="txt_1">80% 달성</span>
+                        <span class="scrap ease"></span>
+                    </div>
+                    <a href="product_detail.html"></a>
+                        <p class="product_list_title">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 BLACK</p>
+                        <div class="product_list_item">
+                            공동구매가 <b class="">75,000원</b>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <span class="mark">마감</span>
+                <a href="product_detail.html">
+                    <div class="img_box relative">
+                        <img src="p_images/s3.jpg">
+                    </div>
+                </a>
+                <div class="product_list_body">
+                    <div class="row">
+                        <span class="txt_1">80% 달성</span>
+                        <span class="scrap ease"></span>
+                    </div>
+                    <a href="product_detail.html"></a>
+                        <p class="product_list_title">'봄의 향' 심신안정 방향효과 인센스스틱</p>
+                        <div class="product_list_item">
+                            공동구매가 <b class="">75,000원</b>
+                        </div>
+                    </a>
+                </div>
+            </li>
+          </ul>
+        <div class="paging">
+          <ul class="btn_wrap">
+            <li class="btn_prev">
+              <a href="#1"> <img src="images/btn_paging_prev2.png" alt=""></a>
+            </li>
+            <li class="btn_prev">
+              <a class="no_next" href="#1"><img src="images/btn_paging_prev1.png" alt=""></a>
+            </li>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li class="btn_next">
+              <a class="no_next" href="#1"><img src="images/btn_paging_next1.png" alt=""></a>
+            </li>
+            <li class="btn_next">
+              <a href="#1"><img src="images/btn_paging_next2.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- footer : s -->
+    <footer>
+      <div class="inner_wrap row">
+				<ul class="footer_menu">
+          <li><a href="notice_list.html">공지사항</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="qa_list.html">1:1문의</a></li>
+          <li><a href="terms.html">서비스 이용약관</a></li>
+          <li><a href="terms.html">개인정보 취급방침</a></li>
+          <li><a href="terms.html">사업자정보확인</a></li>
+        </ul>
+        <div>
+          대표이사 인사이<span class="txt_line">|</span>서울특별시 금천구 가산디지털1로<span class="txt_line">|</span>사업자등록번호 5124-2356-23<span class="txt_line">|</span>통신판매업신고 제 2023-서울강남-169호<br>
+          개인정보관리책임자 김대표<span class="txt_line">|</span>제휴문의 email@email.com<span class="txt_line">|</span>고객문의 help@email.com
+        </div>
+        <p>Copyright ⓒ 2023 All Rights Reserved</p>
+      </div>
+
+    </footer>
+    <!-- footer : s -->
+
+  </div>
+  <!-- wrap : e -->
+
+<script>
+  $( '.list_sort span' ).click( function() {
+    $(this).toggleClass("on");
+  } );
+
+  $( '.scrap' ).click( function() {
+    $(this).toggleClass("on");
+  } );
+
+
+</script>
+
+</body>
+</html>

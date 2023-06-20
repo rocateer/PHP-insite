@@ -1,0 +1,380 @@
+<html lang="kor"><head>
+	<title>인사이트</title>
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!--메타 : 메타 태그만 사용-->
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p_common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+	<link rel="stylesheet" href="external_css/swiper-bundle.min.css">
+
+	<!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
+	<link rel="stylesheet" href="external_css/outside.css">
+
+	<!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+
+	<!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+	<script src="external_js/swiper.jquery.js"></script>
+	<script src="external_js/swiper-bundle.min.js"></script>
+	<script src="external_js/pinch-zoom.js"></script>
+
+
+  <!-- wrap : s -->
+  <div class="wrap">
+
+    <header>
+        <div class="inner_wrap">
+            <div class="header_top">
+                <a class="header_logo">INSITE</a>
+                <div class="header_search">
+                  <input type="text" placeholder="검색어를 입력하세요.">
+                  <a href="search_list_community.html"><img src="images/ic_search.png" class="btn"></a>
+                </div>
+                <ul class="util_menu">
+                  <li><a href="login.html" class="btn_gray_ghost">로그인</a></li>
+                  <li><a href="my_community.html" class="btn_gray_ghost">MY</a></li>
+                  <li><a href="join.html" class="btn_point">회원가입</a></li>
+                  <li><a href="reg_select.html" class="btn_point">글쓰기</a></li>
+                </ul>
+            </div>
+            <ul class="gnb row">
+                <li><a href="main.html">홈</a></li>
+                <li><a href="trade_list.html">중고거래</a></li>
+                <li class="active"><a href="human_list.html">구인구직</a></li>
+                <li><a href="product_list.html">공동구매</a></li>
+                <li><a href="edu_list.html">교육</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="body">
+      <div class="inner_wrap row">
+
+        <div class="body_left">
+          <div class="community_detail_head mt50">
+            <div class="detail_title">
+              2023년도 상반기 KW 신입사원 채용공고 (~05/05)
+              <div class="f_right">
+                <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
+                <img src="images/btn_more.png" class="i_24" alt="" onclick="modal_open_slide('more')">
+              </div>
+            </div>
+            <p class="font_gray_a0 mt30">플랫폼로캣티어</p>
+            <p class="font_gray_a0 mt5">2023.01.01</p>
+          </div>
+          <h5 class="mt50">상세내용</h5>
+					<div class="detail_info_box mt20">
+						<table class="table_info">
+							<colgroup>
+								<col width="100">
+								<col width="*">
+								<col width="70">
+								<col width="*">
+							</colgroup>
+							<tr>
+								<th>마감일</th>
+								<td>2023.04.04 <span class="point_color">(D-13)</span></td>
+								<th>성별</th>
+								<td>성별무관</td>
+							</tr>
+							<tr>
+								<th>근무지역</th>
+								<td>서울 동부<img src="images/ic_sm_arrow.png" class="w_16 middle">강동구</td>
+								<th>연령</th>
+								<td>20세 이상 35세 이하</td>
+							</tr>
+							<tr>
+								<th>모집분야</th>
+								<td>장판</td>
+								<th>급여</th>
+								<td><span class="point_color">일급</span> 3000,000 이하</td>
+							</tr>
+							<tr>
+								<th>경력</th>
+								<td>5년 이상</td>
+								<th></th>
+								<td></td>
+							</tr>
+						</table>
+						<hr class="mt10">
+						<div class="info_btn txt_right mt20">
+							<a href="javascript:void(0)" class="btn_point" onclick="modal_open('apply')">지원하기</a>
+							<a href="#" class="btn_disabled">지원한 공고</a>
+							<!-- <a href="#" class="btn_disabled">마감되었어요</a> -->
+							<a href="#" class="btn_point_ghost">전화번호 확인</a>
+						</div>
+					</div>
+
+					<div class="mt50">
+						근무형태 : 정규직(수습:2개월)<br>
+						근무지 : 경기 > 성남시 분당구 <br>
+						근무요일 : 주5일 <br>
+						근무시간 : 10시 00분 ~ 19시 00분 <br>
+						급여 : 회사내규에 따름(면접 후 결정) 전형절차는 서류전형 후 최종합격 입니다. <br>많은 지원 바랍니다.
+					</div>
+
+					<ul class="detail_img_wrap mt50">
+						<li>
+							<div class="img_box">
+								<img src="p_images/s6.jpg" alt="" onclick="modal_open('img_big')">
+							</div>
+						</li>
+						<li>
+							<div class="img_box">
+								<img src="p_images/s1.jpg" alt="">
+							</div>
+						</li>
+						<li>
+							<div class="img_box">
+								<img src="p_images/s2.jpg" alt="">
+							</div>
+						</li>
+						<li>
+							<div class="img_box">
+								<img src="p_images/s3.jpg" alt="">
+							</div>
+						</li>
+						<li>
+							<div class="img_box">
+								<img src="p_images/s4.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+
+        </div>
+
+        <!-- right area : s -->
+        <div class="body_right mt50">
+
+          <div class="swiper main_bn_bar right_bn_1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_3.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_3.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper main_bn_bar right_bn_2 mt30">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_4.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_4.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper main_bn_bar right_bn_3 mt30">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_5.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_5.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+        <!-- right area : e -->
+
+
+
+      </div>
+
+    </div>
+
+		<!-- modal 이미지 확대보기  : s -->
+		<div class="modal modal_img_big">
+			<img src="p_images/s6.jpg" alt="" class="w_100p">
+		</div>
+		<div class="md_overlay md_overlay_img_big" onclick="modal_close('img_big')"></div>
+		<!-- modal 이미지 확대보기  : e -->
+
+		<!-- modal 지원하기 : s-->
+    <div class="modal modal_apply">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('apply')">
+      <div class="md_container">
+        <div class="md_title">지원하기</div>
+        <div class="md_Hfull_wrap scrollbar mt50">
+          <div class="fs_16 txt_bold">구직지원</div>
+					<div class="row mt30">
+						<ul class="input_ui w_330 f_left row">
+	            <li>
+	              <label>이름<span class="essential">*</span></label>
+	              <input type="text" id="" name="" placeholder="">
+	            </li>
+							<li>
+	              <label>성별<span class="essential">*</span></label>
+	              <select>
+									<option>선택안함</option>
+								</select>
+	            </li>
+						</ul>
+						<ul class="input_ui w_330 f_right row">
+	            <li>
+	              <label>연락처<span class="essential">*</span></label>
+	              <input type="text" id="" name="" placeholder="연락받으실 전화번호를 입력해 주세요.">
+	            </li>
+							<li>
+	              <label>생년월일</label>
+	              <input type="text" id="" name="" placeholder="생년월일을 6자리로 입력해 주세요 ex) 000101">
+	            </li>
+						</ul>
+					</div>
+
+					<hr class="space mt30">
+
+					<div class="fs_16 txt_bold mt50">지원내용</div>
+					<div class="row mt30">
+						<table class="table_info">
+							<colgroup>
+								<col width="100">
+								<col width="*">
+							</colgroup>
+							<tr>
+								<th>직종</th>
+								<td>장판</td>
+							</tr>
+							<tr>
+								<th>지역</th>
+								<td>서울 동부</td>
+							</tr>
+						</table>
+						<div class="mt20 row">
+							<ul class="input_ui w_330 f_left row ">
+								<li>
+		              <label>경력<span class="essential">*</span></label>
+		              <select>
+										<option>1년 미만</option>
+									</select>
+		            </li>
+							</ul>
+							<ul class="input_ui w_330 f_right row">
+		            <li>
+		              <label>희망 급여<span class="essential">*</span></label>
+									<div class="flex_between">
+	                  <div class="w_half relative">
+	                    <select>
+	                      <option>일급</option>
+	                    </select>
+	                  </div>
+	                  <div class="w_half relative">
+	                    <span class="input_right_txt">만원</span>
+	                    <input type="text" name="" id="">
+	                  </div>
+	                </div>
+		            </li>
+							</ul>
+						</div>
+
+						<hr class="space mt30">
+
+						<div class="row mt70">
+
+		          <ul class="input_ui row">
+		            <li>
+		              <label>공고 제목<span class="essential">*</span></label>
+		              <input type="text" id="" name="" placeholder="">
+		            </li>
+		            <li>
+		              <label>세부사항<span class="essential">*</span></label>
+		              <textarea></textarea>
+		            </li>
+		            <li>
+		              <label>사진</label>
+		              <div class="x_scroll_img_reg mt20">
+		                <ul class="img_reg_ul pdl20" id="">
+		                  <li>
+		                    <div class="cnt_num"><span class="point_color">1</span>/10</div>
+		                    <div class="img_box">
+		                      <img src="images/img_add.png" alt="">
+		                    </div>
+		                  </li>
+		                  <li>
+		                    <img src="images/btn_sm_delete.png" alt="x" class="btn_delete">
+		                    <div class="img_box">
+		                      <img src="p_images/s7.jpg" alt="">
+		                    </div>
+		                  </li>
+		                </ul>
+		              </div>
+		            </li>
+		        </ul>
+
+		        </div>
+
+					</div>
+        </div>
+				<div class="mt10 mb10 w_300 center">
+						<a href="#" class="btn_point btn_full_basic">지원</a>
+				</div>
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_apply" onclick="modal_close('apply')"></div>
+    <!-- modal 지원하기 : e-->
+
+
+
+    <!-- footer : s -->
+    <footer>
+      <div class="inner_wrap row">
+				<ul class="footer_menu">
+          <li><a href="notice_list.html">공지사항</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="qa_list.html">1:1문의</a></li>
+          <li><a href="terms.html">서비스 이용약관</a></li>
+          <li><a href="terms.html">개인정보 취급방침</a></li>
+          <li><a href="terms.html">사업자정보확인</a></li>
+        </ul>
+        <div>
+          대표이사 인사이<span class="txt_line">|</span>서울특별시 금천구 가산디지털1로<span class="txt_line">|</span>사업자등록번호 5124-2356-23<span class="txt_line">|</span>통신판매업신고 제 2023-서울강남-169호<br>
+          개인정보관리책임자 김대표<span class="txt_line">|</span>제휴문의 email@email.com<span class="txt_line">|</span>고객문의 help@email.com
+        </div>
+        <p>Copyright ⓒ 2023 All Rights Reserved</p>
+      </div>
+
+    </footer>
+    <!-- footer : s -->
+
+  </div>
+  <!-- wrap : e -->
+
+  <script>
+  // 스크랩 토글버튼
+  function btn_scrap(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
+
+
+  var right_bn_1 = new Swiper(".right_bn_1", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  var right_bn_2 = new Swiper(".right_bn_2", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  var right_bn_3 = new Swiper(".right_bn_3", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  </script>
+
+</body>
+</html>

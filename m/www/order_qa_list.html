@@ -1,0 +1,205 @@
+<html lang="kor"><head>
+	<title>인사이트</title>
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!--메타 : 메타 태그만 사용-->
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p_common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+	<link rel="stylesheet" href="/external_css/swiper-bundle.min.css">
+
+	<!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
+	<link rel="stylesheet" href="/external_css/outside.css">
+
+	<!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+	<script src="/js/jquery-1.12.4.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
+	<script src="/js/common.js"></script>
+
+	<!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+	<script src="/external_js/swiper.jquery.js"></script>
+	<script src="/external_js/swiper-bundle.min.js"></script>
+	<script src="/external_js/pinch-zoom.js"></script>
+
+
+  <!-- wrap : s -->
+  <div class="wrap">
+
+    <header>
+      <div class="inner_wrap">
+          <div class="header_top">
+              <a class="header_logo">INSITE</a>
+              <div class="header_search">
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <a href=""><img src="images/ic_search.png" class="btn"></a>
+              </div>
+              <ul class="util_menu">
+                <li><a href="login.html" class="btn_gray_ghost">로그인</a></li>
+                <li><a href="my_community.html" class="btn_gray_ghost">MY</a></li>
+                <li><a href="join.html" class="btn_point">회원가입</a></li>
+                <li><a href="reg_select.html" class="btn_point">글쓰기</a></li>
+              </ul>
+          </div>
+          <ul class="gnb row">
+              <li><a href="main.html">홈</a></li>
+              <li><a href="trade_list.html">중고거래</a></li>
+              <li><a href="human_list.html">구인구직</a></li>
+              <li><a href="product_list.html">공동구매</a></li>
+              <li><a href="edu_list.html">교육</a></li>
+          </ul>
+      </div>
+    </header>
+
+    <div class="body">
+
+      <div class="inner_wrap row">
+		<!-- my lnb : s -->
+		<div class="my_lnb_wrap">
+			<div class="my_top">반갑습니다,<br> <span>딸기바나나킥맛나</span>님</div>
+			<p class="my_id">example@email.com</p>
+			<ul class="my_lnb_bn">
+				<li>
+					<a href="#">
+						직종 인증
+						<p>직종 인증 신청하기 <img src="images/more_arrow.png" class="w_16 f_right"></p>
+					</a>
+					<hr>
+				</li>
+				<li>
+					<a href="#">
+						프로필 작성
+						<p>직종 인증 후 작성 가능해요</p>
+					</a>
+				</li>
+			</ul>
+			<h6 class="mt40">내 관리</h6>
+			<ul class="my_lnb">
+				<li><a href="member_info.html">내 정보 수정</a></li>
+				<li><a href="my_community.html">내가 작성한 글</a></li>
+				<li><a href="my_recruit_human.html">구인구직 관리</a></li>
+				<li class="active"><a href="my_order.html">공구/교육 관리</a></li>
+				<li><a href="my_scrap_community.html">스크랩</a></li>
+				<li><a href="#">로그아웃</a></li>
+			</ul>
+		</div>
+		<!-- my lnb : e -->
+		<div class="my_body">
+            <h5>Q&A 문의 내역</h5>
+            <table class="table_board mt30">
+                <colgroup>
+                  <col width="100">
+                  <col width="*">
+                  <col width="90">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="td_center">
+                          <div class="product_img_basic">
+                            <div class="img_box"><img src="p_images/s3.jpg"></div>
+                          </div>
+                        </td>
+                        <td class="vh_top">
+                          <a href="order_qa_detail.html" class="block">
+                            <div class="mt10 mb10">
+                              <span class="mark_3">공동구매</span>
+                              <span class="txt_title">가디호텔 철거공사를 하는데 경력자 사람을 구하고 있습니다.</span>
+                            </div>
+                            <p class="fs_14 font_gray_a0 mt10">미답변</p>
+                            <p class="fs_14">이거 언제 보내주실 거에요??</p>
+                          </a>
+                        </td>
+                        <td class="td_right vh_top"><p class="fs_14 font_gray_a0">2023.03.01</p></td>
+                    </tr>
+                    <tr>
+                      <td class="td_center">
+                        <div class="product_img_basic">
+                          <div class="img_box"><img src="p_images/s1.jpg"></div>
+                        </div>
+                      </td>
+                      <td class="vh_top">
+                        <a href="order_qa_detail.html" class="block">
+                          <div class="mt10 mb10">
+                            <span class="mark_3">교육</span>
+                            <span class="txt_title">가디호텔 철거공사를 하는데 경력자 사람을 구하고 있습니다.</span>
+                          </div>
+                          <p class="fs_14 point_color mt10">답변완료</p>
+                          <p class="fs_14">이거 언제 보내주실 거에요??</p>
+                        </a>
+                      </td>
+                      <td class="td_right vh_top"><p class="fs_14 font_gray_a0">2023.03.01</p></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="paging">
+                <ul class="btn_wrap">
+                    <li class="btn_prev">
+                    <a href="#1"> <img src="images/btn_paging_prev2.png" alt=""></a>
+                    </li>
+                    <li class="btn_prev">
+                    <a class="no_next" href="#1"><img src="images/btn_paging_prev1.png" alt=""></a>
+                    </li>
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li class="btn_next">
+                    <a class="no_next" href="#1"><img src="images/btn_paging_next1.png" alt=""></a>
+                    </li>
+                    <li class="btn_next">
+                    <a href="#1"><img src="images/btn_paging_next2.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+	        
+		</div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <!-- footer : s -->
+    <footer>
+      <div class="inner_wrap row">
+		<ul class="footer_menu">
+          <li><a href="notice_list.html">공지사항</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="qa_list.html">1:1문의</a></li>
+          <li><a href="terms.html">서비스 이용약관</a></li>
+          <li><a href="terms.html">개인정보 취급방침</a></li>
+          <li><a href="terms.html">사업자정보확인</a></li>
+        </ul>
+        <div>
+          대표이사 인사이<span class="txt_line">|</span>서울특별시 금천구 가산디지털1로<span class="txt_line">|</span>사업자등록번호 5124-2356-23<span class="txt_line">|</span>통신판매업신고 제 2023-서울강남-169호<br>
+          개인정보관리책임자 김대표<span class="txt_line">|</span>제휴문의 email@email.com<span class="txt_line">|</span>고객문의 help@email.com
+        </div>
+        <p>Copyright ⓒ 2023 All Rights Reserved</p>
+      </div>
+
+    </footer>
+    <!-- footer : s -->
+
+  </div>
+  <!-- wrap : e -->
+
+
+
+</body>
+</html>

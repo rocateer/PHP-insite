@@ -1,0 +1,369 @@
+<html lang="kor"><head>
+	<title>인사이트</title>
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!--메타 : 메타 태그만 사용-->
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p_common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+	<link rel="stylesheet" href="external_css/swiper-bundle.min.css">
+
+	<!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
+	<link rel="stylesheet" href="external_css/outside.css">
+
+	<!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+
+	<!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+	<script src="external_js/swiper.jquery.js"></script>
+	<script src="external_js/swiper-bundle.min.js"></script>
+	<script src="external_js/pinch-zoom.js"></script>
+
+
+  <!-- wrap : s -->
+  <div class="wrap">
+
+    <header>
+        <div class="inner_wrap">
+            <div class="header_top">
+                <a class="header_logo">INSITE</a>
+                <div class="header_search">
+                  <input type="text" placeholder="검색어를 입력하세요.">
+                  <a href="search_list_community.html"><img src="images/ic_search.png" class="btn"></a>
+                </div>
+                <ul class="util_menu">
+                  <li><a href="login.html" class="btn_gray_ghost">로그인</a></li>
+                  <li><a href="my_community.html" class="btn_gray_ghost">MY</a></li>
+                  <li><a href="join.html" class="btn_point">회원가입</a></li>
+                  <li><a href="reg_select.html" class="btn_point">글쓰기</a></li>
+                </ul>
+            </div>
+            <ul class="gnb row">
+                <li><a href="main.html">홈</a></li>
+                <li><a href="trade_list.html">중고거래</a></li>
+                <li><a href="human_list.html">구인구직</a></li>
+                <li><a href="product_list.html">공동구매</a></li>
+                <li><a href="edu_list.html">교육</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="body">
+      <div class="inner_wrap row">
+
+        <div class="body_left">
+          <p class="con_title">자유공간</p>
+          <div class="community_detail_head">
+            <div class="detail_title">
+              차 산다면 뭐가 좋을까? <img src="images/ic_vote.png" class="i_24">
+              <div class="f_right">
+                <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
+                <img src="images/btn_more.png" class="i_24" alt="" onclick="modal_open_slide('more')">
+              </div>
+            </div>
+            <p class="font_gray_a0 mt30">딸기맛바나나킥 · 목공 · 서울 남부</p>
+            <p class="font_gray_a0 mt5">2023.01.01</p>
+          </div>
+          <div class="community_body" id="edit">
+            2- 제안 배경: 전국에서 극심한 주거 가격 변동이 일어났고 많은 사람에게 경제적 손실을 안겨주었습니다만, 가장 큰 손실은 청년들에게 좌절과 박탈감, 패배감, 한탕주의를 심어주며 대한민국 전체의 에너지와 원동력을 저하한 것입니다. 이로 인한 부작용은 열거할 필요도 없이 모두의 머릿속에 떠오르는 그 모든 것들입니다. 조금 과장해서, 나라가 부동산 때문에 망하게 생겼습니다.
+            <br><br><img src="p_images/s3.jpg">
+          </div>
+          <!-- 설문 : s -->
+          <div class="box_vote">
+            <div class="vote_title">가장 잘 된 인테리어 공간은?</div>
+            <div class="vote_sub_txt">복수선택<span class="f_right">150명 참여</span></div>
+            <ul class="mt30">
+              <li>
+                <input type="checkbox" name="vote" id="vote_1" value="Y" class="type_circle" checked="">
+                <label for="vote_1"><span></span>모루유리가 들어간 짙은 우드 중문</label>
+              </li>
+              <li>
+                <input type="checkbox" name="vote" id="vote_2" value="Y" class="type_circle">
+                <label for="vote_2"><span></span>육백각타일을 사용한 화장실</label>
+              </li>
+              <li>
+                <input type="checkbox" name="vote" id="vote_3" value="Y" class="type_circle">
+                <label for="vote_3"><span></span>홈바가 있는 넓은 주방</label>
+              </li>
+              <li>
+                <input type="checkbox" name="vote" id="vote_4" value="Y" class="type_circle">
+                <label for="vote_4"><span></span>야외에 있는 느낌을 준는 캠핑존 베란다</label>
+              </li>
+            </ul>
+            <a href="#" class="btn_point btn_full_thin mt20">투표하기</a>
+          </div>
+          <!-- 설문 : e -->
+          <!-- 설문 결과 : s -->
+          <div class="box_vote">
+            <div class="vote_title">가장 잘 된 인테리어 공간은?</div>
+            <div class="vote_sub_txt">복수선택<span class="f_right">150명 참여</span></div>
+            <ul class="vote_result">
+              <li>
+                <p class="point_color"><img src="images/bl_check.png">모루유리가 들어간 짙은 우드 중문</p>
+                <div class="progress_bg check">
+                  <span class="txt_1">150표</span>
+                  <span class="txt_2">66.7%</span>
+                  <div class="progress_bar" style="width:60%"></div>
+                </div>
+              </li>
+              <li>
+                <p>모루유리가 들어간 짙은 우드 중문</p>
+                <div class="progress_bg">
+                  <span class="txt_1">70표</span>
+                  <span class="txt_2">66.7%</span>
+                  <div class="progress_bar" style="width:20%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- 설문 결과 : e -->
+          <!-- community action -->
+          <ul class="detail_action">
+            <li><a href="javascript:void(0)" onclick="detail_btn_like(this)" class="detail_btn_like ease">좋아요 120</a></li>
+            <li><img src="images/ic_comment.png"> 댓글 23</li>
+            <li><img src="images/ic_visibility.png"> 524</li>
+          </ul>
+
+          <!-- 댓글 입력 : s -->
+          <div class="comment_reg_wrap">
+            <textarea id="cmt_input"></textarea>
+            <p class="place_p">타인을 배려하는 마음을 담아 댓글을 작성해 주세요.<br>내용에 따라 이용약관 및 관련 법률에 의해 삭제될 수 있습니다.</p>
+            <span class="tag">@내님은어디야</span>
+            <div class="comment_reg_btn txt_right">
+              <a href="#" class="ease">취소</a>
+              <a href="#" class="ease">등록</a>
+            </div>
+          </div>
+          <!-- 댓글 입력 : e -->
+
+          <div class="no_data">
+            <p><span class="message_box">작성된 댓글이 없습니다.</span></p>
+          </div>
+
+          <ul class="cmt_ul">
+            <li>
+              <div class="cmt_item_1"><span class="txt_my">벚꽃보러가요 · 목공 · 서울 동부</span>
+                <span class="f_right relative">
+                  <img src="images/ic_sm_more.png" onClick="toggle_more(1);" alt="더보기" class="i_24">
+                  <div class="modal_cmt_more" id="cmt_more_1" style="display:none">
+                    <ul>
+                      <li>
+                        <a href="javascript:modal_open('report');javascript:modal_close('cmt_more')">신고</a>
+                      </li>
+                      <li>
+                        <a href="javascript:modal_open('block');javascript:modal_close('cmt_more')">차단</a>
+                      </li>
+                    </ul>
+                  </div>
+                </span>
+
+              </div>
+              <div class="cmt_item_2">월넛과 베이지의 조화가 넘 멋지네요. 집도 따뜻해 보이면서도 안정감이 들어 집에만 있고 싶어질거 같아요!</div>
+              <div class="cmt_action">
+                <span>00:00</span>
+                <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
+                <span onclick="reg_reply()">대댓글</span>
+              </div>
+            </li>
+            <li>
+              <div class="cmt_item_1">분홍색개구리 · 목공 · 인천 미추홀구<span class="f_right"><img src="images/ic_sm_more.png" onclick="toggle_more(1);" alt="더보기" class="i_24"></span></div>
+              <div class="cmt_item_2">세상 살다보니 이러기도 하네요.</div>
+              <div class="cmt_action">
+                <span>00:00</span>
+                <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
+                <span onclick="reg_reply()">대댓글</span>
+              </div>
+            </li>
+            <li class="cmt_re">
+              <div class="cmt_item_1">책방주인 · 목공 · 제주 서귀포<span class="f_right"><img src="images/ic_sm_more.png" onclick="modal_open('cmt_more')" alt="더보기" class="i_24"></span></div>
+              <div class="cmt_item_2">무슨 뜬금없는 소린가요?</div>
+              <div class="cmt_action">
+                <span>00:00</span>
+                <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
+                <span onclick="reg_reply()">대댓글</span>
+              </div>
+            </li>
+            <li class="cmt_re">
+              <div class="item_blind">관리자에 의해 블라인드 된 글입니다.</div>
+            </li>
+            <li class="cmt_re">
+              <div class="item_blind">삭제된 글입니다.</div>
+            </li>
+            <li>
+              <div class="item_blind">관리자에 의해 블라인드 된 글입니다.</div>
+            </li>
+            <li>
+              <div class="item_blind">삭제된 글입니다.</div>
+            </li>
+            <li>
+              <div class="item_blind">차단한 글입니다.<a href="#" class="blind_clear">차단 해제</a></div>
+            </li>
+          </ul>
+
+          <div class="txt_center mt40 pdb10">
+            <a href="#" class="btn_moreView btn_gray_ghost">10개 더보기</a>
+          </div>
+
+        </div>
+
+        <!-- right area : s -->
+        <div class="body_right mt50">
+
+          <div class="swiper main_bn_bar right_bn_1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_3.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_3.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper main_bn_bar right_bn_2 mt30">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_4.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_4.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper main_bn_bar right_bn_3 mt30">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_5.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_5.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+        <!-- right area : e -->
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <!-- footer : s -->
+    <footer>
+      <div class="inner_wrap row">
+        <ul class="footer_menu">
+          <li><a href="notice_list.html">공지사항</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="qa_list.html">1:1문의</a></li>
+          <li><a href="terms.html">서비스 이용약관</a></li>
+          <li><a href="terms.html">개인정보 취급방침</a></li>
+          <li><a href="terms.html">사업자정보확인</a></li>
+        </ul>
+        <div>
+          대표이사 인사이<span class="txt_line">|</span>서울특별시 금천구 가산디지털1로<span class="txt_line">|</span>사업자등록번호 5124-2356-23<span class="txt_line">|</span>통신판매업신고 제 2023-서울강남-169호<br>
+          개인정보관리책임자 김대표<span class="txt_line">|</span>제휴문의 email@email.com<span class="txt_line">|</span>고객문의 help@email.com
+        </div>
+        <p>Copyright ⓒ 2023 All Rights Reserved</p>
+      </div>
+
+    </footer>
+    <!-- footer : s -->
+
+  </div>
+  <!-- wrap : e -->
+
+  <script>
+  // 스크랩 토글버튼
+  function btn_scrap(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
+  // 좋아요 토글버튼
+  function detail_btn_like(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
+
+  // 댓글 좋아요 토글버튼
+  function cmt_btn_like(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
+
+  // ios placeholder not showing
+  for(var i =0; i < $('.comment_reg_wrap textarea').length; i++){
+    if ($('.comment_reg_wrap').eq(i).find('textarea').val().length === 0) {
+      $('.comment_reg_wrap').eq(i).find('textarea').siblings('.place_p').css('display','block');
+    }else{
+      $('.comment_reg_wrap').eq(i).find('textarea').siblings('.place_p').css('display','none');
+    }
+  }
+  $(".comment_reg_wrap textarea").on("propertychange change keyup paste input", function(){
+    if ($(this).val().length === 0) {
+      $(this).siblings('.place_p').css('display','block');
+      }else{
+      $(this).siblings('.place_p').css('display','none');
+    };
+  });
+
+  //댓글 more 버튼
+  function toggle_more( num ){
+  var element = null;
+  for( var i = 1; i <= num; i++ )
+  {
+    element = document.getElementById( "cmt_more_" + i );
+    if ( element != null )
+    {
+      ( element.style.display != "none" ) ? element.style.display = "none" : element.style.display = "";
+    }
+  }
+  return;
+  }
+
+  //답글쓰기
+  function reg_reply(){
+    $('#cmt_input').focus();
+    $('.comment_reg_wrap .tag').show();
+    $('.comment_reg_wrap .place_p').hide();
+    let tag_width = $('.comment_reg_wrap .tag').width();
+    $('#cmt_input').css('text-indent',tag_width+10);
+  }
+
+  var right_bn_1 = new Swiper(".right_bn_1", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  var right_bn_2 = new Swiper(".right_bn_2", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  var right_bn_3 = new Swiper(".right_bn_3", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  </script>
+
+</body>
+</html>

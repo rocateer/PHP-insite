@@ -1,0 +1,436 @@
+<html lang="kor"><head>
+	<title>인사이트</title>
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!--메타 : 메타 태그만 사용-->
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p_common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+	<link rel="stylesheet" href="external_css/swiper-bundle.min.css">
+
+	<!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
+	<link rel="stylesheet" href="external_css/outside.css">
+
+	<!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+
+	<!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+	<script src="external_js/swiper.jquery.js"></script>
+	<script src="external_js/swiper-bundle.min.js"></script>
+	<script src="external_js/pinch-zoom.js"></script>
+
+
+  <!-- wrap : s -->
+  <div class="wrap">
+
+    <header>
+      <div class="inner_wrap">
+          <div class="header_top">
+              <a class="header_logo">INSITE</a>
+              <div class="header_search">
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <a href="search_list_community.html"><img src="images/ic_search.png" class="btn"></a>
+              </div>
+              <ul class="util_menu">
+                <li><a href="login.html" class="btn_gray_ghost">로그인</a></li>
+                <li><a href="my_community.html" class="btn_gray_ghost">MY</a></li>
+                <li><a href="join.html" class="btn_point">회원가입</a></li>
+                <li><a href="reg_select.html" class="btn_point">글쓰기</a></li>
+              </ul>
+          </div>
+          <ul class="gnb row">
+              <li><a href="main.html">홈</a></li>
+              <li><a href="trade_list.html">중고거래</a></li>
+              <li><a href="human_list.html">구인구직</a></li>
+              <li><a href="product_list.html">공동구매</a></li>
+              <li><a href="edu_list.html">교육</a></li>
+          </ul>
+      </div>
+    </header>
+
+    <div class="body">
+      <div class="inner_wrap row">
+        <div class="body_left">
+          <!-- 인기 : s -->
+          <div class="main_board main_hot_wrap mt50">
+            <div class="main_title_bar">
+              <img src="images/ic_cate_hot.png" class="ic_cate"> 인기
+              <a href="community_hot.html"><img src="images/more_arrow.png" class="btn_more"></a>
+            </div>
+            <ul class="mt20">
+              <li>
+                <span class="main_list_cate"><img src="images/ic_cate_1.png" class="ic_cate"> 자유공간</span>
+                <p><a href="#">강아지 수염 원래 이렇게 긴가요?</a></p>
+                <div class="right_view">
+                  <span><img src="images/ic_sm_comment.png">154</span>
+                  <span><img src="images/ic_sm_visibility.png">625</span>
+                </div>
+              </li>
+              <li>
+                <span class="main_list_cate"><img src="images/ic_cate_2.png" class="ic_cate"> 인사이트</span>
+                <p><a href="#">인테리어를 셀프로 하려는데<img src="images/ic_picture.png" class="i_24"></a></p>
+                <div class="right_view">
+                  <span><img src="images/ic_sm_comment.png">154</span>
+                  <span><img src="images/ic_sm_visibility.png">625</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- 인기 : e -->
+
+          <!-- bn : s -->
+          <div class="swiper main_bn_bar main_bn_1 mt50">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_1.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_1.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- bn : e -->
+
+          <div class="main_board_wrap mt50">
+            <!-- board 1 : s -->
+            <div class="mini_board_box main_board">
+              <div class="main_title_bar">
+                <img src="images/ic_cate_1.png" class="ic_cate"> 자유공간
+                <a href="community_list.html"><img src="images/more_arrow.png" class="btn_more"></a>
+              </div>
+              <ul class="mt20">
+                <li>
+                  <p><a href="#">강아지 수염 원래 이렇게 긴가요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">인테리어를 셀프로 하려는데<img src="images/ic_picture.png" class="i_24"></a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">시간 남아서 코인차트 분석해 줌 제목이 길어지면 어떻게 보이나요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">면세점 쇼핑 질문!</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">엔진오일 얼마면 갈아?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">23</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- board 1 : e -->
+
+            <!-- board 2 : s -->
+            <div class="mini_board_box main_board">
+              <div class="main_title_bar">
+                <img src="images/ic_cate_2.png" class="ic_cate"> 인사이트
+                <a href="community_list.html"><img src="images/more_arrow.png" class="btn_more"></a>
+              </div>
+              <ul class="mt20">
+                <li>
+                  <p><a href="#">강아지 수염 원래 이렇게 긴가요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">인테리어를 셀프로 하려는데<img src="images/ic_picture.png" class="i_24"></a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- board 2 : e -->
+
+            <!-- board 3 : s -->
+            <div class="mini_board_box main_board">
+              <div class="main_title_bar">
+                <img src="images/ic_cate_3.png" class="ic_cate"> 비밀공간
+                <a href=""><img src="images/more_arrow.png" class="btn_more"></a>
+              </div>
+              <ul class="mt20">
+                <li>
+                  <p><a href="#">강아지 수염 원래 이렇게 긴가요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">인테리어를 셀프로 하려는데<img src="images/ic_picture.png" class="i_24"></a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- board 3 : e -->
+
+            <!-- board 4 : s -->
+            <div class="mini_board_box main_board">
+              <div class="main_title_bar">
+                <img src="images/ic_cate_4.png" class="ic_cate"> 중고거래
+                <a href=""><img src="images/more_arrow.png" class="btn_more"></a>
+              </div>
+              <ul class="mt20">
+                <li>
+                  <p><a href="#">강아지 수염 원래 이렇게 긴가요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">인테리어를 셀프로 하려는데<img src="images/ic_picture.png" class="i_24"></a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- board 4 : e -->
+          </div>
+
+          <!-- bn : s -->
+          <div class="swiper main_bn_bar main_bn_2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_2.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_2.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- bn : e -->
+
+          <div class="main_board_wrap mt50">
+            <!-- board 1 : s -->
+            <div class="mini_board_box main_board">
+              <div class="main_title_bar">
+                <img src="images/ic_cate_5.png" class="ic_cate"> 게시판 1
+                <a href=""><img src="images/more_arrow.png" class="btn_more"></a>
+              </div>
+              <ul class="mt20">
+                <li>
+                  <p><a href="#">강아지 수염 원래 이렇게 긴가요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">인테리어를 셀프로 하려는데<img src="images/ic_picture.png" class="i_24"></a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">시간 남아서 코인차트 분석해 줌 제목이 길어지면 어떻게 보이나요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">면세점 쇼핑 질문!</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">엔진오일 얼마면 갈아?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">23</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- board 1 : e -->
+
+            <!-- board 2 : s -->
+            <div class="mini_board_box main_board">
+              <div class="main_title_bar">
+                <img src="images/ic_cate_6.png" class="ic_cate"> 게시판 2
+                <a href=""><img src="images/more_arrow.png" class="btn_more"></a>
+              </div>
+              <ul class="mt20">
+                <li>
+                  <p><a href="#">강아지 수염 원래 이렇게 긴가요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">인테리어를 셀프로 하려는데<img src="images/ic_picture.png" class="i_24"></a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- board 2 : e -->
+
+            <!-- board 3 : s -->
+            <div class="mini_board_box main_board">
+              <div class="main_title_bar">
+                <img src="images/ic_cate_6.png" class="ic_cate"> 게시판 3
+                <a href=""><img src="images/more_arrow.png" class="btn_more"></a>
+              </div>
+              <ul class="mt20">
+                <li>
+                  <p><a href="#">강아지 수염 원래 이렇게 긴가요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">인테리어를 셀프로 하려는데<img src="images/ic_picture.png" class="i_24"></a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- board 3 : e -->
+
+            <!-- board 4 : s -->
+            <div class="mini_board_box main_board">
+              <div class="main_title_bar">
+                <img src="images/ic_cate_5.png" class="ic_cate"> 게시판 4
+                <a href=""><img src="images/more_arrow.png" class="btn_more"></a>
+              </div>
+              <ul class="mt20">
+                <li>
+                  <p><a href="#">강아지 수염 원래 이렇게 긴가요?</a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+                <li>
+                  <p><a href="#">인테리어를 셀프로 하려는데<img src="images/ic_picture.png" class="i_24"></a></p>
+                  <div class="right_view">
+                    <span><img src="images/ic_sm_visibility.png">625</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- board 4 : e -->
+          </div>
+
+        </div>
+        <div class="body_right mt50">
+
+          <div class="swiper main_bn_bar right_bn_1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_3.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_3.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper main_bn_bar right_bn_2 mt30">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><a href="product_vote_list.html"><img src="p_images/b_sample_4.png"></a></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_4.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper main_bn_bar right_bn_3 mt30">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="p_images/b_sample_5.png"></div>
+              <div class="swiper-slide"><img src="p_images/b_sample_5.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      var main_bn_1 = new Swiper(".main_bn_1", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      var main_bn_2 = new Swiper(".main_bn_2", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      var right_bn_1 = new Swiper(".right_bn_1", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      var right_bn_2 = new Swiper(".right_bn_2", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      var right_bn_3 = new Swiper(".right_bn_3", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <!-- footer : s -->
+    <footer>
+      <div class="inner_wrap row">
+				<ul class="footer_menu">
+          <li><a href="notice_list.html">공지사항</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="qa_list.html">1:1문의</a></li>
+          <li><a href="terms.html">서비스 이용약관</a></li>
+          <li><a href="terms.html">개인정보 취급방침</a></li>
+          <li><a href="terms.html">사업자정보확인</a></li>
+        </ul>
+        <div>
+          대표이사 인사이<span class="txt_line">|</span>서울특별시 금천구 가산디지털1로<span class="txt_line">|</span>사업자등록번호 5124-2356-23<span class="txt_line">|</span>통신판매업신고 제 2023-서울강남-169호<br>
+          개인정보관리책임자 김대표<span class="txt_line">|</span>제휴문의 email@email.com<span class="txt_line">|</span>고객문의 help@email.com
+        </div>
+        <p>Copyright ⓒ 2023 All Rights Reserved</p>
+      </div>
+
+    </footer>
+    <!-- footer : s -->
+
+  </div>
+  <!-- wrap : e -->
+
+
+
+</body>
+</html>

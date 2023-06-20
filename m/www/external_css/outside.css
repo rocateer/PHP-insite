@@ -1,0 +1,70 @@
+/*
+ *  MEMO : 외부 모듈의 스타일을 수정하는 css입니다.
+ * 작성자 : 로캣티어
+ * 작성일 : 2023/04/25.
+*/
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .main_bn_bar .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,3px)}
+.swiper-pagination-bullet{width:16px; height: 2px; border-radius:2px; background: #000;}
+
+.main_bn_bar img{width:100%; display: block;}
+.main_bn_bar .swiper-wrapper{height: 120px;}
+.main_bn_bar .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .main_bn_bar .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,3px)}
+.main_bn_bar .swiper-pagination-bullet{width:16px; height: 2px; border-radius:2px; background: #fff;}
+
+.right_bn_1 .swiper-wrapper{height:350px;}
+.right_bn_2 .swiper-wrapper, .right_bn_3 .swiper-wrapper{height:300px;}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {bottom : var(--swiper-pagination-bottom,10px);}
+.main_right .swiper-horizontal>.swiper-pagination-bullets, .main_right .swiper-pagination-bullets.swiper-pagination-horizontal, .main_right .swiper-pagination-custom, .main_right .swiper-pagination-fraction {bottom : var(--swiper-pagination-bottom,20px);}
+
+.community_img_view_swiper{margin-top: 20px; overflow: hidden;}
+.community_swiper .swiper-slide .img_box{padding-top:100%; height:0; position:relative; border-radius: 5px;}
+.community_swiper .swiper-slide .img_box img{width:100%;height:100%; position:absolute; z-index:1; top:0; left:0;}
+.community_swiper{overflow:visible; margin-bottom:30px;}
+.community_swiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .community_swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,3px)}
+.community_swiper .swiper-pagination-bullet{width:16px; height: 2px; border-radius:2px; background: #fff;}
+.modal_swiper_img_view{background:#121212; width: 100%;height: 100vh;}
+.modal_swiper_img_view .cnt{color:#fff;position: relative;z-index: -1;top:15px;left:50%;transform: translateX(-50%);z-index: 0;text-align:center;width: 100%;display: block;}
+.modal_swiper_img_view .wrap{width:auto;height:auto;max-height: 100%;max-width:100%;top:50% !important;transform: translateY(-50%);}
+.md_overlay_swiper_img_view{background-color: #000;}
+
+
+.detail_img_swiper .swiper-slide .img_box{padding-top:100%; height:0; position:relative;}
+.detail_img_swiper .swiper-slide .img_box img{width:100%;height:100%; position:absolute; z-index:1; top:0; left:0;}
+.detail_img_swiper{overflow:visible;}
+.detail_img_swiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .community_swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,3px)}
+.detail_img_swiper .swiper-pagination-bullet{width:16px; height: 2px; border-radius:2px; background: #fff;}
+
+/* 달력 */
+.ui-datepicker-calendar{border-top: 0; background: #232527;}
+.ui-datepicker-calendar th{padding: 0 0 10px 0; text-align: center;}
+.calendar_wrap{margin-top: 40px; padding: 20px; box-sizing: border-box;}
+.calendar_title_bar{padding: 12px 20px; box-sizing: border-box; width: 100%; height: 42px; background: #005AB2; color:#fff;}
+.calendar_title_bar span{color:inherit;}
+.calendar_title_bar span.date{font-size: 16px;}
+.calendar_title_bar span.num{float: right;font-size: 14px;}
+
+/* 달력 custom : s */
+.ui-datepicker{width: 100%; box-sizing: border-box; padding: 0;}
+.ui-widget-content{width:calc(100% - 40px);background: #fff;}
+/* 달력 header */
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{top:14px; right:0;}
+.ui-datepicker .ui-datepicker-header{border-bottom: 0; position: relative; background: #1E2021; width: 100%; box-sizing: border-box;padding: 10px 0;}
+.ui-widget-header .ui-icon{background: url('/images/head_btn_back.png') no-repeat; display: block;width: 18px;height: 18px; font-size: 0;background-size:18px}
+.ui-widget-header .ui-datepicker-prev{width: 18px;position: absolute;z-index: 1; left:10px;top:25px;}
+.ui-widget-header .ui-datepicker-next{width: 18px;transform: rotate(180deg);position: absolute;z-index: 1; right:10px;top:25px;}
+.ui-datepicker .ui-datepicker-title{text-align: center;font-weight: normal;font-size: 20px;color:#333;}
+.ui-datepicker .ui-datepicker-title select{width: calc(50% - 80px); height: 40px;font-size: 12px; background:#232527 url('../images/select_arrow.png') no-repeat calc(100% - 5px) 50%; background-size:20px; margin: 0 5px; border-radius: 5px; padding: 10px;border: 0;font-weight: normal; color:#ddd;}
+.ui-datepicker .ui-datepicker-title select option{background: #1E2021;}
+.ui-datepicker th span{font-size: 12px!important; font-weight: normal;}
+/* 달력 date */
+.ui-datepicker td{padding: 0; position: relative;font-size: 0;}
+.ui-datepicker td::after{content: '';display: block; padding-top: 100%}
+.ui-datepicker td span, .ui-datepicker td a{width:100%; height:100%; display: flex; justify-content: center; align-items: center; position: absolute; padding: 0; box-sizing: border-box; text-align: center;}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{font-size: 12px; border:0;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{color:inherit; z-index: 11; border: 1px solid #20BFA9; color:#20BFA9; border-radius: 5px;}
+/* .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{border-radius: 50%; color:inherit; border:2px solid #4C35CA!important; z-index: 11;} */
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background: #20BFA9; color:#fff; z-index: 10; border-radius: 5px;}
+.ui-datepicker td a{z-index: 1!important;}
+.ui-state-disabled span.ui-state-default{color:#d8d8d8}

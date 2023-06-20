@@ -1,0 +1,447 @@
+<html lang="kor"><head>
+	<title>인사이트</title>
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<!--메타 : 메타 태그만 사용-->
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!--내부 기본 CSS : 내부에서 생성한 CSS만 사용-->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/p_common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--외부 CSS : 외부 모듈에서 제공된 CSS만 사용-->
+	<link rel="stylesheet" href="external_css/swiper-bundle.min.css">
+
+	<!--외부 CSS 커스텀 : 외부 모듈 적용 후 자체적으로 CSS변경 한 경우만 사용-->
+	<link rel="stylesheet" href="external_css/outside.css">
+
+	<!--내부 기본 JS : 내부에서 생성한 JS 경우만 사용 하며. 이를 사용하기 위한 라이브러만사용(jquery.js) -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+
+	<!--외부 JS : 외부 모듈에서 제공된 JS만 사용-->
+	<script src="external_js/swiper.jquery.js"></script>
+	<script src="external_js/swiper-bundle.min.js"></script>
+	<script src="external_js/pinch-zoom.js"></script>
+
+
+  <!-- wrap : s -->
+  <div class="wrap">
+    <header>
+        <div class="inner_wrap">
+            <div class="header_top">
+                <a class="header_logo">INSITE</a>
+                <div class="header_search">
+                  <input type="text" placeholder="검색어를 입력하세요.">
+                  <a href="search_list_community.html"><img src="images/ic_search.png" class="btn"></a>
+                </div>
+                <ul class="util_menu">
+                  <li><a href="login.html" class="btn_gray_ghost">로그인</a></li>
+                  <li><a href="my_community.html" class="btn_gray_ghost">MY</a></li>
+                  <li><a href="join.html" class="btn_point">회원가입</a></li>
+                  <li><a href="reg_select.html" class="btn_point">글쓰기</a></li>
+                </ul>
+            </div>
+            <ul class="gnb row">
+                <li><a href="main.html">홈</a></li>
+                <li><a href="trade_list.html">중고거래</a></li>
+                <li><a href="human_list.html">구인구직</a></li>
+                <li><a href="product_list.html">공동구매</a></li>
+                <li><a href="edu_list.html">교육</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="sticky_body">
+      <!-- right area : s -->
+      <div class="right_sticky_wrap mt50">
+        
+        <div class="sticky_box">
+          <!-- 상태 : 디폴트 -->
+          <!-- <p class="txt_h_1">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 BLACK</p>
+          <ul class="ul_info mt20">
+            <li>교육 신청 예약금<span>175,200원</span></li>
+          </ul>
+          <hr class="mt20">
+          <div class="sticky_bottom">
+            <p class="txt_price_wrap">예약금 <span>175,200원</span></p>
+            <a href="edu_app.html" class="btn_point btn_full_thin mt20">교육 신청</a>
+          </div> -->
+
+          <!-- 상태 : 교육 신청 완료 -->
+          <!-- <div class="state_box">
+            <p>교육 신청 완료</p>
+          </div>
+          <div class="box_gray_line mt20">
+            <table class="table_info sm_type">
+              <colgroup>
+                <col width="70">
+                <col width="*">
+              </colgroup>
+              <tr>
+                <th>예금주명</th>
+                <td>인사이트</td>
+              </tr>
+              <tr>
+                <th>은행</th>
+                <td>국민은행</td>
+              </tr>
+              <tr>
+                <th>계좌번호</th>
+                <td>802635-01-299356</td>
+              </tr>
+            </table>
+            <p class="red_color fs_12 txt_h_1 mt10">※ 빠른 입금 확인을 위해 예금주명과 
+              연락처 뒤 4자리를 입력하여 입금해 주세요.</p>
+          </div>
+          <div class="sticky_bottom">
+            <p class="txt_price_wrap">교육비 <span>175,200원</span></p>
+            <a href="javascript:void(0)" class="btn_point btn_full_thin mt20" onclick="modal_open('cancel')">교육 취소 신청</a>
+          </div> -->
+          <!-- 상태 : 입금 확인 -->
+          <!-- <div class="state_box">
+            <p>입금 확인 완료</p>
+          </div>
+          <p class="mt30 txt_h_1">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 BLACK</p>
+          <p class="font_gray_a0 fs_12 mt10">수량  1개</p>
+
+          <div class="sticky_bottom">
+            <p class="txt_price_wrap">교육비 <span>175,200원</span></p>
+            <a href="javascript:void(0)" class="btn_point btn_full_thin mt20" onclick="modal_open('cancel')">교육 취소 신청</a>
+          </div> -->
+
+          <!-- 상태 : 발송 완료 -->
+          <div class="state_box">
+            <p class="mb5">교육 확정</p>
+            신청하신 교육이 확정되었습니다.<br>궁금하신 사항은 Q&A에 남겨주세요.
+          </div>
+          <p class="mt70 txt_h_1">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 BLACK</p>
+          <p class="font_gray_a0 fs_12 mt10">수량  1개</p>
+
+          <div class="sticky_bottom">
+            <p class="txt_price_wrap">교육비 <span>175,200원</span></p>
+          </div>
+
+          <!-- 상태 : 마감되었어요 -->
+          <!-- <a href="javascript:void(0)" class="btn_disabled btn_full_thin">마감되었어요</a> -->
+
+        </div>
+
+      </div>
+      <!-- right area : e -->
+      <div class="inner_wrap">
+
+        <div class="body_detail">
+          <!-- product_detail_top : s -->
+          <div class="product_detail_top">
+            <span class="mark_1 f_left">모집중</span>
+            <span class="f_right"><a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a></span>
+          </div>
+          <div class="product_detail_wrap">
+            <div class="top_detail_img">
+              <div class="img_box"><img src="p_images/s1.jpg"></div>
+            </div>
+            <div class="top_detail_info">
+              <h5>23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 BLACK</h5>
+              <p class="fs_16 txt_bold mt40">모집인원</p>
+              <ul class="ul_info w_300 mt20">
+                <li>1차 2023.01.01 00:00<span class="txt_r">5/20명</span></li>
+                <li>2차 2023.01.07 00:00<span class="txt_r">2/20명</span></li>
+                <li>3차 2023.01.14 00:00<span class="txt_r">16/20명</span></li>
+                <li>4차 2023.01.21 00:00<span class="txt_r">5/20명</span></li>
+                <li>5차 2023.02.05 00:00<span class="txt_r">5/20명</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- product_detail_top : e -->
+
+          <ul class="tab_2 mt80">
+            <li class="active"><a href="#info">상품정보</a></li>
+            <li><a href="#qa">Q&A</a></li>
+          </ul>
+
+          <div class="deatil_con">
+            <div id="edit">
+                <img src="p_images/s4.jpg"><br><br>
+                로캣티어에 따르면 사단법인이 발표한 ‘2023 대한민국 올해의 녹색상품’에 5가지가 선정됐다.<br>
+                바닥재와 건축용 PF단열재는 지난 2014년 이후 8년 연속으로, 수퍼세이브 창호와 지아벽지는 6년 연속으로, 안심매트는 이번에 처음으로 올해의 녹색상품에 이름을 올리게 됐다.<br>
+                특히, 국내 인테리어 업계에서는 최다인 5개 제품이 올해의 녹색상품에 선정됐다.
+            </div>
+
+            <h5 class="mt100">교육기관 정보</h5>
+            <div class="w_100p mt30">
+                <img src="images/img_map.png" class="w_100p">
+            </div>
+            <p class="txt_bold mt14">(재)건설기술교육원</p>
+            <p class="mt5">서울특별시 금천구 가산디지털 1로 124-12, 101호</p>
+          </div>
+
+            
+
+          <div class="mt50 row" id="qa">
+            <span class="h5">Q&A</span>
+            <a href="javascript:void(0)" onclick="modal_open('qa_reg')" class="btn_point btn_sm f_right">문의하기</a>
+          </div>
+
+          <table class="table_board mt30">
+            <colgroup>
+                <col width="120">
+                <col width="*">
+                <col width="140">
+                <col width="140">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>답변상태</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td colspan="3">
+                        <div class="no_data">
+                            <p><span class="message_box">문의 내용이 없습니다.</span></p>
+                        </div>
+                    </td>
+                </tr> -->
+                <tr class="accordion">
+                    <td colspan="4" class="accordion_td">
+                      <ul class="qa_row trigger">
+                        <li>답변완료</li>
+                        <li>인사이트 서비스 오픈을 시작 합니다.</li>
+                        <li>닉네임최대8글자</li>
+                        <li>2023.03.01 00:00</li>
+                      </ul>
+                      <div class="answer_wrap panel">
+                        <table>
+                          <colgroup>
+                            <col width="120">
+                            <col width="*">
+                          </colgroup>
+                          <tr>
+                            <th class="point_color txt_bold">Q</th>
+                            <td>제로콜라 29130원 결제금액인데<br>3만원이 결제됐어요.<br>sk페이로 결제됐는데 왜 금액이 틀린가요?</td>
+                          </tr>
+                          <tr>
+                            <th class="red_color txt_bold">A</th>
+                            <td>문의주신 주문건 확인시 고객님께서 sk머니로 30000원 충전후 sk 머니 27611원,sk 포인트 1519원 으로 총 29130원 결제하신 부분 확인됩니다.<br><br>                              행복한 하루 되시기 바랍니다. 감사합니다.</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                </tr>
+                <tr class="accordion">
+                  <td colspan="4" class="accordion_td">
+                    <ul class="qa_row">
+                      <li>답변완료</li>
+                      <li><img src="images/ic_login_lock.png" class="w_16"> 비밀글 입니다.</li>
+                      <li>닉네임최대8글자</li>
+                      <li>2023.03.01 00:00</li>
+                    </ul>
+                  </td>
+              </tr>
+            </tbody>
+        </table>
+
+        <div class="paging">
+          <ul class="btn_wrap">
+            <li class="btn_prev">
+              <a href="#1"> <img src="images/btn_paging_prev2.png" alt=""></a>
+            </li>
+            <li class="btn_prev">
+              <a class="no_next" href="#1"><img src="images/btn_paging_prev1.png" alt=""></a>
+            </li>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li class="btn_next">
+              <a class="no_next" href="#1"><img src="images/btn_paging_next1.png" alt=""></a>
+            </li>
+            <li class="btn_next">
+              <a href="#1"><img src="images/btn_paging_next2.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+          
+        </div>
+
+      </div>
+    </div>
+
+    <!-- modal 문의하기 : s-->
+    <div class="modal modal_md modal_qa_reg">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('qa_reg')">
+      <div class="md_container">
+        <div class="md_title">교육 문의</div>
+        <div class="mt20 txt_h_1">
+            교육과 관련 없는 문의는 1:1 문의를 이용해주세요.<br>작성하신 문의는 <br><span class="txt_bold">MY > 공구/교육 관리</span>“에서 확인 할 수 있습니다.</div>
+        <div class="scrollbar mt30">
+            <ul class="input_ui row">
+              <li>
+                <label>문의 내용<span class="essential">*</span></label>
+                <textarea></textarea>
+              </li>
+              <li>
+                <input type="checkbox" name="check" id="only_check" value="Y">
+                <label for="only_check"><span></span>나만 보기</label>
+              </li>
+            </ul>
+        </div>
+				<div class="mt10 mb10 center">
+						<a href="#" class="btn_point btn_full_basic">등록</a>
+				</div>
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_qa_reg" onclick="modal_close('qa_reg')"></div>
+    <!-- modal 문의하기 : e-->
+
+    <!-- modal 교육 취소 신청 : s-->
+    <div class="modal modal_md modal_cancel">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('cancel')">
+      <div class="md_container">
+        <div class="md_title">교육 취소 신청</div>
+        <div class="fs_16 mt20 txt_h_1">구매 취소 후 재구매 신청이 어렵습니다.<br>정말 구매 신청을 취소하시겠어요?</div>
+
+        <div class="product_view_box mt30">
+          <div class="product_view_img">
+              <div class="img_box"><img src="p_images/s3.jpg"></div>
+          </div>
+          <div class="product_view_info">
+              <p class="txt_title">23SS 꼼데가르송 컨버스 척테일러 1970S 블랙로우 스니커즈 블랙로우 스니커즈</p>
+              <p class="fs_12 font_gray_A0 mt10">1차 2023.01.01 00:00</p>
+              <!-- <p class="fs_16 mt5"><b>175,200</b>원</p> -->
+          </div>
+      </div>
+
+        <a href="#" class="btn_point btn_full_basic mt30">교육 취소 신청</a>
+
+      </div>
+    </div>
+    <div class="md_overlay md_overlay_cancel" onclick="modal_close('cancel')"></div>
+    <!-- modal 교육 취소 신청 : e-->
+
+    <!-- footer : s -->
+    <footer>
+      <div class="inner_wrap row">
+				<ul class="footer_menu">
+          <li><a href="notice_list.html">공지사항</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="qa_list.html">1:1문의</a></li>
+          <li><a href="terms.html">서비스 이용약관</a></li>
+          <li><a href="terms.html">개인정보 취급방침</a></li>
+          <li><a href="terms.html">사업자정보확인</a></li>
+        </ul>
+        <div>
+          대표이사 인사이<span class="txt_line">|</span>서울특별시 금천구 가산디지털1로<span class="txt_line">|</span>사업자등록번호 5124-2356-23<span class="txt_line">|</span>통신판매업신고 제 2023-서울강남-169호<br>
+          개인정보관리책임자 김대표<span class="txt_line">|</span>제휴문의 email@email.com<span class="txt_line">|</span>고객문의 help@email.com
+        </div>
+        <p>Copyright ⓒ 2023 All Rights Reserved</p>
+      </div>
+
+    </footer>
+    <!-- footer : s -->
+
+  </div>
+  <!-- wrap : e -->
+
+  <script>
+  // 스크랩 토글버튼
+  function btn_scrap(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
+  // 좋아요 토글버튼
+  function detail_btn_like(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
+
+  // 댓글 좋아요 토글버튼
+  function cmt_btn_like(element){
+    if($(element).hasClass("on")){
+      $(element).removeClass("on");
+    } else {
+      $(element).addClass("on");
+    }
+  }
+
+  //수량
+  function amount_control(element, type){
+    var amount_num = $(element).siblings("span");
+    var current_num = Number(amount_num.text());
+
+    if(type == "minus"){
+      if(current_num == 0){
+        return false;
+        }
+        current_num--;
+      } else {
+        current_num++;
+      }
+      amount_num.text(current_num);
+    }
+
+  //댓글 more 버튼
+  function toggle_more( num ){
+  var element = null;
+  for( var i = 1; i <= num; i++ )
+  {
+    element = document.getElementById( "cmt_more_" + i );
+    if ( element != null )
+    {
+      ( element.style.display != "none" ) ? element.style.display = "none" : element.style.display = "";
+    }
+  }
+  return;
+  }
+
+  //답글쓰기
+  function reg_reply(){
+    $('#cmt_input').focus();
+    $('.comment_reg_wrap .tag').show();
+    $('.comment_reg_wrap .place_p').hide();
+    let tag_width = $('.comment_reg_wrap .tag').width();
+    $('#cmt_input').css('text-indent',tag_width+10);
+  }
+
+  var right_bn_1 = new Swiper(".right_bn_1", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  var right_bn_2 = new Swiper(".right_bn_2", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  var right_bn_3 = new Swiper(".right_bn_3", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  </script>
+
+</body>
+</html>
