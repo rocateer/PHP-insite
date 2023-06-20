@@ -1,6 +1,6 @@
 <!-- header : s -->
 <header>
-  <a class="btn_left" href="/<?=mapping('mypage')?>"><img class="w100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
+  <a class="btn_left" href="javascript:history.go(-1)"><img class="w100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
   <h1>
     1:1 문의
   </h1>
