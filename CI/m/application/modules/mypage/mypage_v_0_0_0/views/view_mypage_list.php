@@ -66,14 +66,11 @@
       <a href="/<?= mapping('my_recruit') ?>">구인구직 관리</a>
     </li>
     <li>
-      <a href="/<?= mapping('my_order') ?>">신청내역</a>
+      <a href="/<?= mapping('my_order') ?>">공구/교육 관리</a>
     </li>
     <li>
       직종 재인증 <img src="/images/ic_result_success.png" alt="인증완료" class="w_16 middle ml10">
       <a href="/<?= mapping('notice') ?>" class="right_txt">직종 재인증을 할 수 있습니다 <img class="w_16 middle" src="/images/btn_more.png"></a>
-    </li>
-    <li>
-      <a href="/<?= mapping('faq') ?>">공구/교육 관리</a>
     </li>
   </ul>
   <p class="mypage_title"> 고객 센터</p>

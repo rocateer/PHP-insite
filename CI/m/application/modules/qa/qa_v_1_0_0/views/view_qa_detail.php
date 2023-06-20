@@ -13,7 +13,7 @@
   <div class="qa_top_txt">
     <div class="qa_top_head">
       <span class="tag">미답변</span>
-      <div class="title"> 그린필 전기자동차 충전에 대한 데이터 질문</div>
+      <div class="title">플랫 플랫폼에 대한 문의 드립니다.</div>
       <span class="qa_date">2023.01.12</span>
     </div>
     <div class="qa_top_con">

@@ -19,7 +19,7 @@
       </div>
       <ul class="input_ui row mt40">
         <li>
-          <label>이릅<span class="essential">*</span></label>
+          <label>이름<span class="essential">*</span></label>
           <input type="text" id="member_name" name="member_name" placeholder="이름을 입력해 주세요.">
         </li>
         <li>
