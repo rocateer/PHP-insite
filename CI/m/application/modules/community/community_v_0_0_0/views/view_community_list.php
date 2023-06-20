@@ -2,7 +2,7 @@
 	<div class="main_header">
     <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
 		<a href="#"><img src="/images/head_btn_search.png" class="main_search mr5"></a>
-		<a href="#" class="btn_point btn_sm">글쓰기</a>
+		<a href="/<?=mapping('main')?>/reg_select" class="btn_point btn_sm">글쓰기</a>
 	</div>
 </header>
 <div class="body">

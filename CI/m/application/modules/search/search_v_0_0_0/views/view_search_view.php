@@ -1,7 +1,7 @@
 <header>
   <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/haed_btn_back.png" alt="뒤로가기"></a>
   <input class="header_search" type="text" placeholder="검색어를 입력해 주세요.">
-  <a href="/<?=mapping('search')?>/search_list_get"><img src="/images/head_btn_search.png" class="btn_right"></a>
+  <a href="/<?=mapping('search')?>/search_list_community"><img src="/images/head_btn_search.png" class="btn_right"></a>
 
 </header>
 <div class="body">

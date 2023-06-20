@@ -387,7 +387,7 @@ header .btn_txt{color:#F60032;font-size:16px; position: absolute; z-index: 1; to
 .qa_top_head .title{color:#F5F5F5;}
 .qa_top_head span.qa_date{font-size: 12px; color:#A0A0A0}
 .qa_top_head span.tag{font-family:'font-b'; margin-right: 5px; float: left;}
-.qa_top_con{padding:30px 20px 20px 20px; background: #121212;}
+.qa_top_con{padding:30px 20px 30px 20px; background: #121212;}
 .qa_top_con .qa_con{border-bottom: 0px; color:#E2E2E2;}
 .qa_bottom_txt .date{font-size: 12px;color:#999;margin-top: 20px;}
 .qa_bottom_txt {padding: 30px 20px; background: #232527; margin-top: 10px; }

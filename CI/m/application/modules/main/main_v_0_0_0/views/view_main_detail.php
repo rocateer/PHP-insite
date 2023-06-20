@@ -3,7 +3,7 @@
 <div class="main_list_wrap">
 	<div class="main_list_head">
 		<img src="/images/ic_cate_5.png" class="mr10">인기
-		<a href="/<?=mapping('community')?>/community_hot "><img src="/images/btn_more.png" class="f_right"></a>
+		<a href="/<?=mapping('community')?>/community_hot"><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">
 		<li>
@@ -55,7 +55,7 @@
 <div class="main_list_wrap">
 	<div class="main_list_head">
 		<img src="/images/ic_cate_1.png" class="mr10">자유공간
-		<a href="#"><img src="/images/btn_more.png" class="f_right"></a>
+		<a href="/<?=mapping('community')?>/community_list"><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">
     <?php for ($i=0; $i < 5; $i++) {?>

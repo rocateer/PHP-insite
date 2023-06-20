@@ -29,7 +29,7 @@
     <p class="mt30">구인구직</p>
     <ul class="reg_select mt10">
       <li>
-        <a href="#"><img src="/images/ic_cate_6.png">구인 공고 등록</a>
+        <a href="/<?=mapping('recruit')?>/job_reg"><img src="/images/ic_cate_6.png">구인 공고 등록</a>
       </li>
     </ul>
   </div>
