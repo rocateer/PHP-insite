@@ -265,6 +265,8 @@ footer p{font-size:14x; color:#BFBFBF; margin-top:16px;}
 .login_wrap .or::before{content: '';display: block;position: absolute;z-index: 1;top:5px;left:0px;width: 35px;height: 1px;background-color: #E2E2E2;}
 .sns_ul{width:100%;overflow: hidden;margin:20px auto; text-align: center;}
 .sns_ul img{width:50px; margin: 0 12px;}
+.find_result{border: 1px solid #E2E2E2; border-radius: 5px; text-align: center; padding: 50px 0; margin-top: 30px;}
+.find_result img{width:36px;}
 
 .input_ui li{margin-bottom:30px;}
 .input_ui li label{margin-bottom: 10px; display: block; color:#444;}
