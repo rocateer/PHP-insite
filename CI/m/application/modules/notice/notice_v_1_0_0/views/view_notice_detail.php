@@ -10,7 +10,7 @@
   </div>
 
   <div class="notice_body mt30">
-    <img src="<?=$result->img?>" class="img_block">
+    <img src="<?=$result->img?>">
     
     <p class="notice_content">
       <?=nl2br($result->contents)?>

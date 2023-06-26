@@ -277,3 +277,5 @@
 .order_qa_list .thum_img .img_box{width:60px; height:60px; border-radius:5px;}
 .order_qa_list .list_right{float: left; width: calc(100% - 80px);}
 .order_qa_list .txt_1{color:#a0a0a0; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+.order_qa_list .list_answer_wrap {overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+.order_qa_list .list_answer_wrap span{display:inline-block; width:55px; margin-top: 10px;}

@@ -368,16 +368,16 @@ a.btn_md_left{float: left; margin-right: 5px; display:inline-block; flex:100px 0
 .notice_title{font-size: 16px;padding: 20px;font-family: 'font-b';border-bottom: 1px solid #444;}
 .notice_date{font-size: 12px;color:#999;margin-bottom: 16px;margin-left: 20px;}
 /* .notice_date + .img_block{margin: 30px 20px 0;border-radius: 10px;width:calc(100% - 40px)} */
-.notice_body {width:100%;}
-.notice_body .img_block{width: 335px; margin: 0 auto;display: block; border-radius: 5px;}
-.notice_content{padding: 20px;color:#666;box-sizing: border-box;font-size: 14px;line-height: 24px}
+.notice_body {padding: 0 20px;}
+.notice_body img{width:100%; margin: 0 auto;display: block; border-radius: 5px;}
+.notice_content{padding: 20px 0;color:#E2E2E2; box-sizing: border-box;font-size: 14px; line-height: 24px}
 .faq_list li{position: relative;}
 .faq_list li .trigger{min-height:58px; padding:20px; box-sizing: border-box; background-size:18px; font-family:'font-b'; border-bottom: 1px solid #444;}
 .faq_list li .trigger.active{background-size: 18px}
 .faq_list li .question{vertical-align: middle; margin-top: -4px;width: 15px; margin-right:8px;}
 .faq_list li .arrow.rotate{transform: rotate(180deg);}
 .faq_list li .arrow{width: 10px;position: absolute; top:25px; right:20px;}
-.faq_list li .answer_wrap{line-height: 24px;display: none;background:#232527 url('/images/A.png') no-repeat 20px 20px; background-size: 10px;padding: 20px 20px;padding-left: 38px;   box-sizing: border-box;}
+.faq_list li .answer_wrap{line-height: 24px;display: none;background:#232527 url('/images/A.png') no-repeat 20px 20px; background-size: 10px;padding: 20px 20px;padding-left:47px; box-sizing: border-box;}
 header .qa_title{color:#222;font-size:14px; position: absolute;z-index: 1;top:16px;right:20px;}
 header .btn_txt{color:#F60032;font-size:16px; position: absolute; z-index: 1; top:15px; right:20px;}
 .qa_ul > li{border-bottom: 1px solid #444; padding: 20px; box-sizing: border-box;height:73px;}
@@ -386,7 +386,7 @@ header .btn_txt{color:#F60032;font-size:16px; position: absolute; z-index: 1; to
 .qa_ul > li .active{font-weight:600;color:#60DDE1;margin-bottom: 10px;}
 .qa_ul > li span{font-size: 14px; color:#999}
 .qa_ul > li span.qa_date{font-size: 12px; color:#A0A0A0}
-.qa_ul > li span.tag{font-family:'font-b'; margin-right: 5px; float: left;}
+.qa_ul > li span.tag{font-family:'font-b'; margin-right: 5px; float: left; display: inline-block; width:55px;}
 .qa_top_head{border-bottom: 1px solid #444; padding: 20px;font-size: 16px; background: #121212;}
 .qa_top_head .title{color:#F5F5F5;}
 .qa_top_head span.qa_date{font-size: 12px; color:#A0A0A0}

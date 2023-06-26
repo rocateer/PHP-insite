@@ -17,7 +17,7 @@
                     <p class="mt10 txt_1">'봄의 향' 심신안정 방향효과 인센스스틱</p>
                     </div>
                 </div>
-                <div class="mt10">
+                <div class="list_answer_wrap">
                     <span class="point_color mr5">답변완료</span>
                     이거 언제 보내주실 거에요??
                 </div>
@@ -34,7 +34,7 @@
                     <p class="mt10 txt_1">PADIUS, Source ECO bag_미디엄 베이직 컬러 </p>
                     </div>
                 </div>
-                <div class="mt10">
+                <div class="list_answer_wrap">
                     <span class="font_gray_A0 mr5">미답변</span>
                     배송 문의 드립니다.
                 </div>
@@ -51,7 +51,7 @@
                     <p class="mt10 txt_1">PADIUS, Source ECO bag_미디엄 베이직 컬러 </p>
                     </div>
                 </div>
-                <div class="mt10">
+                <div class="list_answer_wrap">
                     <span class="font_gray_A0 mr5">미답변</span>
                     배송 문의 드립니다.
                 </div>
