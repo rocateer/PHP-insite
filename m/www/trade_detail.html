@@ -153,7 +153,14 @@
               <div class="cmt_action">
                 <span>00:00</span>
                 <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
-                <span onclick="reg_reply()">대댓글</span>
+                <span class="btn_re_reg">대댓글</span>
+                <div class="comment_reg_wrap re_reg">
+                  <textarea id="cmt_input"></textarea>
+                  <div class="comment_reg_btn txt_right">
+                    <a href="#" class="ease">취소</a>
+                    <a href="#" class="ease">등록</a>
+                  </div>
+                </div>
               </div>
             </li>
             <li>
@@ -162,7 +169,7 @@
               <div class="cmt_action">
                 <span>00:00</span>
                 <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
-                <span onclick="reg_reply()">대댓글</span>
+                <span class="btn_re_reg">대댓글</span>
               </div>
             </li>
             <li class="cmt_re">
@@ -171,7 +178,7 @@
               <div class="cmt_action">
                 <span>00:00</span>
                 <span><a href="javascript:void(0)" onclick="cmt_btn_like(this)" class="cmt_btn_like ease">120</a></span>
-                <span onclick="reg_reply()">대댓글</span>
+                <span class="btn_re_reg">대댓글</span>
               </div>
             </li>
             <li class="cmt_re">
@@ -318,14 +325,11 @@
   return;
   }
 
-  //답글쓰기
-  function reg_reply(){
-    $('#cmt_input').focus();
-    $('.comment_reg_wrap .tag').show();
-    $('.comment_reg_wrap .place_p').hide();
-    let tag_width = $('.comment_reg_wrap .tag').width();
-    $('#cmt_input').css('text-indent',tag_width+10);
-  }
+ //답글쓰기
+ $(".btn_re_reg").click(function(){
+    $(".re_reg").stop().slideToggle(300);
+    return false;
+  });
 
   var right_bn_1 = new Swiper(".right_bn_1", {
     pagination: {

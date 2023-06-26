@@ -65,7 +65,7 @@
             <div class="w_400">
                 <ul class="input_ui row">
                     <li>
-                      <label>이메일<span class="essential">*</span></label>
+                      <label>아이디<span class="essential">*</span></label>
                       <div class="flex_1">
                         <input type="text" id="member_email" name="member_email" placeholder="이메일 주소를 입력해 주세요.">
                         <span>@</span>
@@ -136,14 +136,14 @@
                             지역선택<span class="essential">*</span>
                             <a href="javascript:void(0)" onclick="modal_open('region')" class="f_right essential">선택하기</a>
                         </label>
-                        <input type="text" class="input_dark mt5" id="work_confirm_idx" name="work_confirm_idx" placeholder="주로 활동하는 지역을 선택해주세요.">
+                        <input type="text" class="input_dark mt5" id="work_confirm_idx" name="work_confirm_idx" placeholder="주로 활동하는 지역을 선택해주세요." disabled>
                     </li>
                     <li>
                         <label>
                             직종인증
                             <a href="javascript:void(0)" onclick="modal_open('certification')" class="f_right essential">인증하기</a>
                         </label>
-                        <input type="text" class="input_dark mt5" id="work_confirm_idx" name="work_confirm_idx" placeholder="인증 후 많은 전문가들과 소통하세요">
+                        <input type="text" class="input_dark mt5" id="work_confirm_idx" name="work_confirm_idx" placeholder="인증 후 많은 전문가들과 소통하세요" disabled>
                     </li>
                 </ul>
             </div>
@@ -278,14 +278,17 @@
       <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('certification')">
       <div class="md_container">
         <div class="md_title">직종 인증</div>
-        <div class="md_inner_wrap mt30">
+        <div class="md_inner_wrap txt_height_1 mt30">
           내 직종을 인증하세요!<br>
-          나와 같은 직종에서 일하는 사람들과 공유할 수 있어요.
+          나와 같은 직종에서 일하는 사람들과 소통할 수 있어요.
           <ul class="input_ui row mt50">
             <li>
-                <label>직종 선택<span class="essential">*</span></label>
-                <p class="fs_12 font_gray_a0">현재 일하고 계신 직종을 선택해 주세요. 기타 직종은 '일반'</p>
-                <select>
+                <label>
+                  직종 선택<span class="essential">*</span>
+                  <p class="fs_12 font_gray_a0">현재 일하고 계신 직종을 선택해 주세요. 기타 직종은 '일반'</p>
+                </label>
+                
+                <select class="mt10">
                   <option>직종을 선택해 주세요.</option>
                 </select>
             </li>

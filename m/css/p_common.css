@@ -210,6 +210,7 @@ header{height:50px; box-sizing: border-box; position:fixed; top:0; left: 0; widt
 header.transparent{background: transparent}
 header.fixed.transparent{background:#121212;}
 header .main_header{text-align: right; width:100%; padding:0 20px; top:50%; transform: translateY(-50%); position: absolute; box-sizing: border-box;}
+header .main_header a{margin-left:4px;}
 header .btn_right{position: absolute; right:0px; top:50%; transform: translateY(-50%); padding: 13px;line-height: 0;}
 header .btn_right img{margin-left: 10px;}
 header .btn_left{position: absolute; left:15px; top:50%; transform: translateY(-50%); width: 24px; line-height: 0;}

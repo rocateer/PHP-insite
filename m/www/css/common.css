@@ -61,6 +61,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .mb130{margin-bottom: 130px !important;}
 .pdb10{padding-bottom: 10px;}
 .pdlr30{padding: 0 30px;}
+.pdl20{padding-left: 20px !important;}
 
 /* font */ 
 .fs_12{font-size: 12px;}
@@ -69,7 +70,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .fs_18{font-size: 18px;}
 .fs_20{font-size: 20px;}
 .fs_24{font-size: 24px;}
-.font_gray_a0{color: #A0A0A0;}
+.font_gray_a0{color: #A0A0A0 !important;}
 .font_gray_a{color: #aaa;}
 .font_gray_4{color: #444;}
 .font_black{color: #232527;}
