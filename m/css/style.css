@@ -8,13 +8,14 @@
 .gnb_wrap{-ms-overflow-style:none; /* IE and Edge */ scrollbar-width:none; padding:15px 20px; box-sizing:border-box; overflow-y:hidden; overflow-x:auto; width:auto; word-break: break-all; white-space: nowrap; margin-top:50px;}
 .gnb_wrap li{display:inline-block; margin-right:20px; color:#A0A0A0;}
 .gnb_wrap li.active{color:#fff;}.main_list_wrap{margin-top:20px;}
-.main_list_head{padding:0 20px;}
+.main_list_head{padding:0 20px; font-size: 16px;}
+.main_list_head span{font-size: 16px; padding-top: 2px; display: inline-block; vertical-align: middle;}
 .main_list_head img{width:24px; vertical-align:middle;}
 .main_list li{border-bottom:1px solid #444; padding:20px; overflow: hidden;}
 .main_list li .list_category{font-size:12px; color:#A0A0A0;}
 .main_list li .list_category img{width:16px; vertical-align:middle; margin-right:4px;}
 .main_list li .best_title img{width:16px; vertical-align:middle;}
-.main_list li .best_title span{vertical-align:middle; color:#fff; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; max-width:calc(100% - 50px); display: inline-block;}
+.main_list li .best_title span{vertical-align:middle; color:#F5F5F5; font-size: 14px; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; max-width:calc(100% - 50px); display: inline-block;}
 .main_list li .best_title span.type_2{vertical-align:middle; color:#fff; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; max-width:calc(100% - 80px); display: inline-block;}
 .action_ui li{margin-right:20px; border:none; display: inline-block; font-size:12px; color:#636363; padding:0;}
 .action_ui li img{width:16px; vertical-align:middle; margin-right:4px;}
@@ -43,7 +44,7 @@
 .community_list_head .list_cate_img{width:28px; margin-right:6px; float: left;}
 .community_list_head .right_area{float: left; width:calc(100% - 34px);}
 .community_list .txt_cate{font-size: 12px; color:#E2E2E2; font-family: 'font-b';}
-.community_list .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b';}
+.community_list .txt_nickname{ font-size: 12px; color:#20BFA9; font-family: 'font-b';}
 .community_list .txt_nickname .list_date{font-size: 12px; color:#A0A0A0;}
 .community_list_body{overflow: hidden; margin-top: 16px;}
 .community_list_body .community_list_item{overflow: hidden; box-sizing: border-box;}
@@ -51,7 +52,8 @@
 .community_list_body .community_list_item .community_list_con{color: #A0A0A0; margin-top: 8px; white-space: normal; overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.4;}
 .community_list_body .thum_img{float: right; width:88px; height: 88px; margin-left: 20px; }
 .community_list_body .thum_img .img_box{width:88px; height: 88px; border-radius: 5px;}
-.community_action_area span{color:#636363; font-size: 12px; width:33.3%; float: left; text-align: center;}
+.community_action_area span{color:#636363; font-size: 12px; float: left; text-align: center; margin-right: 20px;}
+.community_action_area span.on{color:#20BFA9;}
 .community_action_area img{width:24px; margin-right: 4px; vertical-align: middle;}
 .detail_category{vertical-align: middle; background: #444; border-radius:3px; padding:5px 8px 4px 8px; font-size: 12px; display: inline-block;}
 .detail_category img{width:16px; margin-right:4px; vertical-align: middle;}
@@ -86,7 +88,7 @@
 .recruit_list li .item_1{font-size: 12px;}
 .recruit_list li .item_2{font-size: 12px; color:#A0A0A0; margin-top: 5px;}
 .recruit_list li .item_2 .info_ic{vertical-align: middle; width:16px; margin-right:4px;}
-.recruit_list li .txt_title{display:inline-block; width:calc(100% - 50px); overflow:hidden; text-overflow: ellipsis; white-space: nowrap; padding-top: 5px;}
+.recruit_list li .txt_title{display:inline-block; font-size: 16px; width:calc(100% - 50px); overflow:hidden; text-overflow: ellipsis; white-space: nowrap; padding-top:2px;}
 .select_result_wrap span{background: #232527; border-radius: 3px; padding: 8px 12px; font-size: 12px; color:#A0A0A0;}
 .select_result_wrap span img{width:16px; margin-left: 3px; vertical-align: middle;}
 
@@ -122,7 +124,7 @@
 .cmt_reg.on{width: 100%;position: fixed; bottom:0;left:0}
 .cmt_reg .tag{display:none;width: 100%;min-height:40px;box-sizing: border-box;position:absolute;z-index: 1; top:-45px;left:0;padding: 13px 20px;background: #F2F2F2;color:#737373;}
 .cmt_reg input{height:40px; border:0; text-indent:20px; border-radius:100px; padding-right:40px; box-sizing: border-box; background:#232527;}
-.cmt_reg .btn_send{display:none;position: absolute;z-index: 1;width: 36px;top:9px;right:22px;}
+.cmt_reg .btn_send{display:block;position: absolute;z-index: 1;width: 36px;top:9px;right:22px;}
 #reply_back{display: none;width: 100%;height: 100%;position: fixed; z-index: 9;top:0;left:0;background: rgba(0,0,0,0.5);}
 
 /* 중고거래 */
@@ -136,7 +138,7 @@
 .trade_list_body .trade_list_item .trade_list_price{font-size: 16px; color:#fff; font-family: 'font-b'; margin-top: 15px;}
 .trade_list_body .trade_list_item .trade_state{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #164740; float: right;}
 .trade_list_body .trade_list_item .trade_state_end{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #444; float: right;}
-.trade_list_body .trade_list_item .trade_list_con{color: #A0A0A0; white-space: normal; overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.2;}
+.trade_list_body .trade_list_item .trade_list_con{color: #F5F5F5; white-space: normal; overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.2;}
 .trade_list_body .thum_img{float: left; width:94px; height: 94px; margin-right: 20px; }
 .trade_list_body .thum_img .img_box{width:94px; height: 94px; border-radius: 5px;}
 .trade_action_area span{color:#636363; margin-right: 20px; font-size: 12px;}
@@ -204,32 +206,35 @@
 .detail_head .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b'; margin-top: 3px;}
 .detail_head .txt_nickname .detail_date{font-size: 12px; color:#A0A0A0;}
 .detail_head .txt_price{font-size: 20px; color:#F5F5F5; font-family: 'font-b';}
-.detail_body{padding: 20px; line-height: 1.4;}
-.detail_body img{width:100%; margin-bottom: 20px;}
-.detail_qna_list li{margin-bottom: 30px;}
+.detail_body{padding: 20px; line-height:2;}
+.detail_body img{width:100%; margin-bottom: 20px; border-radius: 5px;}
+.detail_qna_list li{margin-bottom: 30px; border-bottom: 1px solid #444;}
 .detail_qna_list li .qa_answer_wrap{background:#232527; padding: 20px; margin-top: 20px; display: none;}
-.detail_qna_list li .txt_q{margin-top: 12px;}
+.detail_qna_list li .txt_q{margin-top: 12px; margin-bottom: 20px;}
 .detail_qna_list li .txt_q img{width:12px; margin-right: 3px; vertical-align: middle;}
 .product_amount_box{border: 1px solid #444; border-radius: 2px; padding: 20px 15px;}
 .view_price{font-size: 12px; color:#A0A0A0; overflow: hidden;}
-.view_price span{font-size:20px; color:#F5F5F5; font-family: 'font-b'; float: right;}
+.view_price p{display: inline-block; vertical-align: middle; float: left; margin-top: 5px;}
+.view_price span{font-size:20px; color:#F5F5F5; font-family: 'font-b'; float: right; vertical-align: middle;}
 .amount_wrap{position: relative; margin-top:16px; float: left;}
 .amount_wrap img{width:24px; vertical-align: middle;}
 .amount_wrap .num{width:30px; display:inline-block; text-align: center;}
-.product_view_box{border: 1px solid #444; border-radius: 5px; overflow: hidden; box-sizing: border-box;}
+.product_view_box{border: 1px solid #444; border-radius: 5px; overflow: hidden; box-sizing: border-box; display: flex; align-items: center;}
 .product_view_box .product_view_img{width:123px; height: 123px; position: relative; float: left;}
 .product_view_box .product_view_img .img_box{ width:123px; height: 123px; border-radius: 5px 0 0 5px;}
 .product_view_box .product_view_info{float: left; padding: 15px; width: calc(100% - 123px); box-sizing: border-box;}
+.product_view_box .product_view_info .mark{position: relative; left:0; top:0;}
 .product_view_box .txt_title{overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.4;}
 .product_view_box .mark{position: absolute; left:10px; top:10px; z-index: 2;}
 .account_box{background: #232527; border-radius: 5px; padding: 20px;}
 .account_box .ic_copy{width:16px; vertical-align: middle; margin-top: -3px;}
 .detail_state_bar{background: #164740; padding: 10px 20px; overflow: hidden;}
-.detail_state_bar span{float: left; margin-right: 10px;}
+.detail_state_bar span{float: left; margin-right:30px;}
 .map_wrap{margin:20px 0 20px 0;}
 .map_wrap img{max-width:100%; border-radius: 5px;}
 .radio_select label{margin-bottom:15px !important; color:#F5F5F5 !important; display: block !important;}
 .radio_select label p{float: right;}
+.img_r{border-radius: 5px;}
 
 /* table */
 .table_info{font-size: 14px;}

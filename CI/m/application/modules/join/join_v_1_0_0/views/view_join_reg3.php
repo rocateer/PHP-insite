@@ -64,18 +64,19 @@
   <div class="body">
   <div class="inner_wrap">
     <form class="find_form">
-      <div>
-        <h2>직종 인증 신청</h2>
+      <div class="mt30">
+        <h2>직종 인증</h2>
         <span class="subtext mt10">
-          내 직종을 인증하세요! <br>
-          나와 같은 직종에서 일하는 사람들과 공유할 수 있어요.
+        내 직종을 인증하세요!<br>
+        나와 같은 직종에서 일하는 사람들과 소통할 수 있어요.
         </span>
       </div>
       <ul class="input_ui row mt40">
         <li>
           <label>직종 선택<span class="essential">*</span></label>
           <span class="subtext">
-            현재 일하고 계신 직종을 선택해 주세요. 기타 직종은 '일반'
+          현재 일하고 계신 직종을 선택해 주세요.<br>
+          항목에 없는 인테리어 관련 직종은 “일반”을 선택하세요.
           </span>
           <select class="mt10">
               <option value="">직종을 선택해주세요.</option>
@@ -111,7 +112,7 @@
       </ul>
     </form>
     <div class="btn_space">
-      <a href="javascript:void(0)" class="btn_point btn_full_basic" onclick="default_work()">직종 인증 신청</a>
+      <a href="javascript:void(0)" class="btn_point btn_full_basic" onclick="default_work()">인증 신청</a>
     </div>
   </div>
   </div>

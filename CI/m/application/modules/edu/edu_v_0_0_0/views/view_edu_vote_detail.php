@@ -13,7 +13,7 @@
       <span class="detail_category">진행중</span>
       <span class="detail_date">2023.01.01</span>
     </div>
-    <div class="detail_title">월넛과 베이지로 차분하게, 무드있는 아파트.</div>
+    <div class="detail_title mt20">월넛과 베이지로 차분하게, 무드있는 아파트.</div>
   </div>
 
   <!-- community body -->

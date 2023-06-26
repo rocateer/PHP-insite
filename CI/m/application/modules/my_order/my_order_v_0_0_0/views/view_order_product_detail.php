@@ -1,5 +1,6 @@
 <header>
-    <a class="btn_left" href="/<?=mapping('my_order')?>"><img class="w_100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
+    <a class="btn_left" href="javascript:history.go(-1)"><img class="w_100" src="/images/head_btn_back.png" alt="뒤로가기"></a>
+    <!-- <a class="btn_left" href="/<?=mapping('my_order')?>/order_product_list"><img class="w_100" src="/images/head_btn_back.png" alt="뒤로가기"></a> -->
     <h1>구매 신청 완료</h1>
 </header>
 

@@ -12,7 +12,7 @@
         <input type="text" id="" name="" value="김구직">
       </li>
       <li>
-        <label>연락처</label>
+        <label>연락처<span class="essential">*</span></label>
         <input type="tel" id="" name="" placeholder="연락받으실 전화번호를 입력해 주세요.">
       </li>
       <li>
@@ -91,7 +91,7 @@
         <textarea id="" cols="" class="reg_textarea"></textarea>
       </li>
       <li>
-        <label>포트폴리오<span class="essential">*</span></label>
+        <label>포트폴리오</label>
       </li>
     </ul>
   </div>

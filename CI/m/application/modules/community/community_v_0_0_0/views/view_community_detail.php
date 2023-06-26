@@ -204,7 +204,7 @@
   <div class="">
     <div class="modal_title">신고</div>
     <p class="modal_txt">부적절한 내용이 포함되어 있나요?<br>신고하는 이유를 선택해주세요.</p>
-    <select name="" id="">
+    <select name="" id="" class="mt20">
       <option value="">선택</option>
       <option value="">선택</option>
     </select>
@@ -344,13 +344,13 @@ function modal_close_slide(element){
   }
 
   // 댓글 입력되면 버튼 노출/토글
-  $(".input").on("propertychange change keyup paste input", function(){
-    if ($(this).val().length === 0) {
-      $('.btn_send').css('display','none');
-    }else{
-      $('.btn_send').css('display','block');
-    };
-  })
+  // $(".input").on("propertychange change keyup paste input", function(){
+  //   if ($(this).val().length === 0) {
+  //     $('.btn_send').css('display','block');
+  //   }else{
+  //     $('.btn_send').css('display','block');
+  //   };
+  // })
 
 // top
 $( document ).ready( function() {

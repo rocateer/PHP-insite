@@ -29,10 +29,10 @@
         <li>
           <label class="region">지역선택<span class="essential">*</span></label>
           <a href="#" onclick="modal_open('region')" class="btn essential">선택하기</a>
-          <input type="text" class="input_dark mt5" id="region_full_name" name="region_full_name" placeholder="주로 활동하는 지역을 선택해주세요">
+          <input type="text" class="input_dark mt5 region_input" id="region_full_name" name="region_full_name" placeholder="주로 활동하는 지역을 선택해주세요" disabled>
         </li>
       </ul>
-      <div class="all_checkbox row mt40 mb30">
+      <div class="all_checkbox row mt40 mb60">
         <ul>
           <li>
             <input type="checkbox" name="checkAll" id="checkAll" >

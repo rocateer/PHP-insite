@@ -30,7 +30,7 @@
                 <input type="tel" id="" name="" placeholder="받으시는 분의 연락처를 입력해 주세요.">
             </li>
             <li>
-                <label>배송지</label>
+                <label>배송지<span class="essential">*</span></label>
                 <div class="input_address_wrap">
                     <a href="#" class="btn_right">주소 검색</a>
                     <input type="tel" id="" name="" placeholder="">
@@ -43,7 +43,7 @@
                 <input type="text" id="" name="" placeholder="송금하실 계좌의 예금주명을 입력해 주세요.">
             </li>
             <li>
-                <label>현금영수증<span class="essential">*</span></label>
+                <label>현금영수증</label>
                 <p class="fs_12 font_gray_63">현금영수증 발급을 원하시는 경우, 휴대폰번호 또는 현금영수증 전용 카드 번호를 입력해주세요.</p>
                 <input type="text" id="" name="" placeholder="">
             </li>
@@ -104,7 +104,7 @@
         <div class="f_right"><img src="/images/head_btn_close_w.png" class="w_24" onclick="javascript:modal_close_slide('info')"></div>
     </div>
     <div class="mt20">
-     <img src="/p_images/s8.jpg" class="w_100p">
+     <img src="/p_images/s8.jpg" class="img_r w_100p">
     </div>
 </div>
 <div class="md_slide_overlay md_slide_overlay_info" onclick="modal_close_slide('info')"></div>

@@ -15,12 +15,15 @@
 				다시 한번 확인해주세요.
 			</div>
 		</div>
-		<div class="btn_space mt30">
-			<a href="/<?=mapping('find_id')?>" class="btn_point_ghost btn_full_basic">아이디 찾기</a>
+		<div class="flex_between mt30">
+			<div class="w_half btn_space">
+				<a href="/<?=mapping('find_id')?>" class="btn_point_ghost btn_full_basic">아이디 찾기</a>
+			</div>
+			<div class="w_half btn_space">
+				<a href="/<?=mapping('join')?>" class="btn_point btn_full_basic">회원가입</a>
+			</div>
 		</div>
-		<div class="btn_space mt10">
-			<a href="/<?=mapping('join')?>" class="btn_point btn_full_basic">회원가입</a>
-		</div>
+		
   </div>
 </div>
 

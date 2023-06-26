@@ -192,9 +192,9 @@ input:checked + .check_slider:before {-webkit-transform: translateX(18px); -ms-t
 .find_result{border:1px solid #444; border-radius: 5px; height:300px;margin: 0 auto; text-align:center;}
 .find_result img{width: 35px;margin: 0 auto;display: block;padding-top: 70px;}
 .find_result h2{color: #F5F5F5;}
-.find_result .text{color: #E2E2E2;}
+.find_result .text{color: #E2E2E2; line-height: 160%;}
 
-body, html , .wrap{height: 100%;}
+body, html , .wrap{height: 100%; height: -webkit-fill-available; height: fill-available;}
 .vh_wrap{position: relative; min-height: 100vh; overflow: hidden}
 .vh_wrap.body{min-height: 100vh;}
 .vh_body{padding-bottom: 110px; padding-top: 50px;}
@@ -250,11 +250,13 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 
 .area_title li:first-child{width:40%; border-right: 1px solid #444; }
 .area_title li{width:60%; float: left; text-align: center; height: 50px; background: #232527; line-height: 50px; font-size:16px; font-family: 'font-b'; border-bottom:1px solid #444; box-sizing: border-box;}
-.region_ui{width:100%; height:calc(100vh - 50px); overflow: hidden; text-align: center; box-sizing: border-box;}
-.region_ui .area_item_1{width:40%; float: left; height: 100vh; overflow-y:auto ; border-right: 1px solid #444; box-sizing: border-box;}
-.region_ui .area_item_2{width:60%; float: right; height: 100vh; overflow-y:auto ;}
+.region_ui{width:100%; height:calc(var(100vh) - 150px); isolation: isolate; overflow: hidden; text-align: center; box-sizing: border-box; -webkit-fill-available; height: fill-available;}
+/* .region_ui{width:100%; height:calc(100vh - 150px); isolation: isolate; overflow: hidden; text-align: center; box-sizing: border-box; -webkit-fill-available; height: fill-available;} */
+.region_ui .area_item_1{width:40%; float: left; height: 100vh; overflow-y:auto; border-right: 1px solid #444; box-sizing: border-box;}
+.region_ui .area_item_2{width:60%; float: right; height: 100vh; overflow-y:auto;}
 .region_ui li{width: 50;height:50px; line-height: 50px;display:block;}
 .region_ui li.active{color: #20BFA9;}
+.region_input{cursor: default;}
 
 .step_ui{float: right;}
 .step_ui span{display: inline-block; width:10px; height: 10px; background: #444444; border-radius:30px; vertical-align: middle; margin: 0 3px;}
@@ -269,6 +271,8 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .modal_slide_find_result p{color:#494949;margin-top: 20px;}
 .modal_slide .modal_title{font-size:14px; font-family:'font-b';}
 .modal_slide .modal_txt{font-size: 12px; color:#A0A0A0; margin-top: 15px;}
+.modal_slide_report{padding: 40px 30px 20px 30px;}
+.modal_slide_amount{padding:30px 20px !important;}
 .btn_report{text-align: right; margin:15px -15px 0 -15px;}
 .btn_report span{padding: 15px; display: inline-block;}
 
@@ -288,7 +292,7 @@ input.input_dark {background:#232527; color: #fff; height:50px; line-height: 50p
 .modal .md_container{position: relative; padding: 30px 20px; box-sizing: border-box;}
 .md_overlay{position: fixed; width: 100%; height: 100%; top:0; left:0; background: rgba(0,0,0,.5); opacity: 0; visibility: hidden; z-index: 200}
 .modal_full{width:100%; height:100%;}
-.modal_full #edit{padding:0 20px;box-sizing: border-box;}
+.modal_full #edit{padding:0 20px;box-sizing: border-box; line-height:2.0;}
 
 .btn_md_wrap{ margin-top: 30px; display: flex;}
 a.btn_md_right{float: right; display:inline-block; flex:1; text-align:center;}
@@ -351,7 +355,7 @@ a.btn_md_left{float: left; margin-right: 5px; display:inline-block; flex:100px 0
 .flex_5 select:last-child{margin-left:5px; width: 100px;}
 .flex_term span{line-height: 50px; margin: 0 5px;}
 .w_half{width:calc(50% - 8px); display: inline-block;}
-.input_right_txt{position: absolute; right:0; top:20px; color:#A0A0A0}
+.input_right_txt{position: absolute; right:0; top:16px; color:#A0A0A0}
 
 /* complete 공통 */
 .complete_wrap{margin:0 auto;text-align: center;}
@@ -408,6 +412,7 @@ header .btn_txt{color:#F60032;font-size:16px; position: absolute; z-index: 1; to
 
 .txt_height_1{line-height: 1.6;}
 .txt_height_2{line-height: 1.4;}
+.txt_height_3{line-height: 2.0;}
 
 .complete_wrap{text-align: center;}
 .complete_wrap img{width:70px;}

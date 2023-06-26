@@ -7,7 +7,7 @@
 <div class="body">
   <div class="inner_wrap">
     <form class="find_form">
-			<ul class="input_ui row">
+			<ul class="input_ui row mt30">
 				<li>
 					<label>이름<span class="essential"> *</span></label>
 					<input type="text"id="member_name" name="member_name" placeholder="">

@@ -17,7 +17,7 @@
         <img src="/images/ic_cate_2.png" class="list_cate_img">
         <div class="right_area">
           <p class="txt_cate">자유공간</p>
-          <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+          <p class="txt_nickname font_gray_A0">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
         </div>
       </div>
       <a href="/<?=mapping('community')?>/community_detail">
@@ -32,7 +32,7 @@
         </div>
       </a>
       <div class="community_action_area mt15"> 
-        <span><img src="/images/ic_board_heart_off.png">150</span>
+        <span class="on"><img src="/images/ic_board_heart_on.png">150</span>
         <span><img src="/images/ic_board_chat.png">10</span>
         <span><img src="/images/ic_board_visibility.png">1,523</span>
       </div>
@@ -42,7 +42,7 @@
         <img src="/images/ic_cate_3.png" class="list_cate_img">
         <div class="right_area">
           <p class="txt_cate">자유공간</p>
-          <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+          <p class="txt_nickname font_gray_A0">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
         </div>
       </div>
       <div class="community_list_body">
@@ -70,7 +70,7 @@
         <img src="/images/ic_cate_1.png" class="list_cate_img">
         <div class="right_area">
           <p class="txt_cate">자유공간</p>
-          <p class="txt_nickname">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
+          <p class="txt_nickname font_gray_A0">딸기맛바나나킥 · 서울 남부 <span class="f_right list_date">12.21</span></p>
         </div>
       </div>
       <div class="community_list_body">

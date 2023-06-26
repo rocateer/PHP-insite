@@ -3,7 +3,7 @@
   <h1>&nbsp;</h1>
   <div class="btn_right">
     <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
-    <img src="/images/head_btn_more.png" alt="" onclick="modal_open_slide('more')">
+    <!-- <img src="/images/head_btn_more.png" alt="" onclick="modal_open_slide('more')"> -->
   </div>
 </header>
 
@@ -74,7 +74,7 @@
           <th>1인 최소 구매</th>
           <td>2</td>
         </tr>
-        <tr>
+        <tr id="info">
           <th>1인 최대 구매 가능</th>
           <td>5</td>
         </tr>
@@ -94,9 +94,13 @@
   <hr>
  
   <!-- Q&A : s -->
+  <ul class="tab_2">
+    <li><a href="#info">상품정보</a></li>
+    <li class="active"><a href="#qna">Q&A</a></li>
+  </ul>
   <div class="row">
     <div class="inner_wrap">
-      <h5 class="mt30">Q&A</h5>
+      <!-- <h5 class="mt30">Q&A</h5> -->
       <a href="javascript:void(0)" onclick="modal_open('qa_reg')" class="btn_point_ghost btn_full_basic mt20">문의하기</a>
     </div>
   </div>
@@ -110,12 +114,12 @@
     <li class="accordion">
       <div class="inner_wrap trigger">
         <p class="fs_12 point_color">답변완료</p>
-        <div class="fs_12 mt5">벚꽃보러가요 <span class="f_right date">2023.01.01 09:20</span></div>
+        <div class="fs_12 mt5">벚꽃보러가요 <span class="f_right date">09:20</span></div>
         <p class="txt_q">이거 언제 보내주실 거에요??</p>
       </div>
       
       <div class="panel qa_answer_wrap">
-          <div class="fs_12 mb10">답변<span class="f_right date">2023.01.01 09:20</span></div>
+          <div class="fs_12 mb10">답변<span class="f_right date">11:20</span></div>
           안녕하세요 고객님.<br>
           최근 주문량 증가로 인해 순차적으로 출고 진행이<br>
           되고 있으니 조금만 양해 부탁드립니다.<br>
@@ -124,7 +128,7 @@
     <li class="accordion">
       <div class="inner_wrap"><!-- 비밀글일 경우 trigger를 삭제한다 -->
         <p class="fs_12 font_gray_A0">미답변</p>
-        <div class="fs_12 mt5">벚꽃보러가요 <span class="f_right date">2023.01.01 09:20</span></div>
+        <div class="fs_12 mt5">벚꽃보러가요 <span class="f_right date">09:20</span></div>
         <p class="txt_q"><img src="/images/ic_login_lock.png">비밀글 입니다.</p>
       </div>
     </li>
@@ -181,7 +185,7 @@
       </div>
     </div>
     <div class="view_price mt30">
-      총 상품 금액
+      <p>총 상품 금액</p>
       <span>175,200원</span>
     </div>
     <div class="mt30">

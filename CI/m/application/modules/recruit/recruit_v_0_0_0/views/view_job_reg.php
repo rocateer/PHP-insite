@@ -35,7 +35,7 @@
       <li>
         <label class="region">지역 선택<span class="essential">*</span></label>
         <a href="javascript:void(0)" onclick="modal_open('region')" class="btn essential">선택하기</a>
-        <input type="text" class="input_dark mt5" id="region_full_name" name="region_full_name" placeholder="주로 활동하는 지역을 선택해주세요">
+        <input type="text" class="input_dark mt5" id="region_full_name" name="region_full_name" disabled placeholder="주로 활동하는 지역을 선택해주세요">
       </li>
       <li>
         <label>근무구분<span class="essential">*</span></label>
@@ -187,7 +187,6 @@
       <div>여기는 에디터가 들어가는 공간 입니다. </div>
     </div>
   </div>
-  <a href="javascript:void(0)" class="btn_point btn_floating" onclick="region_reg();">선택</a>
 </div>
 <!-- 성별차별금지 안내 모달 : e -->
 
@@ -203,7 +202,6 @@
       <div>여기는 에디터가 들어가는 공간 입니다. </div>
     </div>
   </div>
-  <a href="javascript:void(0)" class="btn_point btn_floating" onclick="region_reg();">선택</a>
 </div>
 <!-- 연령차별금지 안내 모달 : e -->
 

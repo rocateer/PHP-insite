@@ -10,10 +10,12 @@
 
   <!-- community head -->
   <div class="detail_head">
-      <p class="detail_title">월넛과 베이지로 차분하게, 무드있는 신혼집</p>
+      <p class="txt_title">월넛과 베이지로 차분하게, 무드있는 신혼집</p>
       <p class="txt_nickname">플랫폼로캣티어  <span class="f_right detail_date">2022.12.21</span></p>
   </div>
+  <hr>
   <div class="inner_wrap">
+  <h5 class="mt30">모집내용</h5>
     <table class="mt30 table_info" >
       <colgroup>
         <col width='80px'>
@@ -51,7 +53,7 @@
   </div>
   <hr class="space mt20">
   <!-- community body -->
-  <div class="inner_wrap mt20">
+  <div class="inner_wrap mt20 txt_height_3">
     근무형태 : 정규직 (수습 2개월)<br>
     근무요일 : 주 5일<br>
     근무시간 : 10시 00분 ~ 19시 00분<br><br>

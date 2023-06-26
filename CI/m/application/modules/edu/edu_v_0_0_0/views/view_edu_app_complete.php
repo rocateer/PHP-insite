@@ -4,7 +4,7 @@
     <div class="vh_body complete_wrap">
        <img src="/images/ic_result_success.png">
        <h3 class="text_center">교육 신청 완료</h3>
-       <div class="text_center font_gray_A0 mt20">입금 확인된 후 교육 신청이 확정됩니다.<br><span class="b">“MY > 공구/교육 관리”</span> 에서 확인하실 수 있습니다.</div>   
+       <div class="text_center font_gray_A0 mt20">입금 확인된 후 교육 신청이 확정됩니다.<br><span class="b"><a href="/<?=mapping('my_order')?>">“MY > 공구/교육 관리”</a></span> 에서 확인하실 수 있습니다.</div>   
     </div>
     <div class="vh_footer">
         <div class="account_box mt10">

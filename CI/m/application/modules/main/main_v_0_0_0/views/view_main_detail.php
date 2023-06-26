@@ -2,15 +2,15 @@
 <!-- 인기 : s -->
 <div class="main_list_wrap">
 	<div class="main_list_head">
-		<img src="/images/ic_cate_5.png" class="mr10">인기
+		<img src="/images/ic_cate_5.png" class="mr10"><span>인기</span>
 		<a href="/<?=mapping('community')?>/community_hot"><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">
 		<li>
 			<div class="list_category"><img src="/images/ic_cate_1.png"> 자유공간</div>
 			<div class="best_title mt5">
-				<img src="/images/ic_img.png" class="w_16"> 
 				<span> 월넛과 베이지로 차분하게, 무드있는 신혼집 제목이 길어지면 어떻게 될까요? </span>
+				<img src="/images/ic_img.png" class="w_16"> 
 				<img src="/images/ic_vote.png" class="w_16">
 			</div> 
 			<ul class="action_ui mt10">
@@ -54,7 +54,7 @@
 <!-- 자유공간 : s -->
 <div class="main_list_wrap">
 	<div class="main_list_head">
-		<img src="/images/ic_cate_1.png" class="mr10">자유공간
+		<img src="/images/ic_cate_1.png" class="mr10"><span>자유공간</span>
 		<a href="/<?=mapping('community')?>/community_list"><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">
@@ -75,7 +75,7 @@
 <!-- 인사이트 : s -->
 <div class="main_list_wrap mt50">
 	<div class="main_list_head">
-		<img src="/images/ic_cate_2.png" class="mr10">인사이트
+		<img src="/images/ic_cate_2.png" class="mr10"><span>인사이트</span>
 		<a href="#"><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">
@@ -104,7 +104,7 @@
 <!-- 비밀공간 : s -->
 <div class="main_list_wrap">
 	<div class="main_list_head">
-		<img src="/images/ic_cate_3.png" class="mr10">비밀공간
+		<img src="/images/ic_cate_3.png" class="mr10"><span>비밀공간</span>
 		<a href="#"><img src="/images/btn_more.png" class="f_right"></a>
 	</div>
 	<ul class="main_list">

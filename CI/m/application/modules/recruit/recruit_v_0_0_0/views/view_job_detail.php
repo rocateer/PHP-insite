@@ -10,9 +10,10 @@
 
   <!-- community head -->
   <div class="detail_head">
-      <p class="detail_title">가족처럼 일할 곳을 찾습니다.</p>
+      <p class="txt_title">가족처럼 일할 곳을 찾습니다.</p>
       <p class="txt_nickname">딸기맛바나나킥 · 목공 · 서울 남부  <span class="f_right detail_date">2022.12.21</span></p>
   </div>
+  <hr>
   <div class="inner_wrap">
     <table class="mt30 table_info" >
       <colgroup>
@@ -39,7 +40,7 @@
   </div>
   <hr class="space mt20">
   <!-- community body -->
-  <div class="inner_wrap mt20">
+  <div class="inner_wrap txt_height_3 mt20">
     - A 건설업체<br>
     - B 건설업체<br>
     - C 건설업체<br>

@@ -33,10 +33,10 @@
       <a href="javascript:void(0)" onclick="modal_open('reject')" class="right_txt">인증 신청이 반려 되었습니다 <img class="w_16 middle" src="/images/btn_more.png"></a>
     </li>
     <li>프로필 작성
-      <a href="/<?= mapping('faq') ?>" class="right_txt">직종 인증 후 작성 가능해요</a>
+      <a href="#" class="right_txt">직종 인증 후 작성 가능해요</a>
     </li>
     <li>프로필 작성
-    <a href="/<?= mapping('notice') ?>" class="right_txt">인증 신청이 반려 되었습니다</a>
+    <a href="#" class="right_txt">인증 신청이 반려 되었습니다</a>
     </li>
     <li>프로필 작성
       <a href="/<?= mapping('mypage') ?>/profile_reg" class="right_txt">작성하기 <img class="w_16 middle" src="/images/btn_more.png"></a>
@@ -70,7 +70,7 @@
     </li>
     <li>
       직종 재인증 <img src="/images/ic_result_success.png" alt="인증완료" class="w_16 middle ml10">
-      <a href="/<?= mapping('notice') ?>" class="right_txt">직종 재인증을 할 수 있습니다 <img class="w_16 middle" src="/images/btn_more.png"></a>
+      <a href="#" class="right_txt">직종 재인증을 할 수 있습니다 <img class="w_16 middle" src="/images/btn_more.png"></a>
     </li>
   </ul>
   <p class="mypage_title"> 고객 센터</p>

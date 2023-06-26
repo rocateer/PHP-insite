@@ -15,12 +15,15 @@
 				<span class="point_color"><?=$result->member_id?></span> 입니다.
 			</div>
 		</div>
-		<div class="btn_space mt30">
-			<a href="/<?=mapping('find_pw')?>" class="btn_point_ghost btn_full_basic">비밀번호 찾기</a>
+		<div class="flex_between mt30">
+			<div class="w_half btn_space">
+				<a href="/<?=mapping('find_pw')?>" class="btn_point_ghost btn_full_basic">비밀번호 찾기</a>
+			</div>
+			<div class="w_half btn_space">
+				<a href="/<?=mapping('login')?>" class="btn_point btn_full_basic">로그인</a>
+			</div>
 		</div>
-		<div class="btn_space mt10">
-			<a href="/<?=mapping('login')?>" class="btn_point btn_full_basic">로그인</a>
-		</div>
+		
   </div>
 </div>
 

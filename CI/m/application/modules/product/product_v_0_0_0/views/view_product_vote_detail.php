@@ -13,7 +13,7 @@
       <span class="detail_category">진행중</span>
       <span class="detail_date">2023.01.01</span>
     </div>
-    <div class="detail_title">월넛과 베이지로 차분하게, 무드있는 아파트.</div>
+    <div class="detail_title mt20">월넛과 베이지로 차분하게, 무드있는 아파트.</div>
   </div>
 
   <!-- community body -->
@@ -105,6 +105,9 @@
         <p><span class="message_box">작성된 댓글이 없습니다.</span></p>
       </div>
       <!-- 댓글: tbl_cmt, 답글: tbl_reply, etc: cmt_blind -->
+      <div class="inner_wrap">
+        <p class="mt30 font_gray_f fs_12">댓글 <span class="point_color fs_12">52</span></p>
+      </div>
     <ul class="cmt_ul">
       <li>
         <div class="cmt_item_1">벚꽃보러가요 · 서울 동부<span class="f_right"><img src="/images/ic_more.png" onclick="modal_open_slide('cmt_more')" alt="더보기" class="w_16"></span></div>
