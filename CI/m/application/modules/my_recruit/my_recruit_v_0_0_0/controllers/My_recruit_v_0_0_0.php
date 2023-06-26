@@ -32,4 +32,9 @@ public function my_recruit_applicant_list(){
   $this->_view(mapping('my_recruit').'/view_my_recruit_applicant_list');
 }
 
+//지원자 상세
+public function applicant_detail(){
+  $this->_view(mapping('my_recruit').'/view_applicant_detail');
+}
+
 }// 클래스의 끝

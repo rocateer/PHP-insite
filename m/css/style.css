@@ -49,10 +49,12 @@
 .community_list_body{overflow: hidden; margin-top: 16px;}
 .community_list_body .community_list_item{overflow: hidden; box-sizing: border-box;}
 .community_list_body .community_list_item .community_list_title{font-size: 16px; color:#fff; font-family: 'font-b'; overflow:hidden; text-overflow: ellipsis; white-space: nowrap}
+.community_list_body .community_list_item .community_list_title2{font-size: 16px; color:#fff; font-family: 'font-b'; overflow:hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.4; margin-bottom:30px;}
 .community_list_body .community_list_item .community_list_con{color: #A0A0A0; margin-top: 8px; white-space: normal; overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.4;}
 .community_list_body .thum_img{float: right; width:88px; height: 88px; margin-left: 20px; }
 .community_list_body .thum_img .img_box{width:88px; height: 88px; border-radius: 5px;}
 .community_action_area span{color:#636363; font-size: 12px; float: left; text-align: center; margin-right: 20px;}
+.community_action_area.my_type span{color:#636363; font-size: 12px; float: left; width:33.3%; display: block; text-align: center; margin-right:0px;}
 .community_action_area span.on{color:#20BFA9;}
 .community_action_area img{width:24px; margin-right: 4px; vertical-align: middle;}
 .detail_category{vertical-align: middle; background: #444; border-radius:3px; padding:5px 8px 4px 8px; font-size: 12px; display: inline-block;}
@@ -78,6 +80,7 @@
 .progress_bg .txt_2{font-size:10px; color:#A0A0A0; position: absolute; right:12px; top:4px; z-index: 2;}
 .progress_bg .progress_bar{background: #636363; height:20px; border-radius: 3px;}
 .progress_bg .progress_bar.check{background: #20BFA9;}
+.bottom_txt{position: absolute; bottom: 0; left:0;}
 
 /* recruit */
 .recruit_mark{background: #444; border-radius: 3px; padding: 4px 8px; vertical-align: middle; font-size: 12px; float: left; margin-right:8px;}
@@ -132,8 +135,8 @@
 .trade_list li{border-bottom: 1px solid #444; overflow: hidden; padding: 20px; box-sizing: border-box;}
 .trade_list li .btn_delete{width:24px; vertical-align: middle;}
 .trade_list .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b';}
-.trade_list_body{overflow: hidden; margin-top: 13px;}
-.trade_list_body .trade_list_item{overflow: hidden; box-sizing: border-box;}
+.trade_list_body{overflow: hidden; margin-top:8px;}
+.trade_list_body .trade_list_item{overflow: hidden; box-sizing: border-box; min-height: 94px; position: relative;}
 .trade_list_body .trade_list_item .trade_list_title{font-size: 14px; color:#fff;}
 .trade_list_body .trade_list_item .trade_list_price{font-size: 16px; color:#fff; font-family: 'font-b'; margin-top: 15px;}
 .trade_list_body .trade_list_item .trade_state{font-size: 10px; padding:5px 10px; border-radius: 3px; background: #164740; float: right;}
@@ -141,6 +144,7 @@
 .trade_list_body .trade_list_item .trade_list_con{color: #F5F5F5; white-space: normal; overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.2;}
 .trade_list_body .thum_img{float: left; width:94px; height: 94px; margin-right: 20px; }
 .trade_list_body .thum_img .img_box{width:94px; height: 94px; border-radius: 5px;}
+.trade_action_area{position: absolute; bottom: 0; left:0;}
 .trade_action_area span{color:#636363; margin-right: 20px; font-size: 12px;}
 .trade_action_area img{width:16px; margin-right: 4px; vertical-align: middle;}
 
@@ -257,10 +261,10 @@
 
 
 /* 직종인증 */
-.work_body{font-size: 14px; height: calc(100vh - 200px); overflow-y: auto; padding: 30px 20px;}
+.work_body{font-size: 14px; height: calc(100vh - 200px); overflow-y: auto; padding: 30px 20px; box-sizing: border-box;}
 .work_body img{ width:100%; border-radius: 5px;}
 .work_body tr{ height:45px; vertical-align: top;}
-.work_body th{ color:#A0A0A0;}
+.work_body th{ color:#F5F5F5; font-family: 'font-b';}
 .work_body td{ color:#E2E2E2}
 
 .box_line{border: 1px solid #444; border-radius: 5px; padding: 25px 20px;}

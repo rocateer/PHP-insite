@@ -8,11 +8,11 @@
         <h5>구직프로필</h5>
         <ul class="input_ui row mt20">
             <li>
-                <label>연락처</label>
+                <label>연락처<span class="essential">*</span></label>
                 <input type="tel" id="" name="" placeholder="연락받으실 전화번호를 입력해 주세요.">
             </li>
             <li>
-                <label>성별<span class="essential">*</span></label>
+                <label>성별</label>
                 <select>
                     <option>선택안함</option>
                     <option>남</option>
@@ -21,7 +21,7 @@
             </li>
             <li>
                 <label>생년월일</label>
-                <input type="number" id="" name="" placeholder="회사명 또는 팀명을 입력해 주세요.">
+                <input type="number" id="" name="" placeholder="생년월일을 6자리로 입력해 주세요 ex) 000101">
             </li>
         </ul>
   </div>
@@ -30,7 +30,7 @@
         <h5>지원 내용</h5>
         <table class="table_info mt20">
             <colgroup>
-                <col width="60">
+                <col width="80">
                 <col width="*">
             </colgroup>
             <tr>
@@ -79,7 +79,7 @@
         <textarea id="" cols="" class="reg_textarea"></textarea>
       </li>
       <li>
-        <label>포트폴리오<span class="essential">*</span></label>
+        <label>포트폴리오</label>
       </li>
     </ul>
   </div>

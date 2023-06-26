@@ -19,8 +19,7 @@
     <li>
       <p class="txt_nickname">
         드림꿈드림 · 목공 · 서울 남부 
-        <span class="f_right date">
-          12.21
+        <span class="f_right">
           <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
         </span>
       </p>
@@ -46,8 +45,7 @@
     <li>
       <p class="txt_nickname">
         드림꿈드림 · 목공 · 서울 남부 
-        <span class="f_right date">
-          12.21
+        <span class="f_right">
           <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
         </span>
       </p>
@@ -74,8 +72,7 @@
     <li>
       <p class="txt_nickname">
         드림꿈드림 · 목공 · 서울 남부 
-        <span class="f_right date">
-          12.21
+        <span class="f_right">
           <img class="btn_delete" src="/images/ic_point_delete.png" alt="">
         </span>
       </p>

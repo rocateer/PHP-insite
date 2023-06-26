@@ -19,35 +19,35 @@
     <li>
       <a href="/<?=mapping('recruit')?>/job_detail">
         <div class="community_list_head">
-          <p class="txt_nickname">딸기맛바나나킥1 · 목공 · 서울 남부 <span class="f_right"><img src="/images/ic_point_delete.png" alt="" class="w_24"></span></p> 
+          <p class="txt_nickname font_gray_A0">딸기맛바나나킥1 · 목공 · 서울 남부 <span class="f_right"><img src="/images/ic_point_delete.png" alt="" class="w_24"></span></p> 
         </div>
-        <div class="community_list_body mt5">
+        <div class="community_list_body mt0 relative">
           <div class="thum_img relative">
             <div class="img_box">
               <img src="/p_images/s3.jpg">
             </div>
             <div class="img_cnt_box">3</div>
           </div>
-          <div class="community_list_item">
-            <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
-            <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+          <div class="community_list_item ">
+            <p class="community_list_title2">언제나 준비되어 있는 노력하고 항상 발전하는 인재입니다. 제목이 길어졌을 때도 표현해봅니다.</p>
+            <p class="mt15 bottom_txt"><span class="point_color">일급</span> 30만원</p>
           </div>
         </div>
-        <p class="mt15"><span class="point_color">일급</span> 30만원</p>
+        
       </a>
     </li>
     <li>
       <a href="/<?=mapping('recruit')?>/job_detail">
         <div class="community_list_head">
-          <p class="txt_nickname">딸기맛바나나킥1 · 목공 · 서울 남부 <span class="f_right"><img src="/images/ic_point_delete.png" alt="" class="w_24"></span></p>
+          <p class="txt_nickname font_gray_A0">딸기맛바나나킥1 · 목공 · 서울 남부 <span class="f_right"><img src="/images/ic_point_delete.png" alt="" class="w_24"></span></p>
         </div>
-        <div class="community_list_body mt5">
+        <div class="community_list_body mt0 relative">
           <div class="community_list_item">
-            <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
-            <p class="community_list_con">33평에 양옆으로 크게 발코니가 있는 구조의 아파트였어요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요. 집을 다녀간 지인들 모두 평수보다 넓어 보인다고 이야기하네요.</p>
+            <p class="community_list_title2">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
+            <p class="mt15 bottom_txt"><span class="point_color">일급</span> 30만원</p>
           </div>
         </div>
-        <p class="mt15"><span class="point_color">일급</span> 30만원</p>
+        
       </a>
     </li>
   </ul>

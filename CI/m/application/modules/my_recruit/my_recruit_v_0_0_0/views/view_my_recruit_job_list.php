@@ -15,7 +15,6 @@
 
   <ul class="recruit_list">
     <li>
-      <a href="/<?=mapping('recruit')?>/human_detail">
         <div class="item_1">
           <b>플랫폼로캣티어</b>
           <span class="f_right date">2023.01.01</span>
@@ -24,8 +23,7 @@
           <span class="recruit_mark">목공</span>
           <span class="txt_title">가디호텔 철거공사</span>
         </div>
-        <a href="#" class="btn_gray_ghost btn_full_thin">지원 상세</a>
-      </a>
+        <a href="/<?=mapping('my_recruit')?>/applicant_detail" class="btn_gray_ghost btn_full_thin">지원 상세</a>
     </li>
     <?php for ($i=0; $i < 6; $i++) {?>
     <li>
@@ -37,7 +35,7 @@
         <span class="recruit_mark">목공</span>
         <span class="txt_title">주안자이 아파트 신규 건설 신입 채용</span>
       </div>
-      <a href="#" class="btn_gray_ghost btn_full_thin">지원 상세</a>
+      <a href="/<?=mapping('my_recruit')?>/applicant_detail" class="btn_gray_ghost btn_full_thin">지원 상세</a>
     </li>
     <?php }?>
   </ul>

@@ -45,7 +45,7 @@
         <div class="product_list_body">
           <p class="product_list_title">친환경 포스트잇 처럼 쉽게 붙이고 떼는 벽지</p>
           <div class="product_list_item">서울특별시 금천구
-              <span class="f_right">마감</span>
+              <span class="f_right font_gray_63">마감</span>
           </div>
         </div>
       </a>

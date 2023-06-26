@@ -98,7 +98,7 @@
 <!-- body : e -->
 
 <!-- 반려사유 modal : s -->
-<div class="modal modal_full modal_reject vh_wrap">
+<div class="modal modal_full modal_reject">
   <header>
     <a class="btn_left" href="#">
       <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('reject')" alt="뒤로가기">
@@ -107,7 +107,7 @@
     <!-- <span class="head_txt"><a href="#">등록</a></span> -->
   </header>
 
-  <div class="vh_body">
+  <div class="body">
 
     <div class="work_body">
       <table>
@@ -121,7 +121,7 @@
         </tr>
         <tr>
           <th>반려사유</th>
-          <td>사진이 명확지 않아 정보를 알 수 없습니다. 글씨가 보이도록 사진을 다시 등록해 주세요.</td>
+          <td>사진이 명확지 않아 정보를 알 수 없습니다.<br>글씨가 보이도록 사진을 다시 등록해 주세요.</td>
         </tr>
       </table>
       <img src="/media/commonfile/202304/19/5d347021c1913f481ce7cf8051f98185.jpg" class="img_block mt20">

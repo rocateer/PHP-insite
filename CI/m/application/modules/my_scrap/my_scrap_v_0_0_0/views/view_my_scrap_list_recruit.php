@@ -20,7 +20,7 @@
     </li>
     <?php for ($i=0; $i < 6; $i++) {?>
     <li>
-      <div class="item_1">
+      <div class="item_1 row">
         <b>플랫폼로캣티어</b>
         <span class="f_right"><img src="/images/ic_point_delete.png" alt="" class="w_24"></span>
       </div>

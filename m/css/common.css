@@ -40,6 +40,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 /* layout */
 .wrap{position: relative;}
+.mt0{margin-top: 0px !important;}
 .mt5{margin-top: 5px !important;}
 .mt10{margin-top: 10px !important;}  
 .mt15{margin-top: 15px !important;}
@@ -102,7 +103,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .w_100p{width:100%;}
 .w_50p{width:50%;}
 .w_16{width:16px;}
-.w_24{width:24px;}
 .w_24{width:24px;}
 
 /* modal 공통 레이아웃 */
