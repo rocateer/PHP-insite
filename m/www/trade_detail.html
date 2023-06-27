@@ -65,7 +65,13 @@
                 <span class="mark_2 f_left">예약</span>
                 <span class="f_right">
                     <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
-                    <img src="images/btn_more.png" class="i_24" alt="" onclick="modal_open_slide('more')">
+                    <span class="relative">
+                      <a href="javascript:void(0)"><img src="images/btn_more.png" class="i_24 detail_btn_more" alt=""></a>
+                      <div class="detail_layer_more" style="display: none;">
+                        <a href="javascript:void(0)" onclick="modal_open('report')">신고</a>
+                        <a href="#">차단</a>
+                      </div>
+                    </span>
                 </span>
             </div>
             <div class="product_detail_wrap">
@@ -242,6 +248,32 @@
 
     </div>
 
+    <!-- modal 신고하기 : s-->
+    <div class="modal modal_md modal_report">
+      <img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('report')">
+      <div class="md_container">
+        <div class="md_title">신고하기</div>
+        <div class="scrollbar mt30">
+          <ul class="input_ui row">
+          <li>
+            <select>
+              <option>선택</option>
+            </select>
+            </li>
+          <li>
+            <label>신고 사유 입력<span class="essential">*</span></label>
+            <textarea></textarea>
+          </li>
+          </ul>
+        </div>
+        <div class="mt10 mb10 center">
+            <a href="#" class="btn_point btn_full_basic">확인</a>
+        </div>
+      </div>
+      </div>
+      <div class="md_overlay md_overlay_report" onclick="modal_close('report')"></div>
+      <!-- modal 신고하기 : e-->
+
 
 
     <!-- footer : s -->
@@ -269,6 +301,12 @@
   <!-- wrap : e -->
 
   <script>
+  //상세 더보기
+	$(".detail_btn_more").click(function(){
+    $(".detail_layer_more").stop().slideToggle(0);
+    return false;
+  });
+  
   // 스크랩 토글버튼
   function btn_scrap(element){
     if($(element).hasClass("on")){

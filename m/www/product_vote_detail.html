@@ -67,7 +67,12 @@
               <span class="mark_1 mr10 middle">진행중</span><h3 class="inline_block">차 산다면 뭐가 좋을까?</h3>
               <div class="f_right">
                 <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
-                <img src="images/btn_more.png" class="i_24" alt="" onclick="modal_open_slide('more')">
+                <span class="relative">
+                  <a href="javascript:void(0)"><img src="images/btn_more.png" class="i_24 detail_btn_more" alt=""></a>
+                  <div class="detail_layer_more" style="display: none;">
+                    <a href="#">숨기기</a>
+                  </div>
+                </span>
               </div>
             </div>
             <p class="font_gray_a0 mt30">2023.01.01</p>
@@ -254,7 +259,6 @@
     </div>
 
 
-
     <!-- footer : s -->
     <footer>
       <div class="inner_wrap row">
@@ -280,6 +284,12 @@
   <!-- wrap : e -->
 
   <script>
+  //상세 더보기
+	$(".detail_btn_more").click(function(){
+    $(".detail_layer_more").stop().slideToggle(0);
+    return false;
+  });
+  
   // 스크랩 토글버튼
   function btn_scrap(element){
     if($(element).hasClass("on")){

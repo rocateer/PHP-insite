@@ -102,14 +102,22 @@
         	</ul>
 	        <ul class="community_list mt30">
 	          <li>
-	            <a href="community_detail.html">
-					<div class="community_list_head">
-						<img src="images/ic_cate_2.png" class="list_cate_img">
-						<div class="right_area">
-							<p class="txt_cate">인사이트 <span class="f_right"><img src="images/md_btn_close.png" class="w_24"></span></p>
-							<p class="txt_date">2022.01.23</p>
-						</div>
-	              	</div>
+				<div class="community_list_head">
+					<img src="images/ic_cate_2.png" class="list_cate_img">
+					<div class="right_area">
+						<p class="txt_cate">인사이트 
+							<span class="f_right relative">
+								<img src="images/ic_sm_more.png" onClick="toggle_more(1);" class="w_24">
+								<div class="list_btn_more" id="list_more_1" style="display:none">
+									<a href="#">수정</a>
+									<a href="#">삭제</a>
+								</div>
+							</span>
+						</p>
+						<p class="txt_date">2022.01.23</p>
+					</div>
+				</div>
+				<a href="community_detail.html">
 	              <div class="community_list_body">
 	                <div class="thum_img relative">
 	                  <div class="img_box">
@@ -130,14 +138,14 @@
 	            </a>
 	          </li>
 	          <li>
-	            <a href="community_detail.html">
-					<div class="community_list_head">
-	                <img src="images/ic_cate_2.png" class="list_cate_img">
-	                <div class="right_area">
-	                  <p class="txt_cate">인사이트 <span class="f_right"><img src="images/md_btn_close.png" class="w_24"></span></p>
-	                  <p class="txt_date">2022.01.23</p>
-	                </div>
-	              </div>
+				<div class="community_list_head">
+					<img src="images/ic_cate_2.png" class="list_cate_img">
+					<div class="right_area">
+						<p class="txt_cate">인사이트 <span class="f_right"><img src="images/ic_sm_more.png" class="w_24"></span></p>
+						<p class="txt_date">2022.01.23</p>
+					</div>
+				</div>
+				<a href="community_detail.html">
 	              <div class="community_list_body">
 	                <div class="community_list_item">
 	                  <p class="community_list_title">월넛과 베이지로 차분하게, 무드있는 신혼집을 만들었어요.</p>
@@ -152,14 +160,13 @@
 	            </a>
 	          </li>
 	          <li>
-	            <a href="community_detail.html">
-								<div class="community_list_head">
+				<div class="community_list_head">
 	                <img src="images/ic_cate_2.png" class="list_cate_img">
 	                <div class="right_area">
-	                  <p class="txt_cate">인사이트 <span class="f_right"><img src="images/md_btn_close.png" class="w_24"></span></p>
+	                  <p class="txt_cate">인사이트 <span class="f_right"><img src="images/ic_sm_more.png" class="w_24"></span></p>
 	                  <p class="txt_date">2022.01.23</p>
 	                </div>
-	              </div>
+	            </div>
 	              <div class="community_list_body">
 	                <div class="community_list_item">
 	                  <p class="community_list_title">카뱅 주담대 특판.</p>
@@ -171,7 +178,6 @@
 	                <span><img src="images/ic_sm_comment.png">10</span>
 	                <span><img src="images/ic_sm_visibility.png">1,523</span>
 	              </div>
-	            </a>
 	          </li>
 	        </ul>
 
@@ -211,14 +217,6 @@
     </div>
 
 
-
-
-
-
-
-
-
-
     <!-- footer : s -->
     <footer>
       <div class="inner_wrap row">
@@ -243,7 +241,21 @@
   </div>
   <!-- wrap : e -->
 
-
+<script>
+//댓글 more 버튼
+function toggle_more( num ){
+  var element = null;
+  for( var i = 1; i <= num; i++ )
+  {
+    element = document.getElementById( "list_more_" + i );
+    if ( element != null )
+    {
+      ( element.style.display != "none" ) ? element.style.display = "none" : element.style.display = "";
+    }
+  }
+  return;
+  }
+</script>
 
 </body>
 </html>

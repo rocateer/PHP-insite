@@ -4,7 +4,7 @@
 /* mark */
 .mark_1{background:#444; color:#E2E2E2; font-size: 12px; padding: 6px 12px; border-radius: 3px;}
 .mark_2{border: 1px solid #20BFA9; color:#20BFA9; font-size: 12px; padding: 6px 12px; border-radius: 3px; font-family: 'font-b';}
-.mark_3{background:#E2E2E2; color:#444; font-size:10px; padding: 6px 12px; border-radius: 3px; font-family: 'font-b';}
+.mark_3{background:#E2E2E2; color:#444; font-size:10px; text-align: center; line-height: 24px; border-radius: 3px; font-family: 'font-b'; width:54px; height: 24px; display:inline-block; box-sizing: border-box;} /* QA */
 .btn_scrap{display:inline-block; vertical-align: middle; background:url('../images/btn_scrap_off.png') no-repeat; height:24px; width:24px; background-size:24px 24px;}
 .btn_scrap.on{background: url('../images/btn_scrap_on.png') no-repeat; background-size: 24px 24px;}
 
@@ -24,8 +24,8 @@
 .main_board_wrap{overflow: hidden; margin: 0 -20px;}
 .main_board_wrap .mini_board_box{width:350px; margin: 0 20px; min-height:280px; float: left; margin-bottom: 50px;}
 .main_board_wrap .mini_board_box p{display: inline-block; width:260px; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
-.sticky_body{padding:0px 0 0 0; min-height: 700px;}
-.right_sticky_wrap {position: sticky; top:50px; background: red; width:265px; width:1100px; margin: 0 auto;}
+.sticky_body{padding:180px 0 0 0; min-height: 700px;}
+.right_sticky_wrap {position: sticky; top:230px; background: red; width:265px; width:1100px; margin: 0 auto;}
 .right_sticky_wrap .sticky_box{width:265px; min-height:432px; border: 1px solid #E2E2E2; border-radius: 3px; float: right; padding: 30px 16px; box-sizing: border-box; position: relative;}
 .amount_wrap{width:100px;}
 .amount_wrap span{width:30px; text-align: center; display: inline-block; vertical-align:middle;}
@@ -39,7 +39,7 @@
 .product_img_basic{width:80px;}
 .product_img_basic .img_box img{border-radius:5px; width:80px; height:80px; margin-top: 0;}
 
-.product_detail_top{border-bottom: 1px solid #E2E2E2; padding-bottom:15px; overflow: hidden;}
+.product_detail_top{border-bottom: 1px solid #E2E2E2; padding-bottom:15px; min-height:35px;}
 .product_detail_wrap{overflow: hidden; margin-top: 20px;}
 .top_detail_img{width:374px; height: 374px; float: left;}
 .top_detail_img .img_box{border-radius: 3px;}
@@ -50,7 +50,7 @@
 .top_detail_info_sm{float: right; width:400px; min-height:300px; position: relative;}
 .top_detail_info_sm .bottom{position: absolute; z-index: 2; bottom: 0;  box-sizing: border-box; width: 100%;}
 .txt_rate{font-size: 24px; font-family: 'font-b'; color:#20BFA9;}
-.deatil_con{margin-top: 50px; line-height: 160%; padding-bottom: 50px; border-bottom: 1px solid #E2E2E2;}
+.deatil_con{margin-top: 50px; line-height:2.0; padding-bottom: 50px; border-bottom: 1px solid #E2E2E2;}
 .qa_row{width:100%; overflow: hidden;}
 .qa_row li{border-bottom: 1px solid #E2E2E2; float: left; padding:16px 0 16px; font-size: 14px; height: 25px !important;}
 .qa_row li img{margin-top: 0 !important; vertical-align: middle;}
@@ -78,6 +78,7 @@
 .community_list_head .right_area {float: left; width: calc(100% - 34px);}
 .community_list_head .mark_hot{color:#E54524; font-family: 'font-b'; font-weight: bold;}
 .community_list_head .mark_hot img{width: 16px; vertical-align: middle;}
+.community_list_head .my_txt{display:inline-block; font-family: 'font-b'; margin-top:8px; font-size: 12px;}
 .community_list .txt_cate {font-size: 12px; color: #232527; font-family: 'font-b';}
 .community_list .txt_nickname {font-size: 12px; color: #20BFA9; font-family: 'font-b'; margin-top: 3px;}
 .community_list_body {overflow: hidden; margin-top: 16px;}
@@ -185,7 +186,7 @@
 /* 공동구매&교육 */
 .product_list{overflow: hidden; margin: 0 -10px;}
 .product_list.my_product_list{margin: 0 -25px;}
-.product_list.my_product_list li{width:380px; position: relative; min-height:270px; float: left; margin:0 25px 20px 25px;}
+.product_list.my_product_list li{width:380px; position: relative; min-height:270px; float: left; margin:0 25px 50px 25px;}
 .product_list li{margin-bottom:10px; width:353px; position: relative; min-height:270px; float: left; margin:0 10px 30px 10px;}
 .product_list li .mark{background: #444; border-radius:3px; color:#E2E2E2; font-size:12px; padding:0 10px; z-index:10; position: absolute; top:16px; left:16px; line-height:25px;}
 .product_list li .btn_delete{position: absolute; right:10px; top:10px; z-index: 2; width:24px;}
@@ -219,8 +220,8 @@
 
 /* 중고거래 */
 .trade_list{overflow: hidden; margin:10px -20px;}
-.trade_list.full_type{margin: 10px 0;}
-.trade_list.full_type li{width:100% !important; margin: 20px 0;}
+.trade_list.my_type{margin: 10px -15px;}
+.trade_list.my_type li{width:calc(50% - 30px) !important; margin: 20px 15px; float: left; box-sizing: border-box;}
 .trade_list li{overflow: hidden; box-sizing: border-box; width:530px; height:150px; float: left; margin: 20px; position: relative;}
 .trade_list li .btn_delete{width:24px; vertical-align: middle;}
 .trade_list li .txt_nickname{ font-size: 12px; color:#A0A0A0; font-family: 'font-b'; padding-top:6px;}
@@ -234,6 +235,8 @@
 .trade_list_body .trade_list_item .trade_list_title{font-size: 14px; color:#fff;}
 .trade_list_body .trade_list_item .trade_list_price{font-size: 16px; color:#444; font-family: 'font-b'; margin-top: 15px;}
 .trade_list_body .trade_list_item .trade_list_con{color: #444; margin-top:15px; font-size: 18px; white-space: normal; overflow: hidden; text-overflow: ellipsis; word-break: break-word; display: -webkit-box; -webkit-line-clamp:2; -webkit-box-orient: vertical; line-height: 1.2;}
+.trade_list_body .trade_list_item .my_txt_nickname{overflow:hidden; text-overflow: ellipsis; white-space: nowrap; width:calc(100% - 20px); padding-bottom:5px;}
+.trade_list_body .trade_list_item .my_btn_delete{position:absolute; z-index: 2; right:0px; top:-1px;}
 .trade_list_body .thum_img{float: left; width:150px; height: 150px; margin-right: 20px; }
 .trade_list_body .thum_img .img_box{width:150px; height: 150px; border-radius: 5px;}
 .trade_action_area{position: absolute; bottom:0;}
@@ -243,7 +246,7 @@
 .reg_select{margin: 0 -10px; overflow: hidden; }
 .reg_select li{border: 1px solid #E2E2E2; border-radius:5px; margin-bottom: 8px; position:relative; width:calc(50% - 60px); box-sizing: border-box; margin: 10px; float: left;}
 .reg_select li img{width:40px; margin-right:12px; vertical-align: middle;}
-.reg_select li a{padding:30px; display:block; overflow: hidden; font-size: 24px; box-sizing: border-box;}
+.reg_select li a{padding:20px 30px; display:block; overflow: hidden; font-size:22px; box-sizing: border-box;}
 .reg_select li .dim{background:rgba(160,160,160,1); padding:30px; border-radius: 5px; font-size:16px; color:#E2E2E2; position: absolute; left: 0; top:0; width:calc(100% - 60px); height:40px;}
 .reg_select li .dim img{width:40px; margin-right:12px;}
 
@@ -296,7 +299,7 @@
 .recruit_list li .item_1{font-size: 12px;}
 .recruit_list li .item_2{font-size: 12px; color:#A0A0A0; margin-top: 5px;}
 .recruit_list li .item_2 .info_ic{vertical-align: middle; width:16px; margin-right:4px;}
-.recruit_list li .txt_title{display:inline-block; width:calc(100% - 50px); overflow:hidden; text-overflow: ellipsis; white-space: nowrap; padding-top: 5px;}
+.recruit_list li .txt_title{font-size: 18px; display:inline-block; width:calc(100% - 50px); overflow:hidden; text-overflow: ellipsis; white-space: nowrap; padding-top:0px;}
 .select_result_wrap span{background: #232527; border-radius: 3px; padding: 8px 12px; font-size: 12px; color:#A0A0A0;}
 .select_result_wrap span img{width:16px; margin-left: 3px; vertical-align: middle;}
 
@@ -353,7 +356,7 @@
 .order_thum_box .order_thum_img img{border-radius: 3px;}
 .order_thum_box .order_thum_wrap{padding: 20px;}
 
-.bl_list li{background: url('../images/bl_check.png') 0 5px no-repeat; background-size:16px; padding: 5px 0 5px 20px; line-height: 20px; color:#444;}
+.bl_list li{background: url('../images/bl_check.png') 0 8px no-repeat; background-size:16px; padding: 5px 0 5px 20px; line-height: 20px; color:#444;}
 .ul_radio_v li{padding:10px 0;}
 .ul_radio_v li label p{display: inline-block; float: right;}
 .txt_h_1{line-height: 140%;}

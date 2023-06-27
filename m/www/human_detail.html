@@ -66,54 +66,60 @@
               2023년도 상반기 KW 신입사원 채용공고 (~05/05)
               <div class="f_right">
                 <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
-                <img src="images/btn_more.png" class="i_24" alt="" onclick="modal_open_slide('more')">
+                <span class="relative">
+					<a href="javascript:void(0)"><img src="images/btn_more.png" class="i_24 detail_btn_more" alt=""></a>
+					<div class="detail_layer_more" style="display: none;">
+					  <a href="javascript:void(0)" onclick="modal_open('report')">신고</a>
+					  <a href="#">차단</a>
+					</div>
+				</span>
               </div>
             </div>
             <p class="font_gray_a0 mt30">플랫폼로캣티어</p>
             <p class="font_gray_a0 mt5">2023.01.01</p>
           </div>
           <h5 class="mt50">상세내용</h5>
-					<div class="detail_info_box mt20">
-						<table class="table_info">
-							<colgroup>
-								<col width="100">
-								<col width="*">
-								<col width="70">
-								<col width="*">
-							</colgroup>
-							<tr>
-								<th>마감일</th>
-								<td>2023.04.04 <span class="point_color">(D-13)</span></td>
-								<th>성별</th>
-								<td>성별무관</td>
-							</tr>
-							<tr>
-								<th>근무지역</th>
-								<td>서울 동부<img src="images/ic_sm_arrow.png" class="w_16 middle">강동구</td>
-								<th>연령</th>
-								<td>20세 이상 35세 이하</td>
-							</tr>
-							<tr>
-								<th>모집분야</th>
-								<td>장판</td>
-								<th>급여</th>
-								<td><span class="point_color">일급</span> 3000,000 이하</td>
-							</tr>
-							<tr>
-								<th>경력</th>
-								<td>5년 이상</td>
-								<th></th>
-								<td></td>
-							</tr>
-						</table>
-						<hr class="mt10">
-						<div class="info_btn txt_right mt20">
-							<a href="javascript:void(0)" class="btn_point" onclick="modal_open('apply')">지원하기</a>
-							<a href="#" class="btn_disabled">지원한 공고</a>
-							<!-- <a href="#" class="btn_disabled">마감되었어요</a> -->
-							<a href="#" class="btn_point_ghost">전화번호 확인</a>
-						</div>
-					</div>
+			<div class="detail_info_box mt20">
+				<table class="table_info">
+					<colgroup>
+						<col width="100">
+						<col width="*">
+						<col width="70">
+						<col width="*">
+					</colgroup>
+					<tr>
+						<th>마감일</th>
+						<td>2023.04.04 <span class="point_color">(D-13)</span></td>
+						<th>성별</th>
+						<td>성별무관</td>
+					</tr>
+					<tr>
+						<th>근무지역</th>
+						<td>서울 동부<img src="images/ic_sm_arrow.png" class="w_16 middle">강동구</td>
+						<th>연령</th>
+						<td>20세 이상 35세 이하</td>
+					</tr>
+					<tr>
+						<th>모집분야</th>
+						<td>장판</td>
+						<th>급여</th>
+						<td><span class="point_color">일급</span> 3000,000 이하</td>
+					</tr>
+					<tr>
+						<th>경력</th>
+						<td>5년 이상</td>
+						<th></th>
+						<td></td>
+					</tr>
+				</table>
+				<hr class="mt10">
+				<div class="info_btn txt_right mt20">
+					<a href="javascript:void(0)" class="btn_point" onclick="modal_open('apply')">지원하기</a>
+					<a href="#" class="btn_disabled">지원한 공고</a>
+					<!-- <a href="#" class="btn_disabled">마감되었어요</a> -->
+					<a href="#" class="btn_point_ghost">전화번호 확인</a>
+				</div>
+			</div>
 
 					<div class="mt50 txt_height_3">
 						근무형태 : 정규직(수습:2개월)<br>
@@ -188,6 +194,32 @@
       </div>
 
     </div>
+
+	<!-- modal 신고하기 : s-->
+    <div class="modal modal_md modal_report">
+		<img src="images/md_btn_close.png" class="md_btn_close" onclick="modal_close('report')">
+		<div class="md_container">
+		  <div class="md_title">신고하기</div>
+		  <div class="scrollbar mt30">
+			  <ul class="input_ui row">
+				<li>
+					<select>
+						<option>선택</option>
+					</select>
+				  </li>
+				<li>
+				  <label>신고 사유 입력<span class="essential">*</span></label>
+				  <textarea></textarea>
+				</li>
+			  </ul>
+		  </div>
+			<div class="mt10 mb10 center">
+					<a href="#" class="btn_point btn_full_basic">확인</a>
+			</div>
+		</div>
+	  </div>
+	  <div class="md_overlay md_overlay_report" onclick="modal_close('report')"></div>
+	  <!-- modal 신고하기 : e-->
 
 		<!-- modal 이미지 확대보기  : s -->
 		<div class="modal modal_img_big">
@@ -346,6 +378,12 @@
   <!-- wrap : e -->
 
   <script>
+	//상세 더보기
+	$(".detail_btn_more").click(function(){
+    $(".detail_layer_more").stop().slideToggle(0);
+    return false;
+  });
+  
   // 스크랩 토글버튼
   function btn_scrap(element){
     if($(element).hasClass("on")){

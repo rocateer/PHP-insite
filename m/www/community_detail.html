@@ -56,6 +56,7 @@
             </ul>
         </div>
     </header>
+    
 
     <div class="body">
       <div class="inner_wrap row">
@@ -67,7 +68,13 @@
               차 산다면 뭐가 좋을까? <img src="images/ic_vote.png" class="i_24">
               <div class="f_right">
                 <a href="javascript:void(0)" class="btn_scrap ease" onclick="btn_scrap(this)"></a>
-                <img src="images/btn_more.png" class="i_24" alt="" onclick="modal_open_slide('more')">
+                <span class="relative">
+                  <a href="javascript:void(0)"><img src="images/btn_more.png" class="i_24 detail_btn_more" alt=""></a>
+                  <div class="detail_layer_more" style="display: none;">
+                    <a href="#">수정</a>
+                    <a href="#">삭제</a>
+                  </div>
+                </span>
               </div>
             </div>
             <p class="font_gray_a0 mt30">딸기맛바나나킥 · 목공 · 서울 남부</p>
@@ -287,6 +294,12 @@
   <!-- wrap : e -->
 
   <script>
+  //상세 더보기
+  $(".detail_btn_more").click(function(){
+    $(".detail_layer_more").stop().slideToggle(0);
+    return false;
+  });
+
   // 스크랩 토글버튼
   function btn_scrap(element){
     if($(element).hasClass("on")){
@@ -342,6 +355,7 @@
   }
   return;
   }
+
 
   //답글쓰기
   $(".btn_re_reg").click(function(){
