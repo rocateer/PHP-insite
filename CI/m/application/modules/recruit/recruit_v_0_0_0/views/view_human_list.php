@@ -45,7 +45,7 @@
 
 
 <!-- modal : s -->
-<div class="modal modal_full modal_filter vh_wrap">
+<div class="modal modal_full modal_filter">
   <header>
     <a class="btn_left" href="#">
       <img class="w_100" src="/images/head_btn_close.png" onclick="modal_close('filter')" alt="뒤로가기">

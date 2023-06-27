@@ -233,7 +233,7 @@ input:checked + .check_slider:before {-webkit-transform: translateX(16px); -ms-t
 .w_24{width:24px;}
 
 /* ------------------------------------------------------------------------------------------------------------- */
-header{width: 100%; background-color: #fff; box-sizing: border-box; border-bottom:1px solid #BFBFBF; position: fixed; left:0; top:0; z-index: 500;}
+header{width: 100%; background-color: #fff; box-sizing: border-box; border-bottom:1px solid #BFBFBF; position: fixed; left:0; top:0; z-index:20;}
 header .header_top{display: flex; padding: 25px 0;}
 header .header_logo{display: inline-block; font-size: 33px; font-weight: bold;}
 header .header_search{width:450px; margin: 0 auto; border: 1px solid #E2E2E2; border-radius: 100px; padding: 10px; position: relative;}

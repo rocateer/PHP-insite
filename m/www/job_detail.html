@@ -104,33 +104,40 @@
 						- A 건설업체 <br>- B 건설업체 <br>- C 건설업체 <br>- D 건설업체 <br>- AA 건설업체 <br>- BB 건설업체 총 경력 1년 입니다.
 					</div>
 
-					<ul class="detail_img_wrap row mt50">
-						<li>
+					<div class="swiper detail_img_list">
+						<div class="swiper-wrapper">
+						  <div class="swiper-slide">
 							<div class="img_box">
-								<img src="p_images/s6.jpg" alt="" onclick="modal_open('img_big')">
+								<img src="p_images/s6.jpg" alt="" onclick="modal_open('img_big');idx(0)">
 							</div>
-						</li>
-						<li>
+						  </div>
+						  <div class="swiper-slide">
 							<div class="img_box">
-								<img src="p_images/s1.jpg" alt="">
+								<img src="p_images/s6.jpg" alt="" onclick="modal_open('img_big');idx(1)">
 							</div>
-						</li>
-						<li>
+						  </div>
+						  <div class="swiper-slide">
 							<div class="img_box">
-								<img src="p_images/s2.jpg" alt="">
+								<img src="p_images/s6.jpg" alt="" onclick="modal_open('img_big');idx(2)">
 							</div>
-						</li>
-						<li>
+						  </div>
+						  <div class="swiper-slide">
 							<div class="img_box">
-								<img src="p_images/s3.jpg" alt="">
+								<img src="p_images/s6.jpg" alt="" onclick="modal_open('img_big');idx(3)">
 							</div>
-						</li>
-						<li>
+						  </div>
+						  <div class="swiper-slide">
 							<div class="img_box">
-								<img src="p_images/s4.jpg" alt="">
+								<img src="p_images/s6.jpg" alt="" onclick="modal_open('img_big');idx(4)">
 							</div>
-						</li>
-					</ul>
+						  </div>
+						  <div class="swiper-slide">
+							<div class="img_box">
+								<img src="p_images/s6.jpg" alt="" onclick="modal_open('img_big');idx(5)">
+							</div>
+						  </div>
+						</div>
+					</div>
 
 					<div class="box_gray mt50">
 						<p class="fs_12 font_gray_a0">인사이트는 구직자가 등록한 이력서로 인한 문제 발생 시 어떠한 책임도 지지 않습니다. 이력서를 구인/구직 목적 외 다른 목적으로 이용할 경우 삭제 또는 블라인드 될 수 있습니다</p>
@@ -175,11 +182,23 @@
     </div>
 
 		<!-- modal 이미지 확대보기  : s -->
-		<div class="modal modal_img_big">
-			<img src="p_images/s6.jpg" alt="" class="w_100p">
-		</div>
-		<div class="md_overlay md_overlay_img_big" onclick="modal_close('img_big')"></div>
-		<!-- modal 이미지 확대보기  : e -->
+	<div class="modal modal_img_big">
+		<div class="swiper img_big_swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="/p_images/s1.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="/p_images/s2.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="/p_images/s3.jpg">
+				</div>
+			</div>
+			</div>
+	</div>
+	<div class="md_overlay md_overlay_img_big" onclick="modal_close('img_big')"></div>
+	<!-- modal 이미지 확대보기  : e -->
 
 
     <!-- footer : s -->
@@ -234,6 +253,27 @@
       el: ".swiper-pagination",
     },
   });
+
+  var detail_img_list = new Swiper(".detail_img_list", {
+  slidesPerView: '4.5',
+  spaceBetween: 10,
+});
+
+  function idx(idx){
+  // 모달 슬라이더 이미지
+    var img_big_swiper = new Swiper(".img_big_swiper", {
+      initialSlide: idx,
+      slidesPerView: 1,
+      autoHeight: true,
+      pagination: {
+      el: ".swiper-pagination",
+    },
+      navigation: {
+        nextEl: ".modal_swiper_img_view .swiper-button-next",
+        prevEl: ".modal_swiper_img_view .swiper-button-prev",
+      },
+    });
+  }
 
   </script>
 
